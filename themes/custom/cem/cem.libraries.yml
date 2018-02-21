@@ -1,0 +1,46 @@
+bootstrap:
+  version: VERSION
+  css:
+    base:
+      vendor/Bootstrap-3.3.7/css/bootstrap.min.css: { weight: 0 }
+  js:
+    vendor/Bootstrap-3.3.7/js/bootstrap.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+global-styling:
+  version: VERSION
+  css:
+    layout:
+      css/custom.css: { weight: 0 }
+
+global-scripts:
+  version: VERSION
+  js:
+    js/scripts.js: { scope: 'footer' }
+
+fontawesome:
+  version: VERSION
+  css:
+    base:
+      vendor/FontAwesome/font-awesome.min.css:  { weight: 0 }
+
+googlefont:
+  version: VERSION
+  css:
+    base:
+      '//fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700,900': { type: external }
+
+owlcarousel:
+  version: VERSION
+  css:
+    base:
+      vendor/OwlCarousel/dist/assets/owl.carousel.min.css: { weight: 0 }
+  js:
+    vendor/OwlCarousel/dist/owl.carousel.min.js: { scope: 'footer' }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
