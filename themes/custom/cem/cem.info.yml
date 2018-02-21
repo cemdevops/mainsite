@@ -1,0 +1,21 @@
+name: CEM Theme
+type: theme
+description: Custom theme
+core: 8.x
+libraries:
+  - unifai/bootstrap
+  - unifai/fontawesome
+  - unifai/owlcarousel
+  - unifai/global-styling
+  - unifai/global-scripts
+  - unifai/googlefont
+
+regions:
+  header: Header
+  featured: Featured
+  breadcrumb: Breadcrumb
+  sidebar_first: 'Sidebar first'
+  content: Content
+  sidebar_second: 'Sidebar second'
+  footer_top: 'Footer Top'
+  footer_bottom: 'Footer Bottom'
