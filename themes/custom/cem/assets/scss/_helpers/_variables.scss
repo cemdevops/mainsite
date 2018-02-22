@@ -1,0 +1,100 @@
+// largura do projeto
+//$bodyWidth: 1170;
+$bodyWidth: 1200;
+//$bodyWidth: 1370;
+$bodyWidth_990: 970;
+
+//tipografia
+// ler a apresentacao do shiota
+// http://www.slideshare.net/eshiota/dominating-the-web-typography?ref=http://www.raphaelfabeni.com.br/conferencia-css-brasil/
+// via: http://www.raphaelfabeni.com.br/conferencia-css-brasil/
+$base-font-size: 16px;
+$baseline: 0.938em;
+$paragrafo: 1em;
+
+// colors
+$brandColor: #061846;
+$brandColorSub: rgba(#F1C100,.15);
+$corDeTeste: black; //cor para teste
+$footerBars: #70C3D5;
+$titleColor: #17607D;
+$lightBlue: #014596;
+
+// sections colors
+$mainColor: #061846;
+$graduacaoColor: #700833;
+$posGraduacaoColor: #513c66;
+$cogeaeColor: #315b5a;
+$yellow: #e4c023;
+
+
+
+/*
+
+    ### Sections Maps
+
+*/
+
+$sectionsMaps: (
+    'graduacao':(
+        'sectionName': 'graduacao',
+        'sectionColor': $graduacaoColor,
+        'sectionTitleBorderColor': #DBBAC3,
+        'sectionAboutTextColor': #881a3d,
+        'sectionAboutIconColor': #881a3d,
+        'sectionAboutBorderColor': #DABBC3,
+        'sectionAboutItemTitleColor': #a7003f,
+        'panel-aluno-title-icon-position': '-23px',
+        'panel-aluno-bg-image': '__panel-content-photo-bg-graduacao.jpg',
+        'icon-search': 'icon-search-red.svg'
+    ),
+    'pos-graduacao':(
+        'sectionName': 'pos-graduacao',
+        'sectionColor': $posGraduacaoColor,
+        'sectionTitleBorderColor': #C2B6CA,
+        'sectionAboutTextColor': #c1a52f,
+        'sectionAboutIconColor': #c1a52f,
+        'sectionAboutBorderColor': #F7ECBE,
+        'sectionAboutItemTitleColor': #684e7f,
+        'panel-aluno-title-icon-position': '-46px',
+        'panel-aluno-bg-image': '__panel-content-photo-bg-pos-graduacao.jpg',
+        'icon-search': 'icon-search-purple.svg'
+    ),
+    'especializacao-e-mba':(
+        'sectionName': 'especializacao-e-mba',
+        'sectionColor': $cogeaeColor,
+        'sectionTitleBorderColor': #AABCBB,
+        'sectionAboutTextColor': #c1a52f,
+        'sectionAboutIconColor': #007f00,
+        'sectionAboutBorderColor': #9ACC99,
+        'sectionAboutItemTitleColor': #507963,
+        'panel-aluno-title-icon-position': 'right 1px',
+        'panel-aluno-bg-image': '__panel-content-photo-bg-cogeae.jpg',
+        'icon-search': 'icon-search-green.svg'
+    )
+);
+
+
+/*
+
+    ### MEDIA QUERIES BREAKPOINTS
+
+*/
+//
+// desktop wide = dw
+$desktop-wide: 1366px;
+//
+//desktop normal = dn 
+$desktop-normal: 1260px;
+//
+//tablet landscape = tw
+$tablet-wide: 990px;
+//
+//tablet portrait = tn
+$tablet-normal: 768px;
+//
+//smartphone landscape = sw 
+$smartphone-wide: 650px;
+//
+//smartphone portrait = sn
+$smartphone-normal: 480px;

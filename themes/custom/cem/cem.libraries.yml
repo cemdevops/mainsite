@@ -14,12 +14,14 @@ global-styling:
   version: VERSION
   css:
     layout:
-      css/custom.css: { weight: 0 }
+      assets/css/estilos.css: { weight: 0 }
+      assets/css/vendors.css: { weight: 0 }
 
 global-scripts:
   version: VERSION
   js:
-    js/scripts.js: { scope: 'footer' }
+    assets/js/scripts.js: { scope: 'footer' }
+    assets/js/main.js: { scope: 'footer' }
 
 fontawesome:
   version: VERSION
