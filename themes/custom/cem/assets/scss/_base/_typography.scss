@@ -1,0 +1,77 @@
+//  https://fonts.google.com/?query=robot&selection.family=Lato:400,700|Roboto:100,300,400,500,700
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:100,300,400,500,700');
+
+
+// font-family: 'Lato', sans-serif;
+
+// font-family: 'Roboto', sans-serif;
+
+
+//  icon fonts
+/*@font-face {
+    font-family: "EntypoRegular";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/entypo.eot");
+    src: url("../fonts/entypo.eot?#iefix") format("embedded-opentype"), url("../fonts/entypo.woff") format("woff"), url("../fonts/entypo.ttf") format("truetype"), url("../fonts/entypo.svg#EntypoRegular") format("svg");
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'entypo';
+        src: url('../fonts/entypo.svg#entypo') format('svg');
+    }
+}*/
+
+//https://fonts.google.com/?query=titillium&selection.family=Roboto:400,500,700|Titillium+Web:400,600,700
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include font-lato(700);
+}
+
+/* PadronizaÃ§Ã£o de tÃ­tulos Hs */
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 25px;
+}
+h3 {
+    font-size: 21px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 15px;
+}
+h6 {
+    font-size: 13px;
+}
+
+
+p {
+    //font-weight: 400;
+    font-size: 15px;
+    //line-height: 20px;
+    line-height: 1.5;
+    //font: 400 15px/21px;  
+    strong{
+        font-weight: 600;
+    }
+}
+
+blockquote {
+    text-align: center;
+    font-size: 25px;
+    @include font-lato();
+}
+
+blockquote p {
+    font-size: inherit;
+    line-height: inherit;
+}

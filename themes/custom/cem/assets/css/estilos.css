@@ -1,0 +1,2166 @@
+@charset "UTF-8";
+/*
+
+    ### Sections Maps
+
+*/
+/*
+
+    ### MEDIA QUERIES BREAKPOINTS
+
+*/
+/* old mixin
+@mixin cf() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    & {
+        *zoom: 1;
+    }
+}*/
+/*@mixin mqrange($breakpointsMin, $breakpointsMax) {
+    $breakpointsMin: map_get($breakpoints_jornal, $breakpointsMin);
+    $breakpointsMax: map_get($breakpoints_jornal, $breakpointsMax);
+    @media only screen and (min-width: $breakpointsMin) and (max-width: $breakpointsMax) {
+        @content;
+    }
+}*/
+/*
+    Extends
+*/
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:100,300,400,500,700");
+/* line 248, cem/assets/scss/_helpers/_mixin.scss */
+.main:before, .main:after, .home-slider:before, .home-slider:after, .home-slider-item:before, .home-slider-item:after, .home-call-boxes:before, .home-call-boxes:after, .home-news:before, .home-news:after, .home-agenda:before, .home-agenda:after, .home-video:before, .home-video:after, .home-publications:before, .home-publications:after, .home-pesquisadores:before, .home-pesquisadores:after, header.header:before, header.header:after, .header-top:before, .header-top:after, .header-top .header-search:before, .header-top .header-search:after, .header-menu:before, .header-menu:after, .footer:before, .footer:after, .footer-newsletter:before, .footer-newsletter:after, .footer-navigation:before, .footer-navigation:after, .footer-nav-infos .social:before, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:before, .footer-nav-infos .footer-nav:after, .footer-copy:before, .footer-copy:after {
+  content: " ";
+  display: table;
+}
+
+/* line 253, cem/assets/scss/_helpers/_mixin.scss */
+.main:after, .home-slider:after, .home-slider-item:after, .home-call-boxes:after, .home-news:after, .home-agenda:after, .home-video:after, .home-publications:after, .home-pesquisadores:after, header.header:after, .header-top:after, .header-top .header-search:after, .header-menu:after, .footer:after, .footer-newsletter:after, .footer-navigation:after, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:after, .footer-copy:after {
+  clear: both;
+}
+
+/* line 257, cem/assets/scss/_helpers/_mixin.scss */
+.main, .home-slider, .home-slider-item, .home-call-boxes, .home-news, .home-agenda, .home-video, .home-publications, .home-pesquisadores, header.header, .header-top, .header-top .header-search, .header-menu, .footer, .footer-newsletter, .footer-navigation, .footer-nav-infos .social, .footer-nav-infos .footer-nav, .footer-copy {
+  *zoom: 1;
+}
+
+/* line 261, cem/assets/scss/_helpers/_mixin.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul, .header-menu > .inner > ul, .header-menu > .inner > ul > li > ul, .footer-nav-infos .social ul, .footer-nav-infos .footer-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* line 12, cem/assets/scss/_helpers/_reset.scss */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+     ========================================================================== */
+/**
+   * Remove the margin in all browsers (opinionated).
+   */
+/* line 25, cem/assets/scss/_helpers/_reset.scss */
+body {
+  margin: 0;
+}
+
+/**
+   * Add the correct display in IE 9-.
+   */
+/* line 33, cem/assets/scss/_helpers/_reset.scss */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+/* line 47, cem/assets/scss/_helpers/_reset.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * Add the correct display in IE 9-.
+   * 1. Add the correct display in IE.
+   */
+/* line 60, cem/assets/scss/_helpers/_reset.scss */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+   * Add the correct margin in IE 8.
+   */
+/* line 70, cem/assets/scss/_helpers/_reset.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+/* line 79, cem/assets/scss/_helpers/_reset.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+/* line 90, cem/assets/scss/_helpers/_reset.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * 1. Remove the gray background on active links in IE 10.
+   * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+   */
+/* line 103, cem/assets/scss/_helpers/_reset.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+/* line 113, cem/assets/scss/_helpers/_reset.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+   * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+   */
+/* line 123, cem/assets/scss/_helpers/_reset.scss */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+/* line 132, cem/assets/scss/_helpers/_reset.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+/* line 142, cem/assets/scss/_helpers/_reset.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+   * Add the correct font style in Android 4.3-.
+   */
+/* line 153, cem/assets/scss/_helpers/_reset.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+   * Add the correct background and color in IE 9-.
+   */
+/* line 161, cem/assets/scss/_helpers/_reset.scss */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+/* line 170, cem/assets/scss/_helpers/_reset.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+/* line 179, cem/assets/scss/_helpers/_reset.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 187, cem/assets/scss/_helpers/_reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 191, cem/assets/scss/_helpers/_reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Add the correct display in IE 9-.
+   */
+/* line 202, cem/assets/scss/_helpers/_reset.scss */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+   * Add the correct display in iOS 4-7.
+   */
+/* line 211, cem/assets/scss/_helpers/_reset.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+   * Remove the border on images inside links in IE 10-.
+   */
+/* line 220, cem/assets/scss/_helpers/_reset.scss */
+img {
+  border-style: none;
+}
+
+/**
+   * Hide the overflow in IE.
+   */
+/* line 228, cem/assets/scss/_helpers/_reset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+     ========================================================================== */
+/**
+   * 1. Change the font styles in all browsers (opinionated).
+   * 2. Remove the margin in Firefox and Safari.
+   */
+/* line 240, cem/assets/scss/_helpers/_reset.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+/* line 256, cem/assets/scss/_helpers/_reset.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+/* line 266, cem/assets/scss/_helpers/_reset.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+   * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+   *    controls in Android 4.
+   * 2. Correct the inability to style clickable types in iOS and Safari.
+   */
+/* line 277, cem/assets/scss/_helpers/_reset.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+/* line 288, cem/assets/scss/_helpers/_reset.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+/* line 300, cem/assets/scss/_helpers/_reset.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+   * Correct the padding in Firefox.
+   */
+/* line 311, cem/assets/scss/_helpers/_reset.scss */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+/* line 322, cem/assets/scss/_helpers/_reset.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+   * 1. Add the correct display in IE 9-.
+   * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+/* line 336, cem/assets/scss/_helpers/_reset.scss */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+   * Remove the default vertical scrollbar in IE.
+   */
+/* line 345, cem/assets/scss/_helpers/_reset.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10-.
+   * 2. Remove the padding in IE 10-.
+   */
+/* line 354, cem/assets/scss/_helpers/_reset.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+/* line 364, cem/assets/scss/_helpers/_reset.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+/* line 374, cem/assets/scss/_helpers/_reset.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+   * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+   */
+/* line 383, cem/assets/scss/_helpers/_reset.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+/* line 393, cem/assets/scss/_helpers/_reset.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+     ========================================================================== */
+/*
+   * Add the correct display in IE 9-.
+   * 1. Add the correct display in Edge, IE, and Firefox.
+   */
+/* line 406, cem/assets/scss/_helpers/_reset.scss */
+details,
+menu {
+  display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+/* line 415, cem/assets/scss/_helpers/_reset.scss */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+     ========================================================================== */
+/**
+   * Add the correct display in IE 9-.
+   */
+/* line 426, cem/assets/scss/_helpers/_reset.scss */
+canvas {
+  display: inline-block;
+}
+
+/**
+   * Add the correct display in IE.
+   */
+/* line 434, cem/assets/scss/_helpers/_reset.scss */
+template {
+  display: none;
+}
+
+/* Hidden
+     ========================================================================== */
+/**
+   * Add the correct display in IE 10-.
+   */
+/* line 445, cem/assets/scss/_helpers/_reset.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 1, cem/assets/scss/_base/_base.scss */
+html * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, cem/assets/scss/_base/_base.scss */
+body {
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333333;
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 18, cem/assets/scss/_base/_base.scss */
+a,
+a:link,
+a:visited {
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+
+/* line 28, cem/assets/scss/_base/_base.scss */
+a:hover,
+a:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+/* line 34, cem/assets/scss/_base/_base.scss */
+.main {
+  position: relative;
+}
+
+/* line 39, cem/assets/scss/_base/_base.scss */
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100%;
+  max-width: 1200px;
+  float: none;
+}
+
+/* line 52, cem/assets/scss/_base/_base.scss */
+.link-more {
+  display: inline-block;
+  padding-left: 25px;
+  height: 18px;
+  line-height: 18px;
+  background: url(../img/icon-plus.png) left center no-repeat;
+  font-size: 13px;
+  color: #828282;
+}
+
+/*@font-face {
+    font-family: "EntypoRegular";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/entypo.eot");
+    src: url("../fonts/entypo.eot?#iefix") format("embedded-opentype"), url("../fonts/entypo.woff") format("woff"), url("../fonts/entypo.ttf") format("truetype"), url("../fonts/entypo.svg#EntypoRegular") format("svg");
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'entypo';
+        src: url('../fonts/entypo.svg#entypo') format('svg');
+    }
+}*/
+/* line 27, cem/assets/scss/_base/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+/* PadronizaÃ§Ã£o de tÃ­tulos Hs */
+/* line 37, cem/assets/scss/_base/_typography.scss */
+h1 {
+  font-size: 30px;
+}
+
+/* line 40, cem/assets/scss/_base/_typography.scss */
+h2 {
+  font-size: 25px;
+}
+
+/* line 43, cem/assets/scss/_base/_typography.scss */
+h3 {
+  font-size: 21px;
+}
+
+/* line 46, cem/assets/scss/_base/_typography.scss */
+h4 {
+  font-size: 18px;
+}
+
+/* line 49, cem/assets/scss/_base/_typography.scss */
+h5 {
+  font-size: 15px;
+}
+
+/* line 52, cem/assets/scss/_base/_typography.scss */
+h6 {
+  font-size: 13px;
+}
+
+/* line 57, cem/assets/scss/_base/_typography.scss */
+p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* line 63, cem/assets/scss/_base/_typography.scss */
+p strong {
+  font-weight: 600;
+}
+
+/* line 68, cem/assets/scss/_base/_typography.scss */
+blockquote {
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+/* line 74, cem/assets/scss/_base/_typography.scss */
+blockquote p {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* line 1, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider {
+  width: 100%;
+  background: #F7F7F7;
+  padding-top: 30px;
+  padding-bottom: 55px;
+}
+
+/* line 7, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider .view {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+/* line 11, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider .view > div {
+  position: relative;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 18, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider .slick-dots {
+  z-index: 5;
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  float: left;
+}
+
+/* line 27, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider .slick-dots li {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 2px;
+}
+
+/* line 32, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider .slick-dots li button {
+  background: #DCDCDC;
+  border: 0;
+  border-radius: 50%;
+  font-size: 0;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+/* line 42, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider .slick-dots li button:before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 0 0 1px;
+}
+
+/* line 52, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider .slick-dots li.slick-active button {
+  background-color: #086AAB;
+  border: 0;
+  border-radius: 50%;
+}
+
+/* line 56, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider .slick-dots li.slick-active button:before {
+  background-color: #086AAB;
+  border: 0;
+}
+
+/* line 66, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider-item {
+  float: left;
+  width: 100%;
+}
+
+/* line 70, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider-item div.title,
+.home-slider-item div.image,
+.home-slider-item div.text {
+  float: left;
+  width: 100%;
+}
+
+/* line 76, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider-item div.title {
+  height: 60px;
+  border-bottom: solid 5px #088C9F;
+}
+
+/* line 79, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider-item div.title h2 {
+  width: 100%;
+  padding: 0 0 5px;
+  margin: 0;
+  font-size: 13px;
+  color: #088C9F;
+  text-transform: uppercase;
+}
+
+/* line 87, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider-item div.title p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #4D4D4D;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 96, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider-item div.image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* line 103, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider-item div.text {
+  height: 90px;
+  background: #ffffff;
+  border: dashed 1px #AEAEAE;
+  border-top: 0;
+  font-size: 15px;
+  color: #6A6A6A;
+}
+
+/* line 110, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider-item div.text p {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 114, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider-item div.text a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 18px 0;
+  color: inherit;
+}
+
+/* line 123, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider-item:hover div.title {
+  border-color: #FF6600;
+}
+
+/* line 125, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider-item:hover div.title h2 {
+  color: #FF6600;
+}
+
+/* line 130, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider-item:hover div.image a {
+  position: relative;
+  height: 100%;
+  display: block;
+}
+
+/* line 134, cem/assets/scss/_components/_home-slider/__global.scss */
+.home-slider-item:hover div.image a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/box-hover-mask.png) center no-repeat;
+  z-index: 1;
+}
+
+/* line 1, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+.home-call-boxes {
+  width: 100%;
+  position: relative;
+  min-height: 230px;
+}
+
+/* line 6, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+.home-call-boxes > .detail-left,
+.home-call-boxes > .detail-right {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* line 16, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+.home-call-boxes > .detail-left {
+  left: 0;
+  background-image: url(../img/home-cem-pesquisa-bg.jpg);
+  background-position: right top;
+}
+
+/* line 21, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+.home-call-boxes > .detail-right {
+  right: 0;
+  background-image: url(../img/home-cem-escolas.jpg);
+  background-position: left top;
+}
+
+@media only screen and (min-width: 0) and (max-width: 520px) {
+  /* line 1, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+  .home-call-boxes {
+    min-height: auto;
+  }
+  /* line 28, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+  .home-call-boxes > .detail-left,
+  .home-call-boxes > .detail-right {
+    display: none;
+  }
+}
+
+/* line 33, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+.home-call-boxes > .inner {
+  display: flex;
+}
+
+@media only screen and (min-width: 0) and (max-width: 520px) {
+  /* line 33, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+  .home-call-boxes > .inner {
+    display: block;
+  }
+}
+
+/* line 38, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+.home-call-boxes > .inner > .home-call-box-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  float: left;
+  width: 50%;
+  min-height: 230px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 55px;
+  padding-bottom: 15px;
+}
+
+/* line 50, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+.home-call-boxes > .inner > .home-call-box-item span.call {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-top: 55px;
+  font-weight: 300;
+  font-size: 23px;
+}
+
+/* line 58, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+.home-call-boxes > .inner > .home-call-box-item h2 {
+  padding: 5px 0 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+/* line 64, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+.home-call-boxes > .inner > .home-call-box-item a {
+  color: inherit;
+}
+
+/* line 68, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+.home-call-boxes > .inner > .home-call-box-item.box-left span.call {
+  background: url(../img/icon-chart-frame.png) top center no-repeat;
+}
+
+/* line 73, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+.home-call-boxes > .inner > .home-call-box-item.box-right span.call {
+  background: url(../img/icon-lupa.png) top center no-repeat;
+}
+
+@media only screen and (min-width: 0) and (max-width: 520px) {
+  /* line 38, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+  .home-call-boxes > .inner > .home-call-box-item {
+    width: 100%;
+  }
+  /* line 79, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+  .home-call-boxes > .inner > .home-call-box-item.box-left {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/home-cem-pesquisa-bg.jpg);
+    background-position: right top;
+  }
+  /* line 85, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+  .home-call-boxes > .inner > .home-call-box-item.box-right {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/home-cem-escolas.jpg);
+    background-position: right top;
+  }
+}
+
+/* line 1, cem/assets/scss/_components/_home-news-and-agenda/__global.scss */
+.home-news-and-agenda {
+  width: 100%;
+  background: url(../img/home-noticias-wrapper-bg.jpg) center top no-repeat #F5F5F5;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  background-size: cover;
+}
+
+/* line 1, cem/assets/scss/_components/_home-news-and-agenda/_home-news.scss */
+.home-news {
+  width: 100%;
+}
+
+/* line 4, cem/assets/scss/_components/_home-news-and-agenda/_home-news.scss */
+.home-news .home-news-header {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+/* line 10, cem/assets/scss/_components/_home-news-and-agenda/_home-news.scss */
+.home-news .home-news-header h2 {
+  float: left;
+  width: auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 35px;
+  color: #6A6A6A;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 19, cem/assets/scss/_components/_home-news-and-agenda/_home-news.scss */
+.home-news .home-news-header a.link-more {
+  float: right;
+  margin-top: 15px;
+}
+
+/* line 24, cem/assets/scss/_components/_home-news-and-agenda/_home-news.scss */
+.home-news .home-news-item {
+  width: 100%;
+  height: 300px;
+}
+
+/* line 27, cem/assets/scss/_components/_home-news-and-agenda/_home-news.scss */
+.home-news .home-news-item div.image {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+/* line 30, cem/assets/scss/_components/_home-news-and-agenda/_home-news.scss */
+.home-news .home-news-item div.image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 37, cem/assets/scss/_components/_home-news-and-agenda/_home-news.scss */
+.home-news .home-news-item div.text {
+  width: 100%;
+  font-size: 15px;
+  color: #4C4C4C;
+}
+
+/* line 41, cem/assets/scss/_components/_home-news-and-agenda/_home-news.scss */
+.home-news .home-news-item div.text p {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+/* line 46, cem/assets/scss/_components/_home-news-and-agenda/_home-news.scss */
+.home-news .home-news-item div.text a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 53, cem/assets/scss/_components/_home-news-and-agenda/_home-news.scss */
+.home-news .home-news-item:hover div.image a {
+  position: relative;
+  height: 100%;
+  display: block;
+}
+
+/* line 57, cem/assets/scss/_components/_home-news-and-agenda/_home-news.scss */
+.home-news .home-news-item:hover div.image a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/box-hover-mask.png) center no-repeat;
+  z-index: 1;
+}
+
+/* line 1, cem/assets/scss/_components/_home-news-and-agenda/_home-agenda.scss */
+.home-agenda {
+  width: 100%;
+}
+
+/* line 4, cem/assets/scss/_components/_home-news-and-agenda/_home-agenda.scss */
+.home-agenda .home-agenda-header {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+/* line 10, cem/assets/scss/_components/_home-news-and-agenda/_home-agenda.scss */
+.home-agenda .home-agenda-header h2 {
+  float: left;
+  width: auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 35px;
+  color: #6A6A6A;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 20, cem/assets/scss/_components/_home-news-and-agenda/_home-agenda.scss */
+.home-agenda a.link-more {
+  margin-top: 25px;
+}
+
+/* line 23, cem/assets/scss/_components/_home-news-and-agenda/_home-agenda.scss */
+.home-agenda .home-agenda-box {
+  float: left;
+  width: 100%;
+  background: #ffffff;
+  border: solid 1px #D6D6D6;
+  border-top: solid 5px #086AAB;
+  padding: 0 20px 20px;
+  box-shadow: 0 5px 15px 0 rgba(112, 128, 175, 0.2);
+}
+
+/* line 31, cem/assets/scss/_components/_home-news-and-agenda/_home-agenda.scss */
+.home-agenda .home-agenda-box .home-agenda-item {
+  float: left;
+  width: 100%;
+  height: 120px;
+  padding-top: 20px;
+  border-bottom: dashed 1px #D1D1D1;
+}
+
+/* line 37, cem/assets/scss/_components/_home-news-and-agenda/_home-agenda.scss */
+.home-agenda .home-agenda-box .home-agenda-item div.image {
+  float: left;
+  margin-right: 13px;
+}
+
+/* line 40, cem/assets/scss/_components/_home-news-and-agenda/_home-agenda.scss */
+.home-agenda .home-agenda-box .home-agenda-item div.image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 46, cem/assets/scss/_components/_home-news-and-agenda/_home-agenda.scss */
+.home-agenda .home-agenda-box .home-agenda-item div.text {
+  color: #727272;
+  font-size: 13px;
+}
+
+/* line 50, cem/assets/scss/_components/_home-news-and-agenda/_home-agenda.scss */
+.home-agenda .home-agenda-box .home-agenda-item div.data {
+  float: left;
+  width: 100%;
+  font-size: 13px;
+  color: #9E9E9E;
+  padding-top: 15px;
+}
+
+/* line 1, cem/assets/scss/_components/_home-video-and-publications/__global.scss */
+.home-videos-and-publications {
+  background: #00203D;
+  padding-bottom: 100px;
+}
+
+/* line 1, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 50px 0 0;
+}
+
+/* line 6, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-header {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 40px;
+}
+
+/* line 12, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-header h2 {
+  float: left;
+  width: auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 35px;
+  color: #6A6A6A;
+  margin: 0;
+  padding: 0;
+  padding-left: 70px;
+  background: url(../img/icon-youtube-logo.png) left center no-repeat;
+  background-size: contain;
+}
+
+/* line 24, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-header a.link-more {
+  float: right;
+  margin-top: 15px;
+}
+
+/* line 29, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-box {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+/* line 33, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-box > .inner {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+/* line 38, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-box .slick-dots {
+  z-index: 5;
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  list-style: none;
+  text-align: left;
+  position: absolute;
+  bottom: -30px;
+}
+
+/* line 47, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-box .slick-dots li {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 2px;
+}
+
+/* line 52, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-box .slick-dots li button {
+  background: #DCDCDC;
+  border: 0;
+  border-radius: 50%;
+  font-size: 0;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+/* line 62, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-box .slick-dots li button:before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 0 0 1px;
+}
+
+/* line 72, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-box .slick-dots li.slick-active button {
+  background-color: #086AAB;
+  border: 0;
+  border-radius: 50%;
+}
+
+/* line 76, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-box .slick-dots li.slick-active button:before {
+  background-color: #086AAB;
+  border: 0;
+}
+
+/* line 85, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-item {
+  float: left;
+  width: 100%;
+}
+
+/* line 88, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-item div.image,
+.home-video .home-video-item div.title,
+.home-video .home-video-item div.text {
+  float: left;
+  width: 100%;
+}
+
+/* line 94, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-item div.image {
+  padding: 0 20px;
+}
+
+/* line 96, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-item div.image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 102, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-item div.title {
+  margin: 0;
+  padding: 40px 20px 30px;
+  border-bottom: dashed 1px #D1D1D1;
+}
+
+/* line 106, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-item div.title h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #4E4E4E;
+  line-height: 2.5;
+}
+
+/* line 115, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-item div.text {
+  padding: 20px 20px 30px;
+  font-size: 13px;
+  color: #6A6A6A;
+}
+
+/* line 119, cem/assets/scss/_components/_home-video-and-publications/_home-video.scss */
+.home-video .home-video-item div.text p {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: 2.5;
+}
+
+/* line 1, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications {
+  width: 100%;
+  padding: 50px 0 0;
+}
+
+/* line 5, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-header {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0 40px;
+}
+
+/* line 11, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-header h2 {
+  float: left;
+  width: auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 35px;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  padding-left: 60px;
+  background: url(../img/icon-notes-bg.png) left center no-repeat;
+  background-size: contain;
+}
+
+/* line 23, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-header a.link-more {
+  float: right;
+  margin-top: 15px;
+  color: #ffffff;
+}
+
+/* line 29, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-box {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+/* line 33, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-box > .inner {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+/* line 38, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-box .slick-dots {
+  z-index: 5;
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  list-style: none;
+  text-align: right;
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+
+/* line 48, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-box .slick-dots li {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 2px;
+}
+
+/* line 53, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-box .slick-dots li button {
+  background: #DCDCDC;
+  border: 0;
+  border-radius: 50%;
+  font-size: 0;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+/* line 63, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-box .slick-dots li button:before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 0 0 1px;
+}
+
+/* line 73, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-box .slick-dots li.slick-active button {
+  background-color: #086AAB;
+  border: 0;
+  border-radius: 50%;
+}
+
+/* line 77, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-box .slick-dots li.slick-active button:before {
+  background-color: #086AAB;
+  border: 0;
+}
+
+/* line 86, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-item {
+  padding: 0 10px;
+}
+
+/* line 90, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-item > .inner {
+  float: left;
+  width: 100%;
+  height: 440px;
+  background-color: #ffffff;
+}
+
+/* line 95, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-item > .inner div.image,
+.home-publications .home-publications-item > .inner div.title,
+.home-publications .home-publications-item > .inner div.text {
+  float: left;
+  width: 100%;
+}
+
+/* line 102, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-item > .inner div.image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 108, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-item > .inner div.title {
+  margin: 0;
+  padding: 15px 20px;
+  border-bottom: dashed 1px #D1D1D1;
+}
+
+/* line 112, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-item > .inner div.title h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #4E4E4E;
+  line-height: 2;
+}
+
+/* line 121, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-item > .inner div.text {
+  padding: 20px 20px 0;
+  font-size: 13px;
+  color: #6A6A6A;
+}
+
+/* line 125, cem/assets/scss/_components/_home-video-and-publications/_home-publications.scss */
+.home-publications .home-publications-item > .inner div.text p {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: 2;
+}
+
+/* line 1, cem/assets/scss/_components/_home-pesquisadores-and-apoio/__global.scss */
+.home-pesquisadores-and-apoio {
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+/* line 1, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores {
+  float: left;
+  width: 100%;
+  border-bottom: dashed 1px #D1D1D1;
+  padding-bottom: 30px;
+}
+
+/* line 7, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-header {
+  float: left;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+/* line 11, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-header > span.pre {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  color: #4E4E4E;
+}
+
+/* line 18, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-header h2 {
+  float: left;
+  width: auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 35px;
+  color: #6A6A6A;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 28, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+/* line 32, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .slick-dots {
+  z-index: 5;
+  padding: 0;
+  margin: 0;
+  padding-right: 15px;
+  list-style: none;
+  text-align: right;
+  position: absolute;
+  top: -35px;
+  width: 100%;
+}
+
+/* line 42, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .slick-dots li {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 2px;
+}
+
+/* line 47, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .slick-dots li button {
+  background: #DCDCDC;
+  border: 0;
+  border-radius: 50%;
+  font-size: 0;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+/* line 57, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .slick-dots li button:before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 0 0 1px;
+}
+
+/* line 67, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .slick-dots li.slick-active button {
+  background-color: #086AAB;
+  border: 0;
+  border-radius: 50%;
+}
+
+/* line 71, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .slick-dots li.slick-active button:before {
+  background-color: #086AAB;
+  border: 0;
+}
+
+/* line 79, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item {
+  float: left;
+  width: 20%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 86, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.image {
+  float: left;
+  width: 100%;
+}
+
+/* line 89, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 96, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.title {
+  float: left;
+  width: 100%;
+  background-color: #086AAB;
+}
+
+/* line 100, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.title a {
+  display: block;
+  width: 100%;
+  height: 80px;
+  padding: 35px 0 0;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* line 111, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social {
+  float: left;
+  width: 100%;
+  padding-top: 30px;
+}
+
+/* line 117, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul li {
+  float: left;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+/* line 122, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 126, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul li a span {
+  position: absolute;
+  left: -9999px;
+}
+
+/* line 131, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul li:last-child {
+  margin: 0;
+}
+
+/* line 134, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul li.icon-linkedin {
+  background: url(../img/icon-perfil-linkedin.png) center no-repeat;
+}
+
+/* line 137, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul li.icon-facebook {
+  background: url(../img/icon-perfil-facebook.png) center no-repeat;
+}
+
+/* line 140, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul li.icon-twitter {
+  background: url(../img/icon-perfil-twitter.png) center no-repeat;
+}
+
+/* line 143, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul li.icon-instagram {
+  background: url(../img/icon-perfil-instagram.png) center no-repeat;
+}
+
+/* line 146, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul li.icon-email {
+  background: url(../img/icon-perfil-email.png) center no-repeat;
+}
+
+/* line 149, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-pesquisadores.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul li.icon-site {
+  background: url(../img/icon-perfil-site.png) center no-repeat;
+}
+
+/* line 1, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-apoio.scss */
+.home-apoio {
+  float: left;
+  width: 100%;
+  padding-top: 75px;
+  position: relative;
+  padding-left: 70px;
+}
+
+/* line 7, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-apoio.scss */
+.home-apoio div.title {
+  position: absolute;
+  left: 0;
+  height: 70px;
+  padding-top: 15px;
+}
+
+/* line 15, cem/assets/scss/_components/_home-pesquisadores-and-apoio/_home-apoio.scss */
+.home-apoio div.logos .row div {
+  text-align: center;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* line 1, cem/assets/scss/_layout/_header/__global.scss */
+header.header {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* line 1, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 26px 0;
+}
+
+/* line 6, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top .inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* line 15, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top .logo {
+  float: left;
+  min-height: 60px;
+  margin: 0;
+  padding: 0 84px 0 156px;
+  background: url(../img/logo.png) left center no-repeat;
+  font-weight: normal;
+}
+
+/* line 22, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top .logo span.title {
+  display: block;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 35px;
+  color: #303030;
+}
+
+/* line 30, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top .logo span.sub-title {
+  display: block;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #676F72;
+}
+
+/* line 42, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top .header-search {
+  position: relative;
+  float: left;
+  width: 100%;
+  max-width: 410px;
+  margin-top: 6px;
+  border: solid 1px #E1E1E1;
+  border-radius: 50px;
+  max-height: 46px;
+}
+
+/* line 52, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top .header-search > div {
+  position: relative;
+}
+
+/* line 55, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top .header-search .search-field {
+  width: 100%;
+  height: 44px;
+  padding: 0 100px 0 28px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #8B8B8B;
+  border: 0;
+  background: transparent;
+}
+
+/* line 65, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top .header-search .search-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 44px;
+  background: url(../img/icon-search.png) center no-repeat transparent;
+  border: 0;
+  font-size: 0;
+}
+
+/* line 79, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top .header-top-btn-contact {
+  float: left;
+  height: 21px;
+  right: 0;
+  background: url(../img/icon-mail.png) left center no-repeat;
+  padding-left: 33px;
+  font-size: 13px;
+  color: #676767;
+  margin-top: 20px;
+}
+
+/* line 1, cem/assets/scss/_layout/_header/_menu.scss */
+.header-menu {
+  width: 100%;
+  background-color: #086AAB;
+  border-bottom: solid 5px #CCCCCC;
+  z-index: 2;
+  position: relative;
+}
+
+/* line 9, cem/assets/scss/_layout/_header/_menu.scss */
+.header-menu > .inner > ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* line 14, cem/assets/scss/_layout/_header/_menu.scss */
+.header-menu > .inner > ul > li {
+  position: relative;
+  float: left;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #ffffff;
+  padding: 0 10px;
+}
+
+/* line 21, cem/assets/scss/_layout/_header/_menu.scss */
+.header-menu > .inner > ul > li > a {
+  display: block;
+  padding: 24px 6px;
+  white-space: nowrap;
+  position: relative;
+  color: inherit;
+}
+
+/* line 28, cem/assets/scss/_layout/_header/_menu.scss */
+.header-menu > .inner > ul > li > ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 80%;
+  float: left;
+  min-width: 160px;
+  background: #ffffff;
+  box-shadow: 0 16px 32px 0 rgba(62, 57, 107, 0.2), 0 0px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  font-size: 15px;
+  text-align: left;
+}
+
+/* line 41, cem/assets/scss/_layout/_header/_menu.scss */
+.header-menu > .inner > ul > li > ul > li {
+  float: left;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #333333;
+  padding: 0 10px;
+  border-bottom: solid 1px #eee;
+}
+
+/* line 49, cem/assets/scss/_layout/_header/_menu.scss */
+.header-menu > .inner > ul > li > ul > li:last-child {
+  border: 0;
+}
+
+/* line 52, cem/assets/scss/_layout/_header/_menu.scss */
+.header-menu > .inner > ul > li > ul > li > a {
+  display: block;
+  padding: 10px 20px 10px 16px;
+  white-space: nowrap;
+  position: relative;
+  color: inherit;
+}
+
+/* line 62, cem/assets/scss/_layout/_header/_menu.scss */
+.header-menu > .inner > ul > li > a[data-js="has-submenu"]:after {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 5px;
+  padding-left: 10px;
+  background: url(../img/icon-arrow-down-white.png) center no-repeat;
+}
+
+/* line 72, cem/assets/scss/_layout/_header/_menu.scss */
+.header-menu > .inner > ul > li:hover > ul {
+  display: block;
+}
+
+/* line 1, cem/assets/scss/_layout/_footer/__global.scss */
+.footer {
+  float: left;
+  width: 100%;
+}
+
+/* line 1, cem/assets/scss/_layout/_footer/_footer-newsletter.scss */
+.footer-newsletter {
+  width: 100%;
+  background-color: #002D55;
+  padding: 75px 0;
+}
+
+/* line 8, cem/assets/scss/_layout/_footer/_footer-newsletter.scss */
+.footer-newsletter-form {
+  float: left;
+  width: 100%;
+  position: relative;
+  padding-right: 133px;
+}
+
+/* line 13, cem/assets/scss/_layout/_footer/_footer-newsletter.scss */
+.footer-newsletter-form .footer-newsletter-campo-email {
+  width: 100%;
+  height: 46px;
+  padding-left: 5px;
+  background: none;
+  border: 0;
+  border-bottom: solid 1px #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+/* line 56, cem/assets/scss/_helpers/_mixin.scss */
+.footer-newsletter-form .footer-newsletter-campo-email::-webkit-input-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* line 60, cem/assets/scss/_helpers/_mixin.scss */
+.footer-newsletter-form .footer-newsletter-campo-email::-moz-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* line 64, cem/assets/scss/_helpers/_mixin.scss */
+.footer-newsletter-form .footer-newsletter-campo-email:-ms-input-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* line 68, cem/assets/scss/_helpers/_mixin.scss */
+.footer-newsletter-form .footer-newsletter-campo-email:-moz-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* line 25, cem/assets/scss/_layout/_footer/_footer-newsletter.scss */
+.footer-newsletter-form .footer-newsletter-campo-cadastrar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 46px;
+  padding: 0 20px;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #828282;
+  background-color: #ffffff;
+  border-radius: 50px;
+}
+
+/* line 39, cem/assets/scss/_layout/_footer/_footer-newsletter.scss */
+.footer-newsletter-text {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+/* line 44, cem/assets/scss/_layout/_footer/_footer-newsletter.scss */
+.footer-newsletter-text > span {
+  text-transform: uppercase;
+}
+
+/* line 1, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-navigation {
+  float: left;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #F5F5F5;
+  font-size: 13px;
+  color: #6A6A6A;
+}
+
+/* line 9, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-navigation a {
+  color: inherit;
+}
+
+/* line 15, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-license {
+  padding-top: 50px;
+  background: url(../img/selo-creativecommons.png) left top no-repeat;
+}
+
+/* line 18, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-license span,
+.footer-license a {
+  color: #F2B006;
+  text-decoration: underline;
+}
+
+/* line 25, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-nav-infos {
+  font-size: 13px;
+  color: #6A6A6A;
+}
+
+/* line 29, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-nav-infos a {
+  color: inherit;
+}
+
+/* line 32, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-nav-infos .title {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 18px;
+}
+
+/* line 38, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-nav-infos .infos {
+  line-height: 2;
+}
+
+/* line 41, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-nav-infos .social {
+  float: left;
+  width: 100%;
+  padding-top: 20px;
+}
+
+/* line 48, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-nav-infos .social ul li {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+/* line 53, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-nav-infos .social ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 57, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-nav-infos .social ul li a span {
+  position: absolute;
+  left: -9999px;
+}
+
+/* line 62, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-nav-infos .social ul li.icon-facebook {
+  background: url(../img/icon-footer-social-facebook.png) center no-repeat;
+  background-size: contain;
+}
+
+/* line 66, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-nav-infos .social ul li.icon-twitter {
+  background: url(../img/icon-footer-social-twitter.png) center no-repeat;
+  background-size: contain;
+}
+
+/* line 70, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-nav-infos .social ul li.icon-instagram {
+  background: url(../img/icon-footer-social-instagram.png) center no-repeat;
+  background-size: contain;
+}
+
+/* line 77, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-nav-infos .footer-nav {
+  float: left;
+  width: 100%;
+}
+
+/* line 83, cem/assets/scss/_layout/_footer/_footer-navigation.scss */
+.footer-nav-infos .footer-nav ul li {
+  float: left;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+/* line 1, cem/assets/scss/_layout/_footer/_footer-copyright.scss */
+.footer-copy {
+  float: left;
+  width: 100%;
+  padding: 30px 10px;
+  background-color: #ffffff;
+  font-size: 13px;
+  color: #6A6A6A;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 11, cem/assets/scss/_layout/_footer/_footer-copyright.scss */
+.footer-copy p {
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+}
+
+/*# sourceMappingURL=../../../sass */

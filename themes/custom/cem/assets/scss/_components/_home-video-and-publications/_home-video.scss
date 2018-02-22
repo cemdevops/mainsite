@@ -1,0 +1,128 @@
+.home-video {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 50px 0 0;
+    @include cf();
+    .home-video-header {
+        float: left;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px 40px;
+        h2 {
+            float: left;
+            width: auto;
+            @include font-roboto(100);
+            font-size: 35px;
+            color: #6A6A6A;
+            margin: 0;
+            padding: 0;
+            padding-left: 70px;
+            background: url(../img/icon-youtube-logo.png) left center no-repeat;
+            background-size: contain;
+        }
+        a.link-more {
+            float: right;
+            margin-top: 15px;
+        }
+    }
+    .home-video-box {
+        position: relative;
+        float: left;
+        width: 100%;
+        &>.inner {
+            float: left;
+            width: 100%;
+            position: relative;
+        }
+        .slick-dots {
+            z-index: 5;
+            padding: 0;
+            margin: 0;
+            padding-top: 30px;
+            list-style: none;
+            text-align: left;
+            position: absolute;
+            bottom: -30px;
+            li {
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                margin: 0 2px;
+                button {
+                    background: #DCDCDC;
+                    border: 0;
+                    border-radius: 50%;
+                    font-size: 0;
+                    width: 14px;
+                    height: 14px;
+                    padding: 0;
+                    outline: 0;
+                    cursor: pointer;
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        margin: 0 0 0 1px;
+                    }
+                }
+                &.slick-active {
+                    button {
+                        background-color: #086AAB;
+                        border: 0;
+                        border-radius: 50%;
+                        &:before {
+                            background-color: #086AAB;
+                            border: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .home-video-item {
+        float: left;
+        width: 100%;
+        div.image,
+        div.title,
+        div.text {
+            float: left;
+            width: 100%;
+        }
+        div.image {
+            padding: 0 20px;
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        div.title {
+            margin: 0;
+            padding: 40px 20px 30px;
+            border-bottom: dashed 1px #D1D1D1;
+            h3 {
+                padding: 0;
+                margin: 0;
+                font-size: 15px;
+                font-weight: 500;
+                color: #4E4E4E;
+                line-height: 2.5;
+            }
+        }
+        div.text {
+            padding: 20px 20px 30px;
+            font-size: 13px;
+            color: #6A6A6A;
+            p {
+                padding: 0;
+                margin: 0;
+                color: inherit;
+                font-size: inherit;
+                line-height: 2.5;
+            }
+        }
+    }
+}

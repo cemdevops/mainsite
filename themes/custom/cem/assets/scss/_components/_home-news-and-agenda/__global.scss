@@ -1,0 +1,10 @@
+.home-news-and-agenda {
+    width: 100%;
+    background: url(../img/home-noticias-wrapper-bg.jpg) center top no-repeat #F5F5F5;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    background-size: cover;
+}
+
+@import "_home-news.scss";
+@import "_home-agenda.scss";
