@@ -73,8 +73,6 @@
   </header>
 
 
-
-
   <main role="main">
     <section class="container-fluid home-slider">
       <div class="row">
@@ -83,6 +81,15 @@
         </div>
       </div>
     </section>
+    <section class="home-call-boxes">
+      <span class="detail-left"></span>
+      <span class="detail-right"></span>
+      <div class="inner wrapper">
+          {{ drupal_entity('block', 'sidebar_left') }}
+          {{ drupal_entity('block', 'sidebar_right') }}
+      </div>
+    </section>
+
 
 
   </main>
