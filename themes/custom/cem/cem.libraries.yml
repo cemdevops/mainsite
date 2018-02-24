@@ -2,9 +2,9 @@ bootstrap:
   version: VERSION
   css:
     base:
-      vendor/Bootstrap-3.3.7/css/bootstrap.min.css: { weight: 0 }
+      vendor/bootstrap/css/bootstrap.css: { weight: 0 }
   js:
-    vendor/Bootstrap-3.3.7/js/bootstrap.js: {}
+    assets/js/vendors.js: { scope: 'footer' }
   dependencies:
     - core/jquery
     - core/drupal

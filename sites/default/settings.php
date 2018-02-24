@@ -295,7 +295,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'fvILW4tOPzV43hyLx_NYQGWsaDNPBgYYytSajfd9JFdRjx_zR_fKhv9BoYC7yXX7kYTwfNCCgQ';
+$settings['hash_salt'] = 'to1crhds_Q2HWpV-guDbX7Phgy5sBNmUYAo3P7JVbZjhUY4wYgfvlJonpl90sa4z5vVpmLae-g';
 
 /**
  * Deployment identifier.
@@ -784,9 +784,9 @@ $settings['entity_update_batch_size'] = 50;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'cem',
+  'database' => 'cem_drupal',
   'username' => 'root',
-  'password' => '',
+  'password' => 'root',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
@@ -794,4 +794,4 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/default/files/config_YAHks0o0rjzfoYLrl0SFBpiI1tO0wMhH5n8beYGEoZgjP54lzDiWv_NsXX08f45JUX2mMLnehg/sync';
+$config_directories['sync'] = 'sites/default/files/config_DOZUAAiOvK16QUltrI701nXMvDvUsDHMZv6nJAkb5BUGd81GQ9EEtc8Xxl-wFLg2ACG6v_4oUQ/sync';

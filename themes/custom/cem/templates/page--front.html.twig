@@ -52,7 +52,9 @@
       <div class="inner wrapper">
         <h1 class="logo">
           <span class="title">CEM</span>
-          <span class="sub-title"> centro de estudo da metrópole</span>
+            {% trans %}
+              <span class="sub-title"> centro de estudo da metrópole</span>
+            {% endtrans %}
         </h1>
         <div class="header-search">
           <form>
@@ -62,7 +64,9 @@
             </div>
           </form>
         </div>
-        <a href="#contato" class="header-top-btn-contact"><span>Fale Conosco</span></a>
+          {% trans %}
+            <a href="#contato" class="header-top-btn-contact"><span>Fale Conosco</span></a>
+          {% endtrans %}
       </div>
     </div>
     <nav class="header-menu">
@@ -89,10 +93,271 @@
           {{ drupal_entity('block', 'sidebar_right') }}
       </div>
     </section>
+    <!-- home call boxes end -->
+    <!-- home news and agenda init -->
+    <div class="container-fluid home-news-and-agenda">
+      <div class="row">
+        <div class="col-xs-12 wrapper">
+          <div class="row">
+            <!-- home news init -->
+            <div class="col-md-9">
+              <section class="home-news">
+                <div class="home-news-header">
+                    {% trans %}
+                      <h2>notícias em destaque</h2>
+                       <a href="#" class="link-more">mais notícias</a>
+                    {% endtrans %}
+                </div>
+                <div class="row">
+                  <!-- home news item init -->
+                  {{ drupal_view('noticia','bloco_noticia_home') }}
+                  <!-- home news item end -->
+                </div>
+              </section>
+            </div>
+            <!-- home news end -->
+            <!-- home agenda init -->
+            <div class="col-md-3">
+              <section class="home-agenda">
+                <div class="home-agenda-header">
+                    {% trans %}
+                      <h2>eventos/agenda</h2>
+                    {% endtrans %}
+                </div>
+                <div class="home-agenda-box">
+                  <!-- home agenda item init -->
+                  <div class="home-agenda-item">
+                    <div class="image">
+                      <a href="#">
+                        <img src="../assets/img/home-agenda-foto.jpg">
+                      </a>
+                    </div>
+                    <div class="text">
+                      <a href="#">Vozes à margem: periferias, estética e política.</a>
+                    </div>
+                    <div class="data">
+                      <a href="#">
+                        Data - 16/01/2018
+                      </a>
+                    </div>
+                  </div>
+                  <!-- home agenda item end -->
+                  <!-- home agenda item init -->
+                  <div class="home-agenda-item">
+                    <div class="image">
+                      <a href="#">
+                        <img src="../assets/img/home-agenda-foto.jpg">
+                      </a>
+                    </div>
+                    <div class="text">
+                      <a href="#">Vozes à margem: periferias, estética e política.</a>
+                    </div>
+                    <div class="data">
+                      <a href="#">
+                        Data - 16/01/2018
+                      </a>
+                    </div>
+                  </div>
+                  <!-- home agenda item end -->
+                  <!-- home agenda item init -->
+                  <div class="home-agenda-item">
+                    <div class="image">
+                      <a href="#">
+                        <img src="../assets/img/home-agenda-foto.jpg">
+                      </a>
+                    </div>
+                    <div class="text">
+                      <a href="#">Vozes à margem: periferias, estética e política.</a>
+                    </div>
+                    <div class="data">
+                      <a href="#">
+                        Data - 16/01/2018
+                      </a>
+                    </div>
+                  </div>
+                  <!-- home agenda item end -->
+                  <a href="#" class="link-more">mais eventos</a>
+                </div>
+              </section>
+            </div>
+            <!-- home agenda end -->
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- home news and agenda end -->
+    <!-- home video and publications init -->
+    <div class="container-fluid home-videos-and-publications">
+      <div class="row">
+        <div class="col-xs-12 wrapper">
+          <div class="row">
+            <div class="col-md-4">
+              <!-- home video init -->
+              <section class="home-video">
+                <div class="home-video-header">
+                  <h2>vídeos</h2>
+                  <a href="#" class="link-more">mais vídeos</a>
+                </div>
+                <div class="home-video-box">
+                  <div class="inner">
+                    <!-- home video item init -->
+                    <div class="home-video-item">
+                      <div class="image">
+                        <a href="#">
+                          <img src="../assets/img/home-video-foto.jpg">
+                        </a>
+                      </div>
+                      <div class="title">
+                        <h3>
+                          <a href="#">Notas das Escolas - Visão Geral (Marta Arretche)</a>
+                        </h3>
+                      </div>
+                      <div class="text">
+                        <p>
+                          <a href="#">Marta Arretche, diretora do Centro de Estudos da Metrópole (CEM / USP - Fapesp) faz uma apresentação geral do projeto de georreferenciamento das escolas da Região Metropolitana de São Paulo (RMSP).</a>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- home video item end -->
+                    <!-- home video item init -->
+                    <div class="home-video-item">
+                      <div class="image">
+                        <a href="#">
+                          <img src="../assets/img/home-video-foto.jpg">
+                        </a>
+                      </div>
+                      <div class="title">
+                        <h3>
+                          <a href="#">Notas das Escolas - Visão Geral (Marta Arretche)</a>
+                        </h3>
+                      </div>
+                      <div class="text">
+                        <p>
+                          <a href="#">Marta Arretche, diretora do Centro de Estudos da Metrópole (CEM / USP - Fapesp) faz uma apresentação geral do projeto de georreferenciamento das escolas da Região Metropolitana de São Paulo (RMSP).</a>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- home video item end -->
+                    <!-- home video item init -->
+                    <div class="home-video-item">
+                      <div class="image">
+                        <a href="#">
+                          <img src="../assets/img/home-video-foto.jpg">
+                        </a>
+                      </div>
+                      <div class="title">
+                        <h3>
+                          <a href="#">Notas das Escolas - Visão Geral (Marta Arretche)</a>
+                        </h3>
+                      </div>
+                      <div class="text">
+                        <p>
+                          <a href="#">Marta Arretche, diretora do Centro de Estudos da Metrópole (CEM / USP - Fapesp) faz uma apresentação geral do projeto de georreferenciamento das escolas da Região Metropolitana de São Paulo (RMSP).</a>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- home video item end -->
+                  </div>
+                </div>
+              </section>
+              <!-- home video end -->
+            </div>
+            <div class="col-md-8">
+              <!-- home publications init -->
+              <section class="home-publications">
+                <div class="home-publications-header">
+                  <h2>publicações</h2>
+                  <a href="#" class="link-more">mais publicações</a>
+                </div>
+                <div class="home-publications-box">
+                  <div class="row">
+                    <!-- home publications item init -->
+                    {{ drupal_view('publicacao','bloco_publicacao_home') }}
+                    <!-- home publications item end -->
+                  </div>
+                </div>
+              </section>
+              <!-- home publications end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- home video and publications end -->
+
+    <!-- home pesquisadores and apoio init -->
+    <div class="container-fluid home-pesquisadores-and-apoio">
+      <div class="row">
+        <div class="col-xs-12 wrapper">
+          <div class="row">
+            <!-- home pesquisadores init -->
+            <div class="col-xs-12">
+              <section class="home-pesquisadores">
+                <div class="home-pesquisadores-header">
+                    {% trans %}
+                      <span class="pre">pesquisadores</span>
+                      <h2>coordenadores de projetos</h2>
+                    {% endtrans %}
+                </div>
+                <div class="home-pesquisadores-box">
+                  <div class="row">
+                    <!-- home pesquisador item init -->
+                    <div class="home-pesquisadores-item">
+                      {{ drupal_view('colaborador','bloco_colaborador_home') }}
+                  </div>
+                </div>
+                </div>
+              </section>
+            </div>
+            <!-- home pesquisadores init -->
+            <!-- home apoio init -->
+            <!-- home apoio init -->
+            <div class="col-xs-12">
+              <section class="home-apoio">
+                  {% trans %}
+                    <div class="title">apoio</div>
+                  {% endtrans %}
+                <div class="logos">
+                  {{ drupal_entity('block','apoio') }}
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- home pesquisadores and apoio end -->
 
 
   </main>
+<footer>
+  <!-- footer newsletter init -->
+  <section class="footer-newsletter">
+    <div class="inner wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="footer-newsletter-form">
+              <form>
+                <div>
+                 <!-- <input type="text" placeholder="Seu melhor e-mail" class="footer-newsletter-campo-email"> -->
+                 <!-- <input type="submit" value="cadastrar" class="footer-newsletter-campo-cadastrar"> -->
+                  {{ drupal_entity('block','webform') }}
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="footer-newsletter-text">
+              <span>RECEBA NOSSOS INFORMATIVOS</span><br> Não se preocupe, também não gostamos de SPAM.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+
 
   {% if page.footer %}
     <footer role="contentinfo">
