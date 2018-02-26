@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+// ### Helpers 
+@import     
+    "_helpers/_variables",     
+    "_helpers/_mixin",     
+    "_helpers/_reset"; // normalize
+
+
+// ### Bases do projeto
+@import 
+    "_base/_base.scss",
+    "_base/_typography.scss";
+
+// ### Bases do projeto
+@import
+    "_components/_home-slider/__global.scss",
+    "_components/_home-call-boxes/__global.scss",
+    "_components/_home-news-and-agenda/__global.scss",
+    "_components/_home-video-and-publications/__global.scss",
+    "_components/_home-pesquisadores-and-apoio/__global.scss";
+
+
+// ### Layout
+@import 
+    "_layout/_header/__global.scss",
+    "_layout/_footer/__global.scss";

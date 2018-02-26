@@ -1,0 +1,9 @@
+.footer{
+    float: left;
+    width: 100%;
+    @include cf();
+}
+
+@import "_footer-newsletter.scss";
+@import "_footer-navigation.scss";
+@import "_footer-copyright.scss";
