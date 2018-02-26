@@ -1,0 +1,110 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the basic structure of a single Drupal page.
+ *
+ * Variables:
+ * - logged_in: A flag indicating if user is logged in.
+ * - root_path: The root path of the current page (e.g., node, admin, user).
+ * - node_type: The content type for the current node, if the page is a node.
+ * - head_title: List of text elements that make up the head_title variable.
+ *   May contain one or more of the following:
+ *   - title: The title of the page.
+ *   - name: The name of the site.
+ *   - slogan: The slogan of the site.
+ * - page_top: Initial rendered markup. This should be printed before 'page'.
+ * - page: The rendered page markup.
+ * - page_bottom: Closing rendered markup. This variable should be printed after
+ *   'page'.
+ * - db_offline: A flag indicating if the database is offline.
+ * - placeholder_token: The token for generating head, css, js and js-bottom
+ *   placeholders.
+ *
+ * @see template_preprocess_html()
+ *
+ * @ingroup themeable
+ */
+#}
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+  <body{{ attributes }}>
+    {#
+      Keyboard navigation/accessibility link to main content section in
+      page.html.twig.
+    #}
+    <a href="#main-content" class="visually-hidden focusable">
+      {{ 'Skip to main content'|t }}
+    </a>
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
+    <section class="footer-navigation">
+      <div class="inner wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="row footer-nav-infos">
+                <div class="col-md-5">
+                  <div class="title">suporte</div>
+                  <div class="infos">
+                    <a href="mailto:sac@centrodametropole.org.br">sac@centrodametropole.org.br</a><br>
+                    <span class="phone">(11) 3834-0000     |    0800 000 000</span>
+                    <div class="social">
+                      <ul>
+                        <li class="icon-facebook"><a href="#"><span>facebook</span></a></li>
+                        <li class="icon-twitter"><a href="#"><span>twitter</span></a></li>
+                        <li class="icon-instagram"><a href="#"><span>instagram</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="title">menu</div>
+                  <nav class="footer-nav">
+                    <ul>
+                      <li><a href="#">home</a></li>
+                      <li><a href="#">pesquisadores</a></li>
+                      <li><a href="#">quem somos</a></li>
+                      <li><a href="#">mapa do site</a></li>
+                      <li><a href="#">fale conosco</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="col-md-3">
+                  <div class="title">páginas</div>
+                  <nav class="footer-nav">
+                    <ul>
+                      <li><a href="#">pesquisa</a></li>
+                      <li><a href="#">base de dados</a></li>
+                      <li><a href="#">geoprocessamento</a></li>
+                      <li><a href="#">capacitação</a></li>
+                      <li><a href="#">publicações</a></li>
+                      <li><a href="#">sistemas interativos</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              {{ drupal_entity('block','footerlicense') }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer-copy">
+      <div class="inner wrapper">
+          {% trans %}
+            <p>©2018 CEM - CENTRO DE ESTUDOS DA METRÓPOLE</p>
+          {% endtrans %}
+      </div>
+    </section>
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>

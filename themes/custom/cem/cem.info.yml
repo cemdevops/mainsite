@@ -1,0 +1,21 @@
+name: CEM Theme
+type: theme
+description: Custom theme
+core: 8.x
+libraries:
+  - cem/bootstrap
+  - cem/fontawesome
+  - cem/owlcarousel
+  - cem/global-styling
+  - cem/global-scripts
+  - cem/googlefont
+
+regions:
+  header: Header
+  featured: Featured
+  breadcrumb: Breadcrumb
+  sidebar_first: 'Sidebar first'
+  content: Content
+  sidebar_second: 'Sidebar second'
+  footer_top: 'Footer Top'
+  footer_bottom: 'Footer Bottom'
