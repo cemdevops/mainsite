@@ -14,8 +14,9 @@ global-styling:
   version: VERSION
   css:
     layout:
-      assets/css/estilos.css: { weight: 0 }
       assets/css/vendors.css: { weight: 0 }
+      assets/css/estilos.css: { weight: 0 }
+     
 
 global-scripts:
   version: VERSION
