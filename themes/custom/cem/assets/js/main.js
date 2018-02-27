@@ -18,7 +18,8 @@
     'use strict';
     if ($('.home-publications').length) {
         //$('.home-publications div.home-publications-box>div.inner').slick({
-        $('.home-publications div.home-publications-box>div.row').slick({
+        // $('.home-publications div.home-publications-box>div.row').slick({
+        $('.home-publications div.home-publications-box>div.row>div.views-element-container>div').slick({
             autoplay: true,
             autoplaySpeed: 6000,
             dots: true,
@@ -61,6 +62,3 @@
         });
     }
 })(window, document, jQuery);
-/*(function (window, document, $) {
-    'use strict';
-})(window, document, jQuery);*/
