@@ -53,7 +53,7 @@
         <h1 class="logo">
           <span class="title">CEM</span>
             {% trans %}
-              <span class="sub-title"> centro de estudo da metrópole</span>
+              <span class="sub-title">centro de estudo da metrópole</span>
             {% endtrans %}
         </h1>
         <div class="header-search">
@@ -67,6 +67,15 @@
           {% trans %}
             <a href="#contato" class="header-top-btn-contact"><span>Fale Conosco</span></a>
           {% endtrans %}
+        <ul id="custom-menu-language" class="navbar-right navbar-nav">
+          <li>
+              {% if (language.getId() == 'en') %}
+                <a href="/pt-br/">(português)</a>
+              {% elseif (language.getId() == 'pt-br') %}
+                <a href="/en/">(english)</a>
+              {% endif %}
+          </li>
+        </ul>
       </div>
     </div>
     <nav class="header-menu">
@@ -128,7 +137,9 @@
                   <!-- home agenda item init -->
                   {{ drupal_view('evento','bloco_evento_home') }}
                   <!-- home agenda item end -->
-                  <a href="#" class="link-more">mais eventos</a>
+                    {% trans %}
+                      <a href="#" class="link-more">mais eventos</a>
+                    {% endtrans %}
                 </div>
               </section>
             </div>
