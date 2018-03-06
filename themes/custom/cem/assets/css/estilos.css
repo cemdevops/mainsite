@@ -2162,5 +2162,8 @@ header.header {
   padding: 0;
   margin: 0;
 }
+ul#custom-menu-language li {
+  list-style-type: none;
+}
 
 /*# sourceMappingURL=../../../sass */

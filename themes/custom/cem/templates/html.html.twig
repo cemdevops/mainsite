@@ -51,42 +51,18 @@
             <div class="col-md-8">
               <div class="row footer-nav-infos">
                 <div class="col-md-5">
-                  <div class="title">suporte</div>
-                  <div class="infos">
-                    <a href="mailto:sac@centrodametropole.org.br">sac@centrodametropole.org.br</a><br>
-                    <span class="phone">(11) 3834-0000     |    0800 000 000</span>
-                    <div class="social">
-                      <ul>
-                        <li class="icon-facebook"><a href="#"><span>facebook</span></a></li>
-                        <li class="icon-twitter"><a href="#"><span>twitter</span></a></li>
-                        <li class="icon-instagram"><a href="#"><span>instagram</span></a></li>
-                      </ul>
-                    </div>
-                  </div>
+                   {{ drupal_entity('block', 'suporte') }}
                 </div>
                 <div class="col-md-3">
                   <div class="title">menu</div>
                   <nav class="footer-nav">
-                    <ul>
-                      <li><a href="#">home</a></li>
-                      <li><a href="#">pesquisadores</a></li>
-                      <li><a href="#">quem somos</a></li>
-                      <li><a href="#">mapa do site</a></li>
-                      <li><a href="#">fale conosco</a></li>
-                    </ul>
+                        {{ drupal_menu('footer') }}
                   </nav>
                 </div>
                 <div class="col-md-3">
                   <div class="title">páginas</div>
                   <nav class="footer-nav">
-                    <ul>
-                      <li><a href="#">pesquisa</a></li>
-                      <li><a href="#">base de dados</a></li>
-                      <li><a href="#">geoprocessamento</a></li>
-                      <li><a href="#">capacitação</a></li>
-                      <li><a href="#">publicações</a></li>
-                      <li><a href="#">sistemas interativos</a></li>
-                    </ul>
+				   {{ drupal_menu('paginas') }}
                   </nav>
                 </div>
               </div>
