@@ -2,8 +2,7 @@
     'use strict';
     if ($('.home-pesquisadores').length) {
         //$('.home-publications div.home-publications-box>div.inner').slick({
-        // $('.home-pesquisadores div.home-pesquisadores-box>div.row').slick({
-        $('.home-pesquisadores div.home-pesquisadores-box>div.row>div.views-element-container>div').slick({
+        $('.home-pesquisadores div.home-pesquisadores-box>div.row').slick({
             autoplay: true,
             autoplaySpeed: 6000,
             dots: true,
@@ -19,8 +18,7 @@
     'use strict';
     if ($('.home-publications').length) {
         //$('.home-publications div.home-publications-box>div.inner').slick({
-        // $('.home-publications div.home-publications-box>div.row').slick({
-        $('.home-publications div.home-publications-box>div.row>div.views-element-container>div').slick({
+        $('.home-publications div.home-publications-box>div.row').slick({
             autoplay: true,
             autoplaySpeed: 6000,
             dots: true,
@@ -35,7 +33,7 @@
 (function(window, document, $) {
     'use strict';
     if ($('.home-slider').length) {
-        $('.home-slider .wrapper>div.views-element-container>div').slick({
+        $('.home-slider .wrapper>.view>div').slick({
             autoplay: true,
             autoplaySpeed: 6000,
             dots: true,
@@ -50,8 +48,7 @@
 (function(window, document, $) {
     'use strict';
     if ($('.home-video').length) {
-        // $('.home-video div.home-video-box div.inner').slick({
-        $('.home-video div.home-video-box div.inner>div.row>div.views-element-container>div').slick({
+        $('.home-video div.home-video-box div.inner').slick({
             autoplay: true,
             autoplaySpeed: 6000,
             dots: true,
