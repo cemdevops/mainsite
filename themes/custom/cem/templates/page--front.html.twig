@@ -1,45 +1,6 @@
 
-
+{% set language = language.getId() %}
 <div class="layout-container">
-
-  <header class="header">
-    <div class="header-top">
-      <div class="inner wrapper">
-        <h1 class="logo">
-          <span class="title">CEM</span>
-            {% trans %}
-              <span class="sub-title">centro de estudo da metrópole</span>
-            {% endtrans %}
-        </h1>
-        <div class="header-search">
-          <form>
-            <div>
-              <input type="text" placeholder="pesquisar no site" class="search-field">
-              <input type="submit" value="buscar" class="search-button">
-            </div>
-          </form>
-        </div>
-          {% trans %}
-            <a href="#contato" class="header-top-btn-contact"><span>Fale Conosco</span></a>
-          {% endtrans %}
-        <ul id="custom-menu-language" class="navbar-right navbar-nav">
-          <li>
-              {% if (language.getId() == 'en') %}
-                <a href="/pt-br/">(português)</a>
-              {% elseif (language.getId() == 'pt-br') %}
-                <a href="/en/">(english)</a>
-              {% endif %}
-          </li>
-        </ul>
-      </div>
-    </div>
-    <nav class="header-menu">
-      <div class="inner wrapper">
-        {{ drupal_menu('main') }}
-      </div>
-    </nav>
-  </header>
-
 
   <main role="main">
     <section class="container-fluid home-slider">
@@ -74,7 +35,7 @@
                 </div>
                 <div class="row">
                   <!-- home news item init -->
-                  {{ drupal_view('noticia','bloco_noticia_home') }}
+                  {{ drupal_view('noticia','bloco_noticia_home',language) }}
                   <!-- home news item end -->
                 </div>
               </section>
@@ -90,7 +51,7 @@
                 </div>
                 <div class="home-agenda-box">
                   <!-- home agenda item init -->
-                  {{ drupal_view('evento','bloco_evento_home') }}
+                  {{ drupal_view('evento','bloco_evento_home',language) }}
                   <!-- home agenda item end -->
                     {% trans %}
                       <a href="#" class="link-more">mais eventos</a>
@@ -120,7 +81,7 @@
                 <div class="home-video-box">
                   <div class="inner">
                     <!-- home video item init -->
-                    {{ drupal_view('video', 'bloco_video_home') }}
+                    {{ drupal_view('video', 'bloco_video_home',language) }}
                     <!-- home video item end -->
                   </div>
                 </div>
@@ -137,7 +98,7 @@
                 <div class="home-publications-box">
                   <div class="row">
                     <!-- home publications item init -->
-                    {{ drupal_view('publicacao','bloco_publicacao_home') }}
+                    {{ drupal_view('publicacao','bloco_publicacao_home',language) }}
                     <!-- home publications item end -->
                   </div>
                 </div>

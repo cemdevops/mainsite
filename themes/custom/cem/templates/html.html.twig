@@ -34,6 +34,44 @@
     <js-placeholder token="{{ placeholder_token }}">
   </head>
   <body{{ attributes }}>
+    <header class="header">
+      <div class="header-top">
+        <div class="inner wrapper">
+          <h1 class="logo">
+            <span class="title">CEM</span>
+              {% trans %}
+            <span class="sub-title">centro de estudo da metrópole</span>
+              {% endtrans %}
+          </h1>
+          <div class="header-search">
+            <form>
+              <div>
+                <input type="text" placeholder="pesquisar no site" class="search-field">
+                <input type="submit" value="buscar" class="search-button">
+              </div>
+            </form>
+          </div>
+            {% trans %}
+          <a href="#contato" class="header-top-btn-contact"><span>Fale Conosco</span></a>
+            {% endtrans %}
+          <ul id="custom-menu-language" class="navbar-right navbar-nav">
+            <li>
+                {% set language = language.getId() %}
+                {% if (language == 'en') %}
+                  <a href="/pt-br/">(português)</a>
+                {% elseif (language == 'pt-br') %}
+                  <a href="/en/">(english)</a>
+                {% endif %}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="header-menu">
+        <div class="inner wrapper">
+            {{ drupal_menu('main') }}
+        </div>
+      </nav>
+    </header>
     {#
       Keyboard navigation/accessibility link to main content section in
       page.html.twig.
