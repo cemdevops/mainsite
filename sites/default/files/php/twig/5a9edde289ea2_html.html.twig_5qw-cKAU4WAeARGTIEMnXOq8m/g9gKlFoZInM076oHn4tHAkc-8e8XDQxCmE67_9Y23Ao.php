@@ -15,13 +15,13 @@ class __TwigTemplate_5b905d395459caa199a08d4b9fc1b53f05f0230fbb036d41e097b3e302f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $tags = array("trans" => 42, "set" => 59, "if" => 60);
-        $filters = array("safe_join" => 32, "t" => 80);
+        $tags = array("trans" => 43, "if" => 60);
+        $filters = array("safe_join" => 33, "t" => 80);
         $functions = array("drupal_menu" => 71, "drupal_entity" => 92);
 
         try {
             $this->env->getExtension('Twig_Extension_Sandbox')->checkSecurity(
-                array('trans', 'set', 'if'),
+                array('trans', 'if'),
                 array('safe_join', 't'),
                 array('drupal_menu', 'drupal_entity')
             );
@@ -41,30 +41,31 @@ class __TwigTemplate_5b905d395459caa199a08d4b9fc1b53f05f0230fbb036d41e097b3e302f
 
         // line 28
         echo "<!DOCTYPE html>
+
 <html";
-        // line 29
+        // line 30
         echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, (isset($context["html_attributes"]) ? $context["html_attributes"] : null), "html", null, true));
         echo ">
   <head>
     <head-placeholder token=\"";
-        // line 31
+        // line 32
         echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, (isset($context["placeholder_token"]) ? $context["placeholder_token"] : null), "html", null, true));
         echo "\">
     <title>";
-        // line 32
+        // line 33
         echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->renderVar($this->env->getExtension('Drupal\Core\Template\TwigExtension')->safeJoin($this->env, (isset($context["head_title"]) ? $context["head_title"] : null), " | ")));
         echo "</title>
     <css-placeholder token=\"";
-        // line 33
+        // line 34
         echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, (isset($context["placeholder_token"]) ? $context["placeholder_token"] : null), "html", null, true));
         echo "\">
     <js-placeholder token=\"";
-        // line 34
+        // line 35
         echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, (isset($context["placeholder_token"]) ? $context["placeholder_token"] : null), "html", null, true));
         echo "\">
   </head>
   <body";
-        // line 36
+        // line 37
         echo $this->env->getExtension('Twig_Extension_Sandbox')->ensureToStringAllowed($this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, (isset($context["attributes"]) ? $context["attributes"] : null), "html", null, true));
         echo ">
     <header class=\"header\">
@@ -73,9 +74,9 @@ class __TwigTemplate_5b905d395459caa199a08d4b9fc1b53f05f0230fbb036d41e097b3e302f
           <h1 class=\"logo\">
             <span class=\"title\">CEM</span>
               ";
-        // line 42
+        // line 43
         echo t("<span class=\"sub-title\">centro de estudo da metrópole</span>", array());
-        // line 45
+        // line 46
         echo "          </h1>
           <div class=\"header-search\">
             <form>
@@ -86,16 +87,13 @@ class __TwigTemplate_5b905d395459caa199a08d4b9fc1b53f05f0230fbb036d41e097b3e302f
             </form>
           </div>
             ";
-        // line 54
+        // line 55
         echo t("<a href=\"#contato\" class=\"header-top-btn-contact\"><span>Fale Conosco</span></a>", array());
-        // line 57
+        // line 58
         echo "          <ul id=\"custom-menu-language\" class=\"navbar-right navbar-nav\">
             <li>
                 ";
-        // line 59
-        $context["language"] = $this->getAttribute((isset($context["language"]) ? $context["language"] : null), "getId", array(), "method");
         // line 60
-        echo "                ";
         if (((isset($context["language"]) ? $context["language"] : null) == "en")) {
             // line 61
             echo "                  <a href=\"/pt-br/\">(português)</a>
@@ -211,7 +209,7 @@ class __TwigTemplate_5b905d395459caa199a08d4b9fc1b53f05f0230fbb036d41e097b3e302f
 
     public function getDebugInfo()
     {
-        return array (  195 => 122,  191 => 120,  189 => 117,  178 => 109,  169 => 103,  160 => 97,  152 => 92,  141 => 84,  137 => 83,  133 => 82,  128 => 80,  125 => 79,  118 => 71,  110 => 65,  106 => 63,  104 => 62,  101 => 61,  98 => 60,  96 => 59,  92 => 57,  90 => 54,  79 => 45,  77 => 42,  68 => 36,  63 => 34,  59 => 33,  55 => 32,  51 => 31,  46 => 29,  43 => 28,);
+        return array (  193 => 122,  189 => 120,  187 => 117,  176 => 109,  167 => 103,  158 => 97,  150 => 92,  139 => 84,  135 => 83,  131 => 82,  126 => 80,  123 => 79,  116 => 71,  108 => 65,  104 => 63,  102 => 62,  99 => 61,  97 => 60,  93 => 58,  91 => 55,  80 => 46,  78 => 43,  69 => 37,  64 => 35,  60 => 34,  56 => 33,  52 => 32,  47 => 30,  43 => 28,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

@@ -1,0 +1,8 @@
+<?php
+/**
+* Implements hook_blog_preprocess_html().
+*/
+function cem_preprocess_html(&$variables) {
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['language'] = $language;
+}
