@@ -26,6 +26,7 @@
  */
 #}
 <!DOCTYPE html>
+
 <html{{ html_attributes }}>
   <head>
     <head-placeholder token="{{ placeholder_token }}">
@@ -56,7 +57,6 @@
             {% endtrans %}
           <ul id="custom-menu-language" class="navbar-right navbar-nav">
             <li>
-                {% set language = language.getId() %}
                 {% if (language == 'en') %}
                   <a href="/pt-br/">(português)</a>
                 {% elseif (language == 'pt-br') %}
