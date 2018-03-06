@@ -1944,6 +1944,27 @@ header.header {
   display: block;
 }
 
+@media only screen and (min-width: 840px) and (max-width: 5000px) {
+  /* line 83, cem/assets/scss/_layout/_header/_menu.scss */
+  .header-menu.fixed {
+    height: 65px;
+  }
+  /* line 85, cem/assets/scss/_layout/_header/_menu.scss */
+  .header-menu.fixed > .inner.wrapper {
+    position: fixed;
+    top: 0;
+    max-width: none;
+    background-color: #086AAB;
+    border-bottom: solid 5px #CCCCCC;
+  }
+  /* line 91, cem/assets/scss/_layout/_header/_menu.scss */
+  .header-menu.fixed > .inner.wrapper > ul {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
 /* line 1, cem/assets/scss/_layout/_footer/__global.scss */
 .footer {
   float: left;
@@ -2162,6 +2183,8 @@ header.header {
   padding: 0;
   margin: 0;
 }
+
+/*# sourceMappingURL=../../../sass */
 ul#custom-menu-language li {
   list-style-type: none;
 }
