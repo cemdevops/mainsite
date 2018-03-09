@@ -7,6 +7,7 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\metatag\MetatagManagerInterface;
 use Drupal\metatag_views\MetatagViewsValuesCleanerTrait;
+use Drupal\views\ViewEntityInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -31,30 +32,24 @@ class MetatagViewsEditForm extends FormBase {
   protected $viewsManager;
 
   /**
-   * Array of display settings from ViewEntityInterface::getDisplay().
+   * Array of display settings as returned from getDisplay of ViewEntityInterface
    *
-   * @var array
+   * @var  array
    */
   protected $display;
 
   /**
-   * View entity object.
+   * View entity object
    *
-   * @var \Drupal\views\ViewEntityInterface
+   * @var  ViewEntityInterface
    */
   protected $view;
 
-  /**
-   * {@inheritdoc}
-   */
   public function __construct(MetatagManagerInterface $metatag_manager, EntityTypeManagerInterface $entity_manager) {
     $this->metatagManager = $metatag_manager;
     $this->viewsManager = $entity_manager->getStorage('view');
   }
 
-  /**
-   * {@inheritdoc}
-   */
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('metatag.manager'),
@@ -87,8 +82,8 @@ class MetatagViewsEditForm extends FormBase {
     $form['metatags']['#title'] = t('Metatags');
     $form['metatags']['#type'] = 'fieldset';
 
-    // Need to create that AFTER the $form['metatags'] as the whole form is
-    // passed to the $metatagManager->form() which causes duplicated field.
+    // Need to create that AFTER the $form['metatags'] as the whole form
+    // is passed to the $metatagManager->form() which causes duplicated field.
     $form['view'] = [
       '#type' => 'value',
       '#title' => $this->t('View'),
@@ -97,10 +92,10 @@ class MetatagViewsEditForm extends FormBase {
       '#required' => TRUE,
     ];
 
-    $form['actions']['submit'] = [
+    $form['submit'] = array(
       '#type' => 'submit',
       '#value' => t('Submit'),
-    ];
+    );
 
     return $form;
   }
@@ -109,6 +104,7 @@ class MetatagViewsEditForm extends FormBase {
    * {@inheritdoc}
    */
   public function form(array $values, array $element, array $token_types = [], array $included_groups = NULL, array $included_tags = NULL) {
+
     // Add the outer fieldset.
     $element += [
       '#type' => 'details',
@@ -162,15 +158,15 @@ class MetatagViewsEditForm extends FormBase {
     unset($metatags['view']);
     $metatags = $this->clearMetatagViewsDisallowedValues($metatags);
 
-    /** @var \Drupal\views\ViewEntityInterface $view */
+    /** @var ViewEntityInterface $view */
     $view = $this->viewsManager->load($view_id);
 
     // Store the metatags on the view.
     $config_name = $view->getConfigDependencyName();
     $config_path = 'display.' . $display_id . '.display_options.display_extenders.metatag_display_extender.metatags';
 
-    // Set configuration values based on form submission. This always edits the
-    // original language.
+    // Set configuration values based on form submission.
+    // This always edits the original language.
     $configuration = $this->configFactory()->getEditable($config_name);
     if (empty($this->removeEmptyTags($metatags))) {
       $configuration->clear($config_path);

@@ -2,6 +2,7 @@
 
 namespace Drupal\metatag_dc_advanced\Tests;
 
+use Drupal\simpletest\WebTestBase;
 use Drupal\metatag\Tests\MetatagTagsTestBase;
 
 /**
@@ -14,17 +15,17 @@ class MetatagDublinCoreAdvancedTagsTest extends MetatagTagsTestBase {
   /**
    * {@inheritdoc}
    */
-  private $tags = [];
+  public $tags = [];
 
   /**
-   * {@inheritdoc}
+   * The tag to look for when testing the output.
    */
-  private $testTag = 'meta';
+  public $test_tag = 'meta';
 
   /**
-   * {@inheritdoc}
+   * The attribute to look for to indicate which tag.
    */
-  private $testNameAttribute = 'property';
+  public $test_name_attribute = 'property';
 
   /**
    * {@inheritdoc}

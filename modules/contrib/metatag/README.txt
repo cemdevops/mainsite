@@ -130,19 +130,17 @@ Option 1:
       'keywords' => 'Some,Keywords',
     ]),
   ];
-  $node = \Drupal::entityTypeManager()
-    ->getStorage($entity_type)
-    ->create($values);
+  $node = \Drupal::entityTypeManager()->getStorage($entity_type)->create($values);
   $node->save();
 
 Option 2:
 
-  $node = Node::create([
+  $node = Node::create(array(
     'type' => article,
     'langcode' => 'en',
     'status' => 1,
     'uid' => 1,
-  ]);
+  ));
   $node->set('title', 'Testing metatag creation');
   $node->set('field_meta_tags', serialize([
     'title' => 'Some title',
@@ -181,9 +179,9 @@ Related modules
 Some modules are available that extend Metatag with additional or complimentary
 functionality:
 
-* Schema.org Metatag
+* Schema Metatag
   https://www.drupal.org/project/schema_metatag
-  Extensive solution for adding schema.org / JSON-LD support to Metatag.
+  Extensive solution for adding schema.org support to Metatag.
 
 * Context Metadata
   https://www.drupal.org/project/context_metadata
