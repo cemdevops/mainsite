@@ -2,6 +2,7 @@
 
 namespace Drupal\metatag_open_graph\Tests;
 
+use Drupal\simpletest\WebTestBase;
 use Drupal\metatag\Tests\MetatagTagsTestBase;
 
 /**
@@ -14,7 +15,7 @@ class MetatagOpenGraphTagsTest extends MetatagTagsTestBase {
   /**
    * {@inheritdoc}
    */
-  private $tags = [
+  public $tags = [
     'article_author',
     'article_expiration_time',
     'article_modified_time',
@@ -56,14 +57,14 @@ class MetatagOpenGraphTagsTest extends MetatagTagsTestBase {
   ];
 
   /**
-   * {@inheritdoc}
+   * The tag to look for when testing the output.
    */
-  private $testTag = 'meta';
+  public $test_tag = 'meta';
 
   /**
-   * {@inheritdoc}
+   * The attribute to look for to indicate which tag.
    */
-  private $testNameAttribute = 'property';
+  public $test_name_attribute = 'property';
 
   /**
    * {@inheritdoc}
@@ -76,7 +77,7 @@ class MetatagOpenGraphTagsTest extends MetatagTagsTestBase {
   /**
    * Each of these meta tags has a different tag name vs its internal name.
    */
-  private function getTestTagName($tag_name) {
+  public function getTestTagName($tag_name) {
     // Replace the first underline with a colon.
     $tag_name = str_replace('og_', 'og:', $tag_name);
     $tag_name = str_replace('article_', 'article:', $tag_name);

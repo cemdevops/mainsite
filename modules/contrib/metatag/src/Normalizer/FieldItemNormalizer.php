@@ -10,14 +10,14 @@ use Drupal\serialization\Normalizer\NormalizerBase;
 class FieldItemNormalizer extends NormalizerBase {
 
   /**
-   * {@inheritdoc}
+   * The interface or class that this Normalizer supports.
+   *
+   * @var string
    */
   protected $supportedInterfaceOrClass = 'Drupal\metatag\Plugin\Field\FieldType\MetatagFieldItem';
 
-  /**
-   * {inheritDoc}
-   */
-  public function normalize($object, $format = NULL, array $context = []) {
+
+  public function normalize($object, $format = null, array $context = array()) {
     return t('Metatags are normalized in the metatag field.');
   }
 

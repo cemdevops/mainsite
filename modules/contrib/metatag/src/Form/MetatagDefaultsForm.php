@@ -4,8 +4,11 @@ namespace Drupal\metatag\Form;
 
 use Drupal\Core\Entity\ContentEntityType;
 use Drupal\Core\Entity\EntityForm;
+use Drupal\Core\Entity\EntityTypeBundleInfoInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 /**
  * Class MetatagDefaultsForm.
@@ -25,7 +28,7 @@ class MetatagDefaultsForm extends EntityForm {
     $form['#ajax_wrapper_id'] = 'metatag-defaults-form-ajax-wrapper';
     $ajax = [
       'wrapper' => $form['#ajax_wrapper_id'],
-      'callback' => '::rebuildForm',
+      'callback' => '::rebuildForm'
     ];
     $form['#prefix'] = '<div id="' . $form['#ajax_wrapper_id'] . '">';
     $form['#suffix'] = '</div>';
@@ -53,11 +56,7 @@ class MetatagDefaultsForm extends EntityForm {
         '#options' => $options,
         '#required' => TRUE,
         '#default_value' => $default_type,
-        '#ajax' => $ajax + [
-          'trigger_as' => [
-            'name' => 'select_id_submit',
-          ],
-        ],
+        '#ajax' => $ajax + ['trigger_as' => ['name' => 'select_id_submit']]
       ];
       $form['select_id_submit'] = [
         '#type' => 'submit',
@@ -65,8 +64,8 @@ class MetatagDefaultsForm extends EntityForm {
         '#name' => 'select_id_submit',
         '#ajax' => $ajax,
         '#attributes' => [
-          'class' => ['js-hide'],
-        ],
+          'class' => ['js-hide']
+        ]
       ];
       $values = [];
     }
@@ -144,8 +143,8 @@ class MetatagDefaultsForm extends EntityForm {
     $tag_values = [];
     foreach ($tags as $tag_id => $tag_definition) {
       if ($form_state->hasValue($tag_id)) {
-        // Some plugins need to process form input before storing it. Hence, we
-        // set it and then get it.
+        // Some plugins need to process form input before storing it.
+        // Hence, we set it and then get it.
         $tag = $tag_manager->createInstance($tag_id);
         $tag->setValue($form_state->getValue($tag_id));
         if (!empty($tag->value())) {
@@ -162,7 +161,6 @@ class MetatagDefaultsForm extends EntityForm {
           '%label' => $metatag_defaults->label(),
         ]));
         break;
-
       default:
         drupal_set_message($this->t('Saved the %label Metatag defaults.', [
           '%label' => $metatag_defaults->label(),
@@ -181,9 +179,9 @@ class MetatagDefaultsForm extends EntityForm {
   protected function getAvailableBundles() {
     $options = [];
     $entity_types = $this->getSupportedEntityTypes();
-    /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $entity_manager */
+    /** @var EntityTypeManagerInterface $entity_manager */
     $entity_manager = \Drupal::service('entity_type.manager');
-    /** @var \Drupal\Core\Entity\EntityTypeBundleInfoInterface $bundle_info */
+    /** @var EntityTypeBundleInfoInterface $bundle_info */
     $bundle_info = \Drupal::service('entity_type.bundle.info');
     $metatags_defaults_manager = $entity_manager->getStorage('metatag_defaults');
     foreach ($entity_types as $entity_type => $entity_label) {
@@ -207,12 +205,12 @@ class MetatagDefaultsForm extends EntityForm {
    * Returns a list of supported entity types.
    *
    * @return array
-   *   A list of available entity types as $machine_name => $label.
+   *  A list of available entity types as $machine_name => $label.
    */
   protected function getSupportedEntityTypes() {
     $entity_types = [];
 
-    /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $entity_manager */
+    /** @var EntityTypeManagerInterface $entity_manager */
     $entity_manager = \Drupal::service('entity_type.manager');
 
     // A list of entity types that are not supported.
@@ -251,24 +249,22 @@ class MetatagDefaultsForm extends EntityForm {
     return $entity_types;
   }
 
-  /**
-   * Returns the text label for the entity type specified.
-   *
-   * @param Drupal\Core\Entity\EntityTypeInterface $entityType
-   *   The entity type to process.
-   *
-   * @return string
-   *   A label.
-   */
-  protected function getEntityTypeLabel(EntityTypeInterface $entityType) {
-    $label = $entityType->getLabel();
+ /**
+  * Returns the text label for the entity type specified.
+  *
+  * @param EntityTypeInterface $entityType
+  *
+  * @return string
+  */
+ protected function getEntityTypeLabel(EntityTypeInterface $entityType) {
+   $label = $entityType->getLabel();
 
-    if (is_a($label, 'Drupal\Core\StringTranslation\TranslatableMarkup')) {
-      /** @var \Drupal\Core\StringTranslation\TranslatableMarkup $label */
-      $label = $label->render();
-    }
+   if (is_a($label, 'Drupal\Core\StringTranslation\TranslatableMarkup')) {
+     /** @var TranslatableMarkup $label */
+     $label = $label->render();
+   }
 
-    return $label;
-  }
+   return $label;
+ }
 
 }

@@ -129,15 +129,15 @@ class MetatagDisplayExtender extends DisplayExtenderPluginBase {
    * This output is returned as an array.
    */
   public function optionsSummary(&$categories, &$options) {
-    $categories['metatags'] = [
+    $categories['metatags'] = array(
       'title' => t('Meta tags'),
       'column' => 'second',
-    ];
-    $options['metatags'] = [
+    );
+    $options['metatags'] = array(
       'category' => 'metatags',
       'title' => t('Meta tags'),
       'value' => $this->hasMetatags() ? t('Overridden') : t('Using defaults'),
-    ];
+    );
   }
 
   /**
@@ -165,7 +165,7 @@ class MetatagDisplayExtender extends DisplayExtenderPluginBase {
    *   The meta tag values.
    */
   public function getMetatags() {
-    $metatags = [];
+    $metatags = array();
 
     if (!empty($this->options['metatags'])) {
       $metatags = $this->options['metatags'];
