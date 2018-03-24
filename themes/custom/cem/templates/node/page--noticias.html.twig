@@ -1,3 +1,5 @@
+{% set language = language.getId() %}
+
 <h3>Notícias em destaque</h3>
 
-{{ drupal_view('noticia', 'page_noticias') }}
+{{ drupal_view('noticia', 'page_noticias', language) }}
