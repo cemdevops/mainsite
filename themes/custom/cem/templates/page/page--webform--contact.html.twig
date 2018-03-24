@@ -1,0 +1,15 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            {% trans %}
+            <h3>preencha os dados obrigatórios</h3>
+            <h2>e digite sua mensagem</h2>
+            {% endtrans %}
+            {{ page.content }}
+        </div>
+        <div class="col-md-4">
+            {{  drupal_entity('block_content','6') }}
+        </div>
+    </div>
+</div>
