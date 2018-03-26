@@ -73,15 +73,16 @@
 							  </div>
 								<!-- side bar agenda end -->
 
-								<!-- side bar  noticias recentes init -->
 								<div class="side-bar-box recente">
 									<div class="header">Notícias Recentes</div>
-									<div class="box">
-						
-									</div>
+										<div class="box">
+											<!-- side bar noticia recente item init -->
+											{{ drupal_view('noticia','bloco_noticia_interna',language) }}
+											<!-- side bar noticia recente item end -->
+											<a href="#" class="link-more">mais notícias</a>
+										</div>
 								</div>
 								<!-- side bar  noticias recentes end -->
-
 							</div>
 						</div>
 					</div>
