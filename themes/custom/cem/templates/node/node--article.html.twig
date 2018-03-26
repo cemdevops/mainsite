@@ -73,8 +73,63 @@
  */
 #}
 
-<article{{ attributes }}>
-
-    {{ drupal_field('body','node') }}
-
-</article>
+    <main class="main">
+        <!-- internas top header init -->
+        <section class="internas-top-header">
+            <div class="inner wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="breadcrumb">
+                                <a href="#">home</a>
+                                <a href="#">notícias em destaque</a>
+                                <a href="#">{{ label }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- internas top header end -->
+		      <!-- internas container init -->
+        <section class="internas-container">
+            <div class="inner wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- noticia listagem coluna left init -->
+                        <div class="col-md-9 col-xs-12">
+                            <!-- noticia header init -->
+                            <div class="noticia-header">
+                                <div class="data">
+                                    <span>26/02/2018</span>
+                                </div>
+                                <div class="infos">
+                                    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartilhar</a></div>
+                                </div>
+                                <div class="social">
+                                    <a href="#" class="facebook"><span>Facebook</span></a>
+                                    <a href="#" class="twitter"><span>Twitter</span></a>
+                                    <a href="#" class="linkedin"><span>linkedin</span></a>
+                                </div>
+                                <div class="title">
+                                    <h1>
+                                        Atualização da Base de logradouros da Região Metropolitana
+                                    </h1>
+                                    <div class="sub-title">
+                                        <p>Atualização da base de logradouros da região metropolitana de São Paulo.</p>
+                                    </div>
+                                </div>
+                                <div class="autor">
+                                    Por José Marcos Pinto da Cunha, São Paulo.
+                                </div>
+                            </div>
+                            <!-- noticia header end -->
+                            <!-- noticia conteudo init -->
+		 <div class="noticia-conteudo">
+			{{ drupal_field('body','node') }}
+		</div>
+              </div>
+                </div>
+            </div>
+        </section>
+	</main>
