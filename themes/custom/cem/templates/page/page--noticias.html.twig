@@ -1,5 +1,45 @@
 {% set language = language.getId() %}
+<main class="main">
+    <!-- internas top header init -->
+    <section class="internas-top-header">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        {% trans %}
+                        <h1 class="title-page icon icon-news">Notícias em destaque</h1>
+                        {% endtrans %}
+                        <!-- noticias header busca init -->
+                        <div class="header-top-busca">
+                            <div class="header-search">
+                                <form>
+                                    <div>
+                                        <input type="text" placeholder="pesquisar no site" class="search-field">
+                                        <input type="submit" value="buscar" class="search-button">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- noticias header busca end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h3>Notícias em destaque</h3>
+    <!-- internas top header end -->
+    <!-- internas container init -->
+    <section class="internas-container">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- noticia listagem coluna left init -->
+                    <div class="col-md-9 col-xs-12">
+                        {{ drupal_view('noticia', 'page_noticias', language) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-{{ drupal_view('noticia', 'page_noticias', language) }}
+</main>
