@@ -5,16 +5,14 @@
                 <!-- contato main content init -->
                 <div class="col-xs-12 coordenador-perfil-main-content">
                     <div class="internas-title-with-sub">
-                        <span class="pre">preencha os dados obrigatórios</span>
-                        <h2>e digite sua mensagem</h2>
+                        {% trans %}
+                            <span class="pre">preencha os dados obrigatórios</span>
+                            <h2>e digite sua mensagem</h2>
+                        {% endtrans %}
                     </div>
                     <div class="row">
                         <!-- form content init -->
                         <div class="col-md-9 col-xs-12">
-                            {% trans %}
-                            <h3>preencha os dados obrigatórios</h3>
-                            <h2>e digite sua mensagem</h2>
-                            {% endtrans %}
                             {{ page.content }}
                         </div>
 
