@@ -1,15 +1,34 @@
+<section class="internas-container">
+    <div class="inner wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- contato main content init -->
+                <div class="col-xs-12 coordenador-perfil-main-content">
+                    <div class="internas-title-with-sub">
+                        <span class="pre">preencha os dados obrigatórios</span>
+                        <h2>e digite sua mensagem</h2>
+                    </div>
+                    <div class="row">
+                        <!-- form content init -->
+                        <div class="col-md-9 col-xs-12">
+                            {% trans %}
+                            <h3>preencha os dados obrigatórios</h3>
+                            <h2>e digite sua mensagem</h2>
+                            {% endtrans %}
+                            {{ page.content }}
+                        </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            {% trans %}
-            <h3>preencha os dados obrigatórios</h3>
-            <h2>e digite sua mensagem</h2>
-            {% endtrans %}
-            {{ page.content }}
-        </div>
-        <div class="col-md-4">
-            {{  drupal_entity('block_content','6') }}
+
+                        <div class="row contato-box-infos-row">
+                            <div class="col-md-6 col-xs-12">
+                                <div class="contato-box-infos">
+                                    {{  drupal_entity('block_content','6') }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
