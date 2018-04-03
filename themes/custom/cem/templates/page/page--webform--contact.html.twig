@@ -1,36 +1,93 @@
-<section class="internas-container">
-    <div class="inner wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- contato main content init -->
-                <div class="col-xs-12 coordenador-perfil-main-content">
-                    <div class="internas-title-with-sub">
+<main class="main">
+    <!-- internas top header init -->
+    <section class="internas-top-header">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
                         {% trans %}
-                            <span class="pre">preencha os dados obrigatórios</span>
-                            <h2>e digite sua mensagem</h2>
+                            <h1 class="title-page icon icon-mail">contato / fale conosco</h1>
                         {% endtrans %}
                     </div>
-                    <div class="row">
-                        <!-- form content init -->
-                        <div class="col-md-9 col-xs-12">
-                            {{ page.content }}
+                </div>
+            </div>
+        </div>
+    </section>
 
-                            <div class="row contato-box-infos-row">
-                                <div class="col-md-6 col-xs-12">
-                                    <div class="contato-box-infos">
-                                        {{  drupal_entity('block_content','6') }}
+    <section class="internas-container">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- contato main content init -->
+                    <div class="col-xs-12 coordenador-perfil-main-content">
+                        <div class="internas-title-with-sub">
+                            {% trans %}
+                                <span class="pre">preencha os dados obrigatórios</span>
+                                <h2>e digite sua mensagem</h2>
+                            {% endtrans %}
+                        </div>
+                        <div class="row">
+                            <!-- form content init -->
+                            <div class="col-md-9 col-xs-12">
+                                {{ page.content }}
+
+                                <div class="row contato-box-infos-row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="contato-box-infos">
+                                            {{  drupal_entity('block_content','6') }}
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6 col-xs-12">
-                                    <div class="contato-box-infos">
-                                        {{   drupal_entity('block_content','7') }}
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="contato-box-infos">
+                                            {{   drupal_entity('block_content','7') }}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- home apoio init -->
+                    <div class="col-xs-12">
+                        <section class="home-apoio">
+                            {% trans %}
+                            <div class="title">apoio</div>
+                            {% endtrans %}
+                            <div class="logos">
+                                {{ drupal_entity('block','apoio') }}
+                            </div>
+                        </section>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</main>
+<footer>
+    <!-- footer newsletter init -->
+    <section class="footer-newsletter">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="footer-newsletter-form">
+
+                            <div>
+                                {{ drupal_entity('block','webform') }}
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="footer-newsletter-text">
+                            {% trans %}
+                            <span>RECEBA NOSSOS INFORMATIVOS</span><br> Não se preocupe, também não gostamos de SPAM.
+                            {% endtrans %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>

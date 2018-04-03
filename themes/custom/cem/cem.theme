@@ -22,6 +22,3 @@ function cem_theme_suggestions_page_alter(array &$suggestions, array $variables)
   }
 }
 
-function cem_preprocess_form_element__wrapped(&$variables) {
-  kint($variables);
-}
