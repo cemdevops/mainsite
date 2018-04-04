@@ -1,0 +1,80 @@
+<main class="main">
+    <!-- internas top header init -->
+    <section class="internas-top-header">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="breadcrumb">
+                            <a href="#">home</a>
+                            <a href="#">coordenadores de projetos</a>
+                            <a href="#">{{ label }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- internas top header end -->
+    <!-- internas container init -->
+    <section class="internas-container">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- coordenador main content init -->
+                    <div class="col-xs-12 coordenador-perfil-main-content">
+                        <div class="internas-title-with-sub">
+                            {% trans %}
+                                <span class="pre">pesquisadores</span>
+                            {% endtrans %}
+                            {% trans %}
+                                <h2>coordenadores de projetos</h2>
+                            {% endtrans %}
+                        </div>
+
+                        <div class="row perfil-and-biografia">
+
+                            <div class="col-md-3">
+                                <div class="coordenador-box-perfil">
+                                    <div class="image">
+                                        <a href="#"><img src="{{ drupal_field('field_pessoas_foto','node') }}"></a>
+                                    </div>
+                                    <div class="title">
+                                        <a href="#">{{ label }}</a>
+                                    </div>
+                                    <div class="links">
+                                        <a href="mailto:arretche@usp.br" class="email">arretche@usp.br</a>
+                                        <a href="www.arretche.usp.br" class="website">www.arretche.usp.br</a>
+                                        <a href="www.arretche.usp.br" class="lattes">currículo lattes</a>
+                                    </div>
+                                    <div class="social">
+                                        <ul>
+                                            <li class="icon-linkedin"><a href="#"><span>linkedin</span></a></li>
+                                            <li class="icon-facebook"><a href="#"><span>facebook</span></a></li>
+                                            <li class="icon-twitter"><a href="#"><span>twitter</span></a></li>
+                                            <li class="icon-instagram"><a href="#"><span>instagram</span></a></li>
+                                            <li class="icon-email"><a href="#"><span>email</span></a></li>
+                                            <li class="icon-site"><a href="#"><span>site</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <!-- biografia init -->
+                                <div class="coordenador-box-infos">
+                                    <div class="title icon icon-biografia">
+                                        {% trans %}
+                                            <h3>Biografia</h3>
+                                        {% endtrans %}
+                                        {{  drupal_field('field_pessoa_biografia','node') }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
