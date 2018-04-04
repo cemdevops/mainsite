@@ -1,0 +1,90 @@
+.footer-navigation {
+    float: left;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #F5F5F5;
+    font-size: 13px;
+    color: #6A6A6A;
+    a {
+        color: inherit
+    }
+    @include cf();
+}
+
+.footer-license {
+    padding-top: 50px;
+    background: url(../img/selo-creativecommons.png) left top no-repeat;
+    span,
+    a{
+        color: #F2B006;
+        text-decoration: underline;
+    }
+}
+
+.footer-nav-infos{
+    //padding-top: 50px;
+    font-size: 13px;
+    color: #6A6A6A;
+    a{
+        color: inherit;
+    }
+    .title{
+        width: 100%;
+        font-size: 15px;
+        font-weight: 500;
+        padding-bottom: 18px;
+    }
+    .infos{
+        line-height: 2;
+    }
+    .social{
+        float: left;
+        width: 100%;
+        padding-top: 20px;
+        @include cf();
+        ul{
+            @extend %cleanUl;
+            li{
+                float: left;
+                width: 30px;
+                height: 30px;
+                margin-right: 20px;
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    span{
+                        position: absolute;
+                        left: -9999px;
+                    }
+                }
+                &.icon-facebook{
+                    background: url(../img/icon-footer-social-facebook.png) center no-repeat;
+                    background-size: contain;
+                }
+                &.icon-twitter{
+                    background: url(../img/icon-footer-social-twitter.png) center no-repeat;
+                    background-size: contain;
+                }
+                &.icon-instagram{
+                    background: url(../img/icon-footer-social-instagram.png) center no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+    .footer-nav{
+        float: left;
+        width: 100%;
+        @include cf();
+        ul{
+            @extend %cleanUl;
+            li{
+                float: left;
+                width: 100%;
+                padding-bottom: 15px;
+            }
+        }
+    }
+}

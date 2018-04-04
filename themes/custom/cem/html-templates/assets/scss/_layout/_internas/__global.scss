@@ -1,0 +1,28 @@
+.internas-container {
+    @include cf();
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.internas-title-with-sub {
+    float: left;
+    width: 100%;
+    padding-bottom: 40px;
+    &>span.pre {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        font-weight: 500;
+        color: #4E4E4E;
+    }
+    h2 {
+        float: left;
+        width: auto;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        font-size: 35px;
+        color: #6A6A6A;
+        margin: 0;
+        padding: 0;
+    }
+}

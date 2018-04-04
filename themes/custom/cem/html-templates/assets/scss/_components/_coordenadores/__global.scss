@@ -1,0 +1,175 @@
+.coordenador-perfil-main-content {
+    padding-bottom: 30px;
+}
+
+.perfil-and-biografia {
+    padding-bottom: 30px;
+}
+
+.coordenador-box-perfil {
+    float: left;
+    width: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    div.image {
+        float: left;
+        width: 100%;
+        img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    div.title {
+        float: left;
+        width: 100%;
+        background-color: #086AAB;
+        a {
+            display: block;
+            width: 100%;
+            height: 80px;
+            padding: 35px 0 0;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 500;
+            color: #ffffff;
+        }
+    }
+    div.links {
+        float: left;
+        width: 100%;
+        padding: 15px 30px;
+        border-left: solid 1px #EAEAEA;
+        border-right: solid 1px #EAEAEA;
+        a {
+            display: block;
+            width: 100%;
+            border-bottom: dashed 1px #C0C0C0;
+            font-size: 15px;
+            color: #6A6A6A;
+            padding: 20px 0;
+            word-break: break-all;
+            &.email {
+                padding-left: 37px;
+                background: url(../img/icon-mail-blue.png) left center no-repeat;
+            }
+            &.website {
+                padding-left: 37px;
+                background: url(../img/icon-world.png) left center no-repeat;
+            }
+            &.lattes {
+                padding-left: 37px;
+                background: url(../img/icon-paper-plane.png) left center no-repeat;
+            }
+        }
+    }
+    div.social {
+        float: left;
+        width: 100%;
+        padding: 15px 30px;
+        border: solid 1px #EAEAEA;
+        border-top: 0;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            li {
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                margin-right: 10px;
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    span {
+                        position: absolute;
+                        left: -9999px;
+                    }
+                }
+                &.icon-linkedin {
+                    background: url(../img/icon-perfil-linkedin.png) center no-repeat;
+                }
+                &.icon-facebook {
+                    background: url(../img/icon-perfil-facebook.png) center no-repeat;
+                }
+                &.icon-twitter {
+                    background: url(../img/icon-perfil-twitter.png) center no-repeat;
+                }
+                &.icon-instagram {
+                    background: url(../img/icon-perfil-instagram.png) center no-repeat;
+                }
+                &.icon-email {
+                    background: url(../img/icon-perfil-email.png) center no-repeat;
+                }
+                &.icon-site {
+                    background: url(../img/icon-perfil-site.png) center no-repeat;
+                }
+            }
+        }
+    }
+}
+
+.coordenador-box-infos {
+    float: left;
+    width: 100%;
+    padding-bottom: 30px;
+    font-size: 15px;
+    color: #6D6D6D;
+    .title {
+        float: left;
+        width: 100%;
+        border-bottom: dashed 1px #C0C0C0;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        h3 {
+            float: left;
+            width: 100%;
+            padding: 16px 0;
+            color: #333333;
+            font-size: 19px;
+            font-weight: 700;
+            margin: 0;
+        }
+        &.icon {
+            h3 {
+                padding-left: 65px;
+                background-position: left center;
+                background-repeat: no-repeat;
+            }
+        }
+        &.icon-biografia {
+            h3 {
+                background-image: url(../img/icon-biografia.png);
+            }
+        }
+        &.icon-medias {
+            h3 {
+                background-image: url(../img/icon-medias.png);
+            }
+        }
+        &.icon-books {
+            h3 {
+                background-image: url(../img/icon-books.png);
+            }
+        }
+        &.icon-articles {
+            h3 {
+                background-image: url(../img/icon-articles.png);
+            }
+        }
+    }
+    p {
+        font-size: 15px;
+        color: #6D6D6D;
+    }
+}
+
+.internal-page.home-pesquisadores {
+    border-top: dashed 1px #C0C0C0;
+    padding-top: 30px;
+}
