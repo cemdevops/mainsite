@@ -1,6 +1,3 @@
-{{ node.nid }}
-{{ dump(content) }}
-
 <main class="main">
     <!-- internas top header init -->
     <section class="internas-top-header">
@@ -46,18 +43,18 @@
                                         <a href="#">{{ label }}</a>
                                     </div>
                                     <div class="links">
-                                        <a href="mailto:arretche@usp.br" class="email">arretche@usp.br</a>
-                                        <a href="www.arretche.usp.br" class="website">www.arretche.usp.br</a>
+                                        <a href="mailto:{{ content.field_pessoa_email }}" class="email">{{ content.field_pessoa_email }}</a>
+                                        <a href="www.arretche.usp.br" class="website">{{ content.field_site }}</a>
                                         <a href="www.arretche.usp.br" class="lattes">currículo lattes</a>
                                     </div>
                                     <div class="social">
                                         <ul>
-                                            <li class="icon-linkedin"><a href="#"><span>linkedin</span></a></li>
-                                            <li class="icon-facebook"><a href="#"><span>facebook</span></a></li>
-                                            <li class="icon-twitter"><a href="#"><span>twitter</span></a></li>
-                                            <li class="icon-instagram"><a href="#"><span>instagram</span></a></li>
-                                            <li class="icon-email"><a href="#"><span>email</span></a></li>
-                                            <li class="icon-site"><a href="#"><span>site</span></a></li>
+                                            <li class="icon-linkedin"><a href="{{ content.field_linkedin }}"><span>linkedin</span></a></li>
+                                            <li class="icon-facebook"><a href="{{ content.field_facebook }}"><span>facebook</span></a></li>
+                                            <li class="icon-twitter"><a href="{{ content.field_twitter }}"><span>twitter</span></a></li>
+                                            <li class="icon-instagram"><a href="{{ content.field_instagram }}"><span>instagram</span></a></li>
+                                            <li class="icon-email"><a href="{{ content.field_pessoa_email  }}"><span>email</span></a></li>
+                                            <li class="icon-site"><a href="{{ content.field_site }}"><span>site</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
