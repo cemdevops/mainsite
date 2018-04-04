@@ -1,0 +1,90 @@
+.item-list .pager {
+    clear: both;
+    text-align: center;
+    padding-bottom: 40px !important;
+    margin-bottom: 30px;
+    border-bottom: dashed 1px #C0C0C0;
+}
+
+.item-list ul.pager {
+    padding: 8px 20px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.item-list .pager li {
+    background-image: none;
+    display: inline;
+    list-style-type: none;
+    padding: 0.5em;
+}
+
+.item-list ul.pager li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0 !important;
+    margin: 0 5px !important;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6A6A6A;
+    text-align: center;
+    border: solid 2px #F0F0F0;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.2s linear;
+}
+
+.item-list ul.pager li.pager-first.first,
+.item-list ul.pager li.pager-last.last {
+    display: none !important;
+}
+
+.item-list ul.pager li.pager-ellipsis {
+    display: none !important;
+}
+
+.item-list ul.pager li.pager-previous,
+.item-list ul.pager li.pager-next {
+    // display: none;
+    // position: absolute;
+    // font-size: 0;
+    // width: 17px;
+    // background-image: url(/sites/all/themes/jornalpuc/assets/img/icon-arrows.svg);
+    // background-repeat: no-repeat;
+    // background-size: 34px 30px;
+    // border: 0;
+    // border-radius: 0;
+    // top: 0;
+    // margin-top: 10px !important;
+    border: 0;
+    padding: 0 10px !important;
+    width: auto;
+    &:hover{
+        border: 0;
+        background-color: transparent;
+        color: #6A6A6A;
+    }
+}
+
+.item-list ul.pager li.pager-previous {
+    // background-position: left center;
+    // left: 20px;
+}
+
+.item-list ul.pager li.pager-next {
+    // background-position: -17px center;
+    // right: 20px;
+}
+
+.item-list ul.pager li:hover {
+    border: solid 2px #086AAB;
+    background-color: #086AAB;
+    color: #ffffff;
+}

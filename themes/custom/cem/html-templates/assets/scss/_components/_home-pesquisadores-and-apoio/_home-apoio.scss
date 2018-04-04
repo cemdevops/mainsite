@@ -1,0 +1,25 @@
+.home-apoio {
+    float: left;
+    width: 100%;
+    padding-top: 75px;
+    position: relative;
+    padding-left: 70px;
+    div.title {
+        position: absolute;
+        left: 0;
+        height: 70px;
+        padding-top: 15px;
+    }
+    div.logos {
+        .row {
+            div {
+                text-align: center;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+        }
+    }
+}

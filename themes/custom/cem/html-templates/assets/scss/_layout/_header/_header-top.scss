@@ -1,0 +1,89 @@
+.header-top {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 26px 0;
+    @include cf();
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+// Logo
+.header-top {
+    .logo {
+        float: left;
+        min-height: 60px;
+        margin: 0;
+        padding: 0 84px 0 156px;
+        background: url(../img/logo.png) left center no-repeat;
+        font-weight: normal;
+        span.title {
+            display: block;
+            width: 100%;
+            @include font-lato(700);
+            font-size: 35px;
+            line-height: 35px;
+            color: #303030;
+        }
+        span.sub-title {
+            display: block;
+            width: 100%;
+            @include font-lato();
+            font-size: 17px;
+            color: #676F72;
+        }
+    }
+}
+
+// Busca
+
+.header-search {
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: 410px;
+    margin-top: 6px;
+    border: solid 1px #E1E1E1;
+    border-radius: 50px;
+    max-height: 46px;
+    @include cf();
+    &>div {
+        position: relative;
+    }
+    .search-field {
+        width: 100%;
+        height: 44px;
+        padding: 0 100px 0 28px;
+        @include font-roboto();
+        font-size: 13px;
+        color: #8B8B8B;
+        border: 0;
+        background: transparent;
+        outline: 0;
+    }
+    .search-button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+        height: 44px;
+        background: url(../img/icon-search.png) center no-repeat transparent;
+        border: 0;
+        font-size: 0;
+    }
+}
+
+.header-top {
+    .header-top-btn-contact{
+        float: left;
+        height: 21px;
+        right: 0;
+        background: url(../img/icon-mail.png) left center no-repeat;
+        padding-left: 33px;
+        font-size: 13px;
+        color: #676767;
+        margin-top: 20px;
+    }
+}

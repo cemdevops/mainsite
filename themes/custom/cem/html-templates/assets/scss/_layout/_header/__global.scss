@@ -1,0 +1,7 @@
+header.header{
+    width: 100%;
+    background-color: #ffffff;
+    @include cf();
+}
+@import "_header-top.scss";
+@import "_menu.scss";

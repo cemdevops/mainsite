@@ -1,0 +1,99 @@
+.header-menu {
+    width: 100%;
+    background-color: #086AAB;
+    border-bottom: solid 5px #CCCCCC;
+    @include cf();
+    z-index: 2;
+    position: relative;
+    &>.inner {
+        &>ul {
+            @extend %cleanUl;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &>li {
+                position: relative;
+                float: left; //width: 100/6 + %;
+                @include font-roboto(500);
+                font-size: 15px;
+                color: #ffffff;
+                padding: 0 10px;
+                &>a {
+                    display: block;
+                    padding: 24px 6px;
+                    white-space: nowrap;
+                    position: relative;
+                    color: inherit;
+                }
+                &>ul {
+                    @extend %cleanUl;
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    top: 80%;
+                    float: left;
+                    min-width: 160px;
+                    background: #ffffff;
+                    box-shadow: 0 16px 32px 0 rgba(62, 57, 107, 0.2), 0 0px 10px rgba(0, 0, 0, 0.05);
+                    border-radius: 6px;
+                    font-size: 15px;
+                    text-align: left;
+                    &>li {
+                        float: left;
+                        width: 100%;
+                        @include font-roboto();
+                        font-size: 13px;
+                        color: #333333;
+                        padding: 0 10px;
+                        border-bottom: solid 1px #eee;
+                        &:last-child {
+                            border: 0;
+                        }
+                        &>a {
+                            display: block;
+                            padding: 10px 20px 10px 16px;
+                            white-space: nowrap;
+                            position: relative;
+                            color: inherit;
+                        }
+                    }
+                }
+                &>a[data-js="has-submenu"] {
+                    &:after {
+                        content: '';
+                        display: inline-block;
+                        width: 7px;
+                        height: 5px;
+                        padding-left: 10px;
+                        background: url(../img/icon-arrow-down-white.png) center no-repeat;
+                    }
+                }
+                &:hover {
+                    &>ul {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-menu {
+    @include mqrange(840px, 5000px) {
+        &.fixed {
+            height: 65px;
+            &>.inner.wrapper {
+                position: fixed;
+                top: 0;
+                max-width: none;
+                background-color: #086AAB;
+                border-bottom: solid 5px #CCCCCC;
+                &>ul{
+                    width: 100%;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
