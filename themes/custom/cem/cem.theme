@@ -3,12 +3,25 @@
 * Implements hook_blog_preprocess_html().
 */
 function cem_preprocess_html(&$variables) {
+
+//  $node = \Drupal::entityTypeManager()->getStorage('node')->load(25);
+//  $variables['descricao'] = $node->get('field_page_descricao')->getValue()[0]['value'];
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $variables['language'] = $language;
 }
 
 function cem_preprocess_page(&$variables) {
-    //kint($variables);
+  if(isset($variables['node'])){
+    if($variables['node']->getType() == 'resolution') {
+      $variables['descricao'] = $variables['node']->get('body')->getValue()[0]['value'];
+      //SP
+      $variables['img_sp'] = file_create_url($variables['node']->get('field_image')->entity->uri->value);
+      //Londres
+      $variables['img_londres'] = file_create_url($variables['node']->get('field_imagem')->entity->uri->value);
+    }
+  }
+ // $variables['hierarquia'] = $variables['node']->get('field_hierarquia')->getString();
+
 }
 
 /**
@@ -22,3 +35,13 @@ function cem_theme_suggestions_page_alter(array &$suggestions, array $variables)
   }
 }
 
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function cem_theme_suggestions_html_alter(array &$suggestions, array $variables) {
+  
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'html__'.$content_type;
+  }
+}

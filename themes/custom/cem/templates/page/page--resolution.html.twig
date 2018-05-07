@@ -1,0 +1,136 @@
+
+<main class="main">
+    <!-- resolution header init -->
+    <div class="resolution-header">
+        <div class="inner wrapper">
+            {{ drupal_entity('block_content','9') }}
+        </div>
+        <nav class="resolution-menu">
+            <div class="inner wrapper">
+                <ul>
+                    <li>
+                        <a href="#"><span>project overview</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>mapping</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>publication</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>team</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>contact</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- resolution header end -->
+    <!-- resolution maps init -->
+    <div class="resolution-maps">
+        <div class="inner wrapper">
+            <div class="maps-container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12">
+                            <div class="map-box">
+                                <span class="title">(Londres)</span>
+                                <iframe src="{{ img_sp }}" width="100%" height="100%" border="0" scrolling="no"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12">
+                            <div class="map-box">
+                                <span class="title">(São Paulo)</span>
+                                <iframe src="{{ img_londres }}" width="100%" height="100%" border="0" scrolling="no"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mapping-box">
+                <h3 class="title">Mapping</h3>
+                <p>This is the excerpt for your very first post.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+    </div>
+    <!-- resolution maps end -->
+    <!-- internas container init -->
+    <section class="internas-container">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- resolution content coluna left init -->
+                    <div class="col-md-9 col-xs-12">
+                        <div class="internas-title-with-sub">
+                            <span class="pre">about</span>
+                            <h2>Resolution</h2>
+                        </div>
+                        <div class="internas-text">
+                            {% autoescape false %}
+                               {{ descricao }}
+                            {% endautoescape %}
+                            <a href="#" class="btn">read more</a>
+                        </div>
+                    </div>
+                    <!-- resolution content coluna left end -->
+                    <!-- resolution content coluna right init -->
+                    <div class="col-md-3 col-xs-12">
+
+                        <!-- side bar agenda init -->
+                        <div class="side-bar-box resolution-slider">
+                            <div class="header">PUBLICATIONS</div>
+                            <div class="box">
+                                <div class="resolution-slider">
+                                    <div class="views-element-container">
+                                        <div>
+                                            <!-- side bar evento item init -->
+                                            <div class="resolution-slider-item">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img src="../assets/img/resolution-slider-img.jpg">
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <a href="#">Resolution: Resilient systems for land use transportation</a>
+                                                </div>
+                                                <div class="text">
+                                                    <a href="#">
+                                                        In a context of rapid urban growth, cities across the world are increasingly defined by inequality.
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!-- side bar evento item end -->
+                                            <!-- side bar evento item init -->
+                                            <div class="resolution-slider-item">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img src="../assets/img/resolution-slider-img.jpg">
+                                                    </a>
+                                                </div>
+                                                <div class="title">
+                                                    <a href="#">Resolution: Resilient systems for land use transportation</a>
+                                                </div>
+                                                <div class="text">
+                                                    <a href="#">
+                                                        In a context of rapid urban growth, cities across the world are increasingly defined by inequality.
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!-- side bar evento item end -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- side bar agenda end -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- internas container begin -->
+</main>
