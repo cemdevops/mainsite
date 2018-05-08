@@ -42,7 +42,9 @@
             </div>
             <div class="mapping-box">
                 <h3 class="title">Mapping</h3>
-                <p>This is the excerpt for your very first post.</p>
+                {% trans %}
+                    <p>This is the excerpt for your very first post.</p>
+                {% endtrans %}
                 <a href="#" class="btn">read more</a>
             </div>
         </div>
@@ -72,44 +74,15 @@
 
                         <!-- side bar agenda init -->
                         <div class="side-bar-box resolution-slider">
-                            <div class="header">PUBLICATIONS</div>
+                            {% trans %}
+                                <div class="header">PUBLICATIONS</div>
+                            {% endtrans %}
                             <div class="box">
                                 <div class="resolution-slider">
                                     <div class="views-element-container">
                                         <div>
                                             <!-- side bar evento item init -->
-                                            <div class="resolution-slider-item">
-                                                <div class="image">
-                                                    <a href="#">
-                                                        <img src="../assets/img/resolution-slider-img.jpg">
-                                                    </a>
-                                                </div>
-                                                <div class="title">
-                                                    <a href="#">Resolution: Resilient systems for land use transportation</a>
-                                                </div>
-                                                <div class="text">
-                                                    <a href="#">
-                                                        In a context of rapid urban growth, cities across the world are increasingly defined by inequality.
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <!-- side bar evento item end -->
-                                            <!-- side bar evento item init -->
-                                            <div class="resolution-slider-item">
-                                                <div class="image">
-                                                    <a href="#">
-                                                        <img src="../assets/img/resolution-slider-img.jpg">
-                                                    </a>
-                                                </div>
-                                                <div class="title">
-                                                    <a href="#">Resolution: Resilient systems for land use transportation</a>
-                                                </div>
-                                                <div class="text">
-                                                    <a href="#">
-                                                        In a context of rapid urban growth, cities across the world are increasingly defined by inequality.
-                                                    </a>
-                                                </div>
-                                            </div>
+                                            {{ drupal_view('publicacao','bloco_publicacao_resolution',language) }}
                                             <!-- side bar evento item end -->
                                         </div>
                                     </div>
