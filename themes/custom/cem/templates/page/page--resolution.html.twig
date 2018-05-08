@@ -3,30 +3,21 @@
     <!-- resolution header init -->
     <div class="resolution-header">
         <div class="inner wrapper">
-            {{ drupal_entity('block_content','9') }}
+            <div class="resolution-logos-container">
+                <div class="container-fluid">
+                    <div class="row">
+                        {{ drupal_entity('block_content','9') }}
+                    </div>
+                </div>
+            </div>
         </div>
         <nav class="resolution-menu">
             <div class="inner wrapper">
-                <ul>
-                    <li>
-                        <a href="#"><span>project overview</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span>mapping</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span>publication</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span>team</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span>contact</span></a>
-                    </li>
-                </ul>
+                {{ drupal_menu('menu-resolution') }}
             </div>
         </nav>
     </div>
+
     <!-- resolution header end -->
     <!-- resolution maps init -->
     <div class="resolution-maps">
