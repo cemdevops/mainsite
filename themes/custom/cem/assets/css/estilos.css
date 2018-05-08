@@ -3731,3 +3731,17 @@ header.header {
 ul#custom-menu-language li {
   list-style-type: none;
 }
+
+#block-cem-local-tasks {
+  z-index: 100;
+  border: 1px solid grey;
+  width: 120px;
+  margin-top: 10px;
+  position: fixed;
+  background: white;
+  padding: 10px 0;
+  right: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  top: 210px;
+}
