@@ -1,4 +1,22 @@
+{{ kint(content) }}
+{{ kint(node) }}
+{% set hierarquia = content['field_hierarquia'][0]['#title'] %}
+{{ hierarquia }}
 <main class="main">
+
+    <!-- internas top header init -->
+    <section class="internas-top-header">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="title-page">quem somos <span class="sub-title">sobre</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- internas top header init -->
     <!-- internas container init -->
     <section class="internas-container">
@@ -44,8 +62,11 @@
                             {{  drupal_field('field_page_descricao','node') }}
                         </div>
                     </div>
-
                     <!-- quem somos main content end -->
+                    <div class="row quem-somos-perfis-content">
+                        {{ drupal_view('colaborador','bloco_colaborador_quem_somos') }}
+                    </div>
+
 
 
 
