@@ -1,4 +1,6 @@
-{% set hierarquia = content['field_hierarquia'][0]['#title'] %}
+{% set hierarquia  = content['field_hierarquia'][0]['#title'] %}
+
+{% set pesquisador = node.get('field_pesquisadores').getValue()[0]['target_id'] %}
 {% set id = node.id() %}
 
 {% macro menuMacro(menu, level) -%}
