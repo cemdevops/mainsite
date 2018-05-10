@@ -1,6 +1,6 @@
-{% set hierarquia  = content['field_hierarquia'][0]['#title'] %}
-
-{% set pesquisador = node.get('field_pesquisadores').getValue()[0]['target_id'] %}
+{% set hierarquia      = content['field_hierarquia'][0]['#title'] %}
+{% set pesquisador_id  = node.get('field_pesquisadores').getValue()[0]['target_id'] %}
+{% set menu_lateral_id = node.get('field_layout_publicacoes').getValue()[0]['target_id'] %}
 {% set id = node.id() %}
 
 {% macro menuMacro(menu, level) -%}
@@ -26,7 +26,6 @@
     </ul>
 {%- endmacro %}
 
-
 <main class="main">
     <!-- internas top header init -->
     <section class="internas-top-header">
@@ -40,8 +39,6 @@
             </div>
         </div>
     </section>
-
-    <!-- internas top header init -->
     <!-- internas container init -->
     <section class="internas-container">
         <div class="inner wrapper">
@@ -83,7 +80,7 @@
                     </div>
                     <!-- quem somos main content end -->
                     <div class="row quem-somos-perfis-content">
-                        {{ drupal_view('colaborador','bloco_colaborador_quem_somos') }}
+                        {{ drupal_view('colaborador','bloco_colaborador_quem_somos',pesquisador_id) }}
                     </div>
                 </div>
                 {% elseif hierarquia == 'Publicação' %}
@@ -116,6 +113,39 @@
                         <div class="quem-somos-conteudo">
                             {{  drupal_field('field_page_descricao','node') }}
                         </div>
+                        {#Artigo = 29, Livro = 30, Capitulo de livro = 31, Teses e dissertações = 32, Working papers = 33, Estudo de transfêrencia = 35, Boletim nota 100 = 36, Urban data = 37#}
+                        {% if menu_lateral_id == 29 %}
+                            <div class="row quem-somos-perfis-content">
+                                {{ drupal_view('colaborador','bloco_colaborador_quem_somos') }}
+                            </div>
+                        {% elseif menu_lateral_id == 30 %}
+                            <div class="row quem-somos-perfis-content">
+                                {{ drupal_view('livro','bloco_listagem_livro') }}
+                            </div>
+                        {% elseif menu_lateral_id == 31 %}
+                            <div class="row quem-somos-perfis-content">
+                                {{ drupal_view('colaborador','bloco_colaborador_quem_somos') }}
+                            </div>
+                        {% elseif menu_lateral_id == 32 %}
+                            <div class="row quem-somos-perfis-content">
+                                {{ drupal_view('colaborador','bloco_colaborador_quem_somos') }}
+                            </div>
+                        {% elseif menu_lateral_id == 33 %}
+                            <div class="row quem-somos-perfis-content">
+                                {{ drupal_view('colaborador','bloco_colaborador_quem_somos') }}
+                            </div>
+                        {% elseif menu_lateral_id == 35 %}
+                            <div class="row quem-somos-perfis-content">
+                                {{ drupal_view('colaborador','bloco_colaborador_quem_somos') }}
+                            </div>
+                        {% elseif menu_lateral_id == 36 %}
+                            <div class="row quem-somos-perfis-content">
+                                {{ drupal_view('colaborador','bloco_colaborador_quem_somos') }}
+                            </div>
+                        {% elseif menu_lateral_id == 37 %}
+                            <div class="row quem-somos-perfis-content">
+                            </div>
+                        {% endif %}
                     </div>
 
                 </div>
@@ -123,5 +153,4 @@
             </div>
         </div>
     </section>
-
 </main>
