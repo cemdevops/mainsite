@@ -127,6 +127,24 @@ class WebformSubmissionStorage extends SqlContentEntityStorage implements Webfor
   /**
    * {@inheritdoc}
    */
+  public function loadByEntities(WebformInterface $webform = NULL, EntityInterface $source_entity = NULL, AccountInterface $account = NULL) {
+    $properties = [];
+    if ($webform) {
+      $properties['webform_id'] = $webform->id();
+    }
+    if ($source_entity) {
+      $properties['entity_type'] = $source_entity->getEntityTypeId();
+      $properties['entity_id'] = $source_entity->id();
+    }
+    if ($account) {
+      $properties['uid'] = $account->id();
+    }
+    return $this->loadByProperties($properties);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function loadFromToken($token, WebformInterface $webform, EntityInterface $source_entity = NULL, AccountInterface $account = NULL) {
     // Check token.
     if (!$token) {
@@ -882,7 +900,8 @@ class WebformSubmissionStorage extends SqlContentEntityStorage implements Webfor
       $this->invokeWebformHandlers('postDelete', $entity);
     }
 
-    // Remove the webform submission specific file directory for all stream wrappers.
+    // Remove empty webform submission specific file directory
+    // for all stream wrappers.
     // @see \Drupal\webform\Plugin\WebformElement\WebformManagedFileBase
     // @see \Drupal\webform\Plugin\WebformElement\WebformSignature
     foreach ($entities as $entity) {
@@ -890,7 +909,11 @@ class WebformSubmissionStorage extends SqlContentEntityStorage implements Webfor
       $stream_wrappers = array_keys(\Drupal::service('stream_wrapper_manager')
         ->getNames(StreamWrapperInterface::WRITE_VISIBLE));
       foreach ($stream_wrappers as $stream_wrapper) {
-        file_unmanaged_delete_recursive($stream_wrapper . '://webform/' . $webform->id() . '/' . $entity->id());
+        $file_directory = $stream_wrapper . '://webform/' . $webform->id() . '/' . $entity->id();
+        // Clear empty webform submission directory.
+        if (empty(file_scan_directory($file_directory, '/.*/'))) {
+          file_unmanaged_delete_recursive($file_directory);
+        }
       }
     }
 
@@ -1279,7 +1302,7 @@ class WebformSubmissionStorage extends SqlContentEntityStorage implements Webfor
     if ($this->currentUser->hasPermission('view own webform submission')) {
       return TRUE;
     }
-    elseif ($webform->checkAccessRules('view_own', $this->currentUser)) {
+    elseif ($webform->checkAccessRules('view_own', $this->currentUser)->isAllowed()) {
       return TRUE;
     }
     elseif ($webform->getSetting('form_convert_anonymous')) {
