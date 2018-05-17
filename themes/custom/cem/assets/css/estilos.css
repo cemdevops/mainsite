@@ -3745,7 +3745,7 @@ ul#custom-menu-language li {
   border-bottom-left-radius: 20px;
   top: 210px;
 }
-.user-login-form > .form-text {
+.user-login-form > .form-item  >.form-text {
     width: 100%;
     padding: 12px 20px;
     display: block;
