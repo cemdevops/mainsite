@@ -3745,3 +3745,23 @@ ul#custom-menu-language li {
   border-bottom-left-radius: 20px;
   top: 210px;
 }
+.user-login-form > .form-text {
+    width: 100%;
+    padding: 12px 20px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.user-login-form > .form-actions > .form-submit {
+    background-color: #061846;
+    color: white;
+    padding: 14px 30px;
+    margin: 30px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    text-transform: uppercase;
+}
