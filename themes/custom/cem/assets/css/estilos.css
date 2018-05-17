@@ -3754,14 +3754,13 @@ ul#custom-menu-language li {
 }
 
 .user-login-form > .form-actions > .form-submit {
-    background-color: #061846;
+    background-color: #086AAB;
     color: white;
     padding: 14px 30px;
     margin: 30px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    background-color: #5cb85c;
     border-color: #4cae4c;
     text-transform: uppercase;
 }
