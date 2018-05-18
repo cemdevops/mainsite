@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\example\Controller;
+namespace Drupal\valida_email\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 
