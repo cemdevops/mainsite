@@ -5,3 +5,11 @@ valida_email.content:
     _title: 'Página Validar Email'
   requirements:
     _permission: 'access content'
+
+valida_email.form:
+  path: '/controle-acesso'
+  defaults:
+    _controller: '\Drupal\valida_email\Controller\ValidaEmailController::form'
+    _title: 'Controle de Acesso'
+  requirements:
+    _permission: 'access content'
