@@ -8,8 +8,18 @@ function valida_email_theme($existing, $type, $theme, $path) {
     return [
         'my_template' => [
             'render element' => 'elements',
-//            'path' => $path . '/templates',
-//            'template' => 'my-template',
         ]
     ];
+}
+
+function valida_email_page_attachments(&$page) {
+    $page['#attached']['library'][] = 'valida_email/valida_email';
+
+}
+
+function valida_email_preprocess_node(&$node) {
+    $session = \Drupal::request()->getSession();
+    $value = $session->get('usuario_validado', 'default');
+    kint($value);
+    kint($node);
 }

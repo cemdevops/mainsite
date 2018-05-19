@@ -1,0 +1,30 @@
+<section class="container-fluid home-slider">
+    <div class="row">
+        <div class="col-lg-12 wrapper">
+
+            <div id="conteudo_central">
+
+                <div id="header_form">
+                    <p> {% trans %}
+                            <b>Acesso</b>
+                        {% endtrans %}
+                        <br/>
+                        {% trans %}
+                            Para ter acesso e fazer o download das bases de dados, você deve se identificar. <b>Informe seu email no campo abaixo e clique em continuar</b>,
+                            caso seu email seja identificado em nossa base de cadastros, seu acesso será liberado imediatamente.
+                            Caso seja o seu primeiro acesso, preencha o formulário e siga as instruções.</p>
+                       {% endtrans %}
+                </div>
+
+                <div id="status">
+                </div>
+
+                <form id="formulario_controle" method="post">
+                    <input id="email" name="email" type="text" class="campo_texto">
+                    <input type="hidden" name="id_curso" id="id_curso" value="meuvalor">
+                    <input type="submit" name="enviar" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
