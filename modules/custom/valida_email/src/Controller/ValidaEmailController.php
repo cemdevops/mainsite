@@ -29,11 +29,19 @@ class ValidaEmailController extends ControllerBase {
           }else{
               $session = \Drupal::request()->getSession();
               $session->set('usuario_validado', 'sim');
+              kint($session->get('usuario_validado'));
+              die();
               $data = FALSE;
           }
         }
+       
       }else {
           $data = FALSE;
+              $session = \Drupal::request()->getSession();
+              $session->set('usuario_validado', 'sim');
+              kint($session->get('usuario_validado'));
+              die();
+
       }
       $response['retorno'] = $data;
       return new JsonResponse( $response );
