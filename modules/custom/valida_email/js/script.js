@@ -10,7 +10,7 @@
                 success: function( data ) {
                     console.log(data);
                     if (data.retorno == null) {
-                        window.location.href = '/cem/form/cadastro-curso';
+                        window.location.href = '/form/cadastro-curso';
                     }
                 }
             });

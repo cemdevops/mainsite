@@ -19,7 +19,7 @@ function valida_email_page_attachments(&$page) {
 
 function valida_email_preprocess_node(&$node) {
     $session = \Drupal::request()->getSession();
-    $value = $session->get('usuario_validado', 'default');
-    kint($value);
+    $value = $session->get('usuario_validado');
+    kint($session->all());
     kint($node);
 }
