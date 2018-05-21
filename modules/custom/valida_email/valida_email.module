@@ -1,25 +1,37 @@
 <?php
 
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Implements hook_theme().
  */
 function valida_email_theme($existing, $type, $theme, $path) {
-    return [
-        'my_template' => [
-            'render element' => 'elements',
-        ]
-    ];
+  return [
+    'my_template' => [
+      'render element' => 'elements',
+    ]
+  ];
 }
 
 function valida_email_page_attachments(&$page) {
-    $page['#attached']['library'][] = 'valida_email/valida_email';
-
+  $page['#attached']['library'][] = 'valida_email/valida_email';
+  
 }
 
 function valida_email_preprocess_node(&$node) {
-    $session = \Drupal::request()->getSession();
-    $value = $session->get('usuario_validado');
-    kint($session->all());
-    kint($node);
+
+
+
+  $session = \Drupal::request()->getSession();
+  $sessao  = $session->get('usuario_validado');
+  $controle_acesso = $node['node']->hasField('field_controle_de_acesso');
+  if(isset($controle_acesso)){
+    $acesso = $node['node']->get('field_controle_de_acesso')->getValue()[0]['value'];
+    if(!isset($sessao['usuario_validado']) && $acesso == TRUE) {
+      header('Location: controle-acesso');
+      new RedirectResponse(\Drupal::urlGenerator());
+    }else{
+      header('Location: valida_email');
+    }
+  }
 }
