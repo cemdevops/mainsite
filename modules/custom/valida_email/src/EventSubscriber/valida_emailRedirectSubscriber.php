@@ -13,42 +13,21 @@ class valida_emailRedirectSubscriber implements EventSubscriberInterface {
 /**
 * {@inheritdoc}
 */
-public static function getSubscribedEvents() {
-// This announces which events you want to subscribe to.
-// We only need the request event for this example.  Pass
-// this an array of method names
-return(
-  [KernelEvents::REQUEST => [
-    ['redirectMyContentTypeNode'],
-  ]
-  ]);
-}
+    public function checkForRedirection(GetResponseEvent $event) {
+        kint($event);
+        die();
+        if ($event->getRequest()->query->get('redirect-me')) {
+            $event->setResponse(new RedirectResponse('http://example.com/'));
+        }
+    }
 
-/**
-* Redirect requests for my_content_type node detail pages to node/123.
-*
-* @param GetResponseEvent $event
-* @return void
-*/
-public function redirectMyContentTypeNode(GetResponseEvent $event) {
-$request = $event->getRequest();
+    /**
+     * {@inheritdoc}
+     */
+    public static function getSubscribedEvents() {
+        $events[KernelEvents::REQUEST][] = array('checkForRedirection');
+        return $events;
+    }
 
-// This is necessary because this also gets called on
-// node sub-tabs such as "edit", "revisions", etc.  This
-// prevents those pages from redirected.
-if ($request->attributes->get('_route') !== 'entity.node.canonical') {
-return;
-}
-
-// Only redirect a certain content type.
-if ($request->attributes->get('node')->getType() !== 'my_content_type') {
-return;
-}
-
-// This is where you set the destination.
-$redirect_url = Url::fromUri('entity:node/123');
-$response = new RedirectResponse($redirect_url->toString(), 301);
-$event->setResponse($response);
-}
 
 }

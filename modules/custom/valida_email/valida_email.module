@@ -1,6 +1,6 @@
 <?php
 
-use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
  * Implements hook_theme().
@@ -20,8 +20,6 @@ function valida_email_page_attachments(&$page) {
 
 function valida_email_preprocess_node(&$node) {
 
-
-
   $session = \Drupal::request()->getSession();
   $sessao  = $session->get('usuario_validado');
   $controle_acesso = $node['node']->hasField('field_controle_de_acesso');
@@ -29,7 +27,7 @@ function valida_email_preprocess_node(&$node) {
     $acesso = $node['node']->get('field_controle_de_acesso')->getValue()[0]['value'];
     if(!isset($sessao['usuario_validado']) && $acesso == TRUE) {
       header('Location: controle-acesso');
-      new RedirectResponse(\Drupal::urlGenerator());
+      $redirect = new RedirectResponse('<front>');
     }else{
       header('Location: valida_email');
     }
