@@ -2,12 +2,11 @@
 
 namespace Drupal\valida_email\EventSubscriber;
 
-use Drupal\Core\Url;
+//use Drupal\Core\Url;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
-use Drupal\node\Entity\Node;
 
 class valida_emailRedirectSubscriber implements EventSubscriberInterface {
 
@@ -24,18 +23,20 @@ class valida_emailRedirectSubscriber implements EventSubscriberInterface {
         if ($request->attributes->get('_route') !== 'entity.node.canonical') {
             return;
         }
-
         // Only redirect a certain content type.
-        if ($request->attributes->get('node')->getType() !== 'my_content_type') {
+        if ($request->attributes->get('node')->getType() !== 'page') {
             return;
         }
+        if ($request->attributes->get('node')->get('field_controle_de_acesso')->getValue()[0]['value'] == FALSE) {
+            return;
+        }
+        //$session = \Drupal::request()->getSession()->get('usuario_validado');
 
         // This is where you set the destination.
-        $redirect_url = Url::fromUri('entity:node/123');
-        $response = new RedirectResponse($redirect_url->toString(), 301);
+        //$redirect_url = Url::fromUri('entity:node/123');
+        $response = new RedirectResponse('/controle-acesso', 301);
         $event->setResponse($response);
     }
-
     /**
      * {@inheritdoc}
      */
