@@ -7,6 +7,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
+use Drupal\node\Entity\Node;
 
 class valida_emailRedirectSubscriber implements EventSubscriberInterface {
 
@@ -14,11 +15,25 @@ class valida_emailRedirectSubscriber implements EventSubscriberInterface {
 * {@inheritdoc}
 */
     public function checkForRedirection(GetResponseEvent $event) {
-        kint($event);
-        die();
-        if ($event->getRequest()->query->get('redirect-me')) {
-            $event->setResponse(new RedirectResponse('http://example.com/'));
+
+        $request = $event->getRequest();
+
+        // This is necessary because this also gets called on
+        // node sub-tabs such as "edit", "revisions", etc.  This
+        // prevents those pages from redirected.
+        if ($request->attributes->get('_route') !== 'entity.node.canonical') {
+            return;
         }
+
+        // Only redirect a certain content type.
+        if ($request->attributes->get('node')->getType() !== 'my_content_type') {
+            return;
+        }
+
+        // This is where you set the destination.
+        $redirect_url = Url::fromUri('entity:node/123');
+        $response = new RedirectResponse($redirect_url->toString(), 301);
+        $event->setResponse($response);
     }
 
     /**
