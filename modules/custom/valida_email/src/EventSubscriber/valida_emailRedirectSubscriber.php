@@ -16,10 +16,11 @@ class valida_emailRedirectSubscriber implements EventSubscriberInterface {
     public function checkForRedirection(GetResponseEvent $event) {
 
         $request = $event->getRequest();
-
         // This is necessary because this also gets called on
         // node sub-tabs such as "edit", "revisions", etc.  This
         // prevents those pages from redirected.
+        $session = \Drupal::request()->getSession()->get('usuario_validado');
+
         if ($request->attributes->get('_route') !== 'entity.node.canonical') {
             return;
         }
@@ -31,7 +32,9 @@ class valida_emailRedirectSubscriber implements EventSubscriberInterface {
             return;
         }
         //$session = \Drupal::request()->getSession()->get('usuario_validado');
-
+        if (isset($session['usuario_validado'])) {
+            return;
+        }
         // This is where you set the destination.
         //$redirect_url = Url::fromUri('entity:node/123');
         $response = new RedirectResponse('/controle-acesso', 301);
