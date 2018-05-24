@@ -1,5 +1,5 @@
 services:
-  my_module.redirectmycontenttype:
-    class: Drupal\my_module\EventSubscriber\MyModuleRedirectSubscriber
+  valida_email.redirectmycontenttype:
+    class: Drupal\valida_email\EventSubscriber\valida_emailRedirectSubscriber
     tags:
       - { name: event_subscriber }
