@@ -36,7 +36,7 @@
                 success: function( data ) {
                 }
             });
-            //window.location.href = '/node/'+nid;
+            window.location.href = '/node/'+nid;
             return false;
         });
 
