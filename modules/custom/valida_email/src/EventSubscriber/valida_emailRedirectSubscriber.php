@@ -32,12 +32,14 @@ class valida_emailRedirectSubscriber implements EventSubscriberInterface {
             return;
         }
         //$session = \Drupal::request()->getSession()->get('usuario_validado');
-        if (isset($session['usuario_validado'])) {
+        if ($session == 'sim') {
             return;
         }
         // This is where you set the destination.
         //$redirect_url = Url::fromUri('entity:node/123');
-        $response = new RedirectResponse('/controle-acesso', 301);
+        $nid = $request->attributes->get('node')->id();
+        //enviar parametro nid
+        $response = new RedirectResponse("/controle-acesso?nid={$nid}", 301);
         $event->setResponse($response);
     }
     /**
