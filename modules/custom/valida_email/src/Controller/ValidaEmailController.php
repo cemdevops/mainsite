@@ -53,7 +53,7 @@ class ValidaEmailController extends ControllerBase {
             $session->set('usuario_validado', 'sim');
 //            $session->get('usuario_validado');
         }
-        $response = new RedirectResponse("/controle-acesso?nid={$nid}", 301);
+        $response = new RedirectResponse("/node/{$nid}", 301);
         return new JsonResponse( $response );
     }
 

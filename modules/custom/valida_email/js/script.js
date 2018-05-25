@@ -26,10 +26,8 @@
                 var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
                 return results[1] || 0;
             };
-
             var dados = $( this ).serialize();
             var nid = $.urlParam('nid');
-
             console.log(nid);
             $.ajax({
                 type: "POST",
@@ -38,7 +36,7 @@
                 success: function( data ) {
                 }
             });
-            window.location.href = '/node/'+nid;
+            //window.location.href = '/node/'+nid;
             return false;
         });
 
