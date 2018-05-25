@@ -11,7 +11,7 @@
                 data: dados,
                 success: function( data ) {
                     if (data.retorno == null) {
-                        window.location.href = '/form/cadastro-curso';
+                        window.location.href = '/form/cadastro-curso?nid='+nid;
                     }else{
                         window.location.href = '/node/'+nid;
                     }
@@ -21,20 +21,25 @@
         });
 
         $('#webform-submission-cadastro-curso-add-form').submit(function(){
-            var dados = $( this ).serialize();
 
+            $.urlParam = function(name){
+                var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+                return results[1] || 0;
+            };
+
+            var dados = $( this ).serialize();
+            var nid = $.urlParam('nid');
+        
+            console.log(nid);
             $.ajax({
                 type: "POST",
                 url: "configura_sessao",
                 data: dados,
                 success: function( data ) {
-                    console.log(data);
-                    if (data.retorno == null) {
-                        window.location.href = '/form/cadastro-curso';
-                    }
                 }
             });
             return false;
+            window.location.href = '/node/'+nid;
         });
 
     });
