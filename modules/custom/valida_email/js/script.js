@@ -29,7 +29,7 @@
 
             var dados = $( this ).serialize();
             var nid = $.urlParam('nid');
-        
+
             console.log(nid);
             $.ajax({
                 type: "POST",
@@ -38,8 +38,8 @@
                 success: function( data ) {
                 }
             });
-            return false;
             window.location.href = '/node/'+nid;
+            return false;
         });
 
     });
