@@ -5,6 +5,7 @@ namespace Drupal\valida_email\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 /**
@@ -52,7 +53,8 @@ class ValidaEmailController extends ControllerBase {
             $session->set('usuario_validado', 'sim');
 //            $session->get('usuario_validado');
         }
-
+        $response = new RedirectResponse("/controle-acesso?nid={$nid}", 301);
+        return new JsonResponse( $response );
     }
 
 }
