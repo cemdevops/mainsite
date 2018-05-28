@@ -3,7 +3,8 @@
 
         $('#formulario_controle').submit(function(){
             var dados = $( this ).serialize();
-            var nid  = $("#id_curso").val();
+            var nid   = $("#id_curso").val();
+            var email = $("#email").val();
             console.log(nid);
             $.ajax({
                 type: "POST",
@@ -11,7 +12,7 @@
                 data: dados,
                 success: function( data ) {
                     if (data.retorno == null) {
-                        window.location.href = '/form/cadastro-curso?nid='+nid;
+                        window.location.href = '/form/cadastro-curso?nid='+nid+'?e_mail='+email;
                     }else{
                         window.location.href = '/node/'+nid;
                     }
