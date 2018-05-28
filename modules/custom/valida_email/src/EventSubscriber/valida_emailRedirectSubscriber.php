@@ -46,9 +46,6 @@ class valida_emailRedirectSubscriber implements EventSubscriberInterface {
      * {@inheritdoc}
      */
     public static function getSubscribedEvents() {
-      $route_name = \Drupal::routeMatch()->getRouteName();
-      var_dump($route_name);
-      die();
         $events[KernelEvents::REQUEST][] = array('checkForRedirection');
         return $events;
     }
