@@ -20,9 +20,8 @@
        * {@inheritdoc}
        */
       protected function alterRoutes(RouteCollection $collection) {
-          if ($route = $collection->get('user.login')) {
-              $route->setDefault('_form', '\Drupal\form_overwrite\Form\NewUserLoginForm');
-          }
-
+//          if ($route = $collection->get('user.login')) {
+//              $route->setDefault('_form', '\Drupal\form_overwrite\Form\NewUserLoginForm');
+//          }
       }
   }
