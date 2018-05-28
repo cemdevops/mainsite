@@ -12,7 +12,7 @@
                 data: dados,
                 success: function( data ) {
                     if (data.retorno == null) {
-                        window.location.href = '/form/cadastro-curso?nid='+nid+'?e_mail='+email;
+                        window.location.href = '/form/cadastro-curso?nid='+nid+'&e_mail='+email;
                     }else{
                         window.location.href = '/node/'+nid;
                     }
