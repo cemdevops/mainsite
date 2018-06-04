@@ -1,0 +1,97 @@
+<!-- eventos main content init -->
+<div class="eventos-main">
+  <div class="inner wrapper">
+    <div class="container-fluid">
+      <div class="col-md-9 col-xs-12">
+        <div class="evento-header">
+          <h2 class="evento-title">{{ label }}</h2>
+          <span class="evento-data">
+              {{  drupal_field('field_data_do_evento','node') }}
+          </span>
+        </div>
+        <div class="evento-text internas-text">
+            {% trans %}
+              <h2>Descrição do evento:</h2>
+            {% endtrans %}
+            {{  drupal_field('field_evento_descricao','node') }}
+        </div>
+        <div class="evento-share">
+          <div class="social">
+            <ul>
+              <li class="text">Compartilhar</li>
+              <li class="icon-linkedin"><a href="#"><span>linkedin</span></a></li>
+              <li class="icon-facebook"><a href="#"><span>facebook</span></a></li>
+              <li class="icon-twitter"><a href="#"><span>twitter</span></a></li>
+              <li class="icon-email"><a href="#"><span>email</span></a></li>
+              <li class="facebook-like">
+
+                <div id="fb-root"></div>
+                <script>
+                    (function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.0';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                </script>
+                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-12">
+
+        <!-- box inscricao init -->
+        <div class="side-bar-box inscricoes">
+          <div class="header">Valor:
+            <span class="inscricao-valor-total">
+                                        R$ <span class="recebe-valor">500,00</span>
+                                </span>
+          </div>
+          <div class="box">
+
+            <form>
+              <div class="incricao-convites">
+                <span class="title">Inscrição</span>
+                <span class="number">
+                                                <input type="text" value="1" class="convites-number">
+                                                <span class="plus"></span>
+                                        <span class="low"></span>
+                                        </span>
+              </div>
+            </form>
+            <div class="text">
+              Para o curso de maio/2018, no caso de pagamentos até o dia 9/5/18 o valor é R$ 500,00. Para pagamentos do dia 10 ao dia 22/5/18, o valor é R$ 600,00.
+            </div>
+            <div class="line">
+              <a href="#" class="btn-continuar">Continuar</a>
+            </div>
+          </div>
+        </div>
+        <!-- box inscricao end -->
+
+        <!-- side bar enderecos init -->
+        <div class="side-bar-box">
+          <div class="header icon-endereco bg-black">Endereços</div>
+          <div class="box bg-light">
+            <!-- endereco item init -->
+            <div class="contato-endereco">
+              <h4 class="title">CEM/Cebrap</h4>
+              <p>Rua Morgado de Mateus, 615</p>
+              <p>Vila Mariana (em região próxima ao</p>
+            </div>
+            <!-- endereco item end -->
+          </div>
+        </div>
+        <!-- side bar enderecos end -->
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- eventos main content end -->
