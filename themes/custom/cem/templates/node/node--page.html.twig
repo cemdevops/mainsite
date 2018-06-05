@@ -166,46 +166,40 @@
                     </div>
                 {% elseif hierarquia == 'Difusão Científica' %}
 
-                    <div class="col-md-4 col-xs-12 que-somos-menu-col">
-                        {% set items = simplify_menu('menu-lateral-difusao') %}
-                        {# Iterate menu tree #}
-                        <div class="quem-somos-menu">
-                            {% for menu_item in items.menu_tree %}
-                                <ul>
-                                    <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a></li>
-                                </ul>
-                                {% if menu_item.submenu %}
-                                    {% set subMenuAttribute = "drop-down" %}
+                <!-- agenda slider container init -->
+                <div class="agenda-slider-wrapper">
+                    <div class="inner wrapper">
+                        <!-- agenda slider title init -->
+                        <div class="title-page icon icon-agenda">
+                            <span>agenda</span>
+                            <div class="box-legenda">
+                                {% set items = simplify_menu('menu-lateral-difusao') %}
+                                {# Iterate menu tree #}
+                                {% for menu_item in items.menu_tree %}
                                     <ul>
-                                        {% for itemSub in menu_item.submenu %}
-                                            <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
-                                        {% endfor %}
+                                        <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a></li>
                                     </ul>
-                                {% endif %}
-                            {% endfor %}
+                                    {% if menu_item.submenu %}
+                                        {% set subMenuAttribute = "drop-down" %}
+                                        <ul>
+                                            {% for itemSub in menu_item.submenu %}
+                                                <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                {% endfor %}
+                             </div>
                         </div>
+                            <div class="agenda-slider">
+                                <div class="inner">
+                                    {{ drupal_view('evento','agenda_difusao_cientifica') }}
+                                </div>
+                            </div>
                     </div>
+                </div>
+
                 {% elseif hierarquia == 'Sistemas Interativos' %}
 
-                    <div class="col-md-4 col-xs-12 que-somos-menu-col">
-                        {% set items = simplify_menu('menu-lateral-sistemas-inter') %}
-                        {# Iterate menu tree #}
-                        <div class="quem-somos-menu">
-                            {% for menu_item in items.menu_tree %}
-                                <ul>
-                                    <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a></li>
-                                </ul>
-                                {% if menu_item.submenu %}
-                                    {% set subMenuAttribute = "drop-down" %}
-                                    <ul>
-                                        {% for itemSub in menu_item.submenu %}
-                                            <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
-                                        {% endfor %}
-                                    </ul>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
                 </div>
                 {% endif %}
             </div>
