@@ -1,3 +1,43 @@
+(function(window, document, $) {
+    'use strict';
+    if ($('.agenda-slider').length) {
+        $('.agenda-slider>.inner').slick({
+            dots: false,
+            infinite: true,
+            speed: 400,
+            //cssEase: 'linear',
+            slidesToShow: 6,
+            //lazyLoad: 'ondemand'
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        slidesToShow: 5
+                    }
+                },
+                {
+                    breakpoint: 990,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 650,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 450,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+    }
+})(window, document, jQuery);
 (function (window, document, $) {
     'use strict';
 
@@ -78,6 +118,49 @@
             slidesToScroll: 1,
             arrows: false,
             fade: true
+        });
+    }
+})(window, document, jQuery);
+(function (window, document, $) {
+    'use strict';
+    if($('.side-bar-box.inscricoes').length){
+        var inscricaoValorBase = $('.inscricao-valor-total .recebe-valor').html();
+        inscricaoValorBase = inscricaoValorBase.replace(',','.');
+        inscricaoValorBase = +inscricaoValorBase;
+        var inscricaoValorRecebe = $('.inscricao-valor-total .recebe-valor');
+
+        var inscricaoValorTotal;
+
+        var conviteField  = $('.convites-number');
+        var conviteQtd  = $('.convites-number').attr('value');
+        var conviteQtd  = +conviteQtd;
+        var $btnPlus = $('.incricao-convites .number .plus');
+        var $btnLow = $('.incricao-convites .number .low');
+
+
+        $btnPlus.on('click',function(){
+            conviteField.attr('value', ++conviteQtd);
+        });
+        $btnLow.on('click',function(){
+            if(conviteQtd == 0){
+                return false;
+            }
+            conviteField.attr('value', --conviteQtd);
+        });
+    }
+})(window, document, jQuery);
+(function(window, document, $) {
+    'use strict';
+    if ($('.resolution-slider').length) {
+        $('.resolution-slider div.views-element-container>div').slick({
+            autoplay: true,
+            autoplaySpeed: 6000,
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false
         });
     }
 })(window, document, jQuery);
