@@ -172,23 +172,7 @@
                         <!-- agenda slider title init -->
                         <div class="title-page icon icon-agenda">
                             <span>agenda</span>
-                            <div class="box-legenda">
-                                {% set items = simplify_menu('menu-lateral-difusao') %}
-                                {# Iterate menu tree #}
-                                {% for menu_item in items.menu_tree %}
-                                    <ul>
-                                        <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a></li>
-                                    </ul>
-                                    {% if menu_item.submenu %}
-                                        {% set subMenuAttribute = "drop-down" %}
-                                        <ul>
-                                            {% for itemSub in menu_item.submenu %}
-                                                <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
-                                            {% endfor %}
-                                        </ul>
-                                    {% endif %}
-                                {% endfor %}
-                             </div>
+
                         </div>
                             <div class="agenda-slider">
                                 <div class="inner">
@@ -197,7 +181,43 @@
                             </div>
                     </div>
                 </div>
-
+                <!-- internas container init -->
+                <section class="internas-container">
+                    <div class="inner wrapper">
+                        <div class="container-fluid">
+                            <div class="row quem-somos-content">
+                                <!-- quem somos main content init -->
+                                <div class="col-md-4 col-xs-12 que-somos-menu-col">
+                                    <!-- quem somos menu init -->
+                                    <!-- inserir  class="active" na <li> deixa ela marcada de azul. -->
+                                    <!-- inserir  class="drop-down" na <li> deixa o texto com a seta para baixo. -->
+                                    <!-- inserir  class="drop-down active" na <li> deixa o drop down aberto -->
+                                    <!-- inserir  class="active" na <li> da ul drop-down deixa ela marcada de preto. -->
+                                    <div class="quem-somos-menu difusao-cientifica-menu">
+                                            {% set items = simplify_menu('menu-lateral-difusao') %}
+                                            {# Iterate menu tree #}
+                                            {% for menu_item in items.menu_tree %}
+                                                <ul>
+                                                    <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a></li>
+                                                </ul>
+                                                {% if menu_item.submenu %}
+                                                    {% set subMenuAttribute = "drop-down" %}
+                                                    <ul>
+                                                        {% for itemSub in menu_item.submenu %}
+                                                            <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                {% endif %}
+                                            {% endfor %}
+                                        <div class="quem-somos-menu difusao-cientifica-menu">
+                                            {{  drupal_field('field_page_descricao','node') }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </section>
                 {% elseif hierarquia == 'Sistemas Interativos' %}
 
                 </div>
