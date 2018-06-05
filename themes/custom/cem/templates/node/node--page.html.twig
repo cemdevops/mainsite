@@ -168,12 +168,21 @@
 
                 <!-- agenda slider container init -->
                 <div class="agenda-slider-wrapper">
-                    <div class="inner wrapper">
+                    <h1 class="inner wrapper">
                         <!-- agenda slider title init -->
-                        <div class="title-page icon icon-agenda">
+                        <h1 class="title-page icon icon-agenda">
                             <span>agenda</span>
+                            <div class="box-legenda">
+                                <ul>
+                                    <li class="cursos"><a href="#"><span>cursos</span></a></li>
+                                    <li class="palestras"><a href="#"><span>palestras</span></a></li>
+                                    <li class="eventos"><a href="#"><span>eventos</span></a></li>
+                                    <li class="datas comemorativas/feriados"><a href="#"><span>datas comemorativas/feriados</span></a></li>
+                                    <li class="plus"><a href="#" class="link-more">mais eventos</a></li>
+                                </ul>
+                            </div>
 
-                        </div>
+                        </h1>
                             <div class="agenda-slider">
                                 <div class="inner">
                                     {{ drupal_view('evento','agenda_difusao_cientifica') }}
