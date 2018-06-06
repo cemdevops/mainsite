@@ -130,9 +130,7 @@
                         <div id="ajax-target">
                             <div class="listagem-resultados">
                                 <div class="col-md-12">
-                                    
-                                    {{ drupal_view('evento','bloco_agenda_mes',language,2018,05) }}
-
+                                    {{ drupal_view('evento','bloco_agenda_mes',language, get.year, get.month) }}
                                 </div>
                             </div>
                         </div>
