@@ -10,6 +10,11 @@ function cem_preprocess_html(&$variables) {
   $variables['language'] = $language;
 }
 
+function cem_preprocess_node(&$variables) {
+  $variables['get']['month'] = \Drupal\Component\Utility\XSS::filter($_GET['month']);
+  $variables['get']['year'] = \Drupal\Component\Utility\XSS::filter($_GET['year']);
+}
+
 function cem_preprocess_page(&$variables) {
   if(isset($variables['node'])){
     if($variables['node']->getType() == 'resolution') {
