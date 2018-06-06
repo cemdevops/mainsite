@@ -43,8 +43,8 @@
     <section class="internas-container">
         <div class="inner wrapper">
             <div class="container-fluid">
-                {% if hierarquia == 'Quem somos' %}
                 <div class="row quem-somos-content">
+                {% if hierarquia == 'Quem somos' %}
                     <!-- quem somos main content init -->
                     <div class="col-md-4 col-xs-12 que-somos-menu-col">
                             {# Get menu items #}
@@ -72,10 +72,11 @@
                         <div class="quem-somos-conteudo">
                             {{  drupal_field('field_page_descricao','node') }}
                         </div>
-                    </div>
-                    <!-- quem somos main content end -->
-                    <div class="row quem-somos-perfis-content">
-                        {{ drupal_view('colaborador','bloco_colaborador_quem_somos',pesquisador_id) }}
+
+                        <!-- quem somos main content end -->
+                        <div class="row quem-somos-perfis-content">
+                            {{ drupal_view('colaborador','bloco_colaborador_quem_somos',pesquisador_id) }}
+                        </div>
                     </div>
                 </div>
                 {% elseif hierarquia == 'Publicações' %}
