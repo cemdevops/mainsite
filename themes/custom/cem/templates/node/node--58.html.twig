@@ -1,4 +1,5 @@
 {# agenda #}
+{% set language = language.getId() %}
 <!-- internas container init -->
 <section class="internas-container">
     <div class="inner wrapper">
@@ -129,6 +130,9 @@
                         <div id="ajax-target">
                             <div class="listagem-resultados">
                                 <div class="col-md-12">
+
+
+                                    {{ drupal_view('evento','bloco_agenda_mes',language,2018,05) }}
 
                                     <div class="box-eventos" data-filter="-eventos" data-tipo-evento="5">
                                         <div class="ev-periodo ev-cor-eventos">
