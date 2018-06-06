@@ -109,9 +109,9 @@
                             </div>
                         {% elseif menu_lateral_id == 30 %}
                             <div class="header-search publicoes-search">
-                                <form>
+                                <form method="get" action="http://innovaretech.com.br/pt-br/livro/buscar">
                                     <div>
-                                        <input type="text" placeholder="pesquisar no site" class="search-field">
+                                        <input type="text" placeholder="pesquisar no site" class="search-field" name="livro_buscar">
                                         <select class="search-select">
                                             <option>autor</option>
                                             <option>título</option>
@@ -122,7 +122,7 @@
                             </div>
 
                                 {{  drupal_field('field_page_descricao','node') }}
-                          
+
                             <div class="row quem-somos-perfis-content">
                                 {{ drupal_view('livro','bloco_listagem_livro') }}
                             </div>
