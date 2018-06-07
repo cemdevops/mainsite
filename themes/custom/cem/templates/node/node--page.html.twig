@@ -53,9 +53,13 @@
                         {# Iterate menu tree #}
                         <div class="quem-somos-menu">
                             <ul>
-                            {% for menu_item in items.menu_tree %}
-                                <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a></li>
 
+                            {% for menu_item in items.menu_tree %}
+                                {% if menu_item.submenu %}
+                                    <li class="drop-down"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                                {% else %}
+                                    <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                                {% endif %}
                                 {% if menu_item.submenu %}
                                     {% set subMenuAttribute = "drop-down" %}
                                     <ul>
@@ -64,6 +68,7 @@
                                         {% endfor %}
                                     </ul>
                                 {% endif %}
+                                </li>
                             {% endfor %}
                             </ul>
                         </div>
@@ -87,18 +92,23 @@
                         {# Iterate menu tree #}
                         <div class="quem-somos-menu">
                             <ul>
-                            {% for menu_item in items.menu_tree %}
-                                    <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a></li>
 
-                                {% if menu_item.submenu %}
-                                    {% set subMenuAttribute = "drop-down" %}
-                                    <ul>
-                                        {% for itemSub in menu_item.submenu %}
-                                            <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
-                                        {% endfor %}
-                                    </ul>
-                                {% endif %}
-                            {% endfor %}
+                                {% for menu_item in items.menu_tree %}
+                                    {% if menu_item.submenu %}
+                                        <li class="drop-down"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                                    {% else %}
+                                        <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                                    {% endif %}
+                                    {% if menu_item.submenu %}
+                                        {% set subMenuAttribute = "drop-down" %}
+                                        <ul>
+                                            {% for itemSub in menu_item.submenu %}
+                                                <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </div>
                     </div>
@@ -161,17 +171,23 @@
                         {# Iterate menu tree #}
                         <div class="quem-somos-menu">
                             <ul>
-                            {% for menu_item in items.menu_tree %}
-                                    <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a></li>
-                                {% if menu_item.submenu %}
-                                    {% set subMenuAttribute = "drop-down" %}
-                                    <ul>
-                                        {% for itemSub in menu_item.submenu %}
-                                            <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
-                                        {% endfor %}
-                                    </ul>
-                                {% endif %}
-                            {% endfor %}
+
+                                {% for menu_item in items.menu_tree %}
+                                    {% if menu_item.submenu %}
+                                        <li class="drop-down"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                                    {% else %}
+                                        <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                                    {% endif %}
+                                    {% if menu_item.submenu %}
+                                        {% set subMenuAttribute = "drop-down" %}
+                                        <ul>
+                                            {% for itemSub in menu_item.submenu %}
+                                                <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </div>
                     </div>
@@ -211,8 +227,13 @@
                                             {% set items = simplify_menu('menu-lateral-difusao') %}
                                             {# Iterate menu tree #}
                                         <ul>
+
                                             {% for menu_item in items.menu_tree %}
-                                                    <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a></li>
+                                                {% if menu_item.submenu %}
+                                                    <li class="drop-down"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                                                {% else %}
+                                                    <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                                                {% endif %}
                                                 {% if menu_item.submenu %}
                                                     {% set subMenuAttribute = "drop-down" %}
                                                     <ul>
@@ -221,6 +242,7 @@
                                                         {% endfor %}
                                                     </ul>
                                                 {% endif %}
+                                                </li>
                                             {% endfor %}
                                         </ul>
                                     </div>
