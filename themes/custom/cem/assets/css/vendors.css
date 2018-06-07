@@ -106,8 +106,8 @@
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../../../cem/assets/bootstrap/fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("../../../cem/assets/bootstrap/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../../cem/assets/bootstrap/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../../../cem/assets/bootstrap/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../../cem/assets/bootstrap/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../../cem/assets/bootstrap/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("../../../cem/vendor/Bootstrap-3.3.7/fonts/glyphicons-halflings-regular.eot");
+  src: url("../../../cem/vendor/Bootstrap-3.3.7/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../../cem/vendor/Bootstrap-3.3.7/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../../../cem/vendor/Bootstrap-3.3.7/fonts/glyphicons-halflings-regular.woff") format("woff"), url("../../../cem/vendor/Bootstrap-3.3.7/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../../../cem/vendor/Bootstrap-3.3.7/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 /* line 24, node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_glyphicons.scss */
