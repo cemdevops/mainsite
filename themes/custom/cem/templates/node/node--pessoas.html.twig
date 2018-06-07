@@ -6,8 +6,9 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="breadcrumb">
-                            <a href="#">home</a>
-                            <a href="#">coordenadores de projetos</a>
+                            <a href="/quem-somos/conheca-o-cem">quem somos</a>
+                            <a href="/quem-somos/nossa-equipe">nossa equipe</a>
+                            <a href="/quem-somos/coordenadores-de-projetos">coordenadores de projetos</a>
                             <a href="#">{{ label }}</a>
                         </div>
                     </div>
@@ -69,6 +70,26 @@
                                         {{  drupal_field('field_pessoa_biografia','node') }}
                                     </div>
                                 </div>
+                                <!-- gravacoes, palestras init -->
+                                <div class="coordenador-box-infos">
+                                    <div class="title icon icon-medias">
+                                        {% trans %}
+                                            <h3>Gravação de Seminários, palestras</h3>
+                                        {% endtrans %}
+                                    </div>
+                                    {{  drupal_field('field_pessoa_gravacoes','node') }}
+                                </div>
+                                <!-- gravacoes, palestras end -->
+                                <!-- books init -->
+                                <div class="coordenador-box-infos">
+                                    <div class="title icon icon-books">
+                                        {% trans %}
+                                            <h3>Produção mais recente (*)   -   Livros e Capítulos de livros</h3>
+                                        {% endtrans %}
+                                    </div>
+                                    {{  drupal_field('field_pessoa_producoes','node') }}
+                                </div>
+                                <!-- books end -->
                             </div>
                         </div>
                     </div>
