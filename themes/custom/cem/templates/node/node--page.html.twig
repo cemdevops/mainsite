@@ -129,7 +129,15 @@
                                         </div>
                                     </form>
                                 </div>
-                                {{ drupal_view('categoria_artigo','bloco_categoria_artigo') }}
+                                <div class="quem-somos-conteudo">
+                                    {{  drupal_field('field_page_descricao','node') }}
+                                </div>
+                                <div class="publicacoes-artigos-grid-container">
+                                    <!-- <div class="row"> -->
+                                    <div>
+                                        {{ drupal_view('categoria_artigo','bloco_categoria_artigo') }}
+                                    </div>
+                                </div>
                             </div>
                         {% elseif menu_lateral_id == 30 %}
                             <div class="header-search publicoes-search">
