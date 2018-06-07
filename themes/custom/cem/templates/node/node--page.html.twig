@@ -52,10 +52,10 @@
                         {% set items = simplify_menu('menu-lateral') %}
                         {# Iterate menu tree #}
                         <div class="quem-somos-menu">
-                            {% for menu_item in items.menu_tree %}
                             <ul>
+                            {% for menu_item in items.menu_tree %}
                                 <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a></li>
-                            </ul>
+
                                 {% if menu_item.submenu %}
                                     {% set subMenuAttribute = "drop-down" %}
                                     <ul>
@@ -65,6 +65,7 @@
                                     </ul>
                                 {% endif %}
                             {% endfor %}
+                            </ul>
                         </div>
                     </div>
                     <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
@@ -85,10 +86,10 @@
                         {% set items = simplify_menu('menu-lateral-publicacoes') %}
                         {# Iterate menu tree #}
                         <div class="quem-somos-menu">
+                            <ul>
                             {% for menu_item in items.menu_tree %}
-                                <ul>
                                     <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a></li>
-                                </ul>
+
                                 {% if menu_item.submenu %}
                                     {% set subMenuAttribute = "drop-down" %}
                                     <ul>
@@ -98,6 +99,7 @@
                                     </ul>
                                 {% endif %}
                             {% endfor %}
+                            </ul>
                         </div>
                     </div>
                     <!-- quem somos menu end -->
@@ -158,10 +160,9 @@
                         {% set items = simplify_menu('menu-lateral-download-dados') %}
                         {# Iterate menu tree #}
                         <div class="quem-somos-menu">
+                            <ul>
                             {% for menu_item in items.menu_tree %}
-                                <ul>
                                     <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a></li>
-                                </ul>
                                 {% if menu_item.submenu %}
                                     {% set subMenuAttribute = "drop-down" %}
                                     <ul>
@@ -171,6 +172,7 @@
                                     </ul>
                                 {% endif %}
                             {% endfor %}
+                            </ul>
                         </div>
                     </div>
 
@@ -208,10 +210,9 @@
                                     <div class="quem-somos-menu difusao-cientifica-menu">
                                             {% set items = simplify_menu('menu-lateral-difusao') %}
                                             {# Iterate menu tree #}
+                                        <ul>
                                             {% for menu_item in items.menu_tree %}
-                                                <ul>
                                                     <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a></li>
-                                                </ul>
                                                 {% if menu_item.submenu %}
                                                     {% set subMenuAttribute = "drop-down" %}
                                                     <ul>
@@ -221,6 +222,7 @@
                                                     </ul>
                                                 {% endif %}
                                             {% endfor %}
+                                        </ul>
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
