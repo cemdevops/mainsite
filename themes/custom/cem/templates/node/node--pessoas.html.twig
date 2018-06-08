@@ -1,3 +1,4 @@
+{% set pesquisador     = content['field_pesquisadores'][0]['#title'] %}
 <main class="main">
     <!-- internas top header init -->
     <section class="internas-top-header">
@@ -9,8 +10,8 @@
                             {% trans %}
                                 quem somos
                             {% endtrans %}
-                            <span class="sub-title"><a href="/quem-somos/nossa-equipe">nossa equipe</a></span>
-                            <span class="sub-title"><a href="/quem-somos/coordenadores-de-projetos">coordenadores de projetos</a></span>
+                            <span class="sub-title"><a href="/quem-somos/nossa-equipe">{% trans %}nossa equipe{% endtrans %}</a></span>
+                            <span class="sub-title"><a href="/quem-somos/coordenadores-de-projetos">{{ pesquisador  }}</a></span>
                             <span class="sub-title"><a href="#">{{ label }}</a></span>
                         </h1>
                     </div>

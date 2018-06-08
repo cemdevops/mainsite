@@ -29,32 +29,22 @@
 
 <main class="main">
     <!-- internas top header init -->
-    {% if pesquisador  %}
-        <section class="internas-top-header">
-            <div class="inner wrapper">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <a href="/node/{{ id }}"><h1 class="title-page">{{ hierarquia }}</a><span class="sub-title">{{ label }}</span><span class="sub-title">{{ pesquisador }}</span></h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    {% else %}
-        <section class="internas-top-header">
-            <div class="inner wrapper">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <a href="/node/{{ id }}"><h1 class="title-page">{{ hierarquia }}</a><span class="sub-title">{{ label }}</span></h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    {% endif %}
 
+        <section class="internas-top-header">
+            <div class="inner wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            {% if pesquisador  %}
+                                <a href="/node/{{ id }}"><h1 class="title-page">{{ hierarquia }}</a><span class="sub-title">{% trans %}nossa equipe{% endtrans %}</span><span class="sub-title">{{ label }}</span></h1>
+                            {% else %}
+                                <a href="/node/{{ id }}"><h1 class="title-page">{{ hierarquia }}</a><span class="sub-title">{{ label }}</span></h1>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     <!-- internas container init -->
     <section class="internas-container">
         <div class="inner wrapper">
