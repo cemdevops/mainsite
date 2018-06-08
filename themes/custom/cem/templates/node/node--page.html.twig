@@ -1,4 +1,5 @@
 {% set hierarquia      = content['field_hierarquia'][0]['#title'] %}
+{% set pesquisador     = content['field_pesquisadores'][0]['#title'] %}
 {% set pesquisador_id  = node.get('field_pesquisadores').getValue()[0]['target_id'] %}
 {% set menu_lateral_id = node.get('field_publicacoes').getValue()[0]['target_id'] %}
 {% set id = node.id() %}
@@ -28,17 +29,32 @@
 
 <main class="main">
     <!-- internas top header init -->
-    <section class="internas-top-header">
-        <div class="inner wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <a href="/node/{{ id }}"><h1 class="title-page">{{ hierarquia }}</a><span class="sub-title">{{ label }}</span></h1>
+    {% if pesquisador  %}
+        <section class="internas-top-header">
+            <div class="inner wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <a href="/node/{{ id }}"><h1 class="title-page">{{ hierarquia }}</a><span class="sub-title">{{ label }}</span><span class="sub-title">{{ pesquisador }}</span></h1>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    {% else %}
+        <section class="internas-top-header">
+            <div class="inner wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <a href="/node/{{ id }}"><h1 class="title-page">{{ hierarquia }}</a><span class="sub-title">{{ label }}</span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+
     <!-- internas container init -->
     <section class="internas-container">
         <div class="inner wrapper">
