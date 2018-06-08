@@ -2,6 +2,8 @@
 /**
 * Implements hook_blog_preprocess_html().
 */
+use Drupal\taxonomy\Entity\Term;
+
 function cem_preprocess_html(&$variables) {
 
 //  $node = \Drupal::entityTypeManager()->getStorage('node')->load(25);
@@ -11,6 +13,10 @@ function cem_preprocess_html(&$variables) {
 }
 
 function cem_preprocess_node(&$variables) {
+  $tid = $variables['node']->get('field_pesquisadores')->getValue()[0]['target_id'];
+  $teste = Term::load($tid)->getName();
+  var_dump($teste);
+  //$variables['pesquisadores'] = $variables['node']->get('field_pesquisadores');
   $variables['get']['month'] = \Drupal\Component\Utility\XSS::filter($_GET['month']);
   $variables['get']['year'] = \Drupal\Component\Utility\XSS::filter($_GET['year']);
 }
