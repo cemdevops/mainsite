@@ -79,6 +79,25 @@
       </aside>
     {% endif %}
 
+  <!-- internas container init -->
+  <section class="internas-container">
+    <div class="inner wrapper">
+      <div class="container-fluid">
+        <div class="row quem-somos-content">
+          <div class="col-xs-12">
+            <section class="home-apoio">
+                {% trans %}
+              <div class="title">apoio</div>
+                {% endtrans %}
+              <div class="logos">
+                  {{ drupal_entity('block','apoio') }}
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   </main>
   <footer>
     <!-- footer newsletter init -->
@@ -107,7 +126,7 @@
       </div>
     </section>
   </footer>
-  
+
   {% if page.footer %}
     <footer role="contentinfo">
       {{ page.footer }}
