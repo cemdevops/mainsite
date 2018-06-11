@@ -67,7 +67,6 @@
                         {# Iterate menu tree #}
                         <div class="quem-somos-menu">
                             <ul>
-
                             {% for menu_item in items.menu_tree %}
                                 {% if menu_item.submenu %}
                                     <li class="drop-down"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
