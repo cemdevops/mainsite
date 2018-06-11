@@ -120,7 +120,7 @@
                     </div>
                     <!-- quem somos menu end -->
                     <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
-                        {#Artigo = 29, Livro = 30, Capitulo de livro = 31, Teses e dissertações = 32, Working papers = 33, Estudo de transfêrencia = 35, Boletim nota 100 = 36, Urban data = 37#}
+                        {# Publicacao = 63, Artigo = 29, Livro = 30, Capitulo de livro = 31, Teses e dissertações = 32, Working papers = 33, Estudo de transfêrencia = 35, Boletim nota 100 = 36, Urban data = 37#}
                         {% if menu_lateral_id == 29 %}
                             <div class="publicacoes-livro-grid">
                                 <div class="header-search publicoes-search">
@@ -158,9 +158,7 @@
                                     </div>
                                 </form>
                             </div>
-
                                 {{  drupal_field('field_page_descricao','node') }}
-
                             <div class="row quem-somos-perfis-content">
                                 {{ drupal_view('livro','bloco_listagem_livro') }}
                             </div>
@@ -187,6 +185,22 @@
                         {% elseif menu_lateral_id == 37 %}
                             <div class="row quem-somos-perfis-content">
                             </div>
+                        {% endif %}
+                        {% elseif menu_lateral_id == 63 %}
+                            <div class="header-search publicoes-search">
+                                <form method="get" action="http://innovaretech.com.br/pt-br/livro/buscar">
+                                    <div>
+                                        <input type="text" placeholder="pesquisar no site" class="search-field" name="livro_buscar">
+                                        <select class="search-select">
+                                            <option>autor</option>
+                                            <option>título</option>
+                                        </select>
+                                        <input type="submit" value="buscar" class="search-button">
+                                    </div>
+                                </form>
+                            </div>
+
+                            {{  drupal_field('field_page_descricao','node') }}
                         {% endif %}
                     </div>
 
