@@ -237,7 +237,7 @@
                 {% elseif hierarquia == 'Difusão Científica' %}
                 <!-- agenda slider container init -->
                 <div class="agenda-slider-wrapper">
-                    <h1 class="inner wrapper">
+                    <div class="inner wrapper">
                         <!-- agenda slider title init -->
                         <h1 class="title-page icon icon-agenda">
                             <span>agenda</span>
@@ -250,8 +250,8 @@
                                     <li class="plus"><a href="#" class="link-more">mais eventos</a></li>
                                 </ul>
                             </div>
-
                         </h1>
+                        </div>
                             <div class="agenda-slider">
                                 <div class="inner">
                                     {{ drupal_view('evento','agenda_difusao_cientifica') }}
