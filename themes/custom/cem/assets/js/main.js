@@ -1,7 +1,7 @@
 (function(window, document, $) {
     'use strict';
     if ($('.agenda-slider').length) {
-        $('.agenda-slider>.inner').slick({
+        $('.agenda-slider>.inner > div > div').slick({
             dots: false,
             infinite: true,
             speed: 400,
