@@ -1,7 +1,9 @@
-{% set hierarquia      = content['field_hierarquia'][0]['#title'] %}
-{% set pesquisador     = content['field_pesquisadores'][0]['#title'] %}
-{% set pesquisador_id  = node.get('field_pesquisadores').getValue()[0]['target_id'] %}
-{% set menu_lateral_id = node.get('field_publicacoes').getValue()[0]['target_id'] %}
+{% set hierarquia         = content['field_hierarquia'][0]['#title'] %}
+{% set pesquisador        = content['field_pesquisadores'][0]['#title'] %}
+{% set difusao_cientifica = content['field_difusao_cientifica'][0]['#title'] %}
+{% set pesquisador_id     = node.get('field_pesquisadores').getValue()[0]['target_id'] %}
+{% set menu_lateral_id    = node.get('field_publicacoes').getValue()[0]['target_id'] %}
+
 {% set id = node.id() %}
 
 {% macro menuMacro(menu, level) -%}
@@ -40,7 +42,7 @@
                             {% else %}
                                 {% if menu_lateral_id == 63 %}
                                     <a href="/node/{{ id }}"><h1 class="title-page">{% trans %}publicações{% endtrans %}</a></h1>
-                                {% elseif hierarquia == 'Difusão Científica' %}
+                                {% elseif difusao_cientifica == 'Agenda' %}
                                         <a href="/node/{{ id }}"><h1 class="title-page">{% trans %}difusão científica{% endtrans %}</a></h1>
                                 {% else %}
                                     <a href="/node/{{ id }}"><h1 class="title-page">{{ hierarquia }}</a><span class="sub-title">{{ label }}</span></h1>
