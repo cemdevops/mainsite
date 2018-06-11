@@ -40,6 +40,8 @@
                             {% else %}
                                 {% if menu_lateral_id == 63 %}
                                     <a href="/node/{{ id }}"><h1 class="title-page">{% trans %}publicações{% endtrans %}</a></h1>
+                                {% elseif hierarquia == 'Difusão Científica' %}
+                                        <a href="/node/{{ id }}"><h1 class="title-page">{% trans %}difusão científica{% endtrans %}</a></h1>
                                 {% else %}
                                     <a href="/node/{{ id }}"><h1 class="title-page">{{ hierarquia }}</a><span class="sub-title">{{ label }}</span></h1>
                                 {% endif %}
