@@ -1,16 +1,22 @@
 <!-- eventos main content init -->
-<div class="eventos-main">
+{% set hierarquia = content['field_hierarquia'][0]['#title'] %}
+
+<main class="main">
   <section class="internas-top-header">
-    <div class="inner wrapper">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-12">
-            <a href="/node/{{ id }}"><h1 class="title-page">{{ hierarquia }}</a><span class="sub-title">{{ label }}</span></h1>
-          </div>
+  <div class="inner wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <a href="/node/{{ id }}"><h1 class="title-page">{{ hierarquia }}</a><span class="sub-title">{{ label }}</span></h1>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+</main>
+
+<div class="eventos-main">
+
   <div class="inner wrapper">
     <div class="container-fluid">
       <div class="col-md-9 col-xs-12">
