@@ -20,4 +20,5 @@ function valida_email_page_attachments(&$page) {
 
 function valida_email_preprocess_node(&$node) {
 
+
 }
