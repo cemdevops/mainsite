@@ -58,7 +58,16 @@ function cem_theme_suggestions_html_alter(array &$suggestions, array $variables)
   }
 }
 
-function cem_theme_preprocess_links__language_block(&$variables) {
-  $variables['links']['en']['link']['#title'] = '(english)';
-  $variables['links']['pt-br']['link']['#title'] = '(português)';
+
+function cem_preprocess_links__language_block(&$variables) {
+    $url = $_SERVER['REQUEST_URI'];
+    $lang = explode('/', $url);
+    if($lang[1] == 'pt-br') {
+      $variables['links']['en']['link']['#title'] = '(english)';
+      unset($variables['links']['pt-br']);
+    }else {
+      $variables['links']['pt-br']['link']['#title'] = '(português)';
+      unset($variables['links']['en']);
+    }
 }
+
