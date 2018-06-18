@@ -57,3 +57,8 @@ function cem_theme_suggestions_html_alter(array &$suggestions, array $variables)
     $suggestions[] = 'html__'.$content_type;
   }
 }
+
+function cem_theme_preprocess_links__language_block(&$variables) {
+  $variables['links']['en']['link']['#title'] = '(english)';
+  $variables['links']['pt-br']['link']['#title'] = '(português)';
+}
