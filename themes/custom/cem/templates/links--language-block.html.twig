@@ -42,16 +42,12 @@
     {%- endif -%}
   {%- endif -%}
   <ul id="custom-menu-language" class="navbar-right navbar-nav">
-      {{ kint(links) }}
+
     {%- for item in links -%}
+        {{ kint(item) }}
       <li{{ item.attributes }}>
         {%- if item.link -%}
           {{ item.link }}
-        {%- elseif item.text_attributes -%}
-          <span{{ item.text_attributes }}>{{ item.text }}oi1</span>
-        {%- else -%}
-          {{ item.text }}oi2
-        {%- endif -%}
       </li>
     {%- endfor -%}
   </ul>
