@@ -154,7 +154,7 @@
                             </div>
                         {% elseif menu_lateral_id == 30 %}
                             <div class="header-search publicoes-search">
-                                <form method="get" action="http://innovaretech.com.br/pt-br/livro/buscar">
+                                <form method="get" action="/livro/buscar">
                                     <div>
                                         <input type="text" placeholder="pesquisar no site" class="search-field" name="livro_buscar">
                                         <select class="search-select">
@@ -194,7 +194,7 @@
                             </div>
                         {% elseif menu_lateral_id == 63 %}
                             <div class="header-search publicoes-search">
-                                <form method="get" action="http://innovaretech.com.br/pt-br/livro/buscar">
+                                <form method="get" action="/livro/buscar">
                                     <div>
                                         <input type="text" placeholder="pesquisar no site" class="search-field" name="livro_buscar">
                                         <select class="search-select">
@@ -238,7 +238,12 @@
                     </div>
                 {% elseif hierarquia == 'Sistemas Interativos' %}
                     <!-- conteúdo sitemas interativos -->
-                {% elseif hierarquia == 'Difusão Científica' %}
+                    
+                    {% elseif hierarquia == 'Pesquisa'  %}
+                    <div class="row quem-somos-perfis-content">
+                        {{  drupal_field('field_page_descricao','node') }}
+                    </div>
+                    {% elseif hierarquia == 'Difusão Científica' %}
                 <!-- agenda slider container init -->
 
                 </div>
