@@ -81,6 +81,7 @@
         <a href="#contato" class="header-top-btn-contact"><span>Fale Conosco</span></a>
           {% endtrans %}
         <ul id="custom-menu-language" class="navbar-right navbar-nav">
+            {{ drupal_entity('block', 'seletordeidioma') }}
           <li>
               {% if (language == 'en') %}
                 <a href="/pt-br/">(português)</a>
