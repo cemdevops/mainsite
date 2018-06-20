@@ -1,0 +1,9 @@
+{
+  "name": "drupal/csv_import",
+  "type": "drupal-module",
+  "description": "Provides csv import resource",
+  "licence": "GPL-2.0+",
+  "require": {
+    "parsecsv/php-parsecsv": "^1.0"
+  }
+}
