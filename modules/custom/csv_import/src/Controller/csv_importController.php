@@ -1,7 +1,6 @@
 <?php
 
-namespace Drupal\webform_import\Controller;
-
+namespace Drupal\csv_import\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\webform\Entity\Webform;
@@ -9,18 +8,17 @@ use Drupal\webform\WebformSubmissionForm;
 use \Symfony\Component\HttpFoundation\Response;
 use Drupal\webform\Entity;
 use Drupal\webform\Entity\WebformSubmission;
+use ParseCsv\Csv;
 
-
-require 'vendor/autoload.php';
 class webformimportController extends ControllerBase{
     
     public function import_webform_csv(){
       
-        $csv = new ParseCsv\Csv('tabela_usuarios_cem4.csv');
-        $response = array();
-        foreach($csv->data as $values) {
-          $response[] = $values['nome'];
-        }
+        $csv = new Csv('tabela_usuarios_cem4.csv');
+//        $response = array();
+//        foreach($csv->data as $values) {
+//          $response[] = $values['nome'];
+//        }
         
 //        $filePath = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
 //        $filename = $filePath.'/rsvp_form.csv';
@@ -35,9 +33,8 @@ class webformimportController extends ControllerBase{
 //        }
 //        fclose($handle);
 
-        $response = print_r($response);
+        $response = print_r($csv->data);
         return new Response(render($response));
-    
     }
     
     public function add_rsvp_submission($rowData = array()){
