@@ -240,9 +240,37 @@
                     <!-- conteúdo sitemas interativos -->
 
                     {% elseif hierarquia == 'Pesquisa'  %}
-                    <div class="row quem-somos-perfis-content">
-                        {{  drupal_field('field_page_descricao','node') }}
-                    </div>
+
+                        <div class="col-md-4 col-xs-12 que-somos-menu-col">
+                            {# Get menu items #}
+                            {% set items = simplify_menu('menu-lateral-pesquisa') %}
+                            {# Iterate menu tree #}
+                            <div class="quem-somos-menu">
+                                <ul>
+                                    {% for menu_item in items.menu_tree %}
+                                        {% if menu_item.submenu %}
+                                            <li class="drop-down"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                                        {% else %}
+                                            <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                                        {% endif %}
+                                        {% if menu_item.submenu %}
+                                            {% set subMenuAttribute = "drop-down" %}
+                                            <ul>
+                                                {% for itemSub in menu_item.submenu %}
+                                                    <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
+                                                {% endfor %}
+                                            </ul>
+                                        {% endif %}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
+                            <div class="quem-somos-conteudo">
+                                {{  drupal_field('field_page_descricao','node') }}
+                            </div>
+                        </div>
                     {% elseif hierarquia == 'Difusão Científica' %}
                 <!-- agenda slider container init -->
 
