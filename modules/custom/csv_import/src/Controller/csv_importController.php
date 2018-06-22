@@ -55,8 +55,10 @@ class csv_importController extends ControllerBase {
         }
       }
     }
-    $response["response"] = "success";
-    return new Response($response);
+   return [
+      '#type' => 'markup',
+      '#markup' => $this->t('Importação realizada com sucesso!'),
+    ];
   }
   
   
