@@ -14,12 +14,18 @@ function cem_preprocess_html(&$variables) {
 
 function cem_preprocess_node(&$variables) {
   $tipo = $variables['node']->getType();
-  if($tipo == 'pessoas') {
-    $tid = $variables['node']->get('field_pesquisadores')->getValue()[0]['target_id'];
+  if ($tipo == 'pessoas') {
+    $tid = $variables['node']->get('field_pesquisadores')
+      ->getValue()[0]['target_id'];
     $variables['pesquisadores'] = Term::load($tid)->getName();
   }
-  $variables['get']['month'] = \Drupal\Component\Utility\XSS::filter($_GET['month']);
-  $variables['get']['year'] = \Drupal\Component\Utility\XSS::filter($_GET['year']);
+  if (isset($_GET['month']) && isset($_GET['year'])) {
+    $variables['get']['month'] = \Drupal\Component\Utility\XSS::filter($_GET['month']);
+    $variables['get']['year'] = \Drupal\Component\Utility\XSS::filter($_GET['year']);
+  }else{
+    $variables['get']['month'] = Null;
+    $variables['get']['year']  = Null;
+  }
 }
 
 function cem_preprocess_page(&$variables) {
