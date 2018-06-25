@@ -41,3 +41,4 @@ sites/simpletest
 # simpletest
 
 .idea/
+sites/default/files/*
