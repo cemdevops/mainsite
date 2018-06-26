@@ -15,14 +15,14 @@ function cem_preprocess_html(&$variables) {
 function cem_preprocess_node(&$variables) {
   $tipo = $variables['node']->getType();
   $lang = $variables['node']->language()->getId();
- // print $variables['node']->getTranslation();
-  //kint($variables['node']);
+
   if($tipo == 'agenda') {
     $data = $variables['node']->get('field_evento_data')->getString();
     $data = explode(', ',$data);
-    $data_ini = strtotime($data[0]);
+    $data_ini = strtotime('-3 hour',strtotime($data[0]));
+    
     if(isset($data[1])){
-      $data_fim = strtotime($data[1]);
+      $data_fim = strtotime('-3 hour',strtotime($data[1]));
     }
     if($lang == 'pt-br'){
       setlocale(LC_TIME, "portuguese");
