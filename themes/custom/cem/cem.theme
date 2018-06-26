@@ -44,7 +44,7 @@ function cem_preprocess_node(&$variables) {
           $variables['data_evento'] =  strftime('%d of %B of %Y %Hh%M', $data_ini) . ' until ' . strftime('%d of %B de %Y %Hh%M', $data_fim);
         }
       }else{
-        $variables['data_evento'] =  strftime('%d dof %B of %Y %Hh%M', $data_ini);
+        $variables['data_evento'] =  strftime('%d of %B of %Y %Hh%M', $data_ini);
       }
     }
   }
