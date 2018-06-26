@@ -36,7 +36,7 @@
           </span>
         </div>
         <div class="evento-text internas-text">
-          
+
             {{  drupal_field('field_evento_descricao','node') }}
         </div>
         <div class="evento-share">
@@ -94,23 +94,22 @@
         <!-- box inscricao end -->
 
         <!-- side bar enderecos init -->
-        <div class="side-bar-box">
-            {% trans %}
-              <div class="header icon-endereco bg-black">Endereços</div>
-            {% endtrans %}
-          <div class="box bg-light">
-            <!-- endereco item init -->
-            <div class="contato-endereco">
-              <h4 class="title">{{ lugar }}</h4>
-              <p>{{ endereco }}</p>
-              <p>{{ bairro }}</p>
+        {% if endereco %}
+          <div class="side-bar-box">
+                <div class="header icon-endereco bg-black">{% trans %}Endereços{% endtrans %}</div>
+            <div class="box bg-light">
+              <!-- endereco item init -->
+              <div class="contato-endereco">
+                <h4 class="title">{{ lugar }}</h4>
+                <p>{{ endereco }}</p>
+                <p>{{ bairro }}</p>
+              </div>
+              <!-- endereco item end -->
             </div>
-            <!-- endereco item end -->
           </div>
-        </div>
+        {% endif %}
         <!-- side bar enderecos end -->
-
-
+        
       </div>
     </div>
   </div>
@@ -123,8 +122,8 @@
           {{  drupal_field('field_evento_conteudo','node') }}
         <div class="col-xs-12 internas-text">
             {{  drupal_field('field_evento_observacoes','node') }}
-          <a href="#" class="evento-btn btn-inscricao">Clique aqui para fazer a inscrição</a>
-          <a href="#" class="evento-btn btn-voltar">voltar para seminário e agenda</a>
+          <a href="#" class="evento-btn btn-inscricao">{% trans %}Clique aqui para fazer a inscrição{% endtrans %}</a>
+          <a href="/difusao-cientifica" class="evento-btn btn-voltar">{% trans %}voltar para seminário e agenda{% endtrans %}</a>
         </div>
 
       </div>
