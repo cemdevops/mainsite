@@ -27,11 +27,16 @@ function cem_preprocess_node(&$variables) {
     }else{
       setlocale(LC_TIME, "english");
     }
-    if(date('Y-m-d', $data_ini) == date('Y-m-d', $data_fim)){
-      $variables['data_evento'] =  strftime('%d de %B de %Y %Hh%M', $data_ini) . ' - '. strftime('%Hh%M', $data_fim);
+    if(isset($data[1])){
+      if(date('Y-m-d', $data_ini) == date('Y-m-d', $data_fim)){
+        $variables['data_evento'] =  strftime('%d de %B de %Y %Hh%M', $data_ini) . ' - '. strftime('%Hh%M', $data_fim);
+      }else{
+        $variables['data_evento'] =  strftime('%d de %B de %Y %Hh%M', $data_ini) . ' a ' . strftime('%d de %B de %Y %Hh%M', $data_fim);
+      }
     }else{
-      $variables['data_evento'] =  strftime('%d de %B de %Y %Hh%M', $data_ini) . 'a' . strftime('%d de %B de %Y %Hh%M', $data_fim);
+      $variables['data_evento'] =  strftime('%d de %B de %Y %Hh%M', $data_ini);
     }
+
   }
   
   if($tipo == 'pessoas') {
