@@ -21,7 +21,9 @@ function cem_preprocess_node(&$variables) {
     $data = $variables['node']->get('field_evento_data')->getString();
     $data = explode(', ',$data);
     $data_ini = strtotime($data[0]);
-    $data_fim = strtotime($data[1]);
+    if(isset($data[1])){
+      $data_fim = strtotime($data[1]);
+    }
     if($lang == 'pt-br'){
       setlocale(LC_TIME, "portuguese");
     }else{
