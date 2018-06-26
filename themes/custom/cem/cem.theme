@@ -25,7 +25,7 @@ function cem_preprocess_node(&$variables) {
       $data_fim = strtotime('-3 hour',strtotime($data[1]));
     }
     if($lang == 'pt-br'){
-      setlocale(LC_TIME, "portuguese");
+      setlocale(LC_TIME, "pt_BR.utf8");
       if(isset($data[1])){
         if(date('Y-m-d', $data_ini) == date('Y-m-d', $data_fim)){
           $variables['data_evento'] =  strftime('%d de %B de %Y %Hh%M', $data_ini) . ' - '. strftime('%Hh%M', $data_fim);
