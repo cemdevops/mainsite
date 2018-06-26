@@ -14,12 +14,32 @@ function cem_preprocess_html(&$variables) {
 
 function cem_preprocess_node(&$variables) {
   $tipo = $variables['node']->getType();
-  if ($tipo == 'pessoas') {
+  $lang = $variables['node']->language()->getId();
+ // print $variables['node']->getTranslation();
+  //kint($variables['node']);
+  if($tipo == 'agenda') {
+    $data = $variables['node']->get('field_evento_data')->getString();
+    $data = explode(', ',$data);
+    $data_ini = strtotime($data[0]);
+    $data_fim = strtotime($data[1]);
+    if($lang == 'pt-br'){
+      setlocale(LC_TIME, "portuguese");
+    }else{
+      setlocale(LC_TIME, "english");
+    }
+    if(date('Y-m-d', $data_ini) == date('Y-m-d', $data_fim)){
+      $variables['data_evento'] =  strftime('%d de %B de %Y %Hh%M', $data_ini) . ' - '. strftime('%Hh%M', $data_fim);
+    }else{
+      $variables['data_evento'] =  strftime('%d de %B de %Y %Hh%M', $data_ini) . 'a' . strftime('%d de %B de %Y %Hh%M', $data_fim);
+    }
+  }
+  
+  if($tipo == 'pessoas') {
     $tid = $variables['node']->get('field_pesquisadores')
       ->getValue()[0]['target_id'];
     $variables['pesquisadores'] = Term::load($tid)->getName();
   }
-  if (isset($_GET['month']) && isset($_GET['year'])) {
+  if(isset($_GET['month']) && isset($_GET['year'])) {
     $variables['get']['month'] = \Drupal\Component\Utility\XSS::filter($_GET['month']);
     $variables['get']['year'] = \Drupal\Component\Utility\XSS::filter($_GET['year']);
   }else{
