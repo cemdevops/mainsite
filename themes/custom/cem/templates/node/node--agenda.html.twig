@@ -9,7 +9,11 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12">
-          <a href="/node/{{ id }}"><h1 class="title-page">{{ hierarquia }}</a><span class="sub-title">{{ label }}</span></h1>
+            <h1 class="title-page">
+                {% trans %}difusão científica{% endtrans %}
+              <span class="sub-title"><a href="/difusao-cientifica">{% trans %}seminários e agenda{% endtrans %}</a></span>
+              <span class="sub-title"><a href="/node/{{ id }}">{{  label }}</a></span>
+            </h1>
         </div>
       </div>
     </div>
@@ -32,9 +36,7 @@
           </span>
         </div>
         <div class="evento-text internas-text">
-            {% trans %}
-              <h2>Descrição do evento:</h2>
-            {% endtrans %}
+          
             {{  drupal_field('field_evento_descricao','node') }}
         </div>
         <div class="evento-share">
@@ -113,4 +115,20 @@
     </div>
   </div>
 </div>
+<section class="internas-container">
+  <div class="inner wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- evento content init -->
+          {{  drupal_field('field_evento_conteudo','node') }}
+        <div class="col-xs-12 internas-text">
+            {{  drupal_field('field_evento_observacoes','node') }}
+          <a href="#" class="evento-btn btn-inscricao">Clique aqui para fazer a inscrição</a>
+          <a href="#" class="evento-btn btn-voltar">voltar para seminário e agenda</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 <!-- eventos main content end -->
