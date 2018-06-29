@@ -40,5 +40,6 @@ sites/simpletest
 # Ignore SimpleTest multi-site environment.
 # simpletest
 
+.idea/*
 .idea/
-sites/default/files/*
+vendor/*
