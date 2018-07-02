@@ -154,6 +154,8 @@
                             </div>
                         {% elseif menu_lateral_id == 30 %}
                             <div class="header-search publicoes-search">
+                                {{ drupal_entity('block','formularioexpostobuscabusca_livro') }}
+                                {{ drupal_entity('view','formularioexpostobuscabusca_livro') }}
                                 <form method="get" action="/livro/buscar">
                                     <div>
                                         <input type="text" placeholder="pesquisar no site" class="search-field" name="livro_buscar">
@@ -167,7 +169,7 @@
                             </div>
                                 {{  drupal_field('field_page_descricao','node') }}
                             <div class="row quem-somos-perfis-content">
-                                {{ drupal_view('livro','bloco_listagem_livro') }}
+                                {{ drupal_view('busca','busca_livro') }}
                             </div>
                         {% elseif menu_lateral_id == 31 %}
                             <div class="row quem-somos-perfis-content">
