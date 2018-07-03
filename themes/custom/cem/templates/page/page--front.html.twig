@@ -94,13 +94,13 @@
                 <div class="home-publications-header">
                     {% trans %}
                       <h2>publicações</h2>
-                      <a href="#" class="link-more">mais publicações</a>
+                      <a href="/publicacoes" class="link-more">mais publicações</a>
                     {% endtrans %}
                 </div>
                 <div class="home-publications-box">
                   <div class="row">
                     <!-- home publications item init -->
-                    {{ drupal_view('publicacao','bloco_publicacao_home',language) }}
+                    {{ drupal_view('slidershow','slidershow_home_publicacao',language) }}
                     <!-- home publications item end -->
                   </div>
                 </div>
