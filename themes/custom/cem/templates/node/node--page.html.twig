@@ -14,10 +14,8 @@
         {% for menu_item in menu %}
             {# Check if this is the active item. #}
             {% set active = (menu_item.active) ? ' is-active' : '' %}
-
             {# Check if this item is in the active trail. #}
             {% set active = active ~ ((menu_item.active_trail) ? ' is-active-trail' : '') %}
-
             <li class=”menu__item{{ active }}”>
                 <a href="{{ menu_item.url }}"  class=”menu__link{{ active }}”>{{ menu_item.text }}</a>
                 {% if menu_item.submenu %}
@@ -105,7 +103,6 @@
                         {# Iterate menu tree #}
                         <div class="quem-somos-menu">
                             <ul>
-
                                 {% for menu_item in items.menu_tree %}
                                     {% if menu_item.submenu %}
                                         <li class="drop-down"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
@@ -126,91 +123,32 @@
                         </div>
                     </div>
                     <!-- quem somos menu end -->
+                    {# drupal_view('categoria_artigo','bloco_categoria_artigo')#}
                     <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
                         {# Publicacao = 63, Artigo = 29, Livro = 30, Capitulo de livro = 31, Teses e dissertações = 32, Working papers = 33, Estudo de transfêrencia = 35, Boletim nota 100 = 36, Urban data = 37#}
-                        {% if menu_lateral_id == 29 %}
-                            <div class="publicacoes-livro-grid">
-                                <div class="header-search publicoes-search">
-                                    <form>
-                                        <div>
-                                            <input type="text" placeholder="pesquisar no site" class="search-field" name="artigo_buscar">
-                                            <select class="search-select">
-                                                <option>autor</option>
-                                                <option>título</option>
-                                            </select>
-                                            <input type="submit" value="buscar" class="search-button">
-                                        </div>
-                                    </form>
+                        {{ tipo_publicacao }}
+                        <div class="header-search publicoes-search">
+                            <form method="get">
+                                <div>
+                                    <input type="text" placeholder="pesquisar" class="search-field" name="livro_buscar">
+                                    <input type="submit" value="buscar" class="search-button">
                                 </div>
-                                <div class="quem-somos-conteudo">
-                                    {{  drupal_field('field_page_descricao','node') }}
-                                </div>
-                                <div class="publicacoes-artigos-grid-container">
-                                    <!-- <div class="row"> -->
-                                    <div>
-                                        {{ drupal_view('categoria_artigo','bloco_categoria_artigo') }}
-                                    </div>
-                                </div>
-                            </div>
-                        {% elseif menu_lateral_id == 30 %}
-                            <div class="header-search publicoes-search">
-                                {{ drupal_entity('block_content','formularioexpostobuscabusca_livro') }}
-                                {{ drupal_entity('block','busca-busca_livro') }}
-                                    <!--<dt>Form:</dt>-->
-                                    <dd>{# drupal_form('Drupal\\search\\Form\\SearchBlockForm') #}</dd>
-                                <form method="get">
-                                    <div>
-                                        <input type="text" placeholder="pesquisar" class="search-field" name="livro_buscar">
-                                        <!--<select class="search-select">
-                                            <option>autor</option>
-                                            <option>título</option>
-                                        </select>-->
-                                        <input type="submit" value="buscar" class="search-button">
-                                    </div>
-                                </form>
-                            </div>
-                                {{  drupal_field('field_page_descricao','node') }}
+                            </form>
+                        </div>
+                            {{  drupal_field('field_page_descricao','node') }}
                             <div class="row quem-somos-perfis-content">
+                            {% if menu_lateral_id == 30 %}
                                 {{ drupal_view('busca','busca_livro') }}
                             </div>
-                        {% elseif menu_lateral_id == 31 %}
-                            <div class="row quem-somos-perfis-content">
-                                {{  drupal_field('field_page_descricao','node') }}
-                            </div>
-                        {% elseif menu_lateral_id == 32 %}
-                            <div class="row quem-somos-perfis-content">
-                                {{  drupal_field('field_page_descricao','node') }}
-                            </div>
-                        {% elseif menu_lateral_id == 33 %}
-                            <div class="row quem-somos-perfis-content">
-                                {{  drupal_field('field_page_descricao','node') }}
-                            </div>
-                        {% elseif menu_lateral_id == 35 %}
-                            <div class="row quem-somos-perfis-content">
-                                {{  drupal_field('field_page_descricao','node') }}
-                            </div>
-                        {% elseif menu_lateral_id == 36 %}
-                            <div class="row quem-somos-perfis-content">
-                                {{  drupal_field('field_page_descricao','node') }}
-                            </div>
-                        {% elseif menu_lateral_id == 37 %}
-                            <div class="row quem-somos-perfis-content">
-                            </div>
-                        {% elseif menu_lateral_id == 63 %}
-                            <div class="header-search publicoes-search">
-                                <form method="get" action="/livro/buscar">
-                                    <div>
-                                        <input type="text" placeholder="pesquisar no site" class="search-field" name="livro_buscar">
-                                        <select class="search-select">
-                                            <option>autor</option>
-                                            <option>título</option>
-                                        </select>
-                                        <input type="submit" value="buscar" class="search-button">
-                                    </div>
-                                </form>
-                            </div>
-                            {{  drupal_field('field_page_descricao','node') }}
-                        {% endif %}
+                            {% elseif menu_lateral_id == 29 %}
+                            {% elseif menu_lateral_id == 31 %}
+                            {% elseif menu_lateral_id == 32 %}
+                            {% elseif menu_lateral_id == 33 %}
+                            {% elseif menu_lateral_id == 35 %}
+                            {% elseif menu_lateral_id == 36 %}
+                            {% elseif menu_lateral_id == 37 %}
+                            {% elseif menu_lateral_id == 63 %}
+                            {% endif %}
                     </div>
 
                 {% elseif hierarquia == 'Downloads de dados' %}

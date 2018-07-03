@@ -48,11 +48,17 @@ function cem_preprocess_node(&$variables) {
       }
     }
   }
-  
   if($tipo == 'pessoas') {
     $tid = $variables['node']->get('field_pesquisadores')
       ->getValue()[0]['target_id'];
     $variables['pesquisadores'] = Term::load($tid)->getName();
+  }
+  if($tipo == 'page') {
+    $url  = $_SERVER['REQUEST_URI'];
+    $path = explode('/', $url);
+    if(isset($path[3])){
+      $variables['tipo_publicacao'] = $path[3];
+    }
   }
   if(isset($_GET['month']) && isset($_GET['year'])) {
     $variables['get']['month'] = \Drupal\Component\Utility\XSS::filter($_GET['month']);
@@ -81,7 +87,6 @@ function cem_preprocess_page(&$variables) {
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function cem_theme_suggestions_page_alter(array &$suggestions, array $variables) {
-
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     $content_type = $node->bundle();
     $suggestions[] = 'page__'.$content_type;
@@ -92,13 +97,11 @@ function cem_theme_suggestions_page_alter(array &$suggestions, array $variables)
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function cem_theme_suggestions_html_alter(array &$suggestions, array $variables) {
-  
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     $content_type = $node->bundle();
     $suggestions[] = 'html__'.$content_type;
   }
 }
-
 
 function cem_preprocess_links__language_block(&$variables) {
     $url = $_SERVER['REQUEST_URI'];
@@ -111,4 +114,5 @@ function cem_preprocess_links__language_block(&$variables) {
       unset($variables['links']['en']);
     }
 }
+
 
