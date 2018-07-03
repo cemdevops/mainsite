@@ -3,7 +3,6 @@
 {% set difusao_cientifica = content['field_difusao_cientifica'][0]['#title'] %}
 {% set pesquisador_id     = node.get('field_pesquisadores').getValue()[0]['target_id'] %}
 {% set menu_lateral_id    = node.get('field_publicacoes').getValue()[0]['target_id'] %}
-
 {% set id = node.id() %}
 
 {% macro menuMacro(menu, level) -%}
@@ -136,7 +135,7 @@
                         </div>
                             {{  drupal_field('field_page_descricao','node') }}
                             <div class="row quem-somos-perfis-content">
-                                {% if menu_lateral_id == 30 %}
+                                {% if menu_lateral_id == 30 %} {# Livro = 30 #}
                                     {{ drupal_view('busca','busca_livro') }}
                                 {% elseif menu_lateral_id == 29 %}
                                     {{ drupal_view('categoria_artigo','bloco_categoria_artigo') }}
@@ -152,13 +151,11 @@
                     </div>
 
                 {% elseif hierarquia == 'Downloads de dados' %}
-
                     <div class="col-md-4 col-xs-12 que-somos-menu-col">
                         {% set items = simplify_menu('menu-lateral-download-dados') %}
                         {# Iterate menu tree #}
                         <div class="quem-somos-menu">
                             <ul>
-
                                 {% for menu_item in items.menu_tree %}
                                     {% if menu_item.submenu %}
                                         <li class="drop-down"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
