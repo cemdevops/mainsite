@@ -154,15 +154,17 @@
                             </div>
                         {% elseif menu_lateral_id == 30 %}
                             <div class="header-search publicoes-search">
-                                {{ drupal_entity('block','formularioexpostobuscabusca_livro') }}
-                                {{ drupal_entity('view','formularioexpostobuscabusca_livro') }}
-                                <form method="get" action="/livro/buscar">
+                                {{ drupal_entity('block_content','formularioexpostobuscabusca_livro') }}
+                                {{ drupal_entity('block','busca-busca_livro') }}
+                                    <!--<dt>Form:</dt>-->
+                                    <dd>{# drupal_form('Drupal\\search\\Form\\SearchBlockForm') #}</dd>
+                                <form method="get">
                                     <div>
-                                        <input type="text" placeholder="pesquisar no site" class="search-field" name="livro_buscar">
-                                        <select class="search-select">
+                                        <input type="text" placeholder="pesquisar" class="search-field" name="livro_buscar">
+                                        <!--<select class="search-select">
                                             <option>autor</option>
                                             <option>título</option>
-                                        </select>
+                                        </select>-->
                                         <input type="submit" value="buscar" class="search-button">
                                     </div>
                                 </form>
