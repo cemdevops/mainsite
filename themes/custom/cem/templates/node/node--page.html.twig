@@ -133,10 +133,13 @@
                                 </div>
                             </form>
                         </div>
+                        <div class="quem-somos-conteudo">
                             {{  drupal_field('field_page_descricao','node') }}
-                            <div class="row quem-somos-perfis-content">
+                        </div>
+                        <div class="publicacoes-livro-grid">
                                 {% if menu_lateral_id == 30 %} {# Livro = 30 #}
                                     {{ drupal_view('busca','busca_livro') }}
+                        </div>
                                 {% elseif menu_lateral_id == 29 %}
                                     {{ drupal_view('categoria_artigo','bloco_categoria_artigo') }}
                                 {% elseif menu_lateral_id == 31 %}
@@ -147,7 +150,7 @@
                                 {% elseif menu_lateral_id == 37 %}
                                 {% elseif menu_lateral_id == 63 %}
                                 {% endif %}
-                            </div>
+
                     </div>
 
                 {% elseif hierarquia == 'Downloads de dados' %}
