@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2b2bc3faac01c800fdb0a4f1346ec47f",
+    "content-hash": "79772fbb2d7a3a52941b3b07300006cb",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -57,6 +57,105 @@
                 "stack"
             ],
             "time": "2017-04-11T20:03:41+00:00"
+        },
+        {
+            "name": "balbuf/drupal-libraries-installer",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/balbuf/drupal-libraries-installer.git",
+                "reference": "38492190898ed0b9274f1fc72a1fbc15da03d15b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/balbuf/drupal-libraries-installer/zipball/38492190898ed0b9274f1fc72a1fbc15da03d15b",
+                "reference": "38492190898ed0b9274f1fc72a1fbc15da03d15b",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "composer/installers": "^1.1"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "BalBuf\\DrupalLibrariesInstaller\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "BalBuf\\DrupalLibrariesInstaller\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stephen Beemsterboer",
+                    "homepage": "https://github.com/balbuf"
+                }
+            ],
+            "description": "Install Drupal libraries via a simple listing in your composer.json file",
+            "time": "2018-01-25T01:57:45+00:00"
+        },
+        {
+            "name": "commerceguys/addressing",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/commerceguys/addressing.git",
+                "reference": "ef34ba9f6e5378e56cceb9f45798b464878db031"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/ef34ba9f6e5378e56cceb9f45798b464878db031",
+                "reference": "ef34ba9f6e5378e56cceb9f45798b464878db031",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/collections": "~1.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "1.*",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "2.*",
+                "symfony/validator": ">=3.2"
+            },
+            "suggest": {
+                "symfony/validator": "to validate addresses"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CommerceGuys\\Addressing\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bojan Zivanovic"
+                },
+                {
+                    "name": "Damien Tournoud"
+                }
+            ],
+            "description": "Addressing library powered by CLDR and Google's address data.",
+            "keywords": [
+                "address",
+                "internationalization",
+                "localization",
+                "postal"
+            ],
+            "time": "2018-05-23T13:00:47+00:00"
         },
         {
             "name": "composer/installers",
@@ -636,6 +735,65 @@
             "time": "2014-09-09T13:34:57+00:00"
         },
         {
+            "name": "drupal/address",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/address",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/address-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "143e426be73418c719c6bddd5fb81c610604e860"
+            },
+            "require": {
+                "commerceguys/addressing": "^1.0.0",
+                "drupal/core": "*"
+            },
+            "require-dev": {
+                "drupal/token": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1527081784",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "googletorp",
+                    "homepage": "https://www.drupal.org/user/386230"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Provides functionality for storing, validating and displaying international postal addresses.",
+            "homepage": "http://drupal.org/project/address",
+            "support": {
+                "source": "http://cgit.drupalcode.org/address"
+            }
+        },
+        {
             "name": "drupal/contribute",
             "version": "5.0.0-beta3",
             "source": {
@@ -818,6 +976,58 @@
             "homepage": "https://www.drupal.org/project/simplenews",
             "support": {
                 "source": "http://cgit.drupalcode.org/simplenews"
+            }
+        },
+        {
+            "name": "drupal/single_datetime",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/single_datetime",
+                "reference": "8.x-1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/single_datetime-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "4675b27db09b9cf67cb0a0aac3a55b49d3c09699"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.6",
+                    "datestamp": "1524950580",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Valentino Medimorec (valic)",
+                    "homepage": "https://www.drupal.org/u/valic",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Date time picker form element using the xdan jQuery Plugin Date and Time Picker library",
+            "homepage": "https://www.drupal.org/project/single_datetime",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/single_datetime",
+                "issues": "https://www.drupal.org/project/issues/single_datetime"
             }
         },
         {
@@ -1421,6 +1631,48 @@
                 "random"
             ],
             "time": "2017-03-13T16:27:32+00:00"
+        },
+        {
+            "name": "parsecsv/php-parsecsv",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/parsecsv/parsecsv-for-php.git",
+                "reference": "9c14bc2f30c55687588d794ad2b145bf0ac56196"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/parsecsv/parsecsv-for-php/zipball/9c14bc2f30c55687588d794ad2b145bf0ac56196",
+                "reference": "9c14bc2f30c55687588d794ad2b145bf0ac56196",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ParseCsv\\": "src",
+                    "ParseCsv\\extensions\\": "src\\extensions",
+                    "ParseCsv\\tests\\": "tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jim Myhrberg",
+                    "email": "contact@jimeh.me"
+                },
+                {
+                    "name": "William Knauss",
+                    "email": "will.knauss@gmail.com"
+                }
+            ],
+            "description": "CSV data parser for PHP",
+            "time": "2018-03-03T11:01:45+00:00"
         },
         {
             "name": "psr/http-message",

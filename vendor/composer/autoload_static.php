@@ -60,6 +60,9 @@ class ComposerStaticInitDrupal8
         array (
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
+            'ParseCsv\\tests\\' => 15,
+            'ParseCsv\\extensions\\' => 20,
+            'ParseCsv\\' => 9,
         ),
         'M' => 
         array (
@@ -90,11 +93,13 @@ class ComposerStaticInitDrupal8
         array (
             'Composer\\Semver\\' => 16,
             'Composer\\Installers\\' => 20,
+            'CommerceGuys\\Addressing\\' => 24,
         ),
         'B' => 
         array (
             'Behat\\Mink\\Driver\\' => 18,
             'Behat\\Mink\\' => 11,
+            'BalBuf\\DrupalLibrariesInstaller\\' => 32,
         ),
         'A' => 
         array (
@@ -223,6 +228,18 @@ class ComposerStaticInitDrupal8
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
+        'ParseCsv\\tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/parsecsv/php-parsecsv/tests',
+        ),
+        'ParseCsv\\extensions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/parsecsv/php-parsecsv/src/extensions',
+        ),
+        'ParseCsv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/parsecsv/php-parsecsv/src',
+        ),
         'Masterminds\\' => 
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
@@ -284,6 +301,10 @@ class ComposerStaticInitDrupal8
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
         ),
+        'CommerceGuys\\Addressing\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/commerceguys/addressing/src',
+        ),
         'Behat\\Mink\\Driver\\' => 
         array (
             0 => __DIR__ . '/..' . '/behat/mink-browserkit-driver/src',
@@ -292,6 +313,10 @@ class ComposerStaticInitDrupal8
         'Behat\\Mink\\' => 
         array (
             0 => __DIR__ . '/..' . '/behat/mink/src',
+        ),
+        'BalBuf\\DrupalLibrariesInstaller\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/balbuf/drupal-libraries-installer/src',
         ),
         'Asm89\\Stack\\' => 
         array (

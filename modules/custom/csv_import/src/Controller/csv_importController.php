@@ -16,7 +16,7 @@ class csv_importController extends ControllerBase {
   public function import_webform_csv() {
     
     $filePath = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
-    $filename = $filePath . '\tabela_usuarios_cem4.csv';
+    $filename = $filePath . '/tabela_usuarios_cem4.csv';
     $csv = new Csv($filename);
     $webform_id = 'cadastro_curso';
     $values = array();
