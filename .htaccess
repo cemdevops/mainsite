@@ -22,7 +22,10 @@ DirectoryIndex index.php index.html index.htm
 AddType image/svg+xml svg svgz
 AddEncoding gzip svgz
 
-# Most of the following PHP settings cannot be changed at runtime. See
+# Most of the following PHP settings cannot be changed at runtime. SeeuthType Basic  
+ AuthName "Acesso Proibido"  
+ AuthUserFile  /mnt/disks/datacem01/cem/.htpasswd  
+ Require user cem
 # sites/default/default.settings.php and
 # Drupal\Core\DrupalKernel::bootEnvironment() for settings that can be
 # changed at runtime.

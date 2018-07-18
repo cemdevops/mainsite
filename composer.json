@@ -9,7 +9,11 @@
         "drupal/swiftmailer": "^1.0@beta",
         "drupal/simplenews": "^1.0@alpha",
         "drupal/webform": "^5.0@RC",
-        "drupal/contribute": "^5.0@beta"
+        "drupal/contribute": "^5.0@beta",
+        "balbuf/drupal-libraries-installer": "^1.0",
+        "drupal/single_datetime": "^1.6",
+        "parsecsv/php-parsecsv": "^1.0",
+        "drupal/address": "~1.0"
     },
     "replace": {
         "drupal/core": "^8.4"
