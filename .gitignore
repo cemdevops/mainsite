@@ -43,3 +43,4 @@ sites/simpletest
 .idea/*
 .idea/
 vendor/*
+.htpasswd
