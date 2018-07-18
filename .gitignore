@@ -44,3 +44,4 @@ sites/simpletest
 .idea/
 vendor/*
 .htpasswd
+.htaccess
