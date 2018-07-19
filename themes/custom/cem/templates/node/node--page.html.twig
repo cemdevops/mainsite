@@ -8,7 +8,6 @@
 {% macro menuMacro(menu, level) -%}
     {# Set our default level as an integer. #}
     {% set default_level = 1 %}
-
     <ul class=”menu-level--{{ level|default(default_level) }}”>
         {% for menu_item in menu %}
             {# Check if this is the active item. #}
@@ -55,12 +54,20 @@
         <div class="inner wrapper">
             <div class="container-fluid">
                 <div class="row quem-somos-content">
-
-                {% if hierarquia == 'Quem somos' %}
                     <!-- quem somos main content init -->
                     <div class="col-md-4 col-xs-12 que-somos-menu-col">
                         {# Get menu items #}
-                        {% set items = simplify_menu('menu-lateral') %}
+                        {% if hierarquia == 'Quem somos' %}
+                            {% set items = simplify_menu('menu-lateral') %}
+                        {% elseif hierarquia == 'Publicações' %}
+                            {% set items = simplify_menu('menu-lateral-publicacoes') %}
+                        {% elseif hierarquia == 'Downloads de dados' %}
+                            {% set items = simplify_menu('menu-lateral-download-dados') %}
+                        {% elseif hierarquia == 'Pesquisa'  %}
+                            {% set items = simplify_menu('menu-lateral-pesquisa') %}
+                        {% elseif hierarquia == 'Difusão Científica'  %}
+                            {% set items = simplify_menu('menu-lateral-difusao') %}
+                        {% endif %}
                         {# Iterate menu tree #}
                         <div class="quem-somos-menu">
                             <ul>
@@ -84,199 +91,67 @@
                         </div>
                     </div>
                     <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
-                        <div class="quem-somos-conteudo">
-                            {{  drupal_field('field_page_descricao','node') }}
-                        </div>
-
-                        <!-- quem somos main content end -->
-                        <div class="row quem-somos-perfis-content">
-                            {{ drupal_view('colaborador','bloco_colaborador_quem_somos',pesquisador_id) }}
-                        </div>
-                    </div>
-
-                {% elseif hierarquia == 'Publicações' %}
-                <!-- adaptar para publicações -->
-                    <!-- quem somos main content init -->
-                    <div class="col-md-4 col-xs-12 que-somos-menu-col">
-                        {% set items = simplify_menu('menu-lateral-publicacoes') %}
-                        {# Iterate menu tree #}
-                        <div class="quem-somos-menu">
-                            <ul>
-                                {% for menu_item in items.menu_tree %}
-                                    {% if menu_item.submenu %}
-                                        <li class="drop-down"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
-                                    {% else %}
-                                        <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
-                                    {% endif %}
-                                    {% if menu_item.submenu %}
-                                        {% set subMenuAttribute = "drop-down" %}
-                                        <ul>
-                                            {% for itemSub in menu_item.submenu %}
-                                                <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
-                                            {% endfor %}
-                                        </ul>
-                                    {% endif %}
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- quem somos menu end -->
-
-                    <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
-                        {# Publicacao = 63, Artigo = 29, Livro = 30, Capitulo de livro = 31, Teses e dissertações = 32, Working papers = 33, Estudo de transfêrencia = 35, Boletim nota 100 = 36, Urban data = 37#}
-                        <div class="header-search publicoes-search">
-                            <form method="get">
-                                <div>
-                                    <input type="text" placeholder="pesquisar" class="search-field" name="livro_buscar">
-                                    <input type="submit" value="buscar" class="search-button">
+                        {% if hierarquia == 'Quem somos' %}
+                                <div class="quem-somos-conteudo">
+                                    {{  drupal_field('field_page_descricao','node') }}
                                 </div>
-                            </form>
-                        </div>
-                        <div class="quem-somos-conteudo">
-                            {{  drupal_field('field_page_descricao','node') }}
-                        </div>
-                        <div class="publicacoes-livro-grid">
-                                {% if menu_lateral_id == 30 %} {# Livro = 30 #}
-                                    {{ drupal_view('busca','busca_livro') }}
-                        </div>
-                                {% elseif menu_lateral_id == 29 %}
-                                    {{ drupal_view('categoria_artigo','bloco_categoria_artigo') }}
-                                {% elseif menu_lateral_id == 31 %}
-                                {% elseif menu_lateral_id == 32 %}
-                                {% elseif menu_lateral_id == 33 %}
-                                {% elseif menu_lateral_id == 35 %}
-                                {% elseif menu_lateral_id == 36 %}
-                                {% elseif menu_lateral_id == 37 %}
-                                {% elseif menu_lateral_id == 63 %}
-                                {% endif %}
-
-                    </div>
-
-                {% elseif hierarquia == 'Downloads de dados' %}
-                    <div class="col-md-4 col-xs-12 que-somos-menu-col">
-                        {% set items = simplify_menu('menu-lateral-download-dados') %}
-                        {# Iterate menu tree #}
-                        <div class="quem-somos-menu">
-                            <ul>
-                                {% for menu_item in items.menu_tree %}
-                                    {% if menu_item.submenu %}
-                                        <li class="drop-down"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
-                                    {% else %}
-                                        <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
-                                    {% endif %}
-                                    {% if menu_item.submenu %}
-                                        {% set subMenuAttribute = "drop-down" %}
-                                        <ul>
-                                            {% for itemSub in menu_item.submenu %}
-                                                <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
-                                            {% endfor %}
-                                        </ul>
-                                    {% endif %}
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                {% elseif hierarquia == 'Sistemas Interativos' %}
-                    <!-- conteúdo sitemas interativos -->
-
-                    {% elseif hierarquia == 'Pesquisa'  %}
-
-                        <div class="col-md-4 col-xs-12 que-somos-menu-col">
-                            {# Get menu items #}
-                            {% set items = simplify_menu('menu-lateral-pesquisa') %}
-                            {# Iterate menu tree #}
-                            <div class="quem-somos-menu">
-                                <ul>
-                                    {% for menu_item in items.menu_tree %}
-                                        {% if menu_item.submenu %}
-                                            <li class="drop-down"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
-                                        {% else %}
-                                            <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
-                                        {% endif %}
-                                        {% if menu_item.submenu %}
-                                            {% set subMenuAttribute = "drop-down" %}
-                                            <ul>
-                                                {% for itemSub in menu_item.submenu %}
-                                                    <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
-                                                {% endfor %}
-                                            </ul>
-                                        {% endif %}
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
+                                <!-- quem somos main content end -->
+                                <div class="row quem-somos-perfis-content">
+                                    {{ drupal_view('colaborador','bloco_colaborador_quem_somos',pesquisador_id) }}
+                                </div>
+                        {% elseif hierarquia == 'Pesquisa'  %}
                             <div class="quem-somos-conteudo">
                                 {{  drupal_field('field_page_descricao','node') }}
                             </div>
-                        </div>
-                    {% elseif hierarquia == 'Difusão Científica' %}
-                <!-- agenda slider container init -->
-
+                        {% elseif hierarquia == 'Publicações' %}
+                                <div class="header-search publicoes-search">
+                                    <form method="get">
+                                        <div>
+                                            <input type="text" placeholder="pesquisar" class="search-field" name="{{ tipo_publicacao }}">
+                                            <input type="submit" value="buscar" class="search-button">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="quem-somos-conteudo">
+                                    {{  drupal_field('field_page_descricao','node') }}
+                                </div>
+                                <div class="publicacoes-livro-grid">
+                                            {{ drupal_view('busca',tipo_publicacao) }}
+                                </div>
+                        {% elseif hierarquia == 'Downloads de dados' %}
+                                <div class="quem-somos-conteudo">
+                                    {{  drupal_field('field_page_descricao','node') }}
+                                </div>
+                        {% elseif hierarquia == 'Difusão Científica' %}
+                            <div class="agenda-slider-wrapper">
+                                <div class="inner wrapper">
+                                    <!-- agenda slider title init -->
+                                    <h1 class="title-page icon icon-agenda">
+                                        <span>agenda</span>
+                                        <div class="box-legenda">
+                                            <ul>
+                                                <li class="cursos"><a href="#"><span>cursos</span></a></li>
+                                                <li class="palestras"><a href="#"><span>palestras</span></a></li>
+                                                <li class="eventos"><a href="#"><span>eventos</span></a></li>
+                                                <li class="datas comemorativas/feriados"><a href="#"><span>datas comemorativas/feriados</span></a></li>
+                                                <li class="plus"><a href="#" class="link-more">mais eventos</a></li>
+                                            </ul>
+                                        </div>
+                                    </h1>
+                                </div>
+                                <div class="agenda-slider">
+                                    <div class="inner">
+                                        {{ drupal_view('evento','agenda_difusao_cientifica') }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
+                                {{  drupal_field('field_page_descricao','node') }}
+                            </div>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-                <div class="agenda-slider-wrapper">
-                    <div class="inner wrapper">
-                        <!-- agenda slider title init -->
-                        <h1 class="title-page icon icon-agenda">
-                            <span>agenda</span>
-                            <div class="box-legenda">
-                                <ul>
-                                    <li class="cursos"><a href="#"><span>cursos</span></a></li>
-                                    <li class="palestras"><a href="#"><span>palestras</span></a></li>
-                                    <li class="eventos"><a href="#"><span>eventos</span></a></li>
-                                    <li class="datas comemorativas/feriados"><a href="#"><span>datas comemorativas/feriados</span></a></li>
-                                    <li class="plus"><a href="#" class="link-more">mais eventos</a></li>
-                                </ul>
-                            </div>
-                        </h1>
-                        </div>
-                            <div class="agenda-slider">
-                                <div class="inner">
-                                    {{ drupal_view('evento','agenda_difusao_cientifica') }}
-                                </div>
-                            </div>
-                    </div>
-                    <section class="internas-container">
-                        <div class="inner wrapper">
-                            <div class="container-fluid">
-                                <div class="row quem-somos-content">
-                        <!-- quem somos main content init -->
-                                    <div class="col-md-4 col-xs-12 que-somos-menu-col">
-                                        <div class="quem-somos-menu difusao-cientifica-menu">
-                                                {% set items = simplify_menu('menu-lateral-difusao') %}
-                                                {# Iterate menu tree #}
-                                            <ul>
-                                                {% for menu_item in items.menu_tree %}
-                                                    {% if menu_item.submenu %}
-                                                        <li class="drop-down"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
-                                                    {% else %}
-                                                        <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
-                                                    {% endif %}
-                                                    {% if menu_item.submenu %}
-                                                        {% set subMenuAttribute = "drop-down" %}
-                                                        <ul>
-                                                            {% for itemSub in menu_item.submenu %}
-                                                                <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
-                                                            {% endfor %}
-                                                        </ul>
-                                                    {% endif %}
-                                                    </li>
-                                                {% endfor %}
-                                            </ul>
-                                        </div>
-                                    </div>
-                        <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
-                            {{  drupal_field('field_page_descricao','node') }}
-                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                {% endif %}
 </main>
