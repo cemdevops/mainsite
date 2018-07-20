@@ -1,0 +1,48 @@
+<main class="main">
+    <!-- internas top header init -->
+
+    <section class="internas-top-header">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a href="/node/1"><h1 class="title-page">download de dados</a><span class="sub-title">placehold</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="internas-container">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row quem-somos-content">
+                    <!-- quem somos main content init -->
+                    <div class="col-md-4 col-xs-12 que-somos-menu-col">
+                        {{ drupal_entity('block','facets_temas') }}
+                        {{ drupal_entity('block','facets_fontes') }}
+                        {{ drupal_entity('block','facets_tipos') }}
+                    </div>
+
+                    <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
+                        <div class="header-search publicoes-search">
+                            <form method="get">
+                                <div>
+                                    <input type="text" placeholder="pesquisar" class="search-field" name="{{ tipo_publicacao }}">
+                                    <input type="submit" value="buscar" class="search-button">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="row quem-somos-perfis-content">
+                            {{ drupal_view('busca','download_de_dados') }}
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
