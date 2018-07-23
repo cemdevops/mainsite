@@ -26,12 +26,13 @@
 
                     <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
                         <div class="header-search publicoes-search">
-                            <form method="get">
+                           <!-- <form method="get" accept-charset="UTF-8" data-drupal-selector="views-exposed-form-busca-download-de-dados" data-drupal-form-fields="edit-download-dados" >
                                 <div>
-                                    <input type="text" placeholder="pesquisar" class="search-field" name="download_dados">
+                                    <input type="text" placeholder="pesquisar" class="search-field" name="download_dados" data-drupal-selector="edit-download-dados" id="edit-download-dados">
                                     <input type="submit" value="buscar" class="search-button">
                                 </div>
-                            </form>
+                            </form>-->
+                           {{ drupal_entity('block','formularioexpostobuscadownload_de_dados') }}
                         </div>
                         <div class="row quem-somos-perfis-content">
                             {{ drupal_view('busca','download_de_dados') }}
