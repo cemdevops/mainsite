@@ -105,18 +105,18 @@
                             </div>
                         {% elseif hierarquia == 'Publicações' %}
                                 <div class="header-search publicoes-search">
-                                    <form method="get">
+                                    <!--<form method="get">
                                         <div>
                                             <input type="text" placeholder="pesquisar" class="search-field" name="{{ tipo_publicacao }}">
                                             <input type="submit" value="buscar" class="search-button">
                                         </div>
-                                    </form>
+                                    </form>-->
                                 </div>
                                 <div class="quem-somos-conteudo">
                                     {{  drupal_field('field_page_descricao','node') }}
                                 </div>
                                 <div class="publicacoes-livro-grid">
-                                            {{ drupal_view('busca',tipo_publicacao) }}
+                                            {{ drupal_view('publicacoes',tipo_publicacao) }}
                                 </div>
                         {% elseif hierarquia == 'Downloads de dados' %}
                                 <div class="quem-somos-conteudo">

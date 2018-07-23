@@ -57,7 +57,7 @@ function cem_preprocess_node(&$variables) {
     $url  = $_SERVER['REQUEST_URI'];
     $path = explode('/', $url);
     if(isset($path[3])){
-      $variables['tipo_publicacao'] = $path[4];
+    print  $variables['tipo_publicacao'] = $path[3];
     }
   }
   if(isset($_GET['month']) && isset($_GET['year'])) {
