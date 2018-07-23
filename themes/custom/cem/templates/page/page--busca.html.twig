@@ -24,12 +24,13 @@
 
                     <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
                         <div class="header-search publicoes-search">
-                            <form method="get">
+                           <!-- <form method="get">
                                 <div>
                                     <input type="text" placeholder="pesquisar" class="search-field" name="busca_geral">
                                     <input type="submit" value="buscar" class="search-button">
                                 </div>
-                            </form>
+                            </form>-->
+                            {{ drupal_entity('block','formularioexpostobuscabusca_geral') }}
                         </div>
                         <div class="row quem-somos-perfis-content">
                             {{ drupal_view('busca','busca_geral') }}
