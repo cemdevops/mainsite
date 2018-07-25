@@ -32,7 +32,7 @@ class valida_emailRedirectSubscriber implements EventSubscriberInterface {
 //        if ($request->attributes->get('node')->get('field_controle_de_acesso')->getValue()[0]['value'] == FALSE) {
 //            return;
 //        }
-        if($current_path == '/download-de-dados') {
+        if($current_path != '/download-de-dados-ixi') {
           return;
         }
         //$session = \Drupal::request()->getSession()->get('usuario_validado');
