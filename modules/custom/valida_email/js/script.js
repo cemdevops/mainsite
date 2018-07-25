@@ -12,9 +12,11 @@
                 data: dados,
                 success: function( data ) {
                     if (data.retorno == null) {
-                        window.location.href = '/form/cadastro-curso?nid='+nid+'&e_mail='+email;
+                        // window.location.href = '/form/cadastro-curso?nid='+nid+'&e_mail='+email;
+                        window.location.href = '/form/cadastro-curso?e_mail='+email;
                     }else{
-                        window.location.href = '/node/'+nid;
+                        // window.location.href = '/node/'+nid;
+                        window.location.href = '/download-de-dados';
                     }
                 }
             });
@@ -37,7 +39,8 @@
                 success: function( data ) {
                 }
             });
-            window.location.href = '/node/'+nid;
+            // window.location.href = '/node/'+nid;
+            window.location.href = '/download-de-dados';
             return false;
         });
 
