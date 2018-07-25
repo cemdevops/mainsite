@@ -127,14 +127,14 @@
                                 <div class="inner wrapper">
                                     <!-- agenda slider title init -->
                                     <h1 class="title-page icon icon-agenda">
-                                        <span>agenda</span>
+                                        <span><a href="/node/58">agenda</a></span>
+                                        <!--<span class="plus"><a href="#" class="link-more">mais eventos</a></span>-->
                                         <div class="box-legenda">
                                             <ul>
                                                 <li class="cursos"><a href="#"><span>cursos</span></a></li>
                                                 <li class="palestras"><a href="#"><span>palestras</span></a></li>
                                                 <li class="eventos"><a href="#"><span>eventos</span></a></li>
                                                 <li class="datas comemorativas/feriados"><a href="#"><span>datas comemorativas/feriados</span></a></li>
-                                                <li class="plus"><a href="#" class="link-more">mais eventos</a></li>
                                             </ul>
                                         </div>
                                     </h1>
@@ -145,8 +145,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="quem-somos-conteudo">
-                                {{  drupal_field('field_page_descricao','node') }}
+                            <!--<div class="quem-somos-conteudo">
+                                {#  drupal_field('field_page_descricao','node') #}
+                            </div>-->
+                            <div id="ajax-target">
+                                <div class="listagem-resultados">
+                                    <div class="col-md-12">
+                                        {{ drupal_view('evento','bloco_agenda_mes',language, get.year, get.month) }}
+                                    </div>
+                                </div>
                             </div>
                         {% endif %}
                     </div>
