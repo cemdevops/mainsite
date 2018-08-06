@@ -39,7 +39,7 @@
 .resolution-slider .resolution-slider-item .title:before,
 .resolution-slider .resolution-slider-item .title:after,
 .resolution-slider .resolution-slider-item .text:before,
-.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:before, .quem-somos-menu:after, .publicacoes-artigos-grid-container:before, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:before, .publicacoes-artigos-grid-container > div:after, .eventos-main:before, .eventos-main:after, .agenda-slider-wrapper:before, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:before, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:before, .agenda-slider:after, .calendar-wrapper:before, .calendar-wrapper:after, header.header:before, header.header:after, .header-top:before, .header-top:after, .header-search:before, .header-search:after, .header-menu:before, .header-menu:after, .footer:before, .footer:after, .footer-newsletter:before, .footer-newsletter:after, .footer-navigation:before, .footer-navigation:after, .footer-nav-infos .social:before, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:before, .footer-nav-infos .footer-nav:after, .footer-copy:before, .footer-copy:after, .internas-container:before, .internas-container:after {
+.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:before, .quem-somos-menu:after, .publicacoes-artigos-grid-container:before, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:before, .publicacoes-artigos-grid-container > div:after, .eventos-main:before, .eventos-main:after, .agenda-slider-wrapper:before, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:before, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:before, .agenda-slider:after, .calendar-wrapper:before, .calendar-wrapper:after, .search-items-wrapper:before, .search-items-wrapper:after, header.header:before, header.header:after, .header-top:before, .header-top:after, .header-search:before, .header-search:after, .header-menu:before, .header-menu:after, .footer:before, .footer:after, .footer-newsletter:before, .footer-newsletter:after, .footer-navigation:before, .footer-navigation:after, .footer-nav-infos .social:before, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:before, .footer-nav-infos .footer-nav:after, .footer-copy:before, .footer-copy:after, .internas-container:before, .internas-container:after {
   content: " ";
   display: table;
 }
@@ -47,19 +47,19 @@
 /* line 253, cem/assets/scss/_helpers/_mixin.scss */
 .main:after, .home-slider:after, .home-slider-item:after, .home-call-boxes:after, .home-news:after, .home-agenda:after, .home-video:after, .home-publications:after, .home-pesquisadores:after, .noticia-item:after, .side-bar-box:after, .form-line:after, .resolution-menu:after, .resolution-maps:after, .resolution-maps .maps-container .map-box:after, .resolution-slider:after, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:after,
 .resolution-slider .resolution-slider-item .title:after,
-.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:after, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:after, .eventos-main:after, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:after, .calendar-wrapper:after, header.header:after, .header-top:after, .header-search:after, .header-menu:after, .footer:after, .footer-newsletter:after, .footer-navigation:after, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:after, .footer-copy:after, .internas-container:after {
+.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:after, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:after, .eventos-main:after, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:after, .calendar-wrapper:after, .search-items-wrapper:after, header.header:after, .header-top:after, .header-search:after, .header-menu:after, .footer:after, .footer-newsletter:after, .footer-navigation:after, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:after, .footer-copy:after, .internas-container:after {
   clear: both;
 }
 
 /* line 257, cem/assets/scss/_helpers/_mixin.scss */
 .main, .home-slider, .home-slider-item, .home-call-boxes, .home-news, .home-agenda, .home-video, .home-publications, .home-pesquisadores, .noticia-item, .side-bar-box, .form-line, .resolution-menu, .resolution-maps, .resolution-maps .maps-container .map-box, .resolution-slider, .resolution-slider .resolution-slider-item, .resolution-slider .resolution-slider-item .image,
 .resolution-slider .resolution-slider-item .title,
-.resolution-slider .resolution-slider-item .text, .quem-somos-menu, .publicacoes-artigos-grid-container, .publicacoes-artigos-grid-container > div, .eventos-main, .agenda-slider-wrapper, .agenda-slider-wrapper .box-legenda, .agenda-slider, .calendar-wrapper, header.header, .header-top, .header-search, .header-menu, .footer, .footer-newsletter, .footer-navigation, .footer-nav-infos .social, .footer-nav-infos .footer-nav, .footer-copy, .internas-container {
+.resolution-slider .resolution-slider-item .text, .quem-somos-menu, .publicacoes-artigos-grid-container, .publicacoes-artigos-grid-container > div, .eventos-main, .agenda-slider-wrapper, .agenda-slider-wrapper .box-legenda, .agenda-slider, .calendar-wrapper, .search-items-wrapper, header.header, .header-top, .header-search, .header-menu, .footer, .footer-newsletter, .footer-navigation, .footer-nav-infos .social, .footer-nav-infos .footer-nav, .footer-copy, .internas-container {
   *zoom: 1;
 }
 
 /* line 261, cem/assets/scss/_helpers/_mixin.scss */
-.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul, .resolution-menu .inner ul, .quem-somos-menu ul, .agenda-slider-wrapper .box-legenda ul, .download-item .extension-wrapper, .header-menu > .inner > ul, .header-menu > .inner > ul > li > ul, .footer-nav-infos .social ul, .footer-nav-infos .footer-nav ul {
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul, .resolution-menu .inner ul, .quem-somos-menu ul, .que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul, .agenda-slider-wrapper .box-legenda ul, .download-item .extension-wrapper, .header-menu > .inner > ul, .header-menu > .inner > ul > li > ul, .footer-nav-infos .social ul, .footer-nav-infos .footer-nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1791,20 +1791,25 @@ blockquote p {
 }
 
 /* line 29, cem/assets/scss/_components/_internas-top-header/__global.scss */
+.title-page.icon-search, .internas-top-header h1.icon-search {
+  background-image: url(../img/icon-search.png);
+}
+
+/* line 32, cem/assets/scss/_components/_internas-top-header/__global.scss */
 .title-page.icon-mail, .internas-top-header h1.icon-mail {
   background-image: url(../img/icon-mail.png);
   background-size: 24px auto;
   padding-left: 37px;
 }
 
-/* line 34, cem/assets/scss/_components/_internas-top-header/__global.scss */
+/* line 37, cem/assets/scss/_components/_internas-top-header/__global.scss */
 .title-page.icon-agenda, .internas-top-header h1.icon-agenda {
   background-image: url(../img/icon-agenda.png);
   background-size: 24px auto;
   padding-left: 37px;
 }
 
-/* line 39, cem/assets/scss/_components/_internas-top-header/__global.scss */
+/* line 42, cem/assets/scss/_components/_internas-top-header/__global.scss */
 .title-page .sub-title, .internas-top-header h1 .sub-title {
   display: inline-block;
   padding-left: 36px;
@@ -1814,7 +1819,7 @@ blockquote p {
   color: #7F7F7F;
 }
 
-/* line 50, cem/assets/scss/_components/_internas-top-header/__global.scss */
+/* line 53, cem/assets/scss/_components/_internas-top-header/__global.scss */
 .header-top-busca .header-search {
   max-width: none;
   margin-bottom: 30px;
@@ -2716,7 +2721,31 @@ blockquote p {
   bottom: 30px;
 }
 
-/* line 69, cem/assets/scss/_components/_contato/__global.scss */
+/* line 68, cem/assets/scss/_components/_contato/__global.scss */
+.form-line.form-checkbox input {
+  display: none;
+}
+
+/* line 70, cem/assets/scss/_components/_contato/__global.scss */
+.form-line.form-checkbox input + label {
+  background: url(../img/icon-checkbox-blue.jpg) left center no-repeat;
+  padding: 5px 0;
+  padding-left: 32px;
+}
+
+/* line 76, cem/assets/scss/_components/_contato/__global.scss */
+.form-line.form-checkbox input:checked + label {
+  background: url(../img/icon-checkbox-blue-checked.jpg) left center no-repeat;
+}
+
+/* line 81, cem/assets/scss/_components/_contato/__global.scss */
+.form-line.form-checkbox label {
+  font-weight: 400;
+  font-size: 13px;
+  color: #666666;
+}
+
+/* line 89, cem/assets/scss/_components/_contato/__global.scss */
 .contato-endereco {
   float: left;
   width: 100%;
@@ -2726,7 +2755,7 @@ blockquote p {
   padding: 20px 0;
 }
 
-/* line 76, cem/assets/scss/_components/_contato/__global.scss */
+/* line 96, cem/assets/scss/_components/_contato/__global.scss */
 .contato-endereco .title {
   display: block;
   padding: 0 0 10px;
@@ -2737,18 +2766,18 @@ blockquote p {
   font-size: 13px;
 }
 
-/* line 84, cem/assets/scss/_components/_contato/__global.scss */
+/* line 104, cem/assets/scss/_components/_contato/__global.scss */
 .contato-endereco p {
   margin: 0 0 5px;
   font-size: 13px;
 }
 
-/* line 90, cem/assets/scss/_components/_contato/__global.scss */
+/* line 110, cem/assets/scss/_components/_contato/__global.scss */
 .contato-box-infos-row {
   padding-top: 30px;
 }
 
-/* line 94, cem/assets/scss/_components/_contato/__global.scss */
+/* line 114, cem/assets/scss/_components/_contato/__global.scss */
 .contato-box-infos {
   float: left;
   width: 100%;
@@ -2758,7 +2787,7 @@ blockquote p {
   font-weight: 400;
 }
 
-/* line 100, cem/assets/scss/_components/_contato/__global.scss */
+/* line 120, cem/assets/scss/_components/_contato/__global.scss */
 .contato-box-infos .title {
   float: left;
   width: 100%;
@@ -2769,7 +2798,7 @@ blockquote p {
   text-transform: uppercase;
 }
 
-/* line 108, cem/assets/scss/_components/_contato/__global.scss */
+/* line 128, cem/assets/scss/_components/_contato/__global.scss */
 .contato-box-infos .title[class*="icon"] {
   min-height: 50px;
   padding-left: 68px;
@@ -2779,24 +2808,24 @@ blockquote p {
   background-repeat: no-repeat;
 }
 
-/* line 116, cem/assets/scss/_components/_contato/__global.scss */
+/* line 136, cem/assets/scss/_components/_contato/__global.scss */
 .contato-box-infos .title.icon-telefone {
   background-image: url(../img/icon-telefone.png);
 }
 
-/* line 119, cem/assets/scss/_components/_contato/__global.scss */
+/* line 139, cem/assets/scss/_components/_contato/__global.scss */
 .contato-box-infos .title.icon-speaker {
   background-image: url(../img/icon-speaker.png);
 }
 
-/* line 123, cem/assets/scss/_components/_contato/__global.scss */
+/* line 143, cem/assets/scss/_components/_contato/__global.scss */
 .contato-box-infos .line {
   float: left;
   width: 100%;
   padding-bottom: 15px;
 }
 
-/* line 127, cem/assets/scss/_components/_contato/__global.scss */
+/* line 147, cem/assets/scss/_components/_contato/__global.scss */
 .contato-box-infos .line .caption {
   display: inline-block;
   width: 30%;
@@ -2805,10 +2834,27 @@ blockquote p {
   text-transform: uppercase;
 }
 
-/* line 135, cem/assets/scss/_components/_contato/__global.scss */
+/* line 155, cem/assets/scss/_components/_contato/__global.scss */
 .contato-box-infos .line.single-line .text {
   font-size: 15px;
   font-weight: 500;
+}
+
+/* line 164, cem/assets/scss/_components/_contato/__global.scss */
+.link-login {
+  float: left;
+  width: 100%;
+  padding: 20px 0 40px;
+  border-top: dashed 1px #D1D1D1;
+  font-size: 15px;
+  color: #7F7F7F;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* line 173, cem/assets/scss/_components/_contato/__global.scss */
+.link-login a {
+  font-weight: 600;
 }
 
 /* line 2, cem/assets/scss/_components/_resolution/__global.scss */
@@ -3274,6 +3320,87 @@ blockquote p {
   color: #00B8B8;
 }
 
+/* line 141, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-conteudo p {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+/* fix */
+/* line 151, cem/assets/scss/_components/_quem-somos/__global.scss */
+.que-somos-menu-col .block-facet--checkbox > h2 {
+  float: left;
+  width: 100%;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #7F7F7F;
+  background-color: #086AAB;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  padding: 20px;
+  font-weight: 600;
+}
+
+/* line 164, cem/assets/scss/_components/_quem-somos/__global.scss */
+.que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox {
+  float: left;
+  width: 100%;
+  border-left: solid 1px #F0F0F0;
+  border-right: solid 1px #F0F0F0;
+}
+
+/* line 171, cem/assets/scss/_components/_quem-somos/__global.scss */
+.que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul li {
+  float: left;
+  width: 100%;
+  font-size: 15px;
+  color: #7F7F7F;
+  position: relative;
+  display: block;
+  padding: 20px;
+}
+
+/* line 179, cem/assets/scss/_components/_quem-somos/__global.scss */
+.que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 90%;
+  height: 0;
+  left: 5%;
+  bottom: 0;
+  border-top: dashed 1px #C0C0C0;
+}
+
+/* line 189, cem/assets/scss/_components/_quem-somos/__global.scss */
+.que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul li input {
+  display: none;
+}
+
+/* line 191, cem/assets/scss/_components/_quem-somos/__global.scss */
+.que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul li input + label {
+  padding-left: 24px;
+  background: url(../img/icon-checkbox.png) left center no-repeat;
+}
+
+/* line 196, cem/assets/scss/_components/_quem-somos/__global.scss */
+.que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul li input:checked + label {
+  background: url(../img/icon-checkbox-checked.png) left center no-repeat;
+}
+
+/* line 202, cem/assets/scss/_components/_quem-somos/__global.scss */
+.que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul li:last-child:before {
+  display: none;
+}
+
+/* line 212, cem/assets/scss/_components/_quem-somos/__global.scss */
+.que-somos-menu-col #block-busca-geral.block-facet--checkbox > h2 {
+  color: #ffffff;
+  background-color: #000000;
+  color: #ffffff;
+}
+
 /* line 1, cem/assets/scss/_components/_pesquisa/__global.scss */
 .pesquisa-item {
   position: relative;
@@ -3346,35 +3473,36 @@ blockquote p {
 }
 
 /* line 9, cem/assets/scss/_components/_publicacoes/__global.scss */
-.header-search.publicoes-search .search-field {
+.header-search.publicoes-search .search-field,
+.header-search.publicoes-search #edit-livro-buscar {
   padding: 0 150px 0 28px;
 }
 
-/* line 14, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 15, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container {
   width: 100%;
   border: solid 1px #E1E1E1;
 }
 
-/* line 18, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 19, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container > div {
   float: left;
   width: 100%;
 }
 
-/* line 23, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 24, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item {
   float: left;
   width: 16.66667%;
 }
 
-/* line 26, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 27, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner {
   position: relative;
   height: 120px;
 }
 
-/* line 29, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 30, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner:before, .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner:after {
   content: '';
   display: block;
@@ -3382,7 +3510,7 @@ blockquote p {
   background-color: #E1E1E1;
 }
 
-/* line 36, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 37, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner:before {
   width: 1px;
   height: 80%;
@@ -3391,7 +3519,7 @@ blockquote p {
   margin-top: 10%;
 }
 
-/* line 43, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 44, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner:after {
   width: 80%;
   height: 1px;
@@ -3401,7 +3529,7 @@ blockquote p {
   margin-bottom: -1px;
 }
 
-/* line 51, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 52, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner a {
   display: table;
   width: 100%;
@@ -3412,7 +3540,7 @@ blockquote p {
   font-weight: 400;
 }
 
-/* line 58, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 59, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner a > span {
   display: table-cell;
   vertical-align: middle;
@@ -3420,27 +3548,27 @@ blockquote p {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-  /* line 23, cem/assets/scss/_components/_publicacoes/__global.scss */
+  /* line 24, cem/assets/scss/_components/_publicacoes/__global.scss */
   .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item {
     width: 25%;
   }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 768px) {
-  /* line 23, cem/assets/scss/_components/_publicacoes/__global.scss */
+  /* line 24, cem/assets/scss/_components/_publicacoes/__global.scss */
   .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item {
     width: 50%;
   }
 }
 
-/* line 104, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 105, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-grid {
   float: left;
   width: 100%;
   padding: 30px 0;
 }
 
-/* line 108, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 109, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-grid .publicacoes-livro-item {
   float: left;
   width: 20%;
@@ -3469,24 +3597,41 @@ blockquote p {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1100px) {
-  /* line 108, cem/assets/scss/_components/_publicacoes/__global.scss */
+  /* line 109, cem/assets/scss/_components/_publicacoes/__global.scss */
   .publicacoes-livro-grid .publicacoes-livro-item {
     width: 25%;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-  /* line 108, cem/assets/scss/_components/_publicacoes/__global.scss */
+  /* line 109, cem/assets/scss/_components/_publicacoes/__global.scss */
   .publicacoes-livro-grid .publicacoes-livro-item {
     width: 33.3333%;
   }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 768px) {
-  /* line 108, cem/assets/scss/_components/_publicacoes/__global.scss */
+  /* line 109, cem/assets/scss/_components/_publicacoes/__global.scss */
   .publicacoes-livro-grid .publicacoes-livro-item {
     width: 50%;
   }
+}
+
+/* fix */
+/* line 142, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicoes-search + .quem-somos-perfis-content {
+  float: left;
+}
+
+/* line 146, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-grid header {
+  float: left;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 /* line 1, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
@@ -4951,13 +5096,63 @@ blockquote p {
 }
 
 /* line 29, cem/assets/scss/_components/_download-de-dados/__global.scss */
-.download-item p {
+.download-item p,
+.download-item .texto,
+.download-item .texto * {
   font-size: 15px;
   color: #7F7F7F;
   line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
 }
 
-/* line 36, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 39, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files {
+  float: left;
+  padding: 20px 0;
+}
+
+/* line 42, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="doc"] {
+  background: url(../img/files-doc.jpg) left center no-repeat;
+}
+
+/* line 45, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="pdf"] {
+  background: url(../img/files-pdf.jpg) left center no-repeat;
+}
+
+/* line 48, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="shp"] {
+  background: url(../img/files-shp.jpg) left center no-repeat;
+}
+
+/* line 51, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="xls"] {
+  background: url(../img/files-xls.jpg) left center no-repeat;
+}
+
+/* line 54, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="zip"] {
+  background: url(../img/files-zip.jpg) left center no-repeat;
+}
+
+/* line 57, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files .file {
+  display: block;
+  padding: 20px 0;
+  padding-left: 48px;
+}
+
+/* line 61, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files .file a {
+  font-size: 13px;
+  font-weight: 500;
+  color: #666666;
+}
+
+/* line 70, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li {
   float: left;
   width: 100%;
@@ -4968,7 +5163,7 @@ blockquote p {
   align-items: center;
 }
 
-/* line 44, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 78, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension {
   content: '';
   float: left;
@@ -4988,34 +5183,108 @@ blockquote p {
   margin-right: 10px;
 }
 
-/* line 60, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 94, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.zip {
   background-color: #666666;
 }
 
-/* line 62, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 96, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.zip:before {
   content: 'ZIP';
 }
 
-/* line 66, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 100, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.pdf {
   background-color: #E74C3C;
 }
 
-/* line 68, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 102, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.pdf:before {
   content: 'PDF';
 }
 
-/* line 72, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 106, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.shp {
   background-color: #5BB264;
 }
 
-/* line 74, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 108, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.shp:before {
   content: 'SHP';
+}
+
+/* line 118, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-items-wrapper header,
+.download-items-wrapper .views-field-title {
+  float: left;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* line 1, cem/assets/scss/_components/_busca/__global.scss */
+.search-items-wrapper {
+  float: left;
+  width: 100%;
+}
+
+/* line 5, cem/assets/scss/_components/_busca/__global.scss */
+.search-items-wrapper .search-item {
+  float: left;
+  width: 100%;
+  padding: 40px 0;
+  border-bottom: dashed 1px #D1D1D1;
+}
+
+/* line 10, cem/assets/scss/_components/_busca/__global.scss */
+.search-items-wrapper .search-item .tipo {
+  float: left;
+  width: 200px;
+  padding: 6px 0;
+  font-size: 12px;
+  text-transform: lowercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #086AAB;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+/* line 23, cem/assets/scss/_components/_busca/__global.scss */
+.search-items-wrapper .search-item .data {
+  float: left;
+  font-size: 12px;
+  font-weight: 400;
+  color: #999;
+  padding: 6px 0;
+}
+
+/* line 30, cem/assets/scss/_components/_busca/__global.scss */
+.search-items-wrapper .search-item h2 {
+  width: 100%;
+  clear: both;
+  padding: 15px 0 10px;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #525252;
+}
+
+/* line 40, cem/assets/scss/_components/_busca/__global.scss */
+.search-items-wrapper .search-item .texto,
+.search-items-wrapper .search-item .texto * {
+  font-size: 14px;
+  color: #7F7F7F;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
 }
 
 /* line 1, cem/assets/scss/_layout/_header/__global.scss */
@@ -5087,7 +5356,9 @@ header.header {
 }
 
 /* line 54, cem/assets/scss/_layout/_header/_header-top.scss */
-.header-search .search-field {
+.header-search .search-field,
+.header-search #edit-busca-geral,
+.header-search .form-text {
   width: 100%;
   height: 44px;
   padding: 0 100px 0 28px;
@@ -5100,7 +5371,7 @@ header.header {
   outline: 0;
 }
 
-/* line 65, cem/assets/scss/_layout/_header/_header-top.scss */
+/* line 67, cem/assets/scss/_layout/_header/_header-top.scss */
 .header-search .search-select {
   position: absolute;
   right: 50px;
@@ -5121,8 +5392,9 @@ header.header {
   padding-left: 10px;
 }
 
-/* line 83, cem/assets/scss/_layout/_header/_header-top.scss */
-.header-search .search-button {
+/* line 85, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-search .search-button,
+.header-search #edit-submit-busca {
   position: absolute;
   right: 0;
   top: 0;
@@ -5131,9 +5403,15 @@ header.header {
   background: url(../img/icon-search.png) center no-repeat transparent;
   border: 0;
   font-size: 0;
+  outline: 0;
 }
 
-/* line 96, cem/assets/scss/_layout/_header/_header-top.scss */
+/* line 98, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-search form label {
+  display: none;
+}
+
+/* line 105, cem/assets/scss/_layout/_header/_header-top.scss */
 .header-top .header-top-btn-contact {
   float: left;
   height: 21px;
@@ -5572,40 +5850,3 @@ header.header {
 }
 
 /*# sourceMappingURL=../../../sass */
-
-ul#custom-menu-language li {
-  list-style-type: none;
-}
-
-#block-cem-local-tasks {
-  z-index: 100;
-  border: 1px solid grey;
-  width: 120px;
-  margin-top: 10px;
-  position: fixed;
-  background: white;
-  padding: 10px 0;
-  right: 0;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  top: 210px;
-}
-.user-login-form > .form-item  >.form-text {
-  width: 100%;
-  padding: 12px 20px;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.user-login-form > .form-actions > .form-submit {
-  background-color: #086AAB;
-  color: white;
-  padding: 14px 30px;
-  margin: 30px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  border-color: #4cae4c;
-  text-transform: uppercase;
-}
