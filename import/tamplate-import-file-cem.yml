@@ -1,0 +1,54 @@
+id: import_files002
+label: File document
+migration_group: documents_itens
+# Source.
+source:
+  plugin: csv
+  path: 'C:\xampp1\htdocs\cem\sites\default\files\import-files.csv'
+#  delimiter: ';'
+  header_row_count: 1
+  # Unique ID.
+  keys:
+    - file_path
+  constants:
+     file_source_uri: 'C:\xampp1\htdocs\cem\sites\default\files\arquivos-para-migrar'
+     file_dest_uri: 'C:\xampp1\htdocs\cem\sites\default\files\documentos'
+
+# Destination
+destination:
+  plugin: entity:file
+
+# Process
+process:
+  file_source:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/file_source_uri
+        - file_path
+    # Make sure we don't have any url-unfriendly characters.
+    -
+      plugin: urlencode
+  file_dest:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/file_dest_uri
+        - file_path
+    # Make sure we don't have any url-unfriendly characters.
+    -
+      plugin: urlencode
+  # We use the image file names as is.
+  #
+  # Alternatively, if we wish to name them after some other
+  # column, we can do it here.
+  filename: file_path
+  uri:
+    plugin: file_copy
+    source:
+      - '@file_source'
+      - '@file_dest'
+
+migration_dependencies: {}
