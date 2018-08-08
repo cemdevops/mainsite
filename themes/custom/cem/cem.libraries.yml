@@ -16,8 +16,8 @@ global-styling:
     layout:
       assets/css/vendors.css: { weight: 0 }
       assets/css/estilos.css: { weight: 0 }
+      assets/css/custom.css:  { weight: 0 }
      
-
 global-scripts:
   version: VERSION
   js:
