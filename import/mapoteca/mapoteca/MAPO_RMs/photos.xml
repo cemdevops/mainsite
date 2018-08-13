@@ -1,0 +1,371 @@
+<gallery
+base = ""
+background = "#FFFFFF"
+banner = "#F0F0F0"
+text = "#000000"
+link = "#0000FF"
+alink = "#FF0000"
+vlink = "#800080"
+date = "">
+	<sitename>Centro de Estudos da Metrópole</sitename>
+	<photographer></photographer>
+	<contactinfo></contactinfo>
+	<email></email>
+	<security><![CDATA[]]> </security>
+
+<banner font = "Arial" fontsize = "3" color =  "#F0F0F0"> </banner>
+<thumbnail base ="thumbnails/" font = "Arial" fontsize = "4" color = "#F0F0F0" border = "0" rows = "3" col = "5"> </thumbnail> 
+<large base ="images/" font = "Arial" fontsize = "3" color = "#F0F0F0" border = "0"> </large>
+<images id = "images">
+
+<image
+path = "CartoARA2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoARA2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoBEL2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoBEL2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoBHZ2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoBHZ2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoBXS2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoBXS2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoCAM2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoCAM2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoCAR2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoCAR2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoCUR2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoCUR2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoCVG2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoCVG2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoDFE2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoDFE2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoFLO2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoFLO2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoFOR2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoFOR2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoFRI2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoFRI2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoGOI2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoGOI2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoJPS2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoJPS2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoLIN2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoLIN2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoLON2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoLON2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoMAR2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoMAR2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoMCE2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoMCE2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoMCP2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoMCP2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoNAT2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoNAT2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoNNC2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoNNC2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoNRS2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoNRS2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoPEJ2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoPEJ2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoPOA2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoPOA2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoREC2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoREC2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoRIO2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoRIO2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoSAO2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoSAO2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoSLU2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoSLU2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoSRS2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoSRS2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoSSA2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoSSA2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoTER2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoTER2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoTUB2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoTUB2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoVIT2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoVIT2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoVLA2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoVLA2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+
+<image
+path = "CartoVLI2.jpg"
+width = "450"
+height = "318"
+thumbpath = "CartoVLI2.jpg"
+thumbwidth = "75"
+thumbheight = "53">
+</image>
+
+</images>
+</gallery>
