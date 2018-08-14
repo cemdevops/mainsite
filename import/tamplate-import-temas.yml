@@ -1,10 +1,10 @@
-id: import_terms001
+id: import_temas
 label: Term documents
-migration_group: documents_itens
+migration_group: documents
 # Source.
 source:
   plugin: csv
-  path: 'C:\xampp1\htdocs\cem\sites\default\files\import-terms.csv'
+  path: 'C:\xampp1\htdocs\cem\sites\default\files\import-temas.csv'
   # delimiter: ','
   header_row_count: 1
   # Unique ID.
@@ -13,10 +13,10 @@ source:
 # Destination
 destination:
   plugin: entity:taxonomy_term
-  default_bundle: tipo
+  default_bundle: temas
 
 # Process
 process:
-  name: title
+  name: temas
 
 migration_dependencies: {}

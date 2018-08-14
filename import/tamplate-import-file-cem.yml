@@ -1,6 +1,6 @@
-id: import_files002
+id: import_files
 label: File document
-migration_group: documents_itens
+migration_group: documents
 # Source.
 source:
   plugin: csv
@@ -26,7 +26,7 @@ process:
       delimiter: /
       source:
         - constants/file_source_uri
-        - file_path
+        - nome_arquivo
     # Make sure we don't have any url-unfriendly characters.
     -
       plugin: urlencode
@@ -36,7 +36,7 @@ process:
       delimiter: /
       source:
         - constants/file_dest_uri
-        - file_path
+        - nome_arquivo
     # Make sure we don't have any url-unfriendly characters.
     -
       plugin: urlencode
@@ -45,6 +45,7 @@ process:
   # Alternatively, if we wish to name them after some other
   # column, we can do it here.
   filename: file_path
+#  description: descricao_do_tipo_de_arquivo
   uri:
     plugin: file_copy
     source:
