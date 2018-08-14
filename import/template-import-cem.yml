@@ -1,13 +1,13 @@
-id: import_nodes_ref15
+id: import_documents
 label: Node document
-migration_group: documents_itens
-# Source.
+migration_group: documents
+# Source
 source:
   plugin: csv
-  path: 'C:\xampp1\htdocs\cem\sites\default\files\import-documentos2.csv'
+  path: 'C:\xampp1\htdocs\cem\sites\default\files\import-documents.csv'
   delimiter: ';'
   header_row_count: 1
-  # Unique ID.
+  # Unique ID
   keys:
     - id
   constants:
@@ -19,7 +19,6 @@ source:
 destination:
   plugin: entity:node
   default_bundle: documentos
-
 # Process
 process:
   sticky: constants/bool_0
@@ -30,51 +29,50 @@ process:
   title: titulo
   body/value: descricao_do_conjunto_de_dados
   body/format: constants/full_html
+  field_documento_data_ref: data_ref
   field_documento:
     source: nome_arquivo
     plugin: migration_lookup
-    migration: import_files002
-  # field_documento_tipos:
-    # -
-      # plugin: explode
-      # delimiter: ', '
-      # source: tipo
-    # -
-      # plugin: migration_lookup
-      # migration: import_terms001
-  # field_documento_temas:
-    # -
-      # plugin: explode
-      # delimiter: ', '
-      # source: temas
+    migration: import_files
+   field_documento_tipos:
+     -
+       plugin: explode
+       delimiter: '#'
+       source: tipos
+     -
+       plugin: migration_lookup
+       migration: import_tipos
+  field_documento_temas:
+    -
+      plugin: explode
+      delimiter: '#'
+      source: temas
   field_documento_fontes:
     -
       plugin: explode
-      delimiter: ','
+      delimiter: '#'
       source: fontes
     -
       plugin: migration_lookup
-      migration: import_terms001
-  # field_documento_tags:
-    # -
-      # plugin: explode
-      # delimiter: ', '
-      # source: tags 
-  # field_dob:
-    # plugin: format_date
-    # from_format: 'm/d/Y'
-    # to_format: 'Y-m-d'
-    # source: date_of_birth	  
-#  field_associated_document:
-#    plugin: static_map
-#    source: id_ref
-#    map:
-#      17: 2417
-#      18: 2418
-#      19: 2419
-#      20: 2420
+      migration: import_fontes
+  field_documento_tags:
+    -
+      plugin: explode
+      delimiter: '#'
+      source: tags
+    -
+      plugin: migration_lookup
+      migration: import_tags
+  field_documento_data_lancamento:
+    plugin: format_date
+    from_format: 'd/m/y'
+    to_format: 'd-m-Y'
+    source: date_of_birth
 
 migration_dependencies: 
  optional:
-   - import_files002
-   - import_terms001
+   - import_files
+   - import_fontes
+   - import_tipos
+   - import_temas
+   - import_tags
