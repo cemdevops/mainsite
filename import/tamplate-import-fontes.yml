@@ -1,0 +1,22 @@
+id: import_fontes
+label: Term documents
+migration_group: documents
+# Source.
+source:
+  plugin: csv
+  path: 'C:\xampp1\htdocs\cem\sites\default\files\import-fontes.csv'
+  # delimiter: ','
+  header_row_count: 1
+  # Unique ID.
+  keys:
+    - title
+# Destination
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: tipos
+
+# Process
+process:
+  name: tipos
+
+migration_dependencies: {}
