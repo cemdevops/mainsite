@@ -15,6 +15,7 @@ function cem_preprocess_html(&$variables) {
 function cem_preprocess_node(&$variables) {
   $tipo = $variables['node']->getType();
   $lang = $variables['node']->language()->getId();
+  $variables['language'] = $lang;
 
   if($tipo == 'agenda') {
     $data = $variables['node']->get('field_evento_data')->getString();
