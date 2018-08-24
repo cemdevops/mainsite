@@ -1,0 +1,22 @@
+id: import_tipos001
+label: Term documents
+migration_group: documents_itens
+# Source.
+source:
+  plugin: csv
+  path: 'C:\xampp1\htdocs\cem\sites\default\files\import-tipos001.csv'
+  # delimiter: ','
+  header_row_count: 1
+  # Unique ID.
+  keys:
+    - title
+# Destination
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: tipo
+
+# Process
+process:
+  name: title
+
+migration_dependencies: {}
