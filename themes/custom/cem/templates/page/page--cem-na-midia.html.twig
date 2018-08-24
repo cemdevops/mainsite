@@ -1,0 +1,125 @@
+{% set language = language.getId() %}
+<main class="main">
+    <!-- internas top header init -->
+    <section class="internas-top-header">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        {% trans %}
+                        <h1 class="title-page icon icon-news">CEM na Mídia</h1>
+                        {% endtrans %}
+                        <!-- noticias header busca init -->
+                        <div class="header-top-busca">
+                            <div class="header-search">
+                                {{ drupal_entity('block','apoio') }}
+                                <form>
+                                    <div>
+                                        <input type="text" placeholder="pesquisar no site" class="search-field">
+                                        <input type="submit" value="buscar" class="search-button">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- noticias header busca end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- internas top header end -->
+    <!-- internas container init -->
+    <section class="internas-container">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- noticia listagem coluna left init -->
+                    <div class="col-md-9 col-xs-12">
+                        {{ drupal_view('noticia', 'page_cem_na_midia', language) }}
+                    </div>
+
+                    <div class="col-md-3 col-xs-12">
+                        <div class="side-bar-box agenda">
+                            <div class="header">EVENTOS/AGENDA</div>
+                            <div class="box">
+                                <div class="home-agenda-header">
+                                    {% trans %}
+                                    <h2>eventos/agenda</h2>
+                                    {% endtrans %}
+                                </div>
+                                <div class="box">
+                                    <!-- home agenda item init -->
+                                    {{ drupal_view('evento','bloco_evento_home',language) }}
+                                    <!-- home agenda item end -->
+                                    {% trans %}
+                                    <a href="#" class="link-more">agenda completa</a>
+                                    {% endtrans %}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- side bar agenda end -->
+
+                        <div class="side-bar-box recente">
+                            <div class="header">Notícias Recentes</div>
+                            <div class="box">
+                                <!-- side bar noticia recente item init -->
+                                {{ drupal_view('noticia','bloco_noticia_interna',language) }}
+                                <!-- side bar noticia recente item end -->
+                                <a href="#" class="link-more">mais notícias</a>
+                            </div>
+                        </div>
+                        <!-- side bar  noticias recentes end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- internas container init -->
+    <section class="internas-container">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row quem-somos-content">
+                    <div class="col-xs-12">
+                        <section class="home-apoio">
+                            {% trans %}
+                            <div class="title">apoio</div>
+                            {% endtrans %}
+                            <div class="logos">
+                                {{ drupal_entity('block','apoio') }}
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <!-- footer newsletter init -->
+    <section class="footer-newsletter">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="footer-newsletter-form">
+                            <div>
+                                {{ drupal_entity('block','webform') }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="footer-newsletter-text">
+                            {% trans %}
+                            <span>RECEBA NOSSOS INFORMATIVOS</span><br> Não se preocupe, também não gostamos de SPAM.
+                            {% endtrans %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+
+</main>
