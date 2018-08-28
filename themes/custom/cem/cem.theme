@@ -54,9 +54,9 @@ function cem_preprocess_node(&$variables) {
       ->getValue()[0]['target_id'];
     $variables['pesquisadores'] = Term::load($tid)->getName();
     $daniel = Term::load($tid);
-    kint(Term::load($tid)->url());
-    kint(Term::load($tid)->urlInfo());
-    kint($daniel);
+//    kint(Term::load($tid)->url());
+//    kint(Term::load($tid)->urlInfo());
+//    kint($daniel);
   }
   if($tipo == 'page') {
     $url  = $_SERVER['REQUEST_URI'];
