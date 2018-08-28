@@ -100,7 +100,14 @@
                     {% set subMenuAttribute = "drop-down" %}
                   <ul>
                       {% for itemSub in menu_item.submenu %}
-                        <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
+                          {% if itemSub.submenu %}
+                                <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
+                              {% for itens in itemSub.submenu %}
+                                    <li><a href="{{ itens.url }}"><span>{{ itens.text }}</span></a></li>
+                              {% endfor %}
+                          {% else %}
+                            <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
+                          {% endif %}
                       {% endfor %}
                   </ul>
                 {% endif %}
