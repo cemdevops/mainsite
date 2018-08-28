@@ -1,4 +1,6 @@
 <main class="main">
+
+
     <!-- internas top header init -->
     <section class="internas-top-header">
         <div class="inner wrapper">
@@ -8,7 +10,7 @@
                         <h1 class="title-page">
                             {% trans %}quem somos{% endtrans %}
                             <span class="sub-title"><a href="/quem-somos/nossa-equipe">{% trans %}nossa equipe{% endtrans %}</a></span>
-                            <span class="sub-title"><a href="/quem-somos/coordenadores-de-projetos">{{ pesquisadores }}</a></span>
+                            <!--<span class="sub-title"><a href="/quem-somos/coordenadores-de-projetos">{{ pesquisadores }}</a></span>-->
                             <span class="sub-title"><a href="#">{{ label }}</a></span>
                         </h1>
                     </div>
@@ -35,51 +37,70 @@
                                         <a href="#">{{ label }}</a>
                                     </div>
                                     <div class="links">
-                                        <a href="mailto:{# content.field_pessoa_email #}" class="email">{{ content.field_pessoa_email }}</a>
-                                        <a href="www.arretche.usp.br" class="website">{{ content.field_site }}</a>
-                                        <a href="www.arretche.usp.br" class="lattes">currículo lattes</a>
+                                        <a href="mailto:{{ content.field_pessoa_email[0] }}" class="email">{{ content.field_pessoa_email[0] }}</a>
+                                        {% if node.field_site.value %}
+                                            <a href="{{ content.field_site[0] }}" class="website">{{ content.field_site[0] }}</a>
+                                        {% endif %}
+                                        {% if node.field_site.value %}
+                                            <a href="{{ content.field_lattes[0] }}" class="lattes">{% trans %}currículo lattes{% endtrans %}</a>
+                                        {% endif %}
                                     </div>
                                     <div class="social">
                                         <ul>
-                                            <li class="icon-linkedin"><a href="{# content.field_linkedin #}"><span>linkedin</span></a></li>
-                                            <li class="icon-facebook"><a href="{# content.field_facebook #}"><span>facebook</span></a></li>
-                                            <li class="icon-twitter"><a href="{# content.field_twitter #}"><span>twitter</span></a></li>
-                                            <li class="icon-instagram"><a href="{# content.field_instagram #}"><span>instagram</span></a></li>
-                                            <li class="icon-email"><a href="{# content.field_pessoa_email  #}"><span>email</span></a></li>
-                                            <li class="icon-site"><a href="{# content.field_site #}"><span>site</span></a></li>
+                                            {% if node.field_linkedin.value %}
+                                                <li class="icon-linkedin"><a href=" {{ content.field_linkedin[0] }} "><span>linkedin</span></a></li>
+                                            {% endif %}
+                                            {% if node.field_facebook.value %}
+                                                <li class="icon-facebook"><a href="{{ content.field_facebook[0] }}"><span>facebook</span></a></li>
+                                            {% endif %}
+                                            {% if node.field_twitter.value %}
+                                                <li class="icon-twitter"><a href="{{ content.field_twitter[0] }}"><span>twitter</span></a></li>
+                                            {% endif %}
+                                            {% if node.field_instagram.value %}
+                                                <li class="icon-instagram"><a href="{{ content.field_instagram[0] }}"><span>instagram</span></a></li>
+                                            {% endif %}
+                                            {% if node.field_site.value %}
+                                                <li class="icon-site"><a href="{{ content.field_site[0] }}"><span>site</span></a></li>
+                                            {% endif %}
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-9">
                                 <!-- biografia init -->
-                                <div class="coordenador-box-infos">
-                                    <div class="title icon icon-biografia">
-                                        {% trans %}
-                                            <h3>Biografia</h3>
-                                        {% endtrans %}
-                                        {{  drupal_field('field_pessoa_biografia','node') }}
+                                {% if node.field_pessoa_biografia.value %}
+                                    <div class="coordenador-box-infos">
+                                        <div class="title icon icon-biografia">
+                                            {% trans %}
+                                                <h3>Biografia</h3>
+                                            {% endtrans %}
+                                            {{  drupal_field('field_pessoa_biografia','node') }}
+                                        </div>
                                     </div>
-                                </div>
+                                {% endif %}
                                 <!-- gravacoes, palestras init -->
-                                <div class="coordenador-box-infos">
-                                    <div class="title icon icon-medias">
-                                        {% trans %}
-                                            <h3>Gravação de Seminários, palestras</h3>
-                                        {% endtrans %}
+                                {% if node.field_pessoa_gravacoes.value %}
+                                    <div class="coordenador-box-infos">
+                                        <div class="title icon icon-medias">
+                                            {% trans %}
+                                                <h3>Gravação de Seminários, palestras</h3>
+                                            {% endtrans %}
+                                        </div>
+                                        {{  drupal_field('field_pessoa_gravacoes','node') }}
                                     </div>
-                                    {{  drupal_field('field_pessoa_gravacoes','node') }}
-                                </div>
+                                {% endif %}
                                 <!-- gravacoes, palestras end -->
                                 <!-- books init -->
+                                {% if node.field_pessoa_producoes.value %}
                                 <div class="coordenador-box-infos">
                                     <div class="title icon icon-books">
                                         {% trans %}
-                                            <h3>Produção mais recente (*)   -   Livros e Capítulos de livros</h3>
+                                            <h3>Produção mais recente(*) - Livros e Capítulos de livros</h3>
                                         {% endtrans %}
                                     </div>
                                     {{  drupal_field('field_pessoa_producoes','node') }}
                                 </div>
+                                {% endif %}
                                 <!-- books end -->
                             </div>
                         </div>
