@@ -5115,44 +5115,94 @@ blockquote p {
 
 /* line 42, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files [class*="doc"] {
-  background: url(../img/files-doc.jpg) left center no-repeat;
+  background: url(../img/files-doc.png) left center no-repeat;
 }
 
 /* line 45, cem/assets/scss/_components/_download-de-dados/__global.scss */
-.download-item .files [class*="pdf"] {
-  background: url(../img/files-pdf.jpg) left center no-repeat;
+.download-item .files [class*="docx"] {
+  background: url(../img/files-docx.png) left center no-repeat;
 }
 
 /* line 48, cem/assets/scss/_components/_download-de-dados/__global.scss */
-.download-item .files [class*="shp"] {
-  background: url(../img/files-shp.jpg) left center no-repeat;
+.download-item .files [class*="pdf"] {
+  background: url(../img/files-pdf.png) left center no-repeat;
 }
 
 /* line 51, cem/assets/scss/_components/_download-de-dados/__global.scss */
-.download-item .files [class*="xls"] {
-  background: url(../img/files-xls.jpg) left center no-repeat;
+.download-item .files [class*="shp"] {
+  background: url(../img/files-shp.png) left center no-repeat;
 }
 
 /* line 54, cem/assets/scss/_components/_download-de-dados/__global.scss */
-.download-item .files [class*="zip"] {
-  background: url(../img/files-zip.jpg) left center no-repeat;
+.download-item .files [class*="xls"] {
+  background: url(../img/files-xls.png) left center no-repeat;
 }
 
 /* line 57, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="xlsx"] {
+  background: url(../img/files-xlsx.png) left center no-repeat;
+}
+
+/* line 60, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="zip"] {
+  background: url(../img/files-zip.png) left center no-repeat;
+}
+
+/* line 63, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="rar"] {
+  background: url(../img/files-rar.png) left center no-repeat;
+}
+
+/* line 66, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="gz"] {
+  background: url(../img/files-gz.png) left center no-repeat;
+}
+
+/* line 69, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="png"] {
+  background: url(../img/files-png.png) left center no-repeat;
+}
+
+/* line 72, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="jpg"] {
+  background: url(../img/files-jpg.png) left center no-repeat;
+}
+
+/* line 75, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="jpeg"] {
+  background: url(../img/files-jpg.png) left center no-repeat;
+}
+
+/* line 78, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="bmp"] {
+  background: url(../img/files-bmp.png) left center no-repeat;
+}
+
+/* line 81, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="txt"] {
+  background: url(../img/files-txt.png) left center no-repeat;
+}
+
+/* line 84, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="html"] {
+  background: url(../img/files-html.png) left center no-repeat;
+}
+
+/* line 87, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files .file {
   display: inline-block;
   padding: 20px 0;
   padding-left: 48px;
 }
 
-/* line 62, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 92, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files .file a {
   font-size: 13px;
   font-weight: 500;
   color: #666666;
 }
 
-/* line 71, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 101, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li {
   float: left;
   width: 100%;
@@ -5163,7 +5213,7 @@ blockquote p {
   align-items: center;
 }
 
-/* line 79, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 109, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension {
   content: '';
   float: left;
@@ -5183,37 +5233,37 @@ blockquote p {
   margin-right: 10px;
 }
 
-/* line 95, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 125, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.zip {
   background-color: #666666;
 }
 
-/* line 97, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 127, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.zip:before {
   content: 'ZIP';
 }
 
-/* line 101, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 131, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.pdf {
   background-color: #E74C3C;
 }
 
-/* line 103, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 133, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.pdf:before {
   content: 'PDF';
 }
 
-/* line 107, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 137, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.shp {
   background-color: #5BB264;
 }
 
-/* line 109, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 139, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.shp:before {
   content: 'SHP';
 }
 
-/* line 119, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 149, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-items-wrapper header,
 .download-items-wrapper .views-field-title {
   float: left;
@@ -5225,7 +5275,7 @@ blockquote p {
   line-height: 1.5;
 }
 
-/* line 132, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 162, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue {
   position: relative;
   display: inline-block;
@@ -5235,7 +5285,7 @@ blockquote p {
   margin: 0 15px;
 }
 
-/* line 139, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 169, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue > span {
   display: none;
   font-family: 'Roboto', sans-serif;
@@ -5256,7 +5306,7 @@ blockquote p {
   margin-left: -180px;
 }
 
-/* line 157, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 187, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue > span:after {
   content: '';
   display: block;
@@ -5273,12 +5323,12 @@ blockquote p {
   border-bottom: solid 2px #ffffff;
 }
 
-/* line 173, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 203, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue:hover {
   cursor: pointer;
 }
 
-/* line 175, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 205, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue:hover > span {
   display: block;
 }
