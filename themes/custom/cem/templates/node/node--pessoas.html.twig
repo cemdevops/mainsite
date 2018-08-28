@@ -42,22 +42,22 @@
                                             <a href="{{ node.field_site.value }}" class="website">{{ node.field_site.value }}</a>
                                         {% endif %}
                                         {% if node.field_lattes.value %}
-                                            <a href="{{node.field_lattes.value }}" class="lattes">{% trans %}currículo lattes{% endtrans %}</a>
+                                            <a href="{{ node.field_lattes.value[0]['uri'] }}" class="lattes">{% trans %}currículo lattes{% endtrans %}</a>
                                         {% endif %}
                                     </div>
                                     <div class="social">
                                         <ul>
                                             {% if node.field_linkedin.value %}
-                                                <li class="icon-linkedin"><a href=" {{ node.field_linkedin.value }} "><span>linkedin</span></a></li>
+                                                <li class="icon-linkedin"><a href=" {{ node.field_lattes.value[0]['uri'] }} "><span>linkedin</span></a></li>
                                             {% endif %}
                                             {% if node.field_facebook.value %}
-                                                <li class="icon-facebook"><a href="{{ node.field_facebook.value }}"><span>facebook</span></a></li>
+                                                <li class="icon-facebook"><a href="{{ node.field_facebook.value[0]['uri'] }}"><span>facebook</span></a></li>
                                             {% endif %}
                                             {% if node.field_twitter.value %}
-                                                <li class="icon-twitter"><a href="{{ node.field_twitter.value }}"><span>twitter</span></a></li>
+                                                <li class="icon-twitter"><a href="{{ node.field_twitter.value[0]['uri'] }}"><span>twitter</span></a></li>
                                             {% endif %}
                                             {% if node.field_instagram.value %}
-                                                <li class="icon-instagram"><a href="{{ node.field_instagram.value }}"><span>instagram</span></a></li>
+                                                <li class="icon-instagram"><a href="{{ node.field_instagram.value[0]['uri'] }}"><span>instagram</span></a></li>
                                             {% endif %}
                                             {% if node.field_site.value %}
                                                 <li class="icon-site"><a href="{{ node.field_site.value }}"><span>site</span></a></li>
