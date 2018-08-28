@@ -13,7 +13,8 @@
         "balbuf/drupal-libraries-installer": "^1.0",
         "drupal/single_datetime": "^1.6",
         "parsecsv/php-parsecsv": "^1.0",
-        "drupal/address": "~1.0"
+        "drupal/address": "~1.0",
+        "drupal/taxonomy_manager": "^1.0@alpha"
     },
     "replace": {
         "drupal/core": "^8.4"
