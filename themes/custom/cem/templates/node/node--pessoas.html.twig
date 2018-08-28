@@ -37,7 +37,9 @@
                                         <a href="#">{{ label }}</a>
                                     </div>
                                     <div class="links">
-                                        <a href="mailto:{{ content.field_pessoa_email[0] }}" class="email">{{ content.field_pessoa_email[0] }}</a>
+                                        {% if node.field_pessoa_email.value %}
+                                            <a href="mailto:{{ content.field_pessoa_email[0] }}" class="email">{{ content.field_pessoa_email[0] }}</a>
+                                        {% endif %}
                                         {% if node.field_site.value %}
                                             <a href="{{ content.field_site[0] }}" class="website">{{ content.field_site[0] }}</a>
                                         {% endif %}
