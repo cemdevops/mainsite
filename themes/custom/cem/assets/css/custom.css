@@ -35,3 +35,7 @@ ul#custom-menu-language li {
     border-color: #4cae4c;
     text-transform: uppercase;
 }
+
+div.quem-somos-conteudo  a{
+    text-decoration: underline;
+}
