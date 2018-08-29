@@ -7,6 +7,8 @@ use Drupal\webform\Entity\Webform;
 use Drupal\webform\Entity\WebformSubmission;
 use Drupal\webform\WebformSubmissionForm;
 use \Symfony\Component\HttpFoundation\Response;
+use \Drupal\node\Entity\Node;
+use \Drupal\file\Entity\File;
 use ParseCsv\Csv;
 
 
@@ -14,7 +16,6 @@ use ParseCsv\Csv;
 class csv_importController extends ControllerBase {
   
   public function import_webform_csv() {
-    
     $filePath = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
     $filename = $filePath . '/tabela_usuarios_cem4.csv';
     $csv = new Csv($filename);
@@ -60,9 +61,92 @@ class csv_importController extends ControllerBase {
     ];
   }
   
+  public function import_base_dados() {
   
   
-}
+    function getTidByName($name = NULL, $vid = NULL) {
+      $properties = [];
+      if (!empty($name)) {
+        $properties['name'] = $name;
+      }
+      if (!empty($vid)) {
+        $properties['vid'] = $vid;
+      }
+      $terms = \Drupal::entityManager()
+        ->getStorage('taxonomy_term')
+        ->loadByProperties($properties);
+      $term = reset($terms);
+    
+      return !empty($term) ? $term->id() : 0;
+    }
+  
+  
+    $term_name = getTidByName('BASE DE DADOS', 'tags');
+  
+  
+    $filePath = \Drupal::service('file_system')
+      ->realpath(file_default_scheme() . "://");
+    $base_de_dados = $filePath . '\documents.csv';
+  
+   
+    $csv = new Csv($base_de_dados);
+  
+//    $csv->encoding('UTF-8', 'UTF-8');
+    $csv->delimiter = ";";
+  
+    $h = fopen($base_de_dados, "r");
+    while (($data = fgetcsv($h, 100000, ";")) !== FALSE)
+    {
+  
+      kint($data);
+    }
+
+    die();
+    
+      foreach($csv->data as $value) {
+        $filename = $filePath . '/arquivos-para-migrar/vcnapuc.jpg';
+        $file = file_save_data($filename, "public://vcnapuc.png", FILE_EXISTS_REPLACE);
+        $node = Node::create(['type' => 'documentos']);
+        $node->set('title', $value['titulo']);
+      
+        $body = [
+          'value' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+          'format' => 'basic_html',
+        ];
+        $node->set('body', $body);
+        $node->set('uid', 1);
+        $documentos[] = [
+          'target_id' => $file->id(),
+          'alt' => 'teste do teste do teste',
+          'title' => 'vamos ver isso',
+        ];
+        $node->set('field_documento', $documentos);
+        $node->set('field_documento_data_ref', 'Ut enim ad minima veniam');
+        $tags = [118, 123, 122];
+        getTidByName('BASE DE DADOS', 'tags');
+        $fontes = [];
+        $temas = [];
+        $tipos = [];
+        $node->set('field_documento_tags', $tags);
+        $node->set('field_documento_fontes', $fontes);
+        $node->set('field_documento_temas', $temas);
+        $node->set('field_documento_tags', $tags);
+        $node->set('field_documento_data_lancamento', $value['data_lancamento']);
+        $node->status = 1;
+        $node->langcod = 'pt-br';
+        $node->enforceIsNew();
+        $node->save();
+      }
+      drupal_set_message("Node with nid " . $node->id() . " saved!\n");
+    
+      return [
+        '#type' => 'markup',
+        '#markup' => $this->t('Importação realizada com sucesso!'),
+      ];
+    
+    }
+  
+  }
 
 
 
