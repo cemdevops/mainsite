@@ -200,10 +200,17 @@ class csv_importController extends ControllerBase {
     $divisao = array();
     $cont = 0;
     foreach($base as $value) {
-      $files   = explode('#', $value[8]);
-      foreach($files as $record){
-        $filename = $filePath . "\arquivos-para-migrar\mapoteca&#92" . $record;
-        $file = file_save_data($filename, 'public://' . $record, FILE_EXISTS_REPLACE);
+      $files       = explode('#', $value[8]);
+      $description = explode('#', $value[7]);
+      $combine = array_combine($files, $description);
+      foreach($combine as $file => $descricao){
+        $filename = $filePath . "\arquivos-para-migrar\mapoteca&#92" . $file;
+        $file = file_save_data($filename, 'public://' . $file, FILE_EXISTS_REPLACE);
+        $documentos[] = [
+          'target_id' => $file->id(),
+          'description' => $descricao,
+        ];
+  
       }
       $node = Node::create(['type' => 'mapas_prontos']);
       $node->set('title', $value[1]);
@@ -213,10 +220,7 @@ class csv_importController extends ControllerBase {
       ];
       $node->set('body', $body);
       $node->set('uid', 1);
-      $documentos[] = [
-        'target_id' => $file->id(),
-        'description' => $value[7],
-      ];
+ 
       $node->set('field_documento', $documentos);
       $files = array();
       $node->set('field_documento_data_ref', $value[9]);
@@ -261,8 +265,10 @@ class csv_importController extends ControllerBase {
       $node->save();
       $cont++;
     }
-    drupal_set_message("foram registrados " . $count . "nodes!\n");
-    
+    kint($documentos);
+    die();
+    drupal_set_message("foram registrados " . $cont . "nodes!\n");
+
     return [
       '#type' => 'markup',
       '#markup' => $this->t('Importação realizada com sucesso!'),
