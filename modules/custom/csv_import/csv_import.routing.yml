@@ -7,9 +7,17 @@ csv_import.import_webform_csv:
      _permission: 'access content'
      _role: 'authenticated+admin'
 csv_import.import_base_dados:
-  path: '/node_import/import_node_csv'
+  path: '/import/base-dados'
   defaults:
      _controller: \Drupal\csv_import\Controller\csv_importController::import_base_dados
+     _title: 'Import base de dados'
+  requirements:
+     _permission: 'access content'
+     _role: 'authenticated+admin'
+csv_import.import_mapoteca:
+  path: '/import/mapoteca'
+  defaults:
+     _controller: \Drupal\csv_import\Controller\csv_importController::import_mapoteca
      _title: 'Import base de dados'
   requirements:
      _permission: 'access content'
