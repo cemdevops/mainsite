@@ -7,7 +7,7 @@ csv_import.import_webform_csv:
      _permission: 'access content'
      _role: 'authenticated+admin'
 csv_import.import_base_dados:
-  path: '/import/base-dados'
+  path: '/import/dados'
   defaults:
      _controller: \Drupal\csv_import\Controller\csv_importController::import_base_dados
      _title: 'Import base de dados'

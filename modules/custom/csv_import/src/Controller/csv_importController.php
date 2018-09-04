@@ -11,8 +11,6 @@ use \Drupal\node\Entity\Node;
 use \Drupal\file\Entity\File;
 use ParseCsv\Csv;
 
-
-
 class csv_importController extends ControllerBase {
   
   public function import_webform_csv() {
@@ -75,21 +73,20 @@ class csv_importController extends ControllerBase {
         ->getStorage('taxonomy_term')
         ->loadByProperties($properties);
       $term = reset($terms);
-    
       return !empty($term) ? $term->id() : 0;
     }
     
     $filePath = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
-    $base_de_dados = $filePath . "\documents6.csv";
+    $base_de_dados = $filePath . "/dados_1.csv";
     $h =fopen($base_de_dados, "r");
     
     while (($data = fgetcsv($h, 100000, ";")) !== FALSE) {
       $base[] = $data;
     }
     fclose($h);
-//    kint($base);
+ //   kint($base);
 //    foreach ($base as $value){
-//      kint($value[10]);
+//      kint($value);
 //    }
 //    die();
     $head = array_shift($base);
@@ -99,10 +96,27 @@ class csv_importController extends ControllerBase {
     $tipo  = array();
     
       foreach($base as $value) {
-        $filename = $filePath . "\arquivos-para-migrar&#92" . $value[8];
-        $file = file_save_data($filename, 'public://' . $value[8], FILE_EXISTS_REPLACE);
-        
+        $files       = explode('#', $value[8]);
+        $description = explode('#', $value[7]);
+        $combine     = array_combine($files, $description);
+  
+        foreach($combine as $file => $descricao){
+          $file_source = $filePath . "/arquivos-para-migrar/dados/" . $file;
+          $uri   = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
+          kint($uri);
+          $files = File::Create(['uri' => $uri]);
+          $files->save();
+       
+          kint($files);
+          die();
+          $documentos[] = [
+            'target_id' => $files->id(),
+            'description' => $descricao,
+          ];
+        }
         $node = Node::create(['type' => 'documentos']);
+        $node->set('field_documento', $documentos);
+        
         $node->set('title', $value[1]);
         $body = [
           'value' => $value[5],
@@ -110,11 +124,7 @@ class csv_importController extends ControllerBase {
         ];
         $node->set('body', $body);
         $node->set('uid', 1);
-        $documentos[] = [
-          'target_id' => $file->id(),
-          'description' => $value[7],
-        ];
-        $node->set('field_documento', $documentos);
+  
         $node->set('field_documento_data_ref', $value[9]);
         $node->set('field_documento_data_lancamento', $value[10]);
 //        $tags = [118, 123, 122];
@@ -141,16 +151,17 @@ class csv_importController extends ControllerBase {
         $node->set('field_documento_fontes', $fonte);
         $node->set('field_documento_temas', $tema);
         $node->set('field_documento_tipos', $tipo);
-
-//        $node->set('field_documento_data_lancamento', '1981-01-17');
-        $tag   = array();
-        $fonte = array();
-        $tema  = array();
-        $tipo  = array();
+        
+        $documentos = array();
+        $tag        = array();
+        $fonte      = array();
+        $tema       = array();
+        $tipo       = array();
         $node->status = 1;
         $node->langcod = 'pt-br';
         $node->enforceIsNew();
         $node->save();
+        die();
       }
       drupal_set_message("Node with nid " . $node->id() . " saved!\n");
     
@@ -160,7 +171,6 @@ class csv_importController extends ControllerBase {
       ];
     
     }
-  
   public function import_mapoteca() {
     
     function getTidByName($name = NULL, $vid = NULL) {
@@ -178,39 +188,38 @@ class csv_importController extends ControllerBase {
       
       return !empty($term) ? $term->id() : 0;
     }
-    
     $filePath = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
-    $base_de_dados = $filePath . "\mapoteca.csv";
-    $h =fopen($base_de_dados, "r");
+    $mapoteca = $filePath . "/mapoteca.csv";
+    $h =fopen($mapoteca, "r");
     
     while (($data = fgetcsv($h, 100000, ";")) !== FALSE) {
       $base[] = $data;
     }
     fclose($h);
-//        kint($base);
-//        foreach ($base as $value){
-//          kint($value[10]);
-//        }
-//        die();
+//    kint($base);
     $head = array_shift($base);
-    $tag     = array();
-    $fonte   = array();
-    $tema    = array();
-    $tipo    = array();
-    $divisao = array();
+    $fonte      = array();
+    $tema       = array();
+    $tipo       = array();
+    $divisao    = array();
+    $documentos = array();
     $cont = 0;
     foreach($base as $value) {
       $files       = explode('#', $value[8]);
       $description = explode('#', $value[7]);
-      $combine = array_combine($files, $description);
+      $combine     = array_combine($files, $description);
       foreach($combine as $file => $descricao){
-        $filename = $filePath . "\arquivos-para-migrar\mapoteca&#92" . $file;
-        $file = file_save_data($filename, 'public://' . $file, FILE_EXISTS_REPLACE);
+        $file_source = $filePath . "/arquivos-para-migrar/mapoteca/" . $file;
+        $uri   = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
+        $files = File::Create(['uri' => $uri]);
+        $files->save();
+//        kint($uri);
+//        die();
+//        $files = file_save_data($data, 'public://' . $file, FILE_EXISTS_REPLACE);
         $documentos[] = [
-          'target_id' => $file->id(),
+          'target_id' => $files->id(),
           'description' => $descricao,
         ];
-  
       }
       $node = Node::create(['type' => 'mapas_prontos']);
       $node->set('title', $value[1]);
@@ -222,7 +231,6 @@ class csv_importController extends ControllerBase {
       $node->set('uid', 1);
  
       $node->set('field_documento', $documentos);
-      $files = array();
       $node->set('field_documento_data_ref', $value[9]);
       $node->set('field_documento_data_lancamento', $value[10]);
       //        $tags = [118, 123, 122];
@@ -253,22 +261,20 @@ class csv_importController extends ControllerBase {
       $node->set('field_documento_temas', $tema);
       $node->set('field_documento_tipos', $tipo);
       $node->set('field_documento_divisao', $divisao);
-      
       //        $node->set('field_documento_data_lancamento', '1981-01-17');
-      $tag   = array();
-      $fonte = array();
-      $tema  = array();
-      $tipo  = array();
+      $documentos   = array();
+      $fonte        = array();
+      $tema         = array();
+      $tipo         = array();
       $node->status = 1;
       $node->langcod = 'pt-br';
       $node->enforceIsNew();
       $node->save();
+//      die();
       $cont++;
     }
-    kint($documentos);
-    die();
-    drupal_set_message("foram registrados " . $cont . "nodes!\n");
-
+//    die();
+    drupal_set_message("foram registrados " . $cont . " nodes!\n");
     return [
       '#type' => 'markup',
       '#markup' => $this->t('Importação realizada com sucesso!'),
