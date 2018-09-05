@@ -1,4 +1,5 @@
 {% set language = language.getId() %}
+
 <main class="main">
     <!-- internas top header init -->
     <section class="internas-top-header">
@@ -36,12 +37,12 @@
                 <div class="row">
                     <!-- noticia listagem coluna left init -->
                     <div class="col-md-9 col-xs-12">
-                        {{ drupal_view('noticia', 'page_cem_na_midia', language) }}
+                        {{ drupal_view('noticia', 'page_cem_na_midia', language, ano) }}
                     </div>
 
                     <div class="col-md-3 col-xs-12">
                         <div class="side-bar-box agenda">
-                            <div class="header">{% trans %}O CEM na Mídia{% endtrans %}</div>
+                            <div class="header"><a href="?ano=all"{% trans %}O CEM na Mídia{% endtrans %}</a></div>
                                 <div class="box">
                                     {{ drupal_entity('block','cemnamidia') }}
                                 </div>
