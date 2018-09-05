@@ -81,6 +81,7 @@ function cem_preprocess_page(&$variables) {
       $variables['img_londres'] = file_create_url($variables['node']->get('field_imagem')->entity->uri->value);
     }
   }
+  $variables['ano'] = isset($_GET['ano']) ? $_GET['ano'] : 'all';
  // $variables['hierarquia'] = $variables['node']->get('field_hierarquia')->getString();
 
 }
