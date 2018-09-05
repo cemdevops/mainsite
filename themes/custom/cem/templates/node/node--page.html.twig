@@ -123,28 +123,34 @@
                                     {{  drupal_field('field_page_descricao','node') }}
                                 </div>
                         {% elseif hierarquia == 'Difusão Científica' %}
-                            <div class="agenda-slider-wrapper">
-                                <div class="inner wrapper">
-                                    <!-- agenda slider title init -->
-                                    <h1 class="title-page icon icon-agenda">
-                                        <span><a href="/node/58">agenda</a></span>
-                                        <!--<span class="plus"><a href="#" class="link-more">mais eventos</a></span>-->
-                                        <div class="box-legenda">
-                                            <ul>
-                                                <li class="cursos"><a href="#"><span>cursos</span></a></li>
-                                                <li class="palestras"><a href="#"><span>palestras</span></a></li>
-                                                <li class="eventos"><a href="#"><span>eventos</span></a></li>
-                                                <li class="datas comemorativas/feriados"><a href="#"><span>datas comemorativas/feriados</span></a></li>
-                                            </ul>
+                            {% if difusao_cientifica == 'Agenda' %}
+                                <div class="agenda-slider-wrapper">
+                                    <div class="inner wrapper">
+                                        <!-- agenda slider title init -->
+                                        <h1 class="title-page icon icon-agenda">
+                                            <span><a href="/node/58">agenda</a></span>
+                                            <!--<span class="plus"><a href="#" class="link-more">mais eventos</a></span>-->
+                                            <div class="box-legenda">
+                                                <ul>
+                                                    <li class="cursos"><a href="#"><span>cursos</span></a></li>
+                                                    <li class="palestras"><a href="#"><span>palestras</span></a></li>
+                                                    <li class="eventos"><a href="#"><span>eventos</span></a></li>
+                                                    <li class="datas comemorativas/feriados"><a href="#"><span>datas comemorativas/feriados</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </h1>
+                                    </div>
+                                    <div class="agenda-slider">
+                                        <div class="inner">
+                                            {{ drupal_view('evento','agenda_difusao_cientifica') }}
                                         </div>
-                                    </h1>
-                                </div>
-                                <div class="agenda-slider">
-                                    <div class="inner">
-                                        {{ drupal_view('evento','agenda_difusao_cientifica') }}
                                     </div>
                                 </div>
-                            </div>
+                            {% else %}
+                                <div class="quem-somos-conteudo">
+                                    {{  drupal_field('field_page_descricao','node') }}
+                                </div>
+                            {% endif %}
                             <!--<div class="quem-somos-conteudo">
                                 {#  drupal_field('field_page_descricao','node') #}
                             </div>-->
