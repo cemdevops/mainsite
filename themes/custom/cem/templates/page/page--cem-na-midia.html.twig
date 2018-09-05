@@ -41,22 +41,10 @@
 
                     <div class="col-md-3 col-xs-12">
                         <div class="side-bar-box agenda">
-                            <div class="header">EVENTOS/AGENDA</div>
-                            <div class="box">
-                                <div class="home-agenda-header">
-                                    {% trans %}
-                                    <h2>eventos/agenda</h2>
-                                    {% endtrans %}
-                                </div>
+                            <div class="header">{% trans %}O CEM na Mídia{% endtrans %}</div>
                                 <div class="box">
-                                    <!-- home agenda item init -->
-                                    {{ drupal_view('evento','bloco_evento_home',language) }}
-                                    <!-- home agenda item end -->
-                                    {% trans %}
-                                    <a href="#" class="link-more">agenda completa</a>
-                                    {% endtrans %}
+                                    {{ drupal_entity('block','cemnamidia') }}
                                 </div>
-                            </div>
                         </div>
                         <!-- side bar agenda end -->
 
