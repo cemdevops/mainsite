@@ -170,7 +170,7 @@ class csv_importController extends ControllerBase {
         $node->status = 1;
         $node->langcod = 'pt-br';
         $node->enforceIsNew();
-//        $node->save();
+        $node->save();
       }
       drupal_set_message("Foram registrados" . $count .  " nodes!\n");
       return [
@@ -279,7 +279,7 @@ class csv_importController extends ControllerBase {
       $node->status = 1;
       $node->langcod = 'pt-br';
       $node->enforceIsNew();
-//      $node->save();
+      $node->save();
     }
 //    die();
     drupal_set_message("foram registrados " . $count . " nodes!\n");
