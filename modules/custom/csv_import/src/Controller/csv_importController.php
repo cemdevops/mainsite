@@ -101,12 +101,14 @@ class csv_importController extends ControllerBase {
         }
         $count++;
         $node = Node::create(['type' => 'documentos']);
+        $documentos  = array();
+        
         foreach($file_entity as $file => $descricao){
-          $documentos  = array();
+          
           $file_source = $filePath . "/arquivos-para-migrar/dados/" . $file;
           
-          if(file_exists($file_source) && is_file($file_source)):
-            $uri   = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
+          if(file_exists($file_source) && is_file($file_source)) {
+            $uri = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
             $files = File::Create(['uri' => $uri]);
             $files->save();
             $documentos[] = [
@@ -114,18 +116,20 @@ class csv_importController extends ControllerBase {
               'description' => $descricao,
             ];
             $node->set('field_documento', $documentos);
-           else:
-              $log = $filePath .'/logs/arquivos-faltantes-dados.txt';
-              $current = file_get_contents($log);
-              $current .= "{$file}\n";
-              file_put_contents($log, $current);
-           endif;
+          }
+          if(file_exists($file_source)) {
+            $log = $filePath . '/logs/arquivos-faltantes-dados.txt';
+            $current = file_get_contents($log);
+            $current .= "{$file}\n";
+            file_put_contents($log, $current);
+          }
         }
         if(!empty($value[1])){
           $node->set('title', $value[1]);
         }else{
           $logs = $filePath .'/title.txt';
           $currents = file_get_contents($logs);
+          file_put_contents($logs, "");
           $currents .= "{$value[1]}\n";
           file_put_contents($logs, $currents);
           $node->set('title', 'SEM TITULO');
@@ -209,7 +213,6 @@ class csv_importController extends ControllerBase {
     $tema       = array();
     $tipo       = array();
     $divisao    = array();
-    $documentos = array();
     $count = 0;
     foreach($base as $value) {
       $files       = explode('#', $value[8]);
@@ -222,10 +225,11 @@ class csv_importController extends ControllerBase {
       }
       $count++;
       $node = Node::create(['type' => 'mapas_prontos']);
+      $documentos = array();
       foreach($file_entity as $file => $descricao){
         $file_source = $filePath . "/arquivos-para-migrar/mapoteca/" . $file;
-        if(file_exists($file_source) && is_file($file_source)):
-          $uri   = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
+        if(file_exists($file_source) && is_file($file_source)) {
+          $uri = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
           $files = File::Create(['uri' => $uri]);
           $files->save();
           $documentos[] = [
@@ -233,12 +237,14 @@ class csv_importController extends ControllerBase {
             'description' => $descricao,
           ];
           $node->set('field_documento', $documentos);
-        else:
-          $log = $filePath .'/logs/arquivos-faltantes-mapoteca.txt';
+        }
+        if(file_exists($file_source)) {
+          $log = $filePath . '/logs/arquivos-faltantes-mapoteca.txt';
+          file_put_contents($log, "");
           $current = file_get_contents($log);
           $current .= "{$file}\n";
           file_put_contents($log, $current);
-        endif;
+        };
       }
       $node->set('title', $value[1]);
       $body = [
