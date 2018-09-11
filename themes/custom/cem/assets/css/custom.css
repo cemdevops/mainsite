@@ -39,3 +39,8 @@ ul#custom-menu-language li {
 div.quem-somos-conteudo  a{
     text-decoration: underline;
 }
+
+.noticia-item div.image-cem-na-midia {
+    position: relative;
+    float: left;
+}
