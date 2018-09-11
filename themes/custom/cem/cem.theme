@@ -18,7 +18,8 @@ function cem_preprocess_node(&$variables) {
   $variables['language'] = $lang;
 
   if($tipo == 'agenda') {
-    $data = $variables['node']->get('field_evento_data')->getString();
+    $data      = $variables['node']->get('field_evento_data')->getString();
+    #variables['categoria'] = $variables['node']->get('field_categoria')->getString();
     $data = explode(', ',$data);
     $data_ini = strtotime('-3 hour',strtotime($data[0]));
     
