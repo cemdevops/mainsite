@@ -1,13 +1,13 @@
 <?php
 
-namespace Drupal\csv_publicacoes\Controller;
+namespace Drupal\publicacoes_import\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use \Drupal\node\Entity\Node;
 use \Drupal\file\Entity\File;
 
 
-class csv_publicacoesController extends ControllerBase {
+class publicacoes_importController extends ControllerBase {
 
     public function import_publicacoes() {
 
