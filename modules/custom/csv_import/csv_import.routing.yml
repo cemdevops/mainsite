@@ -25,7 +25,7 @@ csv_import.import_mapoteca:
 csv_import.import_publicacoes:
   path: '/import/publicacoes'
   defaults:
-    _controller: \Drupal\csv_import\Controller\csv_publicacoesController::import_publicacoes
+    _controller: \Drupal\csv_import\Controller\publicacoes_importController::import_publicacoes
     _title: 'Import base de dados'
   requirements:
     _permission: 'access content'
