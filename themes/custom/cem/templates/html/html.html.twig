@@ -63,10 +63,10 @@
       <div class="inner wrapper">
         <a href="/">
           <h1 class="logo">
-            <span class="title">CEM</span>
-              {% trans %}
-            <span class="sub-title">centro de estudo da metrópole</span>
-              {% endtrans %}
+            <span class="title">{% trans %}CEM{% endtrans %}</span>
+
+            <span class="sub-title">{% trans %}centro de estudo da metrópole{% endtrans %}</span>
+
           </h1>
         </a>
         <div class="header-search">
@@ -79,7 +79,7 @@
             {{ drupal_entity('block','formularioexpostobuscabusca_geral') }}
         </div>
           {% trans %}
-        <a href="#contato" class="header-top-btn-contact"><span>Fale Conosco</span></a>
+        <a href="/fale-conosco" class="header-top-btn-contact"><span>Fale Conosco</span></a>
           {% endtrans %}
             {{ drupal_entity('block', 'seletordeidioma') }}
       </div>
