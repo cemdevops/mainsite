@@ -16,10 +16,9 @@ function cem_preprocess_node(&$variables) {
   $tipo = $variables['node']->getType();
   $lang = $variables['node']->language()->getId();
   $variables['language'] = $lang;
-
   $variables['agenda_ano']          = date("Y");
   if($lang == 'pt-br'){
-      setlocale(LC_ALL, 'pt_BR');
+      setlocale(LC_TIME, "pt_BR.utf8");
       $variables['agenda_mes_texto']    = date("F");
   }else {
       $variables['agenda_mes_texto']    = date("F");
