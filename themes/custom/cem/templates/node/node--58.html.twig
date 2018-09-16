@@ -1,8 +1,8 @@
 {# agenda #}
 
 {% set hierarquia = content['field_hierarquia'][0]['#title'] %}
-{% set mes = mes | date("F") %}
-{% set mes_numeric = mes_numeric | date("m") %}
+{% set mes_texto = mes | date("F") %}
+{% set mes_numerico = mes_numeric | date("m") %}
 {% set ano = ano | date("Y") %}
 <main class="main">
     <section class="internas-top-header">
@@ -56,7 +56,7 @@
                                 <a class="calendar-prev" title="Anterior"><span>{% trans %}Anterior{% endtrans %}</span></a>
                                 <a class="calendar-next" title="Próxima"><span>{% trans %}Próxima{% endtrans %}</span></a>
                                 <div class="calendar-title">
-                                    <span class="calendar-month">{{ mes_texto }}</span><span class="calendar-year">{{ ano }}</span>
+                                    {% trans %}<span class="calendar-month">{{ mes_texto }}</span>{% endtrans %}<span class="calendar-year">{{ ano }}</span>
                                 </div>
                             </div>
                             <!-- calendar nav end -->
@@ -146,7 +146,7 @@
                             <div id="ajax-target">
                                 <div class="listagem-resultados">
                                     <div class="col-md-12">
-                                        {{ drupal_view('evento','bloco_agenda_mes',language, ano, mes_numerico) }}
+                                        {{ drupal_view('evento','bloco_agenda_mes',language,ano,mes_numerico) }}
                                     </div>
                                 </div>
                             </div>
