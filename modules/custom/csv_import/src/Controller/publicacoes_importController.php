@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\publicacoes_import\Controller;
+namespace Drupal\csv_import\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use \Drupal\node\Entity\Node;
