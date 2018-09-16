@@ -1,6 +1,9 @@
 {# agenda #}
-{% set language = language.getId() %}
+
 {% set hierarquia = content['field_hierarquia'][0]['#title'] %}
+{% set mes = mes | date("F") %}
+{% set mes_numeric = mes_numeric | date("m") %}
+{% set ano = ano | date("Y") %}
 <main class="main">
     <section class="internas-top-header">
         <div class="inner wrapper">
@@ -50,10 +53,10 @@
                         <div class="calendar-wrapper calendar">
                             <!-- calendar nav init -->
                             <div class="calendar-header">
-                                <a class="calendar-prev" title="Anterior"><span>Anterior</span></a>
-                                <a class="calendar-next" title="Próxima"><span>Próxima</span></a>
+                                <a class="calendar-prev" title="Anterior"><span>{% trans %}Anterior{% endtrans %}</span></a>
+                                <a class="calendar-next" title="Próxima"><span>{% trans %}Próxima{% endtrans %}</span></a>
                                 <div class="calendar-title">
-                                    <span class="calendar-month">junho</span><span class="calendar-year">2018</span>
+                                    <span class="calendar-month">{{ mes_texto }}</span><span class="calendar-year">{{ ano }}</span>
                                 </div>
                             </div>
                             <!-- calendar nav end -->
@@ -61,13 +64,13 @@
                             <table class="calendar-calendar">
                                 <thead>
                                 <tr class="day-week-end">
-                                    <th class="calendar-day-head">Dom</th>
-                                    <th class="calendar-day-head">Seg</th>
-                                    <th class="calendar-day-head">Ter</th>
-                                    <th class="calendar-day-head">Qua</th>
-                                    <th class="calendar-day-head">Qui</th>
-                                    <th class="calendar-day-head">Sex</th>
-                                    <th class="calendar-day-head">Sáb</th>
+                                    <th class="calendar-day-head">{% trans %}Dom{% endtrans %}</th>
+                                    <th class="calendar-day-head">{% trans %}Seg{% endtrans %}</th>
+                                    <th class="calendar-day-head">{% trans %}Ter{% endtrans %}</th>
+                                    <th class="calendar-day-head">{% trans %}Qua{% endtrans %}</th>
+                                    <th class="calendar-day-head">{% trans %}Qui{% endtrans %}</th>
+                                    <th class="calendar-day-head">{% trans %}Sex{% endtrans %}</th>
+                                    <th class="calendar-day-head">{% trans %}Sáb{% endtrans %}</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -131,11 +134,11 @@
                             <!-- calendar sorting init -->
                             <div class="sorting">
                                 <ul>
-                                    <li class="ev-title">CLIQUE PARA VER APENAS:</li>
-                                    <li><a class="cursos" data-mes="6" href="#" id="6">cursos</a></li>
-                                    <li><a class="palestras" data-mes="6" href="#" id="7">palestras</a></li>
-                                    <li><a class="eventos" data-mes="6" href="#" id="5">eventos</a></li>
-                                    <li><a class="datas comemorativas/feriados" data-mes="6" href="#" id="8">datas comemorativas/feriados</a></li>
+                                    <li class="ev-title">{% trans %}CLIQUE PARA VER APENAS:{% endtrans %}</li>
+                                    <li><a class="cursos" data-mes="6" href="#" id="6">{% trans %}cursos{% endtrans %}</a></li>
+                                    <li><a class="palestras" data-mes="6" href="#" id="7">{% trans %}palestras{% endtrans %}</a></li>
+                                    <li><a class="eventos" data-mes="6" href="#" id="5">{% trans %}seminários{% endtrans %}</a></li>
+                                    <li><a class="datas comemorativas/feriados" data-mes="6" href="#" id="8">{% trans %}oficinas{% endtrans %}</a></li>
                                 </ul>
                             </div>
                             <!-- calendar sorting end -->
@@ -143,7 +146,7 @@
                             <div id="ajax-target">
                                 <div class="listagem-resultados">
                                     <div class="col-md-12">
-                                        {{ drupal_view('evento','bloco_agenda_mes',language, get.year, get.month) }}
+                                        {{ drupal_view('evento','bloco_agenda_mes',language, ano, mes_numerico) }}
                                     </div>
                                 </div>
                             </div>
