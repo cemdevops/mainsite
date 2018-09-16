@@ -17,8 +17,14 @@ function cem_preprocess_node(&$variables) {
   $lang = $variables['node']->language()->getId();
   $variables['language'] = $lang;
 
-  $variables['agenda_ano'] = date("Y");
-  $variables['agenda_mes'] = date("m");
+  $variables['agenda_ano']          = date("Y");
+  if($lang == 'pt-br'){
+      setlocale(LC_ALL, 'pt_BR');
+      $variables['agenda_mes_texto']    = date("F");
+  }else {
+      $variables['agenda_mes_texto']    = date("F");
+  }
+  $variables['agenda_mes_numerico'] = date("m");
 
   if($tipo == 'agenda') {
     $data      = $variables['node']->get('field_evento_data')->getString();
