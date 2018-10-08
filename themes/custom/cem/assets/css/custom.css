@@ -44,3 +44,8 @@ div.quem-somos-conteudo  a{
     position: relative;
     float: left;
 }
+
+.download-item .files [class*="excel"] {
+    background: url(../img/baixar-cem-ico.png) left center no-repeat;
+}
+
