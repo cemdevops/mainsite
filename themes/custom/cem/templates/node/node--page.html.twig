@@ -99,6 +99,20 @@
                                 <div class="row quem-somos-perfis-content">
                                     {{ drupal_view('colaborador','bloco_colaborador_quem_somos',language,pesquisador_id) }}
                                 </div>
+                            {% if pesquisador  == 'Pesquisadores' %}
+                                <fieldset class="collapse-text-fieldset collapsible form-wrapper collapse-processed field_pos_doutorandos">
+                                    {{  drupal_field('field_pos_doutorandos','node') }}
+                                </fieldset>
+                                <fieldset class="collapse-text-fieldset collapsible form-wrapper collapse-processed field_bolsistas_e_pesquisadores">
+                                    {{  drupal_field('field_bolsistas_e_pesquisadores','node') }}
+                                </fieldset>
+                                <fieldset class="collapse-text-fieldset collapsible form-wrapper collapse-processed field_pesquisadores_associados">
+                                    {{  drupal_field('field_pesquisadores_associados','node') }}
+                                </fieldset>
+                                <fieldset class="collapse-text-fieldset collapsible form-wrapper collapse-processed field_pesquisadores_visitantes">
+                                    {{  drupal_field('field_pesquisadores_visitantes','node') }}
+                                </fieldset>
+                            {% endif %}
                         {% elseif hierarquia == 'Pesquisa'  %}
                             <div class="quem-somos-conteudo">
                                 {{  drupal_field('field_page_descricao','node') }}
