@@ -1,7 +1,7 @@
 (function(window, document, $) {
     'use strict';
     if ($('.agenda-slider').length) {
-        $('.agenda-slider>.inner > div > div').slick({
+        $('.agenda-slider>.inner').slick({
             dots: false,
             infinite: true,
             speed: 400,
@@ -39,20 +39,20 @@
     }
 })(window, document, jQuery);
 (function (window, document, $) {
-    'use strict';
+  'use strict';
 
-    var $headerNavBar = $('.header-menu');
-    var $headerNavBarHeight = $headerNavBar.height();
-    var $headerNavBarDistanceToTop = $headerNavBar.offset().top;
+  var $headerNavBar = $('.header-menu');
+  var $headerNavBarHeight = $headerNavBar.height();
+  var $headerNavBarDistanceToTop = $headerNavBar.offset().top;
 
-    $(window).on('scroll resize', function () {
-        if ($(this).scrollTop() > $headerNavBarHeight + $headerNavBarDistanceToTop) {
-            $headerNavBar.addClass('fixed');
-            return;
-        }
-        $headerNavBar.removeClass('fixed');
+  $(window).on('scroll resize', function () {
+    if ($(this).scrollTop() > $headerNavBarHeight + $headerNavBarDistanceToTop) {
+      $headerNavBar.addClass('fixed');
+      return;
+    }
+    $headerNavBar.removeClass('fixed');
 
-    });
+  });
 
 })(window, document, jQuery);
 (function(window, document, $) {
@@ -137,7 +137,7 @@
         var $btnPlus = $('.incricao-convites .number .plus');
         var $btnLow = $('.incricao-convites .number .low');
 
-
+        
         $btnPlus.on('click',function(){
             conviteField.attr('value', ++conviteQtd);
         });
@@ -149,6 +149,31 @@
         });
     }
 })(window, document, jQuery);
+(function(window, document, $) {
+  "use strict";
+  $(".quem-somos-conteudo-col .field_pos_doutorandos").on("click", function() {
+    $(this).toggleClass("open");
+  });
+  $(".quem-somos-conteudo-col .field_bolsistas_e_pesquisadores").on(
+    "click",
+    function() {
+      $(this).toggleClass("open");
+    }
+  );
+  $(".quem-somos-conteudo-col .field_pesquisadores_associados").on(
+    "click",
+    function() {
+      $(this).toggleClass("open");
+    }
+  );
+  $(".quem-somos-conteudo-col .field_pesquisadores_visitantes").on(
+    "click",
+    function() {
+      $(this).toggleClass("open");
+    }
+  );
+})(window, document, jQuery);
+
 (function(window, document, $) {
     'use strict';
     if ($('.resolution-slider').length) {
@@ -165,5 +190,5 @@
     }
 })(window, document, jQuery);
 /*(function (window, document, $) {
- 'use strict';
- })(window, document, jQuery);*/
+    'use strict';
+})(window, document, jQuery);*/
