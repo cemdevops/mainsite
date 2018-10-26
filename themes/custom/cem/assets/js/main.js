@@ -137,7 +137,7 @@
         var $btnPlus = $('.incricao-convites .number .plus');
         var $btnLow = $('.incricao-convites .number .low');
 
-        
+
         $btnPlus.on('click',function(){
             conviteField.attr('value', ++conviteQtd);
         });
@@ -148,6 +148,7 @@
             conviteField.attr('value', --conviteQtd);
         });
     }
+    
 })(window, document, jQuery);
 (function(window, document, $) {
   "use strict";
