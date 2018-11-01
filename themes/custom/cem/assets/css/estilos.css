@@ -39,7 +39,7 @@
 .resolution-slider .resolution-slider-item .title:before,
 .resolution-slider .resolution-slider-item .title:after,
 .resolution-slider .resolution-slider-item .text:before,
-.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:before, .quem-somos-menu:after, .publicacoes-artigos-grid-container:before, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:before, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:before, .header-search.publicoes-search:after, .eventos-main:before, .eventos-main:after, .agenda-slider-wrapper:before, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:before, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:before, .agenda-slider:after, .calendar-wrapper:before, .calendar-wrapper:after, .search-items-wrapper:before, .search-items-wrapper:after, header.header:before, header.header:after, .header-top:before, .header-top:after, .header-search:before, .header-search:after, .header-menu:before, .header-menu:after, .footer:before, .footer:after, .footer-newsletter:before, .footer-newsletter:after, .footer-navigation:before, .footer-navigation:after, .footer-nav-infos .social:before, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:before, .footer-nav-infos .footer-nav:after, .footer-copy:before, .footer-copy:after, .internas-container:before, .internas-container:after {
+.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:before, .quem-somos-menu:after, .publicacoes-artigos-grid-container:before, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:before, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:before, .header-search.publicoes-search:after, .publicacoes-livros-interna:before, .publicacoes-livros-interna:after, .eventos-main:before, .eventos-main:after, .agenda-slider-wrapper:before, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:before, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:before, .agenda-slider:after, .calendar-wrapper:before, .calendar-wrapper:after, .search-items-wrapper:before, .search-items-wrapper:after, header.header:before, header.header:after, .header-top:before, .header-top:after, .header-search:before, .header-search:after, .header-menu:before, .header-menu:after, .footer:before, .footer:after, .footer-newsletter:before, .footer-newsletter:after, .footer-navigation:before, .footer-navigation:after, .footer-nav-infos .social:before, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:before, .footer-nav-infos .footer-nav:after, .footer-copy:before, .footer-copy:after, .internas-container:before, .internas-container:after {
   content: " ";
   display: table;
 }
@@ -47,19 +47,19 @@
 /* line 253, cem/assets/scss/_helpers/_mixin.scss */
 .main:after, .home-slider:after, .home-slider-item:after, .home-call-boxes:after, .home-news:after, .home-agenda:after, .home-video:after, .home-publications:after, .home-pesquisadores:after, .noticia-item:after, .side-bar-box:after, .form-line:after, .resolution-menu:after, .resolution-maps:after, .resolution-maps .maps-container .map-box:after, .resolution-slider:after, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:after,
 .resolution-slider .resolution-slider-item .title:after,
-.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:after, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:after, .eventos-main:after, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:after, .calendar-wrapper:after, .search-items-wrapper:after, header.header:after, .header-top:after, .header-search:after, .header-menu:after, .footer:after, .footer-newsletter:after, .footer-navigation:after, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:after, .footer-copy:after, .internas-container:after {
+.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:after, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:after, .publicacoes-livros-interna:after, .eventos-main:after, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:after, .calendar-wrapper:after, .search-items-wrapper:after, header.header:after, .header-top:after, .header-search:after, .header-menu:after, .footer:after, .footer-newsletter:after, .footer-navigation:after, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:after, .footer-copy:after, .internas-container:after {
   clear: both;
 }
 
 /* line 257, cem/assets/scss/_helpers/_mixin.scss */
 .main, .home-slider, .home-slider-item, .home-call-boxes, .home-news, .home-agenda, .home-video, .home-publications, .home-pesquisadores, .noticia-item, .side-bar-box, .form-line, .resolution-menu, .resolution-maps, .resolution-maps .maps-container .map-box, .resolution-slider, .resolution-slider .resolution-slider-item, .resolution-slider .resolution-slider-item .image,
 .resolution-slider .resolution-slider-item .title,
-.resolution-slider .resolution-slider-item .text, .quem-somos-menu, .publicacoes-artigos-grid-container, .publicacoes-artigos-grid-container > div, .header-search.publicoes-search, .eventos-main, .agenda-slider-wrapper, .agenda-slider-wrapper .box-legenda, .agenda-slider, .calendar-wrapper, .search-items-wrapper, header.header, .header-top, .header-search, .header-menu, .footer, .footer-newsletter, .footer-navigation, .footer-nav-infos .social, .footer-nav-infos .footer-nav, .footer-copy, .internas-container {
+.resolution-slider .resolution-slider-item .text, .quem-somos-menu, .publicacoes-artigos-grid-container, .publicacoes-artigos-grid-container > div, .header-search.publicoes-search, .publicacoes-livros-interna, .eventos-main, .agenda-slider-wrapper, .agenda-slider-wrapper .box-legenda, .agenda-slider, .calendar-wrapper, .search-items-wrapper, header.header, .header-top, .header-search, .header-menu, .footer, .footer-newsletter, .footer-navigation, .footer-nav-infos .social, .footer-nav-infos .footer-nav, .footer-copy, .internas-container {
   *zoom: 1;
 }
 
 /* line 261, cem/assets/scss/_helpers/_mixin.scss */
-.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul, .resolution-menu .inner ul, .quem-somos-menu ul, .que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul, .quem-somos-conteudo-col fieldset > div > ul, .agenda-slider-wrapper .box-legenda ul, .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul, .download-item .extension-wrapper, .header-menu > .inner > ul, .header-menu > .inner > ul > li > ul, .footer-nav-infos .social ul, .footer-nav-infos .footer-nav ul {
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul, .resolution-menu .inner ul, .quem-somos-menu ul, .que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul, .quem-somos-conteudo-col fieldset > div > ul, .publicacoes-livros-interna .livro-display .actions ul, .agenda-slider-wrapper .box-legenda ul, .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul, .download-item .extension-wrapper, .header-menu > .inner > ul, .header-menu > .inner > ul > li > ul, .footer-nav-infos .social ul, .footer-nav-infos .footer-nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -3510,7 +3510,7 @@ blockquote p {
 
 /* line 1, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-menu {
-  border-top: solid 5px #FF3366;
+  border-top: solid 5px #ff3366;
 }
 
 /* line 5, cem/assets/scss/_components/_publicacoes/__global.scss */
@@ -3529,7 +3529,7 @@ blockquote p {
 /* line 16, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container {
   width: 100%;
-  border: solid 1px #E1E1E1;
+  border: solid 1px #e1e1e1;
 }
 
 /* line 21, cem/assets/scss/_components/_publicacoes/__global.scss */
@@ -3552,10 +3552,10 @@ blockquote p {
 
 /* line 35, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner:before, .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner:after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
 }
 
 /* line 43, cem/assets/scss/_components/_publicacoes/__global.scss */
@@ -3582,7 +3582,7 @@ blockquote p {
   display: table;
   width: 100%;
   height: 100%;
-  color: #7F7F7F;
+  color: #7f7f7f;
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -3721,7 +3721,7 @@ blockquote p {
 .publicacoes-livro-grid header {
   float: left;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   margin-bottom: 30px;
   font-size: 15px;
@@ -3740,7 +3740,7 @@ blockquote p {
   position: relative;
   float: left;
   width: 100%;
-  border: solid 1px #E1E1E1;
+  border: solid 1px #e1e1e1;
   border-radius: 50px;
   max-height: 46px;
 }
@@ -3764,22 +3764,306 @@ blockquote p {
 .publicoes-search .js-form-type-select label {
   display: block;
   font-size: 15px;
-  color: #7F7F7F;
+  color: #7f7f7f;
   padding-right: 10px;
 }
 
 /* line 251, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicoes-search .js-form-type-select select {
   height: 40px;
-  border: solid 1px #E1E1E1;
+  border: solid 1px #e1e1e1;
   border-radius: 40px;
   font-size: 13px;
-  color: #8B8B8B;
+  color: #8b8b8b;
   -webkit-appearance: none;
   -moz-appearance: none;
   background: url(../img/select-bg.png) right center no-repeat;
   padding-left: 20px;
   padding-right: 60px;
+}
+
+/* 
+    Livros internas
+*/
+/* line 271, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna {
+  float: left;
+  width: 100%;
+  color: #7f7f7f;
+  font-size: 15px;
+}
+
+/* line 276, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna p {
+  font-size: 15px;
+  color: inherit;
+}
+
+/* line 281, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display {
+  float: left;
+  width: 50%;
+  max-width: 340px;
+  border: solid 1px #f0f0f0;
+  margin: 15px 20px;
+}
+
+/* line 287, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .image {
+  float: left;
+  width: 100%;
+  height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 1px #f0f0f0;
+  padding: 10px;
+}
+
+/* line 296, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 301, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .actions {
+  float: left;
+  width: 100%;
+  height: 48px;
+}
+
+/* line 307, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .actions ul li {
+  float: left;
+  width: 50%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #666666;
+}
+
+/* line 316, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .actions ul li a {
+  color: inherit;
+}
+
+/* line 319, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .actions ul li.zoom {
+  border-right: solid 1px #f0f0f0;
+}
+
+/* line 321, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .actions ul li.zoom a {
+  display: inline-block;
+  background: url(../img/icon-zoom.png) left center no-repeat;
+  padding: 5px 0;
+  padding-left: 20px;
+}
+
+/* line 328, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .actions ul li.buy {
+  background-color: #086aab;
+}
+
+/* line 330, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .actions ul li.buy a {
+  display: inline-block;
+  padding: 15px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* line 341, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-infos {
+  float: left;
+  width: 100%;
+  margin: 25px 0;
+  border: solid 1px #f0f0f0;
+  font-size: 12px;
+  color: #666666;
+}
+
+/* line 348, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-infos .header {
+  padding: 15px 10px;
+  background-color: #086aab;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* line 355, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-infos td {
+  border-bottom: solid 1px #f0f0f0;
+}
+
+/* line 358, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-infos .key {
+  width: 20%;
+  height: 50px;
+  max-width: 125px;
+  padding: 15px 10px;
+  color: #6a6a6a;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/* line 367, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-infos .value {
+  position: relative;
+  width: 80%;
+  padding: 15px 10px;
+}
+
+/* line 371, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-infos .value:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 30px;
+  border-right: dashed 1px #cbcbcb;
+  margin-top: -15px;
+  top: 50%;
+  left: 0;
+}
+
+/* line 381, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-infos .value a {
+  text-decoration: underline;
+}
+
+/* line 388, cem/assets/scss/_components/_publicacoes/__global.scss */
+.btn-voltar {
+  font-size: 12px;
+  margin-top: 30px;
+  text-align: left;
+  display: inline-block;
+  color: #ffffff !important;
+  background-color: #086aab;
+  background-image: url(../img/icon-arrow-left-white.png);
+  background-position: 29px center;
+  background-repeat: no-repeat;
+  padding: 15px 20px;
+  padding-left: 45px;
+  border-radius: 3px;
+}
+
+/* line 403, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new {
+  padding-bottom: 20px;
+}
+
+/* line 405, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner {
+  float: left;
+  width: 100%;
+  border: solid 1px #f0f0f0;
+}
+
+/* line 409, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .image {
+  float: left;
+  width: 100%;
+  height: 270px;
+  border-bottom: solid 1px #f0f0f0;
+}
+
+/* line 414, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .image a {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 422, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 427, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .title {
+  float: left;
+  width: 100%;
+  height: 100px;
+  border-bottom: solid 1px #f0f0f0;
+  font-size: 15px;
+  color: #8a8a8a;
+}
+
+/* line 434, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .title a {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-align: center;
+}
+
+/* line 443, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .title a:hover {
+  text-decoration: underline;
+}
+
+/* line 448, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .infos {
+  float: left;
+  width: 100%;
+  height: 140px;
+  font-size: 11px;
+  color: #8a8a8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* line 458, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .infos .text {
+  width: 100%;
+  text-align: center;
+  padding: 6px 10px;
+}
+
+/* line 463, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .infos .link {
+  width: 100%;
+  text-align: center;
+}
+
+/* line 466, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .infos .link a {
+  display: inline-block;
+  width: 80%;
+  padding: 10px 15px;
+  text-align: center;
+  background-color: #086aab;
+  color: #ffffff !important;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: lowercase;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+/* line 482, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner:hover .image,
+.publicacoes-livro-item__new .inner:hover .infos {
+  background-color: #f7f7f7;
+}
+
+/* line 487, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner:hover .title a {
+  text-decoration: underline;
 }
 
 /* line 1, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
