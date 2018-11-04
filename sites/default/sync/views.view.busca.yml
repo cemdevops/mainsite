@@ -11,6 +11,7 @@ dependencies:
     - field.storage.node.field_documento_data_ref
     - field.storage.node.field_evento_conteudo
     - field.storage.node.field_imagem_descricao
+    - field.storage.node.field_livros_autor
     - field.storage.node.field_nome_da_revista
     - field.storage.node.field_publicacoes_arquivo
     - field.storage.node.field_publicacoes_link
@@ -3436,10 +3437,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: image_url
           settings:
             image_style: lista_de_livros_140x210_
-            image_link: ''
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -3603,6 +3603,159 @@ display:
             multi_type: separator
             multi_separator: ', '
           plugin_id: search_api_field
+        field_livros_autor:
+          id: field_livros_autor
+          table: search_api_index_search_index
+          field: field_livros_autor
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          plugin_id: search_api_field
+        nid:
+          id: nid
+          table: search_api_datasource_search_index_entity_node
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_numeric
+          fallback_options:
+            set_precision: false
+            precision: 0
+            decimal: .
+            separator: ','
+            format_plural: false
+            format_plural_string: !!binary MQNAY291bnQ=
+            prefix: ''
+            suffix: ''
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            format_plural_values:
+              - '1'
+              - '@count'
+          entity_type: node
+          plugin_id: search_api_field
         nothing:
           id: nothing
           table: views
@@ -3614,7 +3767,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "       <div class=\"publicacoes-livro-item __full\">\n<span class=\"image\">\n                                                {{ field_publicacoes_thumbnail }}\n                                        </span>\n<div class=\"text\">\n                                            <div class=\"title\">{{ title }}{{ field_nome_da_revista }}  {{ field_ano_de_publicacao }}</div>\n                                            {{ field_publicacoes_autor }}\n                                            {{ body }} \n                                             {{ field_publicacoes_link }}\n{{ field_publicacoes_arquivo }}\n                                        </div>\n             \n            \n             \n            \n             \n            \n             \n         </div>"
+            text: "\n    <div class=\"publicacoes-livro-grid row\">\n                                <!-- livro item init -->\n                                <div class=\"publicacoes-livro-item__new col-md-4 col-xs-12\">\n                                    <div class=\"inner\">\n                                        <div class=\"image\">\n                                            <a href=\"#\"><img src=\"{{ field_publicacoes_thumbnail }}\"></a>\n                                        </div>\n                                        <div class=\"title\"><a href=\"#\">{{ title }}</a></div>\n                                        <div class=\"infos\">\n                                            <div class=\"text\"><span>Autor(es):</span>{{ field_livros_autor }}</div>\n                                            <div class=\"text\"><span>PUBLICAÇÃO:</span>{{ field_ano_de_publicacao }}</div>\n                                            <div class=\"link\"><a href=\"#\">saiba mais</a></div>\n                                        </div>\n                                    </div>\n                                </div>\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -3661,6 +3814,7 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_ano_de_publicacao'
+        - 'config:field.storage.node.field_livros_autor'
         - 'config:field.storage.node.field_publicacoes_link'
         - 'config:field.storage.node.field_publicacoes_thumbnail'
   mapoteca:
