@@ -1,4 +1,5 @@
-{#  drupal_field('field_publicacoes_link','node') #}
+{% set link_livro = content['field_publicacoes_link'][0]['#title'] %}
+
 {% macro menuMacro(menu, level) -%}
     {# Set our default level as an integer. #}
     {% set default_level = 1 %}
@@ -65,8 +66,7 @@
                         </div>
                     </div>
                     <div class="col-md-8 col-xs-12 quem-somos-conteudo-col quem-somos-conteudo">
-
-
+                        
                         <!-- publicacoes livros interna init -->
                         <div class="publicacoes-livros-interna">
 
@@ -78,8 +78,9 @@
                                 </div>
                                 <div class="actions">
                                     <ul>
-                                        <li class="zoom"><a href="#">ampliar foto</a></li>
-                                        <li class="buy"><a href="#">comprar</a></li>
+                                        {% if link_livro %}
+                                            <li class="buy"><a href="{{ link_livro }}">comprar</a></li>
+                                        {% endif %}
                                     </ul>
                                 </div>
                             </div>
