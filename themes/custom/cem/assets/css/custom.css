@@ -49,3 +49,6 @@ div.quem-somos-conteudo  a{
     background: url(../img/baixar-cem-ico.png) left center no-repeat;
 }
 
+.js-form-item-sort-by {
+    display: none;
+}
