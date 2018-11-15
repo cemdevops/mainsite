@@ -7,9 +7,9 @@ use \Drupal\node\Entity\Node;
 use \Drupal\file\Entity\File;
 
 
-class publicacoes_importController extends ControllerBase {
+class publicacoes_en_importController extends ControllerBase {
 
-    public function import_publicacoes() {
+    public function import_publicacoes_en() {
 
         function getTidByName($name = NULL, $vid = NULL) {
             $properties = [];
@@ -27,15 +27,13 @@ class publicacoes_importController extends ControllerBase {
         }
 
         $filePath = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
-        $publicacoes = $filePath . "/pay-load-publish-pt.csv";
+        $publicacoes = $filePath . "/pay-load-publish-en.csv";
         $h =fopen($publicacoes, "r");
 
         while (($data = fgetcsv($h, 100000, "|")) !== FALSE) {
             $base[] = $data;
         }
         fclose($h);
-//        kint($base);
-//        exit();
         $head  = array_shift($base);
         $autor = array();
         $count = 0;
@@ -50,8 +48,11 @@ class publicacoes_importController extends ControllerBase {
                 $file_entity = array_combine($files, $description);
             }
             $count++;
-            $node = Node::create(['type' => 'publicacoes']);
-            $documentos = array();
+            $node = Node::load($value[0]);
+//            kint($node);
+//            exit();
+            $translated_fields = [];
+            $documentos        = [];
 
             foreach ($file_entity as $file => $descricao) {
 
@@ -65,7 +66,7 @@ class publicacoes_importController extends ControllerBase {
                         'target_id' => $files->id(),
                         'description' => $descricao,
                     ];
-                    $node->set('field_publicacoes_arquivo', $documentos);
+                    $translated_fields['field_publicacoes_arquivo'] =  $documentos;
                 }
                 if (file_exists($file_source)) {
                     $log = $filePath . '/logs/arquivos-faltantes-publicacoes.txt';
@@ -75,39 +76,28 @@ class publicacoes_importController extends ControllerBase {
                 }
             }
             if (!empty($value[1])) {
-                $node->set('title', $value[1]);
+                $translated_fields['title'] = $value[1];
             } else {
-                $logs = $filePath . '/title.txt';
-                $currents = file_get_contents($logs);
-                file_put_contents($logs, "");
-                $currents .= "{$value[1]}\n";
-                file_put_contents($logs, $currents);
-                $node->set('title', 'SEM TITULO');
+                $translated_fields['title'] = 'SEM TITULO';
             }
             $body = [
                 'value' => $value[2],
                 'format' => 'full_html',
             ];
-            $node->set('body', $body);
-
-            $node->set('field_ano_de_publicacao', $value[3]);
-
             $link = [
                 'uri' => $value[4],
                 'title' => $value[5],
             ];
-            $node->set('field_publicacoes_link', $link);
-
             $categoria = getTidByName($value[1], 'categoria_publicacoes');
 
-            $node->set('field_publicacoes_categoria', $categoria);
-            $node->set('field_publicacoes_autores', $value[8]);
+            $translated_fields['field_publicacoes_autores']   = $value[8];
+            $translated_fields['body']                        = $body;
+            $translated_fields['field_publicacoes_categoria'] = $categoria;
+            $translated_fields['field_publicacoes_link']      = $link;
+            $translated_fields['field_ano_de_publicacao']     = $value[3];
 
-            $node->set('uid', 1);
-            $node->status = 1;
-            $node->langcod = 'pt-br';
-            $node->enforceIsNew();
-            $node->save();
+            $node->addTranslation('en', $translated_fields)->save();
+
         }
         drupal_set_message("Foram registrados" . $count .  " nodes!\n");
         return [
