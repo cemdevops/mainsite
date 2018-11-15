@@ -34,8 +34,8 @@
     Extends
 */
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:100,300,400,500,700");
-/* line 248, cem/assets/scss/_helpers/_mixin.scss */
-.main:before, .main:after, .home-slider:before, .home-slider:after, .home-slider-item:before, .home-slider-item:after, .home-call-boxes:before, .home-call-boxes:after, .home-news:before, .home-news:after, .home-agenda:before, .home-agenda:after, .home-video:before, .home-video:after, .home-publications:before, .home-publications:after, .home-pesquisadores:before, .home-pesquisadores:after, .noticia-item:before, .noticia-item:after, .side-bar-box:before, .side-bar-box:after, .form-line:before, .form-line:after, .resolution-menu:before, .resolution-menu:after, .resolution-maps:before, .resolution-maps:after, .resolution-maps .maps-container .map-box:before, .resolution-maps .maps-container .map-box:after, .resolution-slider:before, .resolution-slider:after, .resolution-slider .resolution-slider-item:before, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:before, .resolution-slider .resolution-slider-item .image:after,
+/* line 244, cem/assets/scss/_helpers/_mixin.scss */
+.accordion:before, .accordion > .title:before, .accordion.open > .content:before, .accordion:after, .accordion > .title:after, .accordion.open > .content:after, .main:before, .main:after, .home-slider:before, .home-slider:after, .home-slider-item:before, .home-slider-item:after, .home-call-boxes:before, .home-call-boxes:after, .home-news:before, .home-news:after, .home-agenda:before, .home-agenda:after, .home-video:before, .home-video:after, .home-publications:before, .home-publications:after, .home-pesquisadores:before, .home-pesquisadores:after, .noticia-item:before, .noticia-item:after, .side-bar-box:before, .side-bar-box:after, .form-line:before, .form-line:after, .resolution-menu:before, .resolution-menu:after, .resolution-maps:before, .resolution-maps:after, .resolution-maps .maps-container .map-box:before, .resolution-maps .maps-container .map-box:after, .resolution-slider:before, .resolution-slider:after, .resolution-slider .resolution-slider-item:before, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:before, .resolution-slider .resolution-slider-item .image:after,
 .resolution-slider .resolution-slider-item .title:before,
 .resolution-slider .resolution-slider-item .title:after,
 .resolution-slider .resolution-slider-item .text:before,
@@ -44,25 +44,32 @@
   display: table;
 }
 
-/* line 253, cem/assets/scss/_helpers/_mixin.scss */
-.main:after, .home-slider:after, .home-slider-item:after, .home-call-boxes:after, .home-news:after, .home-agenda:after, .home-video:after, .home-publications:after, .home-pesquisadores:after, .noticia-item:after, .side-bar-box:after, .form-line:after, .resolution-menu:after, .resolution-maps:after, .resolution-maps .maps-container .map-box:after, .resolution-slider:after, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:after,
+/* line 249, cem/assets/scss/_helpers/_mixin.scss */
+.accordion:after, .accordion > .title:after, .accordion.open > .content:after, .main:after, .home-slider:after, .home-slider-item:after, .home-call-boxes:after, .home-news:after, .home-agenda:after, .home-video:after, .home-publications:after, .home-pesquisadores:after, .noticia-item:after, .side-bar-box:after, .form-line:after, .resolution-menu:after, .resolution-maps:after, .resolution-maps .maps-container .map-box:after, .resolution-slider:after, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:after,
 .resolution-slider .resolution-slider-item .title:after,
 .resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:after, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:after, .publicacoes-livros-interna:after, .eventos-main:after, .evento-slider-foto-container .evento-fotos-slider-box:after, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:after, .calendar-wrapper:after, .search-items-wrapper:after, header.header:after, .header-top:after, .header-search:after, .header-menu:after, .footer:after, .footer-newsletter:after, .footer-navigation:after, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:after, .footer-copy:after, .internas-container:after {
   clear: both;
 }
 
-/* line 257, cem/assets/scss/_helpers/_mixin.scss */
-.main, .home-slider, .home-slider-item, .home-call-boxes, .home-news, .home-agenda, .home-video, .home-publications, .home-pesquisadores, .noticia-item, .side-bar-box, .form-line, .resolution-menu, .resolution-maps, .resolution-maps .maps-container .map-box, .resolution-slider, .resolution-slider .resolution-slider-item, .resolution-slider .resolution-slider-item .image,
+/* line 253, cem/assets/scss/_helpers/_mixin.scss */
+.accordion, .accordion > .title, .accordion.open > .content, .main, .home-slider, .home-slider-item, .home-call-boxes, .home-news, .home-agenda, .home-video, .home-publications, .home-pesquisadores, .noticia-item, .side-bar-box, .form-line, .resolution-menu, .resolution-maps, .resolution-maps .maps-container .map-box, .resolution-slider, .resolution-slider .resolution-slider-item, .resolution-slider .resolution-slider-item .image,
 .resolution-slider .resolution-slider-item .title,
 .resolution-slider .resolution-slider-item .text, .quem-somos-menu, .publicacoes-artigos-grid-container, .publicacoes-artigos-grid-container > div, .header-search.publicoes-search, .publicacoes-livros-interna, .eventos-main, .evento-slider-foto-container .evento-fotos-slider-box, .agenda-slider-wrapper, .agenda-slider-wrapper .box-legenda, .agenda-slider, .calendar-wrapper, .search-items-wrapper, header.header, .header-top, .header-search, .header-menu, .footer, .footer-newsletter, .footer-navigation, .footer-nav-infos .social, .footer-nav-infos .footer-nav, .footer-copy, .internas-container {
   *zoom: 1;
 }
 
-/* line 261, cem/assets/scss/_helpers/_mixin.scss */
+/* line 257, cem/assets/scss/_helpers/_mixin.scss */
 .home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul, .side-bar-cem-na-midia, .resolution-menu .inner ul, .quem-somos-menu ul, .que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul, .quem-somos-conteudo-col fieldset > div > ul, .publicacoes-livros-interna .livro-display .actions ul, .agenda-slider-wrapper .box-legenda ul, .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul, .download-item .extension-wrapper, .header-menu > .inner > ul, .header-menu > .inner > ul > li > ul, .footer-nav-infos .social ul, .footer-nav-infos .footer-nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+/* line 263, cem/assets/scss/_helpers/_mixin.scss */
+.accordion, .accordion > .title, .accordion.open > .content {
+  position: relative;
+  float: left;
+  width: 100%;
 }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -554,7 +561,7 @@ body {
   background: #ffffff;
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #333333;
@@ -627,7 +634,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
 }
 
@@ -677,7 +684,7 @@ p strong {
 blockquote {
   text-align: center;
   font-size: 25px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
 }
 
@@ -932,7 +939,7 @@ blockquote p {
 .home-news .home-news-header h2 {
   float: left;
   width: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 35px;
   color: #6A6A6A;
@@ -1023,7 +1030,7 @@ blockquote p {
 .home-agenda .home-agenda-header h2 {
   float: left;
   width: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 35px;
   color: #6A6A6A;
@@ -1110,7 +1117,7 @@ blockquote p {
 .home-video .home-video-header h2 {
   float: left;
   width: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 35px;
   color: #6A6A6A;
@@ -1275,7 +1282,7 @@ blockquote p {
 .home-publications .home-publications-header h2 {
   float: left;
   width: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 35px;
   color: #ffffff;
@@ -1461,7 +1468,7 @@ blockquote p {
 .home-pesquisadores .home-pesquisadores-header h2 {
   float: left;
   width: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 35px;
   color: #6A6A6A;
@@ -1681,7 +1688,7 @@ blockquote p {
   color: #555555;
   font-size: 24px;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   text-transform: lowercase;
 }
@@ -1692,7 +1699,7 @@ blockquote p {
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 16px auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
@@ -2605,7 +2612,7 @@ nav.pager ul.pager__items li.is-active {
   background-color: #ffffff;
   border: solid 1px #E1E1E1;
   border-radius: 3px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #333333;
@@ -2614,7 +2621,7 @@ nav.pager ul.pager__items li.is-active {
   outline: 0;
 }
 
-/* line 56, cem/assets/scss/_helpers/_mixin.scss */
+/* line 55, cem/assets/scss/_helpers/_mixin.scss */
 .form-line input[type="text"]::-webkit-input-placeholder,
 .form-line input[type="email"]::-webkit-input-placeholder,
 .form-line input[type="password"]::-webkit-input-placeholder,
@@ -2624,7 +2631,7 @@ nav.pager ul.pager__items li.is-active {
   opacity: 0.5;
 }
 
-/* line 60, cem/assets/scss/_helpers/_mixin.scss */
+/* line 59, cem/assets/scss/_helpers/_mixin.scss */
 .form-line input[type="text"]::-moz-placeholder,
 .form-line input[type="email"]::-moz-placeholder,
 .form-line input[type="password"]::-moz-placeholder,
@@ -2634,7 +2641,7 @@ nav.pager ul.pager__items li.is-active {
   opacity: 0.5;
 }
 
-/* line 64, cem/assets/scss/_helpers/_mixin.scss */
+/* line 63, cem/assets/scss/_helpers/_mixin.scss */
 .form-line input[type="text"]:-ms-input-placeholder,
 .form-line input[type="email"]:-ms-input-placeholder,
 .form-line input[type="password"]:-ms-input-placeholder,
@@ -2644,7 +2651,7 @@ nav.pager ul.pager__items li.is-active {
   opacity: 0.5;
 }
 
-/* line 68, cem/assets/scss/_helpers/_mixin.scss */
+/* line 67, cem/assets/scss/_helpers/_mixin.scss */
 .form-line input[type="text"]:-moz-placeholder,
 .form-line input[type="email"]:-moz-placeholder,
 .form-line input[type="password"]:-moz-placeholder,
@@ -2686,7 +2693,7 @@ nav.pager ul.pager__items li.is-active {
   border: 0;
   border-radius: 3px;
   background-color: #086AAB;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #ffffff;
@@ -2747,7 +2754,7 @@ nav.pager ul.pager__items li.is-active {
   padding: 0 0 10px;
   margin: 0;
   color: #4C999F;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 13px;
 }
@@ -2769,7 +2776,7 @@ nav.pager ul.pager__items li.is-active {
   width: 100%;
   color: #676767;
   font-size: 15px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -2858,7 +2865,7 @@ nav.pager ul.pager__items li.is-active {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -2900,7 +2907,7 @@ nav.pager ul.pager__items li.is-active {
   border-bottom: solid 1px #E9E9E9;
   z-index: 2;
   position: relative;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -2915,7 +2922,7 @@ nav.pager ul.pager__items li.is-active {
 .resolution-menu .inner ul > li {
   position: relative;
   float: left;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: #525252;
@@ -2935,7 +2942,7 @@ nav.pager ul.pager__items li.is-active {
 .resolution-maps {
   width: 100%;
   padding-top: 90px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   border-bottom: solid 1px #E9E9E9;
   padding-bottom: 10px;
@@ -2984,7 +2991,7 @@ nav.pager ul.pager__items li.is-active {
   width: 100%;
   text-align: center;
   color: #5A5A5A;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   padding-top: 25px;
@@ -2995,7 +3002,7 @@ nav.pager ul.pager__items li.is-active {
 .mapping-box .title {
   padding: 0 0 20px;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 35px;
   color: #6A6A6A;
@@ -3282,7 +3289,7 @@ nav.pager ul.pager__items li.is-active {
 
 /* line 126, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -3294,7 +3301,7 @@ nav.pager ul.pager__items li.is-active {
 
 /* line 132, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: #4c4c4c;
@@ -3423,9 +3430,10 @@ nav.pager ul.pager__items li.is-active {
   right: 0;
   top: 10px;
   background: url(../img/icon-arrow-right-black.png) center no-repeat;
+  transition: all 0.2s linear;
 }
 
-/* line 254, cem/assets/scss/_components/_quem-somos/__global.scss */
+/* line 255, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo-col fieldset > div > h3 {
   position: relative;
   display: block;
@@ -3437,7 +3445,7 @@ nav.pager ul.pager__items li.is-active {
   color: #666666;
 }
 
-/* line 266, cem/assets/scss/_components/_quem-somos/__global.scss */
+/* line 267, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo-col fieldset > div > ul li {
   font-weight: 500;
   font-size: 15px;
@@ -3445,23 +3453,23 @@ nav.pager ul.pager__items li.is-active {
   padding-left: 10px;
 }
 
-/* line 273, cem/assets/scss/_components/_quem-somos/__global.scss */
+/* line 274, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo-col fieldset > div > p {
   font-weight: 400;
   font-size: 15px;
 }
 
-/* line 276, cem/assets/scss/_components/_quem-somos/__global.scss */
+/* line 277, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo-col fieldset > div > p strong {
   font-weight: 500;
 }
 
-/* line 283, cem/assets/scss/_components/_quem-somos/__global.scss */
+/* line 284, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo-col fieldset.open > div * {
   display: block;
 }
 
-/* line 287, cem/assets/scss/_components/_quem-somos/__global.scss */
+/* line 288, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo-col fieldset.open > div > h2:before {
   transform: rotate(90deg);
 }
@@ -3478,7 +3486,7 @@ nav.pager ul.pager__items li.is-active {
 /* line 305, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-timeline p {
   font-size: 15px;
-  color: #7F7F7F;
+  color: #7f7f7f;
 }
 
 /* line 309, cem/assets/scss/_components/_quem-somos/__global.scss */
@@ -3504,7 +3512,7 @@ nav.pager ul.pager__items li.is-active {
   display: block;
   padding-bottom: 30px;
   margin-bottom: 30px;
-  border-bottom: dashed 1px #C0C0C0;
+  border-bottom: dashed 1px #c0c0c0;
   font-size: 19px;
   color: #333333;
   font-weight: 700;
@@ -3513,14 +3521,14 @@ nav.pager ul.pager__items li.is-active {
 /* line 330, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-timeline .timeline-item .title:before {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   width: 12px;
   height: 12px;
-  background-color: #00B9B9;
+  background-color: #00b9b9;
   border-radius: 50%;
   border: solid 4px #ffffff;
-  box-shadow: 0 0 1px 1px #EEEEEE;
+  box-shadow: 0 0 1px 1px #eeeeee;
   left: -35px;
 }
 
@@ -3659,7 +3667,7 @@ nav.pager ul.pager__items li.is-active {
   height: 100%;
   color: #7f7f7f;
   font-size: 15px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -4151,7 +4159,7 @@ nav.pager ul.pager__items li.is-active {
 .evento-btn {
   border-radius: 4px;
   padding: 10px 5px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
@@ -4210,7 +4218,7 @@ nav.pager ul.pager__items li.is-active {
 
 /* line 58, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-header .evento-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 28px;
   color: #4D9BA1;
@@ -4267,7 +4275,7 @@ nav.pager ul.pager__items li.is-active {
 
 /* line 106, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-share div.social ul li.text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #6A6A6A;
@@ -4354,7 +4362,7 @@ nav.pager ul.pager__items li.is-active {
   background-color: transparent;
   font-size: 15px;
   color: #4D4D4D;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   margin-left: 18px;
   text-align: center;
@@ -4402,7 +4410,7 @@ nav.pager ul.pager__items li.is-active {
 .side-bar-box.inscricoes .box .btn-continuar {
   display: block;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #ffffff;
@@ -5475,7 +5483,7 @@ nav.pager ul.pager__items li.is-active {
   padding-left: 24px;
   display: flex;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #4C4C4C;
   font-size: 15px;
@@ -5492,7 +5500,7 @@ nav.pager ul.pager__items li.is-active {
   border-radius: 50%;
   text-align: center;
   background-color: #E2E2E2;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 21px;
   color: #fff;
@@ -5504,7 +5512,7 @@ nav.pager ul.pager__items li.is-active {
   width: 100%;
   border-bottom: dashed 1px #F0F0F0;
   padding: 15px 25px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #7F7F7F;
@@ -5514,7 +5522,7 @@ nav.pager ul.pager__items li.is-active {
 .sistema-interativo-item .link {
   width: 100%;
   padding: 15px 25px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #7F7F7F;
@@ -5522,7 +5530,7 @@ nav.pager ul.pager__items li.is-active {
 
 /* line 79, cem/assets/scss/_components/_sistemas-interativos/__global.scss */
 .sistema-interativo-item .link a {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #4C4C4C;
 }
@@ -5760,7 +5768,7 @@ nav.pager ul.pager__items li.is-active {
 .download-item h2 {
   padding: 0 0 10px;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: #525252;
@@ -5897,7 +5905,7 @@ nav.pager ul.pager__items li.is-active {
   border-radius: 4px;
   background-color: #666666;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 11px;
   text-transform: uppercase;
@@ -6026,7 +6034,7 @@ nav.pager ul.pager__items li.is-active {
   padding: 6px 0;
   font-size: 12px;
   text-transform: lowercase;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #ffffff;
   background-color: #086AAB;
@@ -6067,6 +6075,56 @@ nav.pager ul.pager__items li.is-active {
   font-weight: 400;
 }
 
+/* line 1, cem/assets/scss/_components/_ui-elements/_accordion.scss */
+.accordion {
+  font-size: 15px;
+  border: solid 1px #d4d4d4;
+  margin: 0 0 25px;
+  padding: 10px 15px;
+}
+
+/* line 7, cem/assets/scss/_components/_ui-elements/_accordion.scss */
+.accordion > .title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #00b8b8;
+  cursor: pointer;
+}
+
+/* line 13, cem/assets/scss/_components/_ui-elements/_accordion.scss */
+.accordion > .title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -3px;
+  width: 5px;
+  height: 5px;
+  border-right: solid 1px #333;
+  border-bottom: solid 1px #333;
+  transform-origin: center;
+  transform: rotate(-45deg);
+  transition: all 0.2s linear;
+}
+
+/* line 29, cem/assets/scss/_components/_ui-elements/_accordion.scss */
+.accordion > .content {
+  display: none;
+}
+
+/* line 34, cem/assets/scss/_components/_ui-elements/_accordion.scss */
+.accordion.open > .title:after {
+  transform: rotate(45deg);
+}
+
+/* line 38, cem/assets/scss/_components/_ui-elements/_accordion.scss */
+.accordion.open > .content {
+  display: block;
+  padding-top: 25px;
+}
+
 /* line 1, cem/assets/scss/_layout/_header/__global.scss */
 header.header {
   width: 100%;
@@ -6101,7 +6159,7 @@ header.header {
 .header-top .logo span.title {
   display: block;
   width: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 35px;
   line-height: 35px;
@@ -6112,7 +6170,7 @@ header.header {
 .header-top .logo span.sub-title {
   display: block;
   width: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 17px;
   color: #676F72;
@@ -6142,7 +6200,7 @@ header.header {
   width: 100%;
   height: 44px;
   padding: 0 100px 0 28px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 13px;
   color: #8B8B8B;
@@ -6163,7 +6221,7 @@ header.header {
   border-left: solid 1px #E1E1E1;
   border-right: solid 1px #E1E1E1;
   background: url(../img/icon-arrow-down-black.png) 70px center no-repeat;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 13px;
   color: #8B8B8B;
@@ -6223,7 +6281,7 @@ header.header {
 .header-menu > .inner > ul > li {
   position: relative;
   float: left;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: #ffffff;
@@ -6258,7 +6316,7 @@ header.header {
 .header-menu > .inner > ul > li > ul > li {
   float: left;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 13px;
   color: #333333;
@@ -6345,31 +6403,31 @@ header.header {
   background: none;
   border: 0;
   border-bottom: solid 1px #ffffff;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: #ffffff;
 }
 
-/* line 56, cem/assets/scss/_helpers/_mixin.scss */
+/* line 55, cem/assets/scss/_helpers/_mixin.scss */
 .footer-newsletter-form .footer-newsletter-campo-email::-webkit-input-placeholder {
   color: #ffffff;
   opacity: 1;
 }
 
-/* line 60, cem/assets/scss/_helpers/_mixin.scss */
+/* line 59, cem/assets/scss/_helpers/_mixin.scss */
 .footer-newsletter-form .footer-newsletter-campo-email::-moz-placeholder {
   color: #ffffff;
   opacity: 1;
 }
 
-/* line 64, cem/assets/scss/_helpers/_mixin.scss */
+/* line 63, cem/assets/scss/_helpers/_mixin.scss */
 .footer-newsletter-form .footer-newsletter-campo-email:-ms-input-placeholder {
   color: #ffffff;
   opacity: 1;
 }
 
-/* line 68, cem/assets/scss/_helpers/_mixin.scss */
+/* line 67, cem/assets/scss/_helpers/_mixin.scss */
 .footer-newsletter-form .footer-newsletter-campo-email:-moz-placeholder {
   color: #ffffff;
   opacity: 1;
@@ -6383,7 +6441,7 @@ header.header {
   height: 46px;
   padding: 0 20px;
   border: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #828282;
@@ -6574,7 +6632,7 @@ header.header {
   float: left;
   width: 100%;
   padding-bottom: 40px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #5A5A5A;
@@ -6595,7 +6653,7 @@ header.header {
 /* line 47, cem/assets/scss/_layout/_internas/__global.scss */
 .internas-text p,
 .internas-text li {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: inherit;
   color: inherit;
@@ -6616,7 +6674,7 @@ header.header {
 
 /* line 60, cem/assets/scss/_layout/_internas/__global.scss */
 .internas-text h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 20px;
   color: #262626;
