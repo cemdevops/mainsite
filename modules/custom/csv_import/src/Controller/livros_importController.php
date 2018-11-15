@@ -7,9 +7,9 @@ use \Drupal\node\Entity\Node;
 use \Drupal\file\Entity\File;
 
 
-class publicacoes_importController extends ControllerBase {
+class livros_importController extends ControllerBase {
 
-    public function import_publicacoes() {
+    public function import_livros() {
 
         function getTidByName($name = NULL, $vid = NULL) {
             $properties = [];
@@ -34,8 +34,8 @@ class publicacoes_importController extends ControllerBase {
             $base[] = $data;
         }
         fclose($h);
-//        kint($base);
-//        exit();
+        kint($base);
+        exit();
         $head  = array_shift($base);
         $autor = array();
         $count = 0;
