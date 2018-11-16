@@ -39,7 +39,7 @@
 .resolution-slider .resolution-slider-item .title:before,
 .resolution-slider .resolution-slider-item .title:after,
 .resolution-slider .resolution-slider-item .text:before,
-.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:before, .quem-somos-menu:after, .publicacoes-artigos-grid-container:before, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:before, .publicacoes-artigos-grid-container > div:after, .eventos-main:before, .eventos-main:after, .agenda-slider-wrapper:before, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:before, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:before, .agenda-slider:after, .calendar-wrapper:before, .calendar-wrapper:after, .search-items-wrapper:before, .search-items-wrapper:after, header.header:before, header.header:after, .header-top:before, .header-top:after, .header-search:before, .header-search:after, .header-menu:before, .header-menu:after, .footer:before, .footer:after, .footer-newsletter:before, .footer-newsletter:after, .footer-navigation:before, .footer-navigation:after, .footer-nav-infos .social:before, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:before, .footer-nav-infos .footer-nav:after, .footer-copy:before, .footer-copy:after, .internas-container:before, .internas-container:after {
+.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:before, .quem-somos-menu:after, .publicacoes-artigos-grid-container:before, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:before, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:before, .header-search.publicoes-search:after, .publicacoes-livros-interna:before, .publicacoes-livros-interna:after, .eventos-main:before, .eventos-main:after, .agenda-slider-wrapper:before, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:before, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:before, .agenda-slider:after, .calendar-wrapper:before, .calendar-wrapper:after, .search-items-wrapper:before, .search-items-wrapper:after, header.header:before, header.header:after, .header-top:before, .header-top:after, .header-search:before, .header-search:after, .header-menu:before, .header-menu:after, .footer:before, .footer:after, .footer-newsletter:before, .footer-newsletter:after, .footer-navigation:before, .footer-navigation:after, .footer-nav-infos .social:before, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:before, .footer-nav-infos .footer-nav:after, .footer-copy:before, .footer-copy:after, .internas-container:before, .internas-container:after {
   content: " ";
   display: table;
 }
@@ -47,19 +47,19 @@
 /* line 253, cem/assets/scss/_helpers/_mixin.scss */
 .main:after, .home-slider:after, .home-slider-item:after, .home-call-boxes:after, .home-news:after, .home-agenda:after, .home-video:after, .home-publications:after, .home-pesquisadores:after, .noticia-item:after, .side-bar-box:after, .form-line:after, .resolution-menu:after, .resolution-maps:after, .resolution-maps .maps-container .map-box:after, .resolution-slider:after, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:after,
 .resolution-slider .resolution-slider-item .title:after,
-.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:after, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:after, .eventos-main:after, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:after, .calendar-wrapper:after, .search-items-wrapper:after, header.header:after, .header-top:after, .header-search:after, .header-menu:after, .footer:after, .footer-newsletter:after, .footer-navigation:after, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:after, .footer-copy:after, .internas-container:after {
+.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:after, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:after, .publicacoes-livros-interna:after, .eventos-main:after, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:after, .calendar-wrapper:after, .search-items-wrapper:after, header.header:after, .header-top:after, .header-search:after, .header-menu:after, .footer:after, .footer-newsletter:after, .footer-navigation:after, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:after, .footer-copy:after, .internas-container:after {
   clear: both;
 }
 
 /* line 257, cem/assets/scss/_helpers/_mixin.scss */
 .main, .home-slider, .home-slider-item, .home-call-boxes, .home-news, .home-agenda, .home-video, .home-publications, .home-pesquisadores, .noticia-item, .side-bar-box, .form-line, .resolution-menu, .resolution-maps, .resolution-maps .maps-container .map-box, .resolution-slider, .resolution-slider .resolution-slider-item, .resolution-slider .resolution-slider-item .image,
 .resolution-slider .resolution-slider-item .title,
-.resolution-slider .resolution-slider-item .text, .quem-somos-menu, .publicacoes-artigos-grid-container, .publicacoes-artigos-grid-container > div, .eventos-main, .agenda-slider-wrapper, .agenda-slider-wrapper .box-legenda, .agenda-slider, .calendar-wrapper, .search-items-wrapper, header.header, .header-top, .header-search, .header-menu, .footer, .footer-newsletter, .footer-navigation, .footer-nav-infos .social, .footer-nav-infos .footer-nav, .footer-copy, .internas-container {
+.resolution-slider .resolution-slider-item .text, .quem-somos-menu, .publicacoes-artigos-grid-container, .publicacoes-artigos-grid-container > div, .header-search.publicoes-search, .publicacoes-livros-interna, .eventos-main, .agenda-slider-wrapper, .agenda-slider-wrapper .box-legenda, .agenda-slider, .calendar-wrapper, .search-items-wrapper, header.header, .header-top, .header-search, .header-menu, .footer, .footer-newsletter, .footer-navigation, .footer-nav-infos .social, .footer-nav-infos .footer-nav, .footer-copy, .internas-container {
   *zoom: 1;
 }
 
 /* line 261, cem/assets/scss/_helpers/_mixin.scss */
-.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul, .resolution-menu .inner ul, .quem-somos-menu ul, .que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul, .agenda-slider-wrapper .box-legenda ul, .download-item .extension-wrapper, .header-menu > .inner > ul, .header-menu > .inner > ul > li > ul, .footer-nav-infos .social ul, .footer-nav-infos .footer-nav ul {
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul, .resolution-menu .inner ul, .quem-somos-menu ul, .que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul, .quem-somos-conteudo-col fieldset > div > ul, .publicacoes-livros-interna .livro-display .actions ul, .agenda-slider-wrapper .box-legenda ul, .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul, .download-item .extension-wrapper, .header-menu > .inner > ul, .header-menu > .inner > ul > li > ul, .footer-nav-infos .social ul, .footer-nav-infos .footer-nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -871,127 +871,38 @@ blockquote p {
 .home-call-boxes {
   width: 100%;
   position: relative;
-  min-height: 230px;
-}
-
-/* line 6, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-.home-call-boxes > .detail-left,
-.home-call-boxes > .detail-right {
-  position: absolute;
-  top: 0;
-  display: block;
-  width: 50%;
-  height: 100%;
+  background: url(../img/home-infos-bg.jpg) center center no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
-/* line 16, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-.home-call-boxes > .detail-left {
-  left: 0;
-  background-image: url(../img/home-cem-pesquisa-bg.jpg);
-  background-position: right top;
+/* line 9, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+.home-call-boxes > .inner {
+  min-height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* line 14, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+.home-call-boxes > .inner .home-info-item {
+  display: flex;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 17px;
+  text-align: center;
+  flex-direction: column;
 }
 
 /* line 21, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-.home-call-boxes > .detail-right {
-  right: 0;
-  background-image: url(../img/home-cem-escolas.jpg);
-  background-position: left top;
-}
-
-@media only screen and (min-width: 0) and (max-width: 520px) {
-  /* line 1, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-  .home-call-boxes {
-    min-height: auto;
-  }
-  /* line 28, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-  .home-call-boxes > .detail-left,
-  .home-call-boxes > .detail-right {
-    display: none;
-  }
-}
-
-/* line 33, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-.home-call-boxes > .inner {
-  display: flex;
-}
-
-@media only screen and (min-width: 0) and (max-width: 520px) {
-  /* line 33, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-  .home-call-boxes > .inner {
-    display: block;
-  }
-}
-
-/* line 38, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-.home-call-boxes > .inner > .home-call-box-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  float: left;
-  width: 50%;
-  min-height: 230px;
-  text-align: center;
-  color: #ffffff;
-  padding-top: 55px;
-  padding-bottom: 15px;
-}
-
-/* line 50, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-.home-call-boxes > .inner > .home-call-box-item span.call {
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding-top: 55px;
-  font-weight: 300;
-  font-size: 23px;
-}
-
-/* line 58, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-.home-call-boxes > .inner > .home-call-box-item h2 {
-  padding: 5px 0 0;
+.home-call-boxes > .inner .home-info-item p {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 30px;
 }
 
-/* line 64, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-.home-call-boxes > .inner > .home-call-box-item a {
-  color: inherit;
-}
-
-/* line 68, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-.home-call-boxes > .inner > .home-call-box-item.box-left span.call {
-  background: url(../img/icon-chart-frame.png) top center no-repeat;
-}
-
-/* line 73, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-.home-call-boxes > .inner > .home-call-box-item.box-right span.call {
-  background: url(../img/icon-lupa.png) top center no-repeat;
-}
-
-@media only screen and (min-width: 0) and (max-width: 520px) {
-  /* line 38, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-  .home-call-boxes > .inner > .home-call-box-item {
-    width: 100%;
-  }
-  /* line 79, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-  .home-call-boxes > .inner > .home-call-box-item.box-left {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(../img/home-cem-pesquisa-bg.jpg);
-    background-position: right top;
-  }
-  /* line 85, cem/assets/scss/_components/_home-call-boxes/__global.scss */
-  .home-call-boxes > .inner > .home-call-box-item.box-right {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(../img/home-cem-escolas.jpg);
-    background-position: right top;
-  }
+/* line 24, cem/assets/scss/_components/_home-call-boxes/__global.scss */
+.home-call-boxes > .inner .home-info-item .number {
+  display: block;
+  text-align: center;
+  font-size: 45px;
 }
 
 /* line 1, cem/assets/scss/_components/_home-news-and-agenda/__global.scss */
@@ -3153,8 +3064,8 @@ blockquote p {
 .quem-somos-menu {
   position: relative;
   width: 100%;
-  border: solid 1px #F0F0F0;
-  border-top: solid 5px #00B9B9;
+  border: solid 1px #f0f0f0;
+  border-top: solid 5px #00b9b9;
 }
 
 /* line 9, cem/assets/scss/_components/_quem-somos/__global.scss */
@@ -3162,7 +3073,7 @@ blockquote p {
   float: left;
   width: 100%;
   font-size: 15px;
-  color: #7F7F7F;
+  color: #7f7f7f;
 }
 
 /* line 14, cem/assets/scss/_components/_quem-somos/__global.scss */
@@ -3175,25 +3086,25 @@ blockquote p {
 
 /* line 19, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-menu ul > li > a:before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 90%;
   height: 0;
   left: 5%;
   bottom: 0;
-  border-top: dashed 1px #C0C0C0;
+  border-top: dashed 1px #c0c0c0;
 }
 
 /* line 30, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-menu ul > li:hover, .quem-somos-menu ul > li.active {
-  background-color: #086AAB;
+  background-color: #086aab;
   color: #ffffff;
 }
 
 /* line 37, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-menu ul > li.drop-down > a:after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 7px;
   height: 7px;
@@ -3203,7 +3114,7 @@ blockquote p {
 
 /* line 46, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-menu ul > li.drop-down:hover, .quem-somos-menu ul > li.drop-down.active {
-  background-color: #086AAB;
+  background-color: #086aab;
   color: #ffffff;
 }
 
@@ -3225,8 +3136,8 @@ blockquote p {
 /* line 62, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-menu ul > li > ul > li {
   font-size: 15px;
-  color: #7F7F7F;
-  background-color: #F8F8F8;
+  color: #7f7f7f;
+  background-color: #f8f8f8;
 }
 
 /* line 66, cem/assets/scss/_components/_quem-somos/__global.scss */
@@ -3279,7 +3190,7 @@ blockquote p {
 .quem-somos-perfil-box div.title {
   float: left;
   width: 100%;
-  background-color: #086AAB;
+  background-color: #086aab;
 }
 
 /* line 113, cem/assets/scss/_components/_quem-somos/__global.scss */
@@ -3303,7 +3214,7 @@ blockquote p {
 /* line 128, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo strong {
   font-weight: 500;
-  color: #4C4C4C;
+  color: #4c4c4c;
 }
 
 /* line 132, cem/assets/scss/_components/_quem-somos/__global.scss */
@@ -3311,13 +3222,13 @@ blockquote p {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 15px;
-  color: #4C4C4C;
+  color: #4c4c4c;
   padding: 15px 0;
 }
 
 /* line 137, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo h3.blue {
-  color: #00B8B8;
+  color: #00b8b8;
 }
 
 /* line 141, cem/assets/scss/_components/_quem-somos/__global.scss */
@@ -3333,8 +3244,8 @@ blockquote p {
   width: 100%;
   font-size: 15px;
   text-transform: uppercase;
-  color: #7F7F7F;
-  background-color: #086AAB;
+  color: #7f7f7f;
+  background-color: #086aab;
   color: #ffffff;
   padding: 0;
   margin: 0;
@@ -3346,8 +3257,8 @@ blockquote p {
 .que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox {
   float: left;
   width: 100%;
-  border-left: solid 1px #F0F0F0;
-  border-right: solid 1px #F0F0F0;
+  border-left: solid 1px #f0f0f0;
+  border-right: solid 1px #f0f0f0;
 }
 
 /* line 171, cem/assets/scss/_components/_quem-somos/__global.scss */
@@ -3355,7 +3266,7 @@ blockquote p {
   float: left;
   width: 100%;
   font-size: 15px;
-  color: #7F7F7F;
+  color: #7f7f7f;
   position: relative;
   display: block;
   padding: 20px;
@@ -3363,14 +3274,14 @@ blockquote p {
 
 /* line 179, cem/assets/scss/_components/_quem-somos/__global.scss */
 .que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul li:before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 90%;
   height: 0;
   left: 5%;
   bottom: 0;
-  border-top: dashed 1px #C0C0C0;
+  border-top: dashed 1px #c0c0c0;
 }
 
 /* line 189, cem/assets/scss/_components/_quem-somos/__global.scss */
@@ -3389,16 +3300,153 @@ blockquote p {
   background: url(../img/icon-checkbox-checked.png) left center no-repeat;
 }
 
-/* line 202, cem/assets/scss/_components/_quem-somos/__global.scss */
+/* line 203, cem/assets/scss/_components/_quem-somos/__global.scss */
 .que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul li:last-child:before {
   display: none;
 }
 
-/* line 212, cem/assets/scss/_components/_quem-somos/__global.scss */
+/* line 213, cem/assets/scss/_components/_quem-somos/__global.scss */
 .que-somos-menu-col #block-busca-geral.block-facet--checkbox > h2 {
   color: #ffffff;
   background-color: #000000;
   color: #ffffff;
+}
+
+/* line 223, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-conteudo-col fieldset {
+  font-size: 15px;
+  border: solid 1px #d4d4d4;
+  margin: 0 0 25px;
+  padding: 10px 15px;
+}
+
+/* line 229, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-conteudo-col fieldset > div * {
+  display: none;
+}
+
+/* line 232, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-conteudo-col fieldset > div > h2 {
+  position: relative;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 5px 0;
+  margin: 0;
+  color: #00b8b8;
+  cursor: pointer;
+}
+
+/* line 242, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-conteudo-col fieldset > div > h2:before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 8px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background: url(../img/icon-arrow-right-black.png) center no-repeat;
+}
+
+/* line 254, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-conteudo-col fieldset > div > h3 {
+  position: relative;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 15px 0 25px;
+  margin: 0;
+  color: #666666;
+}
+
+/* line 266, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-conteudo-col fieldset > div > ul li {
+  font-weight: 500;
+  font-size: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+}
+
+/* line 273, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-conteudo-col fieldset > div > p {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* line 276, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-conteudo-col fieldset > div > p strong {
+  font-weight: 500;
+}
+
+/* line 283, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-conteudo-col fieldset.open > div * {
+  display: block;
+}
+
+/* line 287, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-conteudo-col fieldset.open > div > h2:before {
+  transform: rotate(90deg);
+}
+
+/* line 299, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-timeline {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-left: 99px;
+  background: url(../img/timeline-bg.png) 49px top repeat-y;
+}
+
+/* line 305, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-timeline p {
+  font-size: 15px;
+  color: #7F7F7F;
+}
+
+/* line 309, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-timeline .timeline-item {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+/* line 314, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-timeline .timeline-item .year {
+  position: absolute;
+  left: -99px;
+  font-size: 19px;
+  color: #333333;
+  font-weight: 900;
+}
+
+/* line 321, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-timeline .timeline-item .title {
+  position: relative;
+  display: block;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: dashed 1px #C0C0C0;
+  font-size: 19px;
+  color: #333333;
+  font-weight: 700;
+}
+
+/* line 330, cem/assets/scss/_components/_quem-somos/__global.scss */
+.quem-somos-timeline .timeline-item .title:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #00B9B9;
+  border-radius: 50%;
+  border: solid 4px #ffffff;
+  box-shadow: 0 0 1px 1px #EEEEEE;
+  left: -35px;
 }
 
 /* line 1, cem/assets/scss/_components/_pesquisa/__global.scss */
@@ -3462,7 +3510,7 @@ blockquote p {
 
 /* line 1, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-menu {
-  border-top: solid 5px #FF3366;
+  border-top: solid 5px #ff3366;
 }
 
 /* line 5, cem/assets/scss/_components/_publicacoes/__global.scss */
@@ -3472,45 +3520,45 @@ blockquote p {
   max-width: 100%;
 }
 
-/* line 9, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 10, cem/assets/scss/_components/_publicacoes/__global.scss */
 .header-search.publicoes-search .search-field,
 .header-search.publicoes-search #edit-livro-buscar {
   padding: 0 150px 0 28px;
 }
 
-/* line 15, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 16, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container {
   width: 100%;
-  border: solid 1px #E1E1E1;
+  border: solid 1px #e1e1e1;
 }
 
-/* line 19, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 21, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container > div {
   float: left;
   width: 100%;
 }
 
-/* line 24, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 27, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item {
   float: left;
   width: 16.66667%;
 }
 
-/* line 27, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 31, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner {
   position: relative;
   height: 120px;
 }
 
-/* line 30, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 35, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner:before, .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner:after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
 }
 
-/* line 37, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 43, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner:before {
   width: 1px;
   height: 80%;
@@ -3519,7 +3567,7 @@ blockquote p {
   margin-top: 10%;
 }
 
-/* line 44, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 51, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner:after {
   width: 80%;
   height: 1px;
@@ -3529,18 +3577,18 @@ blockquote p {
   margin-bottom: -1px;
 }
 
-/* line 52, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 60, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner a {
   display: table;
   width: 100%;
   height: 100%;
-  color: #7F7F7F;
+  color: #7f7f7f;
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
 
-/* line 59, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 68, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item > .inner a > span {
   display: table-cell;
   vertical-align: middle;
@@ -3548,40 +3596,40 @@ blockquote p {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-  /* line 24, cem/assets/scss/_components/_publicacoes/__global.scss */
+  /* line 27, cem/assets/scss/_components/_publicacoes/__global.scss */
   .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item {
     width: 25%;
   }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 768px) {
-  /* line 24, cem/assets/scss/_components/_publicacoes/__global.scss */
+  /* line 27, cem/assets/scss/_components/_publicacoes/__global.scss */
   .publicacoes-artigos-grid-container .publicacoes-artigos-grid-item {
     width: 50%;
   }
 }
 
-/* line 105, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 117, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-grid {
   float: left;
   width: 100%;
   padding: 30px 0;
 }
 
-/* line 109, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 122, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-grid .publicacoes-livro-item {
   float: left;
   width: 20%;
 }
 
-/* line 112, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 126, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-grid .publicacoes-livro-item a {
   display: table;
   width: 100%;
   height: 100%;
 }
 
-/* line 116, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 131, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-grid .publicacoes-livro-item a > span {
   display: table-cell;
   vertical-align: middle;
@@ -3589,7 +3637,7 @@ blockquote p {
   padding: 10px;
 }
 
-/* line 121, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 137, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-grid .publicacoes-livro-item a > span img {
   display: block;
   width: 100%;
@@ -3597,41 +3645,425 @@ blockquote p {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1100px) {
-  /* line 109, cem/assets/scss/_components/_publicacoes/__global.scss */
+  /* line 122, cem/assets/scss/_components/_publicacoes/__global.scss */
   .publicacoes-livro-grid .publicacoes-livro-item {
     width: 25%;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-  /* line 109, cem/assets/scss/_components/_publicacoes/__global.scss */
+  /* line 122, cem/assets/scss/_components/_publicacoes/__global.scss */
   .publicacoes-livro-grid .publicacoes-livro-item {
     width: 33.3333%;
   }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 768px) {
-  /* line 109, cem/assets/scss/_components/_publicacoes/__global.scss */
+  /* line 122, cem/assets/scss/_components/_publicacoes/__global.scss */
   .publicacoes-livro-grid .publicacoes-livro-item {
     width: 50%;
   }
 }
 
+/* line 157, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-grid .publicacoes-livro-item.__full {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+/* line 161, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-grid .publicacoes-livro-item.__full .image {
+  float: left;
+  width: 25%;
+  max-width: 140px;
+}
+
+/* line 166, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-grid .publicacoes-livro-item.__full .image img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 172, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-grid .publicacoes-livro-item.__full .text {
+  float: left;
+  width: 70%;
+  padding-left: 25px;
+  font-size: 14px;
+}
+
+/* line 178, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-grid .publicacoes-livro-item.__full .text > div {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+/* line 182, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-grid .publicacoes-livro-item.__full .text > div.title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* line 187, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-grid .publicacoes-livro-item.__full .text > div.link {
+  font-size: 16px;
+  font-weight: 700;
+  color: #116986;
+}
+
 /* fix */
-/* line 142, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 200, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicoes-search + .quem-somos-perfis-content {
   float: left;
 }
 
-/* line 146, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 204, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-grid header {
   float: left;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   margin-bottom: 30px;
   font-size: 15px;
   line-height: 1.5;
+}
+
+/* line 214, cem/assets/scss/_components/_publicacoes/__global.scss */
+.header-search.publicoes-search {
+  max-height: none;
+  border: 0;
+  border-radius: 0;
+}
+
+/* line 220, cem/assets/scss/_components/_publicacoes/__global.scss */
+.header-search.publicoes-search .js-form-type-textfield input {
+  position: relative;
+  float: left;
+  width: 100%;
+  border: solid 1px #e1e1e1;
+  border-radius: 50px;
+  max-height: 46px;
+}
+
+/* line 232, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicoes-search .views-exposed-form {
+  margin-bottom: 60px;
+}
+
+/* line 236, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicoes-search .js-form-type-select {
+  float: right;
+  margin-top: 24px;
+  margin-left: 30px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+/* line 244, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicoes-search .js-form-type-select label {
+  display: block;
+  font-size: 15px;
+  color: #7f7f7f;
+  padding-right: 10px;
+}
+
+/* line 251, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicoes-search .js-form-type-select select {
+  height: 40px;
+  border: solid 1px #e1e1e1;
+  border-radius: 40px;
+  font-size: 13px;
+  color: #8b8b8b;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url(../img/select-bg.png) right center no-repeat;
+  padding-left: 20px;
+  padding-right: 60px;
+}
+
+/* 
+    Livros internas
+*/
+/* line 271, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna {
+  float: left;
+  width: 100%;
+  color: #7f7f7f;
+  font-size: 15px;
+}
+
+/* line 276, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna p {
+  font-size: 15px;
+  color: inherit;
+}
+
+/* line 281, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display {
+  float: left;
+  width: 50%;
+  max-width: 340px;
+  border: solid 1px #f0f0f0;
+  margin: 15px 20px;
+}
+
+/* line 287, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .image {
+  float: left;
+  width: 100%;
+  height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 1px #f0f0f0;
+  padding: 10px;
+}
+
+/* line 296, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 301, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .actions {
+  float: left;
+  width: 100%;
+  height: 48px;
+}
+
+/* line 307, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .actions ul li {
+  float: left;
+  width: 50%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #666666;
+}
+
+/* line 316, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .actions ul li a {
+  color: inherit;
+}
+
+/* line 319, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .actions ul li.zoom {
+  border-right: solid 1px #f0f0f0;
+}
+
+/* line 321, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .actions ul li.zoom a {
+  display: inline-block;
+  background: url(../img/icon-zoom.png) left center no-repeat;
+  padding: 5px 0;
+  padding-left: 20px;
+}
+
+/* line 328, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .actions ul li.buy {
+  background-color: #086aab;
+}
+
+/* line 330, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-display .actions ul li.buy a {
+  display: inline-block;
+  padding: 15px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* line 341, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-infos {
+  float: left;
+  width: 100%;
+  margin: 25px 0;
+  border: solid 1px #f0f0f0;
+  font-size: 12px;
+  color: #666666;
+}
+
+/* line 348, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-infos .header {
+  padding: 15px 10px;
+  background-color: #086aab;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* line 355, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-infos td {
+  border-bottom: solid 1px #f0f0f0;
+}
+
+/* line 358, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-infos .key {
+  width: 20%;
+  height: 50px;
+  max-width: 125px;
+  padding: 15px 10px;
+  color: #6a6a6a;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/* line 367, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-infos .value {
+  position: relative;
+  width: 80%;
+  padding: 15px 10px;
+}
+
+/* line 371, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-infos .value:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 30px;
+  border-right: dashed 1px #cbcbcb;
+  margin-top: -15px;
+  top: 50%;
+  left: 0;
+}
+
+/* line 381, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livros-interna .livro-infos .value a {
+  text-decoration: underline;
+}
+
+/* line 388, cem/assets/scss/_components/_publicacoes/__global.scss */
+.btn-voltar {
+  font-size: 12px;
+  margin-top: 30px;
+  text-align: left;
+  display: inline-block;
+  color: #ffffff !important;
+  background-color: #086aab;
+  background-image: url(../img/icon-arrow-left-white.png);
+  background-position: 29px center;
+  background-repeat: no-repeat;
+  padding: 15px 20px;
+  padding-left: 45px;
+  border-radius: 3px;
+}
+
+/* line 403, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new {
+  padding-bottom: 20px;
+}
+
+/* line 405, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner {
+  float: left;
+  width: 100%;
+  border: solid 1px #f0f0f0;
+}
+
+/* line 409, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .image {
+  float: left;
+  width: 100%;
+  height: 270px;
+  border-bottom: solid 1px #f0f0f0;
+}
+
+/* line 414, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .image a {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 422, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 427, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .title {
+  float: left;
+  width: 100%;
+  height: 100px;
+  border-bottom: solid 1px #f0f0f0;
+  font-size: 15px;
+  color: #8a8a8a;
+}
+
+/* line 434, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .title a {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-align: center;
+}
+
+/* line 443, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .title a:hover {
+  text-decoration: underline;
+}
+
+/* line 448, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .infos {
+  float: left;
+  width: 100%;
+  height: 140px;
+  font-size: 11px;
+  color: #8a8a8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* line 458, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .infos .text {
+  width: 100%;
+  text-align: center;
+  padding: 6px 10px;
+}
+
+/* line 463, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .infos .link {
+  width: 100%;
+  text-align: center;
+}
+
+/* line 466, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner .infos .link a {
+  display: inline-block;
+  width: 80%;
+  padding: 10px 15px;
+  text-align: center;
+  background-color: #086aab;
+  color: #ffffff !important;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: lowercase;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+/* line 482, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner:hover .image,
+.publicacoes-livro-item__new .inner:hover .infos {
+  background-color: #f7f7f7;
+}
+
+/* line 487, cem/assets/scss/_components/_publicacoes/__global.scss */
+.publicacoes-livro-item__new .inner:hover .title a {
+  text-decoration: underline;
 }
 
 /* line 1, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
@@ -4313,7 +4745,7 @@ blockquote p {
   align-items: center;
 }
 
-/* line 63, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 64, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-prev:before,
 .calendar-next:before {
   display: block;
@@ -4323,13 +4755,13 @@ blockquote p {
   background-image: url(../img/arrows-calendar.png);
 }
 
-/* line 70, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 72, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-prev span,
 .calendar-next span {
   display: none;
 }
 
-/* line 75, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 77, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-prev {
   left: 0;
   top: 0;
@@ -4337,24 +4769,24 @@ blockquote p {
   border-right: dashed 1px #C0C0C0;
 }
 
-/* line 80, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 83, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-prev:before {
   background-position: left center;
 }
 
-/* line 85, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 88, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-next {
   right: 0;
   top: 0;
   border-left: dashed 1px #C0C0C0;
 }
 
-/* line 89, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 93, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-next:before {
   background-position: right center;
 }
 
-/* line 94, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 98, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-prev span,
 .calendar-next span {
   display: none;
@@ -4364,17 +4796,17 @@ blockquote p {
   background: url(/sites/all/themes/jornalpuc/assets/img/agenda-arrows.svg) no-repeat 0 0;
 }
 
-/* line 103, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 107, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-prev span {
   background-position: 18px 0px;
 }
 
-/* line 107, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 111, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-next span {
   background-position: -18px 0px;
 }
 
-/* line 111, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 115, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar {
   float: left;
   z-index: 2;
@@ -4384,17 +4816,17 @@ blockquote p {
   border-spacing: 0;
 }
 
-/* line 118, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 123, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar td {
   padding: 0;
 }
 
-/* line 123, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 128, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .calendar-week-end {
   color: rgba(23, 96, 125, 0.75);
 }
 
-/* line 127, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 132, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .day-week-end {
   font-size: 13px;
   font-weight: 500;
@@ -4402,7 +4834,7 @@ blockquote p {
   color: #666666;
 }
 
-/* line 134, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 139, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar th {
   height: 60px;
   border: 0;
@@ -4410,7 +4842,7 @@ blockquote p {
   font-weight: 500;
 }
 
-/* line 141, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 146, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar td {
   text-align: center;
   font-size: 13px;
@@ -4421,7 +4853,7 @@ blockquote p {
   text-decoration: none;
 }
 
-/* line 151, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 156, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar td a {
   display: block;
   display: flex;
@@ -4433,13 +4865,13 @@ blockquote p {
 }
 
 @media only screen and (max-width: 650px) {
-  /* line 162, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 167, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar-calendar td {
     font-size: 13px;
   }
 }
 
-/* line 167, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 172, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .status-default {
   display: block;
   outline: none;
@@ -4447,7 +4879,7 @@ blockquote p {
   color: #6A6A6A;
 }
 
-/* line 175, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 180, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .status-active {
   color: #ffffff;
   text-decoration: none;
@@ -4455,7 +4887,7 @@ blockquote p {
   background-size: 30px;
 }
 
-/* line 181, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 187, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .status-active-cursos {
   color: #ffffff;
   text-decoration: none;
@@ -4463,7 +4895,7 @@ blockquote p {
   background-size: 30px;
 }
 
-/* line 187, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 194, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .status-active-palestra {
   color: #ffffff;
   text-decoration: none;
@@ -4471,7 +4903,7 @@ blockquote p {
   background-size: 30px;
 }
 
-/* line 193, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 201, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .status-active-eventos {
   color: #ffffff;
   text-decoration: none;
@@ -4479,7 +4911,7 @@ blockquote p {
   background-size: 30px;
 }
 
-/* line 199, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 208, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .status-active-datas {
   color: #ffffff;
   text-decoration: none;
@@ -4488,7 +4920,7 @@ blockquote p {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1060px) {
-  /* line 208, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 217, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar-calendar {
     width: 100%;
     max-width: none;
@@ -4496,40 +4928,40 @@ blockquote p {
 }
 
 @media only screen and (min-width: 0) and (max-width: 720px) {
-  /* line 215, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 224, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar-calendar {
     width: 100%;
     max-width: none;
   }
 }
 
-/* line 221, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 230, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-other-month .status-default {
   color: #17607D;
 }
 
-/* line 225, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 234, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting {
   font-size: 18px;
   width: 230px;
   float: right;
 }
 
-/* line 231, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 240, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* line 237, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 246, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li {
   text-transform: capitalize;
   font-size: 14px;
   padding: 20px 0;
 }
 
-/* line 243, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 252, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li.ev-title {
   font-weight: 500;
   text-transform: uppercase;
@@ -4541,37 +4973,37 @@ blockquote p {
   font-size: 13px;
 }
 
-/* line 254, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 263, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li a {
   display: block;
 }
 
-/* line 258, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 267, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li a:hover {
   font-weight: 700;
 }
 
-/* line 262, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 271, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li a.cursos:before {
   background: #61B16F;
 }
 
-/* line 266, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 275, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li a.palestras:before {
   background: #086AAB;
 }
 
-/* line 270, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 279, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li a.eventos:before {
   background: #F39507;
 }
 
-/* line 274, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 283, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li a[class="datas comemorativas/feriados"]:before {
   background: #BE120E;
 }
 
-/* line 278, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 287, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li a:before {
   display: block;
   width: 12px;
@@ -4583,29 +5015,29 @@ blockquote p {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1060px) {
-  /* line 289, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 298, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting {
     width: 100%;
   }
-  /* line 292, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 302, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li {
     float: left;
     width: auto;
     padding: 10px;
   }
-  /* line 297, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 308, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li.ev-title {
     width: 100%;
     padding: 10px 5px;
     background: rgba(30, 125, 149, 0.1);
     margin-bottom: 5px;
   }
-  /* line 303, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 315, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li a {
     display: flex;
     align-items: center;
   }
-  /* line 307, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 320, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li a:before {
     width: 15px !important;
     height: 15px !important;
@@ -4613,36 +5045,36 @@ blockquote p {
 }
 
 @media only screen and (min-width: 0) and (max-width: 720px) {
-  /* line 314, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 327, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting {
     width: 100%;
   }
-  /* line 317, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 331, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li {
     float: left;
     width: auto;
     padding: 10px;
   }
-  /* line 322, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 337, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li.ev-title {
     width: 100%;
     padding: 10px 5px;
     background: rgba(30, 125, 149, 0.1);
     margin-bottom: 5px;
   }
-  /* line 328, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 344, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li a {
     display: flex;
     align-items: center;
   }
-  /* line 332, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 349, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li a:before {
     width: 15px !important;
     height: 15px !important;
   }
 }
 
-/* line 338, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 355, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados {
   width: 100%;
   float: left;
@@ -4651,7 +5083,7 @@ blockquote p {
   border-bottom: solid 1px #F0F0F0;
 }
 
-/* line 346, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 363, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos {
   padding: 30px 10px;
   display: flex;
@@ -4660,12 +5092,12 @@ blockquote p {
   border-bottom: dashed 1px #F0F0F0;
 }
 
-/* line 354, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 371, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos:last-child {
   border-bottom: none;
 }
 
-/* line 358, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 375, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo {
   font-size: 11px;
   color: #727272;
@@ -4675,7 +5107,7 @@ blockquote p {
   z-index: 2;
 }
 
-/* line 365, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 383, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo:before {
   position: absolute;
   content: '';
@@ -4689,57 +5121,97 @@ blockquote p {
   top: -9px;
 }
 
-/* line 379, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 397, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos .ev-periodo.no-sphere:before {
+  display: none;
+}
+
+/* line 403, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo .ev-date-box {
   position: relative;
   z-index: 2;
 }
 
-/* line 383, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 408, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo .ev-dia {
   color: #ffffff;
   display: inline-block;
-  margin-right: 15px;
 }
 
-/* line 391, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 417, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul li {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  width: 36px;
+  height: 36px;
+  background-color: #4D9BA1;
+  border-radius: 50%;
+  line-height: 36px;
+  margin: 0 2px;
+}
+
+/* line 427, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul li:first-child {
+  margin-left: 0;
+}
+
+/* line 431, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul li:before {
+  position: absolute;
+  content: '';
+  display: block;
+  display: none;
+  width: 30px;
+  height: 30px;
+  background-color: #4D9BA1;
+  border-radius: 50%;
+  left: -7px;
+  top: -9px;
+}
+
+/* line 448, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos .ev-periodo .ev-mes {
+  display: none;
+}
+
+/* line 452, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos p.ev-descricao {
   font-size: 15px;
   color: #727272;
   padding: 0;
   margin: 0;
-  margin-left: 10px;
   padding-left: 10px;
   border-left: dashed 1px #F0F0F0;
 }
 
 @media only screen and (max-width: 650px) {
-  /* line 402, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 463, cem/assets/scss/_components/_agenda/_calendar.scss */
   .listagem-resultados .box-eventos {
     flex-direction: column;
     padding: 15px 0;
     margin: 0 10px;
   }
-  /* line 407, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 469, cem/assets/scss/_components/_agenda/_calendar.scss */
   .listagem-resultados .box-eventos .ev-periodo {
     flex: auto;
     width: 100%;
     padding: 0 0 10px;
   }
-  /* line 412, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 475, cem/assets/scss/_components/_agenda/_calendar.scss */
   .listagem-resultados .box-eventos p.ev-descricao {
     padding: 0;
     margin: 0;
   }
 }
 
-/* line 418, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 481, cem/assets/scss/_components/_agenda/_calendar.scss */
 .ev-date-box + .ev-date-box {
   padding-left: 18px;
   position: relative;
 }
 
-/* line 423, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 486, cem/assets/scss/_components/_agenda/_calendar.scss */
 .ev-date-box + .ev-date-box:before {
   content: '-';
   position: absolute;
@@ -5192,17 +5664,18 @@ blockquote p {
 .download-item .files .file {
   display: inline-block;
   padding: 20px 0;
+  padding: 10px 0;
   padding-left: 48px;
 }
 
-/* line 92, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 93, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files .file a {
   font-size: 13px;
   font-weight: 500;
   color: #666666;
 }
 
-/* line 101, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 102, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li {
   float: left;
   width: 100%;
@@ -5213,7 +5686,7 @@ blockquote p {
   align-items: center;
 }
 
-/* line 109, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 110, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension {
   content: '';
   float: left;
@@ -5233,37 +5706,37 @@ blockquote p {
   margin-right: 10px;
 }
 
-/* line 125, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 126, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.zip {
   background-color: #666666;
 }
 
-/* line 127, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 128, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.zip:before {
   content: 'ZIP';
 }
 
-/* line 131, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 132, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.pdf {
   background-color: #E74C3C;
 }
 
-/* line 133, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 134, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.pdf:before {
   content: 'PDF';
 }
 
-/* line 137, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 138, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.shp {
   background-color: #5BB264;
 }
 
-/* line 139, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 140, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.shp:before {
   content: 'SHP';
 }
 
-/* line 149, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 150, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-items-wrapper header,
 .download-items-wrapper .views-field-title {
   float: left;
@@ -5275,7 +5748,7 @@ blockquote p {
   line-height: 1.5;
 }
 
-/* line 162, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 163, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue {
   position: relative;
   display: inline-block;
@@ -5285,7 +5758,7 @@ blockquote p {
   margin: 0 15px;
 }
 
-/* line 169, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 170, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue > span {
   display: none;
   font-family: 'Roboto', sans-serif;
@@ -5306,7 +5779,7 @@ blockquote p {
   margin-left: -180px;
 }
 
-/* line 187, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 188, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue > span:after {
   content: '';
   display: block;
@@ -5323,12 +5796,12 @@ blockquote p {
   border-bottom: solid 2px #ffffff;
 }
 
-/* line 203, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 204, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue:hover {
   cursor: pointer;
 }
 
-/* line 205, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 206, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue:hover > span {
   display: block;
 }

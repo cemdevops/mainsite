@@ -34,35 +34,42 @@
     Extends
 */
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:100,300,400,500,700");
-/* line 248, cem/assets/scss/_helpers/_mixin.scss */
-.main:before, .main:after, .home-slider:before, .home-slider:after, .home-slider-item:before, .home-slider-item:after, .home-call-boxes:before, .home-call-boxes:after, .home-news:before, .home-news:after, .home-agenda:before, .home-agenda:after, .home-video:before, .home-video:after, .home-publications:before, .home-publications:after, .home-pesquisadores:before, .home-pesquisadores:after, .noticia-item:before, .noticia-item:after, .side-bar-box:before, .side-bar-box:after, .form-line:before, .form-line:after, .resolution-menu:before, .resolution-menu:after, .resolution-maps:before, .resolution-maps:after, .resolution-maps .maps-container .map-box:before, .resolution-maps .maps-container .map-box:after, .resolution-slider:before, .resolution-slider:after, .resolution-slider .resolution-slider-item:before, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:before, .resolution-slider .resolution-slider-item .image:after,
+/* line 244, cem/assets/scss/_helpers/_mixin.scss */
+.accordion:before, .accordion > .title:before, .accordion.open > .content:before, .accordion:after, .accordion > .title:after, .accordion.open > .content:after, .main:before, .main:after, .home-slider:before, .home-slider:after, .home-slider-item:before, .home-slider-item:after, .home-call-boxes:before, .home-call-boxes:after, .home-news:before, .home-news:after, .home-agenda:before, .home-agenda:after, .home-video:before, .home-video:after, .home-publications:before, .home-publications:after, .home-pesquisadores:before, .home-pesquisadores:after, .noticia-item:before, .noticia-item:after, .side-bar-box:before, .side-bar-box:after, .form-line:before, .form-line:after, .resolution-menu:before, .resolution-menu:after, .resolution-maps:before, .resolution-maps:after, .resolution-maps .maps-container .map-box:before, .resolution-maps .maps-container .map-box:after, .resolution-slider:before, .resolution-slider:after, .resolution-slider .resolution-slider-item:before, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:before, .resolution-slider .resolution-slider-item .image:after,
 .resolution-slider .resolution-slider-item .title:before,
 .resolution-slider .resolution-slider-item .title:after,
 .resolution-slider .resolution-slider-item .text:before,
-.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:before, .quem-somos-menu:after, .publicacoes-artigos-grid-container:before, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:before, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:before, .header-search.publicoes-search:after, .publicacoes-livros-interna:before, .publicacoes-livros-interna:after, .eventos-main:before, .eventos-main:after, .agenda-slider-wrapper:before, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:before, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:before, .agenda-slider:after, .calendar-wrapper:before, .calendar-wrapper:after, .search-items-wrapper:before, .search-items-wrapper:after, header.header:before, header.header:after, .header-top:before, .header-top:after, .header-search:before, .header-search:after, .header-menu:before, .header-menu:after, .footer:before, .footer:after, .footer-newsletter:before, .footer-newsletter:after, .footer-navigation:before, .footer-navigation:after, .footer-nav-infos .social:before, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:before, .footer-nav-infos .footer-nav:after, .footer-copy:before, .footer-copy:after, .internas-container:before, .internas-container:after {
+.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:before, .quem-somos-menu:after, .publicacoes-artigos-grid-container:before, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:before, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:before, .header-search.publicoes-search:after, .publicacoes-livros-interna:before, .publicacoes-livros-interna:after, .eventos-main:before, .eventos-main:after, .evento-slider-foto-container .evento-fotos-slider-box:before, .evento-slider-foto-container .evento-fotos-slider-box:after, .agenda-slider-wrapper:before, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:before, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:before, .agenda-slider:after, .calendar-wrapper:before, .calendar-wrapper:after, .search-items-wrapper:before, .search-items-wrapper:after, header.header:before, header.header:after, .header-top:before, .header-top:after, .header-search:before, .header-search:after, .header-menu:before, .header-menu:after, .footer:before, .footer:after, .footer-newsletter:before, .footer-newsletter:after, .footer-navigation:before, .footer-navigation:after, .footer-nav-infos .social:before, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:before, .footer-nav-infos .footer-nav:after, .footer-copy:before, .footer-copy:after, .internas-container:before, .internas-container:after {
   content: " ";
   display: table;
 }
 
-/* line 253, cem/assets/scss/_helpers/_mixin.scss */
-.main:after, .home-slider:after, .home-slider-item:after, .home-call-boxes:after, .home-news:after, .home-agenda:after, .home-video:after, .home-publications:after, .home-pesquisadores:after, .noticia-item:after, .side-bar-box:after, .form-line:after, .resolution-menu:after, .resolution-maps:after, .resolution-maps .maps-container .map-box:after, .resolution-slider:after, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:after,
+/* line 249, cem/assets/scss/_helpers/_mixin.scss */
+.accordion:after, .accordion > .title:after, .accordion.open > .content:after, .main:after, .home-slider:after, .home-slider-item:after, .home-call-boxes:after, .home-news:after, .home-agenda:after, .home-video:after, .home-publications:after, .home-pesquisadores:after, .noticia-item:after, .side-bar-box:after, .form-line:after, .resolution-menu:after, .resolution-maps:after, .resolution-maps .maps-container .map-box:after, .resolution-slider:after, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:after,
 .resolution-slider .resolution-slider-item .title:after,
-.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:after, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:after, .publicacoes-livros-interna:after, .eventos-main:after, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:after, .calendar-wrapper:after, .search-items-wrapper:after, header.header:after, .header-top:after, .header-search:after, .header-menu:after, .footer:after, .footer-newsletter:after, .footer-navigation:after, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:after, .footer-copy:after, .internas-container:after {
+.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:after, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:after, .publicacoes-livros-interna:after, .eventos-main:after, .evento-slider-foto-container .evento-fotos-slider-box:after, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:after, .calendar-wrapper:after, .search-items-wrapper:after, header.header:after, .header-top:after, .header-search:after, .header-menu:after, .footer:after, .footer-newsletter:after, .footer-navigation:after, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:after, .footer-copy:after, .internas-container:after {
   clear: both;
 }
 
-/* line 257, cem/assets/scss/_helpers/_mixin.scss */
-.main, .home-slider, .home-slider-item, .home-call-boxes, .home-news, .home-agenda, .home-video, .home-publications, .home-pesquisadores, .noticia-item, .side-bar-box, .form-line, .resolution-menu, .resolution-maps, .resolution-maps .maps-container .map-box, .resolution-slider, .resolution-slider .resolution-slider-item, .resolution-slider .resolution-slider-item .image,
+/* line 253, cem/assets/scss/_helpers/_mixin.scss */
+.accordion, .accordion > .title, .accordion.open > .content, .main, .home-slider, .home-slider-item, .home-call-boxes, .home-news, .home-agenda, .home-video, .home-publications, .home-pesquisadores, .noticia-item, .side-bar-box, .form-line, .resolution-menu, .resolution-maps, .resolution-maps .maps-container .map-box, .resolution-slider, .resolution-slider .resolution-slider-item, .resolution-slider .resolution-slider-item .image,
 .resolution-slider .resolution-slider-item .title,
-.resolution-slider .resolution-slider-item .text, .quem-somos-menu, .publicacoes-artigos-grid-container, .publicacoes-artigos-grid-container > div, .header-search.publicoes-search, .publicacoes-livros-interna, .eventos-main, .agenda-slider-wrapper, .agenda-slider-wrapper .box-legenda, .agenda-slider, .calendar-wrapper, .search-items-wrapper, header.header, .header-top, .header-search, .header-menu, .footer, .footer-newsletter, .footer-navigation, .footer-nav-infos .social, .footer-nav-infos .footer-nav, .footer-copy, .internas-container {
+.resolution-slider .resolution-slider-item .text, .quem-somos-menu, .publicacoes-artigos-grid-container, .publicacoes-artigos-grid-container > div, .header-search.publicoes-search, .publicacoes-livros-interna, .eventos-main, .evento-slider-foto-container .evento-fotos-slider-box, .agenda-slider-wrapper, .agenda-slider-wrapper .box-legenda, .agenda-slider, .calendar-wrapper, .search-items-wrapper, header.header, .header-top, .header-search, .header-menu, .footer, .footer-newsletter, .footer-navigation, .footer-nav-infos .social, .footer-nav-infos .footer-nav, .footer-copy, .internas-container {
   *zoom: 1;
 }
 
-/* line 261, cem/assets/scss/_helpers/_mixin.scss */
-.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul, .resolution-menu .inner ul, .quem-somos-menu ul, .que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul, .quem-somos-conteudo-col fieldset > div > ul, .publicacoes-livros-interna .livro-display .actions ul, .agenda-slider-wrapper .box-legenda ul, .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul, .download-item .extension-wrapper, .header-menu > .inner > ul, .header-menu > .inner > ul > li > ul, .footer-nav-infos .social ul, .footer-nav-infos .footer-nav ul {
+/* line 257, cem/assets/scss/_helpers/_mixin.scss */
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul, .side-bar-cem-na-midia, .resolution-menu .inner ul, .quem-somos-menu ul, .que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul, .quem-somos-conteudo-col fieldset > div > ul, .publicacoes-livros-interna .livro-display .actions ul, .agenda-slider-wrapper .box-legenda ul, .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul, .download-item .extension-wrapper, .header-menu > .inner > ul, .header-menu > .inner > ul > li > ul, .footer-nav-infos .social ul, .footer-nav-infos .footer-nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+/* line 263, cem/assets/scss/_helpers/_mixin.scss */
+.accordion, .accordion > .title, .accordion.open > .content {
+  position: relative;
+  float: left;
+  width: 100%;
 }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -554,7 +561,7 @@ body {
   background: #ffffff;
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #333333;
@@ -627,7 +634,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
 }
 
@@ -677,7 +684,7 @@ p strong {
 blockquote {
   text-align: center;
   font-size: 25px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
 }
 
@@ -932,7 +939,7 @@ blockquote p {
 .home-news .home-news-header h2 {
   float: left;
   width: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 35px;
   color: #6A6A6A;
@@ -1023,7 +1030,7 @@ blockquote p {
 .home-agenda .home-agenda-header h2 {
   float: left;
   width: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 35px;
   color: #6A6A6A;
@@ -1110,7 +1117,7 @@ blockquote p {
 .home-video .home-video-header h2 {
   float: left;
   width: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 35px;
   color: #6A6A6A;
@@ -1275,7 +1282,7 @@ blockquote p {
 .home-publications .home-publications-header h2 {
   float: left;
   width: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 35px;
   color: #ffffff;
@@ -1461,7 +1468,7 @@ blockquote p {
 .home-pesquisadores .home-pesquisadores-header h2 {
   float: left;
   width: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 35px;
   color: #6A6A6A;
@@ -1681,7 +1688,7 @@ blockquote p {
   color: #555555;
   font-size: 24px;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   text-transform: lowercase;
 }
@@ -1692,7 +1699,7 @@ blockquote p {
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 16px auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
@@ -2028,8 +2035,41 @@ blockquote p {
   columns: #4D9BA1;
 }
 
+/* line 238, cem/assets/scss/_components/_noticias/__global.scss */
+#block-cemnamidia {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+/* line 242, cem/assets/scss/_components/_noticias/__global.scss */
+.side-bar-cem-na-midia {
+  float: left;
+  margin: 0 !important;
+}
+
+/* line 246, cem/assets/scss/_components/_noticias/__global.scss */
+.side-bar-cem-na-midia li {
+  float: left;
+  width: 25%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6A6A6A;
+  border-right: solid 1px #F4F4F4;
+  border-bottom: solid 1px #F4F4F4;
+}
+
+/* line 258, cem/assets/scss/_components/_noticias/__global.scss */
+.side-bar-cem-na-midia li:hover {
+  background-color: #F8F8F8;
+}
+
 /* line 1, cem/assets/scss/_components/_paginacao/__global.scss */
-.item-list .pager {
+.item-list .pager,
+nav.pager {
   clear: both;
   text-align: center;
   padding-bottom: 40px !important;
@@ -2038,7 +2078,14 @@ blockquote p {
 }
 
 /* line 9, cem/assets/scss/_components/_paginacao/__global.scss */
-.item-list ul.pager {
+.item-list .pager #pagination-heading,
+nav.pager #pagination-heading {
+  display: none;
+}
+
+/* line 14, cem/assets/scss/_components/_paginacao/__global.scss */
+.item-list ul.pager,
+nav.pager ul.pager__items {
   padding: 8px 20px;
   margin: 0;
   list-style: none;
@@ -2048,16 +2095,42 @@ blockquote p {
   position: relative;
 }
 
-/* line 19, cem/assets/scss/_components/_paginacao/__global.scss */
-.item-list .pager li {
+/* line 25, cem/assets/scss/_components/_paginacao/__global.scss */
+.item-list .pager li,
+nav.pager ul.pager__items li {
   background-image: none;
   display: inline;
   list-style-type: none;
   padding: 0.5em;
 }
 
-/* line 26, cem/assets/scss/_components/_paginacao/__global.scss */
-.item-list ul.pager li {
+/* line 31, cem/assets/scss/_components/_paginacao/__global.scss */
+.item-list .pager li a,
+nav.pager ul.pager__items li a {
+  background-color: transparent !important;
+  border: 0 !important;
+}
+
+/* line 34, cem/assets/scss/_components/_paginacao/__global.scss */
+.item-list .pager li a:focus,
+nav.pager ul.pager__items li a:focus {
+  background-color: transparent !important;
+  border: 0 !important;
+}
+
+/* line 41, cem/assets/scss/_components/_paginacao/__global.scss */
+nav.pager ul.pager__items li .visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+/* line 50, cem/assets/scss/_components/_paginacao/__global.scss */
+.item-list ul.pager li,
+nav.pager ul.pager__items li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2075,35 +2148,44 @@ blockquote p {
   transition: all 0.2s linear;
 }
 
-/* line 44, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 69, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-first.first,
-.item-list ul.pager li.pager-last.last {
+.item-list ul.pager li.pager-last.last,
+nav.pager ul.pager__items li.pager__item--ellipsis,
+nav.pager ul.pager__items li.pager__item--first,
+nav.pager ul.pager__items li.pager__item--last {
   display: none !important;
 }
 
-/* line 49, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 77, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-ellipsis {
   display: none !important;
 }
 
-/* line 53, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 81, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-previous,
-.item-list ul.pager li.pager-next {
+.item-list ul.pager li.pager-next,
+nav.pager ul.pager__items li.pager__item--previous,
+nav.pager ul.pager__items li.pager__item--next {
   border: 0;
   padding: 0 10px !important;
   width: auto;
 }
 
-/* line 69, cem/assets/scss/_components/_paginacao/__global.scss */
+/* line 100, cem/assets/scss/_components/_paginacao/__global.scss */
 .item-list ul.pager li.pager-previous:hover,
-.item-list ul.pager li.pager-next:hover {
+.item-list ul.pager li.pager-next:hover,
+nav.pager ul.pager__items li.pager__item--previous:hover,
+nav.pager ul.pager__items li.pager__item--next:hover {
   border: 0;
   background-color: transparent;
   color: #6A6A6A;
 }
 
-/* line 86, cem/assets/scss/_components/_paginacao/__global.scss */
-.item-list ul.pager li:hover {
+/* line 117, cem/assets/scss/_components/_paginacao/__global.scss */
+.item-list ul.pager li:hover,
+nav.pager ul.pager__items li:hover,
+nav.pager ul.pager__items li.is-active {
   border: solid 2px #086AAB;
   background-color: #086AAB;
   color: #ffffff;
@@ -2530,7 +2612,7 @@ blockquote p {
   background-color: #ffffff;
   border: solid 1px #E1E1E1;
   border-radius: 3px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #333333;
@@ -2539,7 +2621,7 @@ blockquote p {
   outline: 0;
 }
 
-/* line 56, cem/assets/scss/_helpers/_mixin.scss */
+/* line 55, cem/assets/scss/_helpers/_mixin.scss */
 .form-line input[type="text"]::-webkit-input-placeholder,
 .form-line input[type="email"]::-webkit-input-placeholder,
 .form-line input[type="password"]::-webkit-input-placeholder,
@@ -2549,7 +2631,7 @@ blockquote p {
   opacity: 0.5;
 }
 
-/* line 60, cem/assets/scss/_helpers/_mixin.scss */
+/* line 59, cem/assets/scss/_helpers/_mixin.scss */
 .form-line input[type="text"]::-moz-placeholder,
 .form-line input[type="email"]::-moz-placeholder,
 .form-line input[type="password"]::-moz-placeholder,
@@ -2559,7 +2641,7 @@ blockquote p {
   opacity: 0.5;
 }
 
-/* line 64, cem/assets/scss/_helpers/_mixin.scss */
+/* line 63, cem/assets/scss/_helpers/_mixin.scss */
 .form-line input[type="text"]:-ms-input-placeholder,
 .form-line input[type="email"]:-ms-input-placeholder,
 .form-line input[type="password"]:-ms-input-placeholder,
@@ -2569,7 +2651,7 @@ blockquote p {
   opacity: 0.5;
 }
 
-/* line 68, cem/assets/scss/_helpers/_mixin.scss */
+/* line 67, cem/assets/scss/_helpers/_mixin.scss */
 .form-line input[type="text"]:-moz-placeholder,
 .form-line input[type="email"]:-moz-placeholder,
 .form-line input[type="password"]:-moz-placeholder,
@@ -2611,7 +2693,7 @@ blockquote p {
   border: 0;
   border-radius: 3px;
   background-color: #086AAB;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #ffffff;
@@ -2672,7 +2754,7 @@ blockquote p {
   padding: 0 0 10px;
   margin: 0;
   color: #4C999F;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 13px;
 }
@@ -2694,7 +2776,7 @@ blockquote p {
   width: 100%;
   color: #676767;
   font-size: 15px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -2783,7 +2865,7 @@ blockquote p {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -2825,7 +2907,7 @@ blockquote p {
   border-bottom: solid 1px #E9E9E9;
   z-index: 2;
   position: relative;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -2840,7 +2922,7 @@ blockquote p {
 .resolution-menu .inner ul > li {
   position: relative;
   float: left;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: #525252;
@@ -2860,7 +2942,7 @@ blockquote p {
 .resolution-maps {
   width: 100%;
   padding-top: 90px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   border-bottom: solid 1px #E9E9E9;
   padding-bottom: 10px;
@@ -2909,7 +2991,7 @@ blockquote p {
   width: 100%;
   text-align: center;
   color: #5A5A5A;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   padding-top: 25px;
@@ -2920,7 +3002,7 @@ blockquote p {
 .mapping-box .title {
   padding: 0 0 20px;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 35px;
   color: #6A6A6A;
@@ -3207,7 +3289,7 @@ blockquote p {
 
 /* line 126, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -3219,7 +3301,7 @@ blockquote p {
 
 /* line 132, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: #4c4c4c;
@@ -3348,9 +3430,10 @@ blockquote p {
   right: 0;
   top: 10px;
   background: url(../img/icon-arrow-right-black.png) center no-repeat;
+  transition: all 0.2s linear;
 }
 
-/* line 254, cem/assets/scss/_components/_quem-somos/__global.scss */
+/* line 255, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo-col fieldset > div > h3 {
   position: relative;
   display: block;
@@ -3362,7 +3445,7 @@ blockquote p {
   color: #666666;
 }
 
-/* line 266, cem/assets/scss/_components/_quem-somos/__global.scss */
+/* line 267, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo-col fieldset > div > ul li {
   font-weight: 500;
   font-size: 15px;
@@ -3370,23 +3453,23 @@ blockquote p {
   padding-left: 10px;
 }
 
-/* line 273, cem/assets/scss/_components/_quem-somos/__global.scss */
+/* line 274, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo-col fieldset > div > p {
   font-weight: 400;
   font-size: 15px;
 }
 
-/* line 276, cem/assets/scss/_components/_quem-somos/__global.scss */
+/* line 277, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo-col fieldset > div > p strong {
   font-weight: 500;
 }
 
-/* line 283, cem/assets/scss/_components/_quem-somos/__global.scss */
+/* line 284, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo-col fieldset.open > div * {
   display: block;
 }
 
-/* line 287, cem/assets/scss/_components/_quem-somos/__global.scss */
+/* line 288, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-conteudo-col fieldset.open > div > h2:before {
   transform: rotate(90deg);
 }
@@ -3403,7 +3486,7 @@ blockquote p {
 /* line 305, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-timeline p {
   font-size: 15px;
-  color: #7F7F7F;
+  color: #7f7f7f;
 }
 
 /* line 309, cem/assets/scss/_components/_quem-somos/__global.scss */
@@ -3429,7 +3512,7 @@ blockquote p {
   display: block;
   padding-bottom: 30px;
   margin-bottom: 30px;
-  border-bottom: dashed 1px #C0C0C0;
+  border-bottom: dashed 1px #c0c0c0;
   font-size: 19px;
   color: #333333;
   font-weight: 700;
@@ -3438,14 +3521,14 @@ blockquote p {
 /* line 330, cem/assets/scss/_components/_quem-somos/__global.scss */
 .quem-somos-timeline .timeline-item .title:before {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   width: 12px;
   height: 12px;
-  background-color: #00B9B9;
+  background-color: #00b9b9;
   border-radius: 50%;
   border: solid 4px #ffffff;
-  box-shadow: 0 0 1px 1px #EEEEEE;
+  box-shadow: 0 0 1px 1px #eeeeee;
   left: -35px;
 }
 
@@ -3584,7 +3667,7 @@ blockquote p {
   height: 100%;
   color: #7f7f7f;
   font-size: 15px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -3865,10 +3948,11 @@ blockquote p {
 
 /* line 328, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livros-interna .livro-display .actions ul li.buy {
+  width: 100%;
   background-color: #086aab;
 }
 
-/* line 330, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 331, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livros-interna .livro-display .actions ul li.buy a {
   display: inline-block;
   padding: 15px;
@@ -3876,7 +3960,7 @@ blockquote p {
   font-weight: 500;
 }
 
-/* line 341, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 342, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livros-interna .livro-infos {
   float: left;
   width: 100%;
@@ -3886,7 +3970,7 @@ blockquote p {
   color: #666666;
 }
 
-/* line 348, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 349, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livros-interna .livro-infos .header {
   padding: 15px 10px;
   background-color: #086aab;
@@ -3895,12 +3979,12 @@ blockquote p {
   color: #ffffff;
 }
 
-/* line 355, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 356, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livros-interna .livro-infos td {
   border-bottom: solid 1px #f0f0f0;
 }
 
-/* line 358, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 359, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livros-interna .livro-infos .key {
   width: 20%;
   height: 50px;
@@ -3911,14 +3995,14 @@ blockquote p {
   text-transform: uppercase;
 }
 
-/* line 367, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 368, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livros-interna .livro-infos .value {
   position: relative;
   width: 80%;
   padding: 15px 10px;
 }
 
-/* line 371, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 372, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livros-interna .livro-infos .value:before {
   content: "";
   position: absolute;
@@ -3930,12 +4014,12 @@ blockquote p {
   left: 0;
 }
 
-/* line 381, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 382, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livros-interna .livro-infos .value a {
   text-decoration: underline;
 }
 
-/* line 388, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 389, cem/assets/scss/_components/_publicacoes/__global.scss */
 .btn-voltar {
   font-size: 12px;
   margin-top: 30px;
@@ -3951,19 +4035,19 @@ blockquote p {
   border-radius: 3px;
 }
 
-/* line 403, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 404, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-item__new {
   padding-bottom: 20px;
 }
 
-/* line 405, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 406, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-item__new .inner {
   float: left;
   width: 100%;
   border: solid 1px #f0f0f0;
 }
 
-/* line 409, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 410, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-item__new .inner .image {
   float: left;
   width: 100%;
@@ -3971,7 +4055,7 @@ blockquote p {
   border-bottom: solid 1px #f0f0f0;
 }
 
-/* line 414, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 415, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-item__new .inner .image a {
   width: 100%;
   height: 100%;
@@ -3981,13 +4065,13 @@ blockquote p {
   justify-content: center;
 }
 
-/* line 422, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 423, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-item__new .inner .image img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 427, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 428, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-item__new .inner .title {
   float: left;
   width: 100%;
@@ -3997,7 +4081,7 @@ blockquote p {
   color: #8a8a8a;
 }
 
-/* line 434, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 435, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-item__new .inner .title a {
   width: 100%;
   height: 100%;
@@ -4009,12 +4093,12 @@ blockquote p {
   text-align: center;
 }
 
-/* line 443, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 444, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-item__new .inner .title a:hover {
   text-decoration: underline;
 }
 
-/* line 448, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 449, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-item__new .inner .infos {
   float: left;
   width: 100%;
@@ -4027,20 +4111,20 @@ blockquote p {
   flex-direction: column;
 }
 
-/* line 458, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 459, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-item__new .inner .infos .text {
   width: 100%;
   text-align: center;
   padding: 6px 10px;
 }
 
-/* line 463, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 464, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-item__new .inner .infos .link {
   width: 100%;
   text-align: center;
 }
 
-/* line 466, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 467, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-item__new .inner .infos .link a {
   display: inline-block;
   width: 80%;
@@ -4055,13 +4139,13 @@ blockquote p {
   margin-top: 10px;
 }
 
-/* line 482, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 483, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-item__new .inner:hover .image,
 .publicacoes-livro-item__new .inner:hover .infos {
   background-color: #f7f7f7;
 }
 
-/* line 487, cem/assets/scss/_components/_publicacoes/__global.scss */
+/* line 488, cem/assets/scss/_components/_publicacoes/__global.scss */
 .publicacoes-livro-item__new .inner:hover .title a {
   text-decoration: underline;
 }
@@ -4075,16 +4159,16 @@ blockquote p {
 .evento-btn {
   border-radius: 4px;
   padding: 10px 5px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
-/* line 9, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 10, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-btn a {
   color: #ffffff !important;
 }
 
-/* line 12, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 14, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-btn.btn-inscricao {
   margin-top: 30px;
   display: block;
@@ -4095,7 +4179,7 @@ blockquote p {
   color: #ffffff !important;
 }
 
-/* line 21, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 24, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-btn.btn-voltar {
   margin-top: 30px;
   text-align: left;
@@ -4109,7 +4193,7 @@ blockquote p {
   padding-left: 45px;
 }
 
-/* line 35, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 38, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .eventos-main {
   width: 100%;
   background-color: #F4F4F4;
@@ -4118,13 +4202,13 @@ blockquote p {
   padding-bottom: 40px;
 }
 
-/* line 42, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 46, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .eventos-main .internas-text {
   padding-bottom: 10px;
   border-bottom: dashed 1px #C0C0C0;
 }
 
-/* line 48, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 52, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-header {
   float: left;
   width: 100%;
@@ -4132,9 +4216,9 @@ blockquote p {
   border-bottom: dashed 1px #C0C0C0;
 }
 
-/* line 53, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 58, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-header .evento-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 28px;
   color: #4D9BA1;
@@ -4142,7 +4226,7 @@ blockquote p {
   margin-top: 0;
 }
 
-/* line 60, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 66, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-header .evento-data {
   display: block;
   width: 100%;
@@ -4154,21 +4238,21 @@ blockquote p {
   background: url(../img/icon-evento-data.png) left center no-repeat;
 }
 
-/* line 73, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 79, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-share div.social {
   float: left;
   width: 100%;
   padding: 15px 0;
 }
 
-/* line 77, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 84, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-share div.social ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 81, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 89, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-share div.social ul li {
   float: left;
   width: 25px;
@@ -4176,22 +4260,22 @@ blockquote p {
   margin-right: 10px;
 }
 
-/* line 86, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 95, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-share div.social ul li a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-/* line 90, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 100, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-share div.social ul li a span {
   position: absolute;
   left: -9999px;
 }
 
-/* line 95, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 106, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-share div.social ul li.text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #6A6A6A;
@@ -4200,54 +4284,54 @@ blockquote p {
   padding-top: 5px;
 }
 
-/* line 103, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 115, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-share div.social ul li.facebook-like {
   width: auto;
   height: auto;
 }
 
-/* line 107, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 120, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-share div.social ul li.icon-linkedin {
   background: url(../img/icon-perfil-linkedin.png) center no-repeat;
 }
 
-/* line 110, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 124, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-share div.social ul li.icon-facebook {
   background: url(../img/icon-perfil-facebook.png) center no-repeat;
 }
 
-/* line 113, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 128, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-share div.social ul li.icon-twitter {
   background: url(../img/icon-perfil-twitter.png) center no-repeat;
 }
 
-/* line 116, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 132, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-share div.social ul li.icon-instagram {
   background: url(../img/icon-perfil-instagram.png) center no-repeat;
 }
 
-/* line 119, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 136, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-share div.social ul li.icon-email {
   background: url(../img/icon-perfil-email.png) center no-repeat;
 }
 
-/* line 122, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 140, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .evento-share div.social ul li.icon-site {
   background: url(../img/icon-perfil-site.png) center no-repeat;
 }
 
-/* line 131, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 149, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .side-bar-box.inscricoes .header {
   background-image: none;
   background-color: #262626;
 }
 
-/* line 134, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 153, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .side-bar-box.inscricoes .header .inscricao-valor-total {
   float: right;
 }
 
-/* line 138, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 158, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .side-bar-box.inscricoes .box {
   padding-left: 0;
   padding-right: 0;
@@ -4255,7 +4339,7 @@ blockquote p {
   padding-top: 10px;
 }
 
-/* line 143, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 164, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .side-bar-box.inscricoes .box .incricao-convites {
   padding: 20px 10px;
   font-size: 15px;
@@ -4264,27 +4348,27 @@ blockquote p {
   border-bottom: solid 1px #E1E1E1;
 }
 
-/* line 149, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 171, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .side-bar-box.inscricoes .box .incricao-convites .number {
   float: right;
   width: 67px;
   position: relative;
 }
 
-/* line 153, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 176, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .side-bar-box.inscricoes .box .incricao-convites .number input {
   width: 33px;
   border: 0;
   background-color: transparent;
   font-size: 15px;
   color: #4D4D4D;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   margin-left: 18px;
   text-align: center;
 }
 
-/* line 163, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 187, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .side-bar-box.inscricoes .box .incricao-convites .number span.plus,
 .side-bar-box.inscricoes .box .incricao-convites .number span.low {
   position: absolute;
@@ -4294,19 +4378,19 @@ blockquote p {
   cursor: pointer;
 }
 
-/* line 171, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 196, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .side-bar-box.inscricoes .box .incricao-convites .number span.plus {
   right: 0;
   background: url(../img/icon-plus.png) center;
 }
 
-/* line 175, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 201, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .side-bar-box.inscricoes .box .incricao-convites .number span.low {
   left: 0;
   background: url(../img/icon-sub.png) center;
 }
 
-/* line 181, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 208, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .side-bar-box.inscricoes .box .text {
   padding: 14px 20px;
   font-size: 13px;
@@ -4315,18 +4399,18 @@ blockquote p {
   border-bottom: solid 1px #E1E1E1;
 }
 
-/* line 188, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 216, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .side-bar-box.inscricoes .box .line {
   padding: 14px 20px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-/* line 193, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 222, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .side-bar-box.inscricoes .box .btn-continuar {
   display: block;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #ffffff;
@@ -4336,9 +4420,132 @@ blockquote p {
   text-align: center;
 }
 
-/* line 203, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+/* line 233, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
 .side-bar-box.inscricoes .box .btn-continuar a {
   color: #ffffff;
+}
+
+/* line 240, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+.evento-slider-foto-container {
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+/* line 246, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+.evento-slider-foto-container .slick-list {
+  padding-bottom: 50px;
+}
+
+/* line 250, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+.evento-slider-foto-container .slick-dots {
+  z-index: 5;
+  padding: 0;
+  margin: 0;
+  padding-right: 15px;
+  list-style: none;
+  text-align: right;
+  position: absolute;
+  top: -35px;
+  width: 100%;
+}
+
+/* line 261, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+.evento-slider-foto-container .slick-dots li {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 2px;
+}
+
+/* line 267, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+.evento-slider-foto-container .slick-dots li button {
+  background: #DCDCDC;
+  border: 0;
+  border-radius: 50%;
+  font-size: 0;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+/* line 278, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+.evento-slider-foto-container .slick-dots li button:before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 0 0 1px;
+}
+
+/* line 289, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+.evento-slider-foto-container .slick-dots li.slick-active button {
+  background-color: #086AAB;
+  border: 0;
+  border-radius: 50%;
+}
+
+/* line 294, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+.evento-slider-foto-container .slick-dots li.slick-active button:before {
+  background-color: #086AAB;
+  border: 0;
+}
+
+/* line 303, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+.evento-slider-foto-container .evento-fotos-slider-header {
+  float: left;
+  width: 100%;
+  padding: 16px 0;
+  color: #333333;
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0;
+  padding-left: 65px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-image: url(../img/icon-photo.png);
+}
+
+/* line 318, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+.evento-slider-foto-container .evento-fotos-slider-box {
+  float: left;
+  width: 100%;
+}
+
+/* line 323, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+.evento-slider-foto-container .evento-fotos-slider-item {
+  float: left;
+  padding: 10px 12px;
+  height: 220px;
+}
+
+/* line 328, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+.evento-slider-foto-container .evento-fotos-slider-item .image {
+  float: left;
+  width: 100%;
+  height: 220px;
+  border: solid 1px #EAEAEA;
+  border-radius: 3px;
+}
+
+/* line 335, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+.evento-slider-foto-container .evento-fotos-slider-item .image a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 343, cem/assets/scss/_components/_difusao-cientifica/__global.scss */
+.evento-slider-foto-container .evento-fotos-slider-item .image a img {
+  width: 100%;
+  height: auto;
 }
 
 /* line 1, cem/assets/scss/_components/_agenda/_agenda-slider-wrapper.scss */
@@ -5276,7 +5483,7 @@ blockquote p {
   padding-left: 24px;
   display: flex;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #4C4C4C;
   font-size: 15px;
@@ -5293,7 +5500,7 @@ blockquote p {
   border-radius: 50%;
   text-align: center;
   background-color: #E2E2E2;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 21px;
   color: #fff;
@@ -5305,7 +5512,7 @@ blockquote p {
   width: 100%;
   border-bottom: dashed 1px #F0F0F0;
   padding: 15px 25px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #7F7F7F;
@@ -5315,7 +5522,7 @@ blockquote p {
 .sistema-interativo-item .link {
   width: 100%;
   padding: 15px 25px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #7F7F7F;
@@ -5323,7 +5530,7 @@ blockquote p {
 
 /* line 79, cem/assets/scss/_components/_sistemas-interativos/__global.scss */
 .sistema-interativo-item .link a {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #4C4C4C;
 }
@@ -5561,7 +5768,7 @@ blockquote p {
 .download-item h2 {
   padding: 0 0 10px;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: #525252;
@@ -5698,7 +5905,7 @@ blockquote p {
   border-radius: 4px;
   background-color: #666666;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 11px;
   text-transform: uppercase;
@@ -5827,7 +6034,7 @@ blockquote p {
   padding: 6px 0;
   font-size: 12px;
   text-transform: lowercase;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #ffffff;
   background-color: #086AAB;
@@ -5868,6 +6075,56 @@ blockquote p {
   font-weight: 400;
 }
 
+/* line 1, cem/assets/scss/_components/_ui-elements/_accordion.scss */
+.accordion {
+  font-size: 15px;
+  border: solid 1px #d4d4d4;
+  margin: 0 0 25px;
+  padding: 10px 15px;
+}
+
+/* line 7, cem/assets/scss/_components/_ui-elements/_accordion.scss */
+.accordion > .title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #00b8b8;
+  cursor: pointer;
+}
+
+/* line 13, cem/assets/scss/_components/_ui-elements/_accordion.scss */
+.accordion > .title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -3px;
+  width: 5px;
+  height: 5px;
+  border-right: solid 1px #333;
+  border-bottom: solid 1px #333;
+  transform-origin: center;
+  transform: rotate(-45deg);
+  transition: all 0.2s linear;
+}
+
+/* line 29, cem/assets/scss/_components/_ui-elements/_accordion.scss */
+.accordion > .content {
+  display: none;
+}
+
+/* line 34, cem/assets/scss/_components/_ui-elements/_accordion.scss */
+.accordion.open > .title:after {
+  transform: rotate(45deg);
+}
+
+/* line 38, cem/assets/scss/_components/_ui-elements/_accordion.scss */
+.accordion.open > .content {
+  display: block;
+  padding-top: 25px;
+}
+
 /* line 1, cem/assets/scss/_layout/_header/__global.scss */
 header.header {
   width: 100%;
@@ -5902,7 +6159,7 @@ header.header {
 .header-top .logo span.title {
   display: block;
   width: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 35px;
   line-height: 35px;
@@ -5913,7 +6170,7 @@ header.header {
 .header-top .logo span.sub-title {
   display: block;
   width: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 17px;
   color: #676F72;
@@ -5943,7 +6200,7 @@ header.header {
   width: 100%;
   height: 44px;
   padding: 0 100px 0 28px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 13px;
   color: #8B8B8B;
@@ -5964,7 +6221,7 @@ header.header {
   border-left: solid 1px #E1E1E1;
   border-right: solid 1px #E1E1E1;
   background: url(../img/icon-arrow-down-black.png) 70px center no-repeat;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 13px;
   color: #8B8B8B;
@@ -6024,7 +6281,7 @@ header.header {
 .header-menu > .inner > ul > li {
   position: relative;
   float: left;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: #ffffff;
@@ -6059,7 +6316,7 @@ header.header {
 .header-menu > .inner > ul > li > ul > li {
   float: left;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 13px;
   color: #333333;
@@ -6146,31 +6403,31 @@ header.header {
   background: none;
   border: 0;
   border-bottom: solid 1px #ffffff;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: #ffffff;
 }
 
-/* line 56, cem/assets/scss/_helpers/_mixin.scss */
+/* line 55, cem/assets/scss/_helpers/_mixin.scss */
 .footer-newsletter-form .footer-newsletter-campo-email::-webkit-input-placeholder {
   color: #ffffff;
   opacity: 1;
 }
 
-/* line 60, cem/assets/scss/_helpers/_mixin.scss */
+/* line 59, cem/assets/scss/_helpers/_mixin.scss */
 .footer-newsletter-form .footer-newsletter-campo-email::-moz-placeholder {
   color: #ffffff;
   opacity: 1;
 }
 
-/* line 64, cem/assets/scss/_helpers/_mixin.scss */
+/* line 63, cem/assets/scss/_helpers/_mixin.scss */
 .footer-newsletter-form .footer-newsletter-campo-email:-ms-input-placeholder {
   color: #ffffff;
   opacity: 1;
 }
 
-/* line 68, cem/assets/scss/_helpers/_mixin.scss */
+/* line 67, cem/assets/scss/_helpers/_mixin.scss */
 .footer-newsletter-form .footer-newsletter-campo-email:-moz-placeholder {
   color: #ffffff;
   opacity: 1;
@@ -6184,7 +6441,7 @@ header.header {
   height: 46px;
   padding: 0 20px;
   border: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #828282;
@@ -6375,7 +6632,7 @@ header.header {
   float: left;
   width: 100%;
   padding-bottom: 40px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #5A5A5A;
@@ -6396,7 +6653,7 @@ header.header {
 /* line 47, cem/assets/scss/_layout/_internas/__global.scss */
 .internas-text p,
 .internas-text li {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: inherit;
   color: inherit;
@@ -6417,7 +6674,7 @@ header.header {
 
 /* line 60, cem/assets/scss/_layout/_internas/__global.scss */
 .internas-text h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 20px;
   color: #262626;
