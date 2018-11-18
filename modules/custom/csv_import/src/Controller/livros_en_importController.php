@@ -105,7 +105,7 @@ class livros_en_importController extends ControllerBase
             $translated_fields['body'] = $body;
             $translated_fields['field_publicacoes_link'] = $link;
             $translated_fields['field_ano_de_publicacao'] = $value[3];
-            $translated_fields['field_publicacoes_arquivo'] = $imagem_capa;
+            $translated_fields['field_publicacoes_thumbnail'] = $imagem_capa;
 
             $node->addTranslation('en', $translated_fields)->save();
         }
