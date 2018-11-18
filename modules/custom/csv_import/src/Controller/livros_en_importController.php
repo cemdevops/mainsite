@@ -93,7 +93,7 @@ class livros_en_importController extends ControllerBase
             ];
             if (file_exists($file_source) && is_file($file_source)) {
                 $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $value[9];
-                $uri = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
+                $uri = file_unmanaged_copy($file_source, 'public://' . $value[9], FILE_EXISTS_REPLACE);
                 $files = File::Create(['uri' => $uri]);
                 $files->save();
                 $imagem_capa = [
@@ -107,6 +107,7 @@ class livros_en_importController extends ControllerBase
             $translated_fields['body'] = $body;
             $translated_fields['field_publicacoes_link'] = $link;
             $translated_fields['field_ano_de_publicacao'] = $value[3];
+
             $node->addTranslation('en', $translated_fields)->save();
         }
         drupal_set_message("Foram registrados" . $count . " nodes!\n");
