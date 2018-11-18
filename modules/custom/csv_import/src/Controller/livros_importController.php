@@ -75,8 +75,9 @@ class livros_importController extends ControllerBase {
                 }
             }
             // Imagem capa do livro
-            $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $value[9];
-            if (file_exists($file_source) && is_file($file_source)) {
+
+            if ($value[9] != "") {
+                $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $value[9];
                 $uri = file_unmanaged_copy($file_source, 'public://' . $value[9], FILE_EXISTS_REPLACE);
                 $files = File::Create(['uri' => $uri]);
                 $files->save();
