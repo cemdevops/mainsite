@@ -76,16 +76,17 @@ class livros_importController extends ControllerBase {
             }
             // Imagem capa do livro
             $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $value[9];
-            $uri = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
-            $files = File::Create(['uri' => $uri]);
-            $files->save();
-            $imagem_capa = [
-                'target_id' => $files->id(),
-                'alt'       => 'Imagem Capa do Livro',
-                'title'     => 'Imagem Capa do Livro'
-            ];
-
-            $node->set('field_publicacoes_thumbnail', $imagem_capa);
+            if (file_exists($file_source) && is_file($file_source)) {
+                $uri = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
+                $files = File::Create(['uri' => $uri]);
+                $files->save();
+                $imagem_capa = [
+                    'target_id' => $files->id(),
+                    'alt' => 'Imagem Capa do Livro',
+                    'title' => 'Imagem Capa do Livro'
+                ];
+                $node->set('field_publicacoes_thumbnail', $imagem_capa);
+            }
 
             if (!empty($value[1])) {
                 $node->set('title', $value[1]);
