@@ -91,22 +91,22 @@ class livros_en_importController extends ControllerBase
                 'uri' => $value[4],
                 'title' => $value[5],
             ];
-
-            $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $value[9];
-            $uri = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
-            $files = File::Create(['uri' => $uri]);
-            $files->save();
-            $imagem_capa = [
-                'target_id' => $files->id(),
-                'alt'       => 'Imagem Capa do Livro',
-                'title'     => 'Imagem Capa do Livro'
-            ];
+            if (file_exists($file_source) && is_file($file_source)) {
+                $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $value[9];
+                $uri = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
+                $files = File::Create(['uri' => $uri]);
+                $files->save();
+                $imagem_capa = [
+                    'target_id' => $files->id(),
+                    'alt' => 'Imagem Capa do Livro',
+                    'title' => 'Imagem Capa do Livro'
+                ];
+                $translated_fields['field_publicacoes_thumbnail'] = $imagem_capa;
+            }
             $translated_fields['field_publicacoes_autores'] = $value[8];
             $translated_fields['body'] = $body;
             $translated_fields['field_publicacoes_link'] = $link;
             $translated_fields['field_ano_de_publicacao'] = $value[3];
-            $translated_fields['field_publicacoes_thumbnail'] = $imagem_capa;
-
             $node->addTranslation('en', $translated_fields)->save();
         }
         drupal_set_message("Foram registrados" . $count . " nodes!\n");
