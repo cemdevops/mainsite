@@ -7,11 +7,14 @@ use \Drupal\node\Entity\Node;
 use \Drupal\file\Entity\File;
 
 
-class livros_en_importController extends ControllerBase {
+class livros_en_importController extends ControllerBase
+{
 
-    public function import_livros_en() {
+    public function import_livros_en()
+    {
 
-        function getTidByName($name = NULL, $vid = NULL) {
+        function getTidByName($name = NULL, $vid = NULL)
+        {
             $properties = [];
             if (!empty($name)) {
                 $properties['name'] = $name;
@@ -27,19 +30,19 @@ class livros_en_importController extends ControllerBase {
         }
 
         $filePath = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
-        $publicacoes = $filePath . "/pay-load-publish-pt.csv";
-        $h =fopen($publicacoes, "r");
+        $publicacoes = $filePath . "/livros-payload-en.csv";
+        $h = fopen($publicacoes, "r");
 
         while (($data = fgetcsv($h, 100000, "|")) !== FALSE) {
             $base[] = $data;
         }
         fclose($h);
-        kint($base);
-        exit();
-        $head  = array_shift($base);
+//        kint($base);
+//        exit();
+        $head = array_shift($base);
         $autor = array();
         $count = 0;
-        foreach($base as $value) {
+        foreach ($base as $value) {
 
             $files = explode('#', $value[6]);
             $description = explode('#', $value[7]);
@@ -50,8 +53,9 @@ class livros_en_importController extends ControllerBase {
                 $file_entity = array_combine($files, $description);
             }
             $count++;
-            $node = Node::create(['type' => 'publicacoes']);
-            $documentos = array();
+            $node = Node::load($value[0]);
+            $translated_fields = [];
+            $documentos = [];
 
             foreach ($file_entity as $file => $descricao) {
 
@@ -65,7 +69,7 @@ class livros_en_importController extends ControllerBase {
                         'target_id' => $files->id(),
                         'description' => $descricao,
                     ];
-                    $node->set('field_publicacoes_arquivo', $documentos);
+                    $translated_fields['field_publicacoes_arquivo'] = $documentos;
                 }
                 if (file_exists($file_source)) {
                     $log = $filePath . '/logs/arquivos-faltantes-publicacoes.txt';
@@ -75,47 +79,43 @@ class livros_en_importController extends ControllerBase {
                 }
             }
             if (!empty($value[1])) {
-                $node->set('title', $value[1]);
+                $translated_fields['title'] = $value[1];
             } else {
-                $logs = $filePath . '/title.txt';
-                $currents = file_get_contents($logs);
-                file_put_contents($logs, "");
-                $currents .= "{$value[1]}\n";
-                file_put_contents($logs, $currents);
-                $node->set('title', 'SEM TITULO');
+                $translated_fields['title'] = 'SEM TITULO';
             }
             $body = [
                 'value' => $value[2],
                 'format' => 'full_html',
             ];
-            $node->set('body', $body);
-
-            $node->set('field_ano_de_publicacao', $value[3]);
-
             $link = [
                 'uri' => $value[4],
                 'title' => $value[5],
             ];
-            $node->set('field_publicacoes_link', $link);
 
-            $categoria = getTidByName($value[1], 'categoria_publicacoes');
+            $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $value[9];
+            $uri = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
+            $files = File::Create(['uri' => $uri]);
+            $files->save();
+            $imagem_capa = [
+                'target_id' => $files->id(),
+                'alt'       => 'Imagem Capa do Livro',
+                'title'     => 'Imagem Capa do Livro'
+            ];
+            $translated_fields['field_publicacoes_autores'] = $value[8];
+            $translated_fields['body'] = $body;
+            $translated_fields['field_publicacoes_link'] = $link;
+            $translated_fields['field_ano_de_publicacao'] = $value[3];
+            $translated_fields['field_publicacoes_arquivo'] = $imagem_capa;
 
-            $node->set('field_publicacoes_categoria', $categoria);
-            $node->set('field_publicacoes_autores', $value[8]);
-
-            $node->set('uid', 1);
-            $node->status = 1;
-            $node->langcod = 'pt-br';
-            $node->enforceIsNew();
-            $node->save();
+            $node->addTranslation('en', $translated_fields)->save();
         }
-        drupal_set_message("Foram registrados" . $count .  " nodes!\n");
+        drupal_set_message("Foram registrados" . $count . " nodes!\n");
         return [
             '#type' => 'markup',
             '#markup' => $this->t('Importação realizada com sucesso!'),
         ];
-
     }
-
-
 }
+
+
+

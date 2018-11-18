@@ -29,7 +29,6 @@ class publicacoes_importController extends ControllerBase {
         $filePath = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
         $publicacoes = $filePath . "/pay-load-publish-pt.csv";
         $h =fopen($publicacoes, "r");
-
         while (($data = fgetcsv($h, 100000, "|")) !== FALSE) {
             $base[] = $data;
         }
@@ -114,8 +113,5 @@ class publicacoes_importController extends ControllerBase {
             '#type' => 'markup',
             '#markup' => $this->t('Importação realizada com sucesso!'),
         ];
-
     }
-
-
 }
