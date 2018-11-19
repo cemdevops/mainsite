@@ -1,4 +1,5 @@
-{% set link_livro = content['field_publicacoes_link'][0]['#title'] %}
+{% set link_resenha = content['field_publicacoes_link'][0]['#title'] %}
+{% set link_livro   = content['field_link_comprar_livro'][0]['#title'] %}
 
 {% macro menuMacro(menu, level) -%}
     {# Set our default level as an integer. #}
@@ -69,21 +70,22 @@
 
                         <!-- publicacoes livros interna init -->
                         <div class="publicacoes-livros-interna">
-
-                            <div class="livro-display">
-                                <div class="image">
-                                    <a href="#">
-                                        <img src="{{ imagem_livro }}">
-                                    </a>
+                            {%  if imagem_livro %}
+                                <div class="livro-display">
+                                    <div class="image">
+                                        <a href="#">
+                                            <img src="{{ imagem_livro }}">
+                                        </a>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            {% if link_livro %}
+                                                <li class="buy"><a href="{{ link_livro }}">comprar</a></li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="actions">
-                                    <ul>
-                                        {% if link_livro %}
-                                            <li class="buy"><a href="{{ link_livro }}">comprar</a></li>
-                                        {% endif %}
-                                    </ul>
-                                </div>
-                            </div>
+                            {% endif %}
                             {{  drupal_field('body','node') }}
                             <table width="100%" cellpadding="0" cellspacing="0" class="livro-infos">
                                 <tr>
@@ -98,8 +100,12 @@
                                     <td class="value">{{ label }}</td>
                                 </tr>
                                 <tr>
-                                    <td class="key">{% trans %}Sumário{% endtrans %}</td>
-                                    <td class="value"><a href="#">clique aqui</a></td>
+                                    <td class="key">{% trans %}Resenha{% endtrans %}</td>
+                                    <td class="value"><a href="{{ link_resenha }}">{% trans %}clique aqui{% endtrans %}</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="key">{% trans %}Anexos{% endtrans %}</td>
+                                    <td class="value"><a href="{{  anexos_livro }}">{% trans %}clique aqui{% endtrans %}</a></td>
                                 </tr>
                             </table>
                             <a href="#" class="btn-voltar">{% trans %}voltar para livros{% endtrans %}</a>
