@@ -1,5 +1,6 @@
 {% set link_resenha = content['field_publicacoes_link'][0]['#title'] %}
 {% set link_livro   = content['field_link_comprar_livro'][0]['#title'] %}
+{% set autor_livro  = content['field_publicacoes_autores'][0]['#context']['value'] %}
 
 {% macro menuMacro(menu, level) -%}
     {# Set our default level as an integer. #}
@@ -91,22 +92,29 @@
                                 <tr>
                                     <td class="header" colspan="2">{% trans %}Ficha Técnica{% endtrans %}</td>
                                 </tr>
-                                <tr>
-                                    <td class="key">{% trans %}Autor{% endtrans %}</td>
-                                    <td class="value">{{  drupal_field('field_livros_autor','node') }}</td>
-                                </tr>
+                                {% if autor_livro %}
+                                    <tr>
+                                        <td class="key">{% trans %}Autor{% endtrans %}</td>
+                                        <td class="value">{{  drupal_field('field_publicacoes_autores','node') }}</td>
+                                    </tr>
+                                {% endif %}
+
                                 <tr>
                                     <td class="key">{% trans %}Título{% endtrans %}</td>
                                     <td class="value">{{ label }}</td>
                                 </tr>
-                                <tr>
-                                    <td class="key">{% trans %}Resenha{% endtrans %}</td>
-                                    <td class="value"><a href="{{ link_resenha }}">{% trans %}clique aqui{% endtrans %}</a></td>
-                                </tr>
-                                <tr>
-                                    <td class="key">{% trans %}Anexos{% endtrans %}</td>
-                                    <td class="value"><a href="{{  anexos_livro }}">{% trans %}clique aqui{% endtrans %}</a></td>
-                                </tr>
+                                {% if link_resenha %}
+                                    <tr>
+                                        <td class="key">{% trans %}Resenha{% endtrans %}</td>
+                                        <td class="value"><a href="{{ link_resenha }}">{% trans %}clique aqui{% endtrans %}</a></td>
+                                    </tr>
+                                {% endif %}
+                                {% if anexos_livro %}
+                                    <tr>
+                                        <td class="key">{% trans %}Anexos{% endtrans %}</td>
+                                        <td class="value"><a href="{{  anexos_livro }}">{% trans %}clique aqui{% endtrans %}</a></td>
+                                    </tr>
+                                {% endif %}
                             </table>
                             <a href="#" class="btn-voltar">{% trans %}voltar para livros{% endtrans %}</a>
                         </div>
