@@ -27,15 +27,15 @@ class livros_importController extends ControllerBase {
         }
 
         $filePath = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
-        $publicacoes = $filePath . "/pay-load-publish-pt.csv";
-        $h =fopen($publicacoes, "r");
+        $publicacoes = $filePath . "/livros-payload-pt-br.csv";
 
+        $h =fopen($publicacoes, "r");
         while (($data = fgetcsv($h, 100000, "|")) !== FALSE) {
             $base[] = $data;
         }
         fclose($h);
-        kint($base);
-        exit();
+//        kint($base);
+//        exit();
         $head  = array_shift($base);
         $autor = array();
         $count = 0;
@@ -50,7 +50,7 @@ class livros_importController extends ControllerBase {
                 $file_entity = array_combine($files, $description);
             }
             $count++;
-            $node = Node::create(['type' => 'publicacoes']);
+            $node = Node::create(['type' => 'livros']);
             $documentos = array();
 
             foreach ($file_entity as $file => $descricao) {
@@ -74,6 +74,21 @@ class livros_importController extends ControllerBase {
                     file_put_contents($log, $current);
                 }
             }
+            // Imagem capa do livro
+
+            if ($value[9] != "") {
+                $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $value[9];
+                $uri = file_unmanaged_copy($file_source, 'public://' . $value[9], FILE_EXISTS_REPLACE);
+                $files = File::Create(['uri' => $uri]);
+                $files->save();
+                $imagem_capa = [
+                    'target_id' => $files->id(),
+                    'alt' => 'Imagem Capa do Livro',
+                    'title' => 'Imagem Capa do Livro'
+                ];
+                $node->set('field_publicacoes_thumbnail', $imagem_capa);
+            }
+
             if (!empty($value[1])) {
                 $node->set('title', $value[1]);
             } else {
@@ -97,10 +112,6 @@ class livros_importController extends ControllerBase {
                 'title' => $value[5],
             ];
             $node->set('field_publicacoes_link', $link);
-
-            $categoria = getTidByName($value[1], 'categoria_publicacoes');
-
-            $node->set('field_publicacoes_categoria', $categoria);
             $node->set('field_publicacoes_autores', $value[8]);
 
             $node->set('uid', 1);
