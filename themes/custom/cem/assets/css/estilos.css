@@ -6416,7 +6416,7 @@ header.header {
 
 /* line 206, cem/assets/scss/_layout/_header/_header-top.scss */
 .header-top-links .contact-translate ul li.header-top-btn-translate {
-  padding-left: 25px;
+  padding-left: 0px;
   background: url(../img/icon-translate.png) left center no-repeat;
   background-size: contain;
 }
