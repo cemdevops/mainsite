@@ -55,33 +55,49 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
+      <meta property="og:url"           content="http://web.fflch.usp.br/centrodametropole/" />
+      <meta property="og:type"          content="website" />
+      <meta property="og:title"         content="Centro de Estudos da Metrópole" />
+      <meta property="og:description"   content="Centro de Estudos da Metrópole" />
+      <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
   </head>
   <body{{ attributes }}>
 
   <header class="header">
+    <div class="header-top-links">
+      <div class="inner wrapper">
+        <div class="social">
+          <ul>
+            <li class="icon-facebook">
+              <a href="href=http://facebook.com/sharer.php?u=/"><span>facebook</span></a>
+            </li>
+            <li class="icon-twitter">
+              <a href="#"><span>twitter</span></a>
+            </li>
+            <li class="icon-instagram">
+              <a href="#"><span>instagram</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-translate">
+          <ul>
+            <li class="header-top-btn-contact"><a href="/contato"><span> {% trans %}Fale Conosco e Imprensa{% endtrans %}</span></a></li>
+            <li class="header-top-btn-translate">{{ drupal_entity('block', 'seletordeidioma') }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="header-top">
       <div class="inner wrapper">
         <a href="/">
           <h1 class="logo">
             <span class="title">{% trans %}CEM{% endtrans %}</span>
-
             <span class="sub-title">{% trans %}Centro de Estudos da Metrópole{% endtrans %}</span>
-
           </h1>
         </a>
         <div class="header-search">
-          <!--<form action="/busca" method="get">
-            <div>
-              <input type="text" placeholder="pesquisar no site" class="search-field" name="busca_geral">
-              <input type="submit" value="buscar" class="search-button">
-            </div>
-          </form>-->
             {{ drupal_entity('block','formularioexpostobuscabusca_geral') }}
         </div>
-          {% trans %}
-        <a href="/fale-conosco" class="header-top-btn-contact"><span>Fale Conosco e Imprensa</span></a>
-          {% endtrans %}
-            {{ drupal_entity('block', 'seletordeidioma') }}
       </div>
     </div>
 

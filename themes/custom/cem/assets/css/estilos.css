@@ -35,45 +35,45 @@
 */
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:100,300,400,500,700");
 /* line 244, cem/assets/scss/_helpers/_mixin.scss */
-.side-bar-banner:before, .download-item.with-map .map-box ._inner:before, .accordion:before, .accordion > .title:before, .accordion.open > .content:before, .side-bar-banner:after, .download-item.with-map .map-box ._inner:after, .accordion:after, .accordion > .title:after, .accordion.open > .content:after, .main:before, .main:after, .home-slider:before, .home-slider:after, .home-slider-item:before, .home-slider-item:after, .home-call-boxes:before, .home-call-boxes:after, .home-news:before, .home-news:after, .home-agenda:before, .home-agenda:after, .home-video:before, .home-video:after, .home-publications:before, .home-publications:after, .home-pesquisadores:before, .home-pesquisadores:after, .noticia-item:before, .noticia-item:after, .side-bar-box:before, .side-bar-box:after, .form-line:before, .form-line:after, .resolution-menu:before, .resolution-menu:after, .resolution-maps:before, .resolution-maps:after, .resolution-maps .maps-container .map-box:before, .resolution-maps .maps-container .map-box:after, .resolution-slider:before, .resolution-slider:after, .resolution-slider .resolution-slider-item:before, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:before, .resolution-slider .resolution-slider-item .image:after,
+.side-bar-banner:before, .download-item.with-map .map-box ._inner:before, .accordion:before, .accordion > .title:before, .accordion.open > .content:before, .header-top-links:before, .side-bar-banner:after, .download-item.with-map .map-box ._inner:after, .accordion:after, .accordion > .title:after, .accordion.open > .content:after, .header-top-links:after, .main:before, .main:after, .home-slider:before, .home-slider:after, .home-slider-item:before, .home-slider-item:after, .home-call-boxes:before, .home-call-boxes:after, .home-news:before, .home-news:after, .home-agenda:before, .home-agenda:after, .home-video:before, .home-video:after, .home-publications:before, .home-publications:after, .home-pesquisadores:before, .home-pesquisadores:after, .noticia-item:before, .noticia-item:after, .side-bar-box:before, .side-bar-box:after, .form-line:before, .form-line:after, .resolution-menu:before, .resolution-menu:after, .resolution-maps:before, .resolution-maps:after, .resolution-maps .maps-container .map-box:before, .resolution-maps .maps-container .map-box:after, .resolution-slider:before, .resolution-slider:after, .resolution-slider .resolution-slider-item:before, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:before, .resolution-slider .resolution-slider-item .image:after,
 .resolution-slider .resolution-slider-item .title:before,
 .resolution-slider .resolution-slider-item .title:after,
 .resolution-slider .resolution-slider-item .text:before,
-.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:before, .quem-somos-menu:after, .publicacoes-artigos-grid-container:before, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:before, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:before, .header-search.publicoes-search:after, .publicacoes-livros-interna:before, .publicacoes-livros-interna:after, .eventos-main:before, .eventos-main:after, .evento-slider-foto-container .evento-fotos-slider-box:before, .evento-slider-foto-container .evento-fotos-slider-box:after, .agenda-slider-wrapper:before, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:before, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:before, .agenda-slider:after, .calendar-wrapper:before, .calendar-wrapper:after, .search-items-wrapper:before, .search-items-wrapper:after, header.header:before, header.header:after, .header-top:before, .header-top:after, .header-search:before, .header-search:after, .header-menu:before, .header-menu:after, .footer:before, .footer:after, .footer-newsletter:before, .footer-newsletter:after, .footer-navigation:before, .footer-navigation:after, .footer-nav-infos .social:before, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:before, .footer-nav-infos .footer-nav:after, .footer-copy:before, .footer-copy:after, .internas-container:before, .internas-container:after {
+.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:before, .quem-somos-menu:after, .publicacoes-artigos-grid-container:before, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:before, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:before, .header-search.publicoes-search:after, .publicacoes-livros-interna:before, .publicacoes-livros-interna:after, .eventos-main:before, .eventos-main:after, .evento-slider-foto-container .evento-fotos-slider-box:before, .evento-slider-foto-container .evento-fotos-slider-box:after, .agenda-slider-wrapper:before, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:before, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:before, .agenda-slider:after, .calendar-wrapper:before, .calendar-wrapper:after, .search-items-wrapper:before, .search-items-wrapper:after, header.header:before, header.header:after, .header-top:before, .header-top:after, .header-search:before, .header-search:after, .header-top-links .social:before, .header-top-links .social:after, .header-top-links .contact-translate:before, .header-top-links .contact-translate:after, .header-menu:before, .header-menu:after, .footer:before, .footer:after, .footer-newsletter:before, .footer-newsletter:after, .footer-navigation:before, .footer-navigation:after, .footer-nav-infos .social:before, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:before, .footer-nav-infos .footer-nav:after, .footer-copy:before, .footer-copy:after, .internas-container:before, .internas-container:after {
   content: " ";
   display: table;
 }
 
 /* line 249, cem/assets/scss/_helpers/_mixin.scss */
-.side-bar-banner:after, .download-item.with-map .map-box ._inner:after, .accordion:after, .accordion > .title:after, .accordion.open > .content:after, .main:after, .home-slider:after, .home-slider-item:after, .home-call-boxes:after, .home-news:after, .home-agenda:after, .home-video:after, .home-publications:after, .home-pesquisadores:after, .noticia-item:after, .side-bar-box:after, .form-line:after, .resolution-menu:after, .resolution-maps:after, .resolution-maps .maps-container .map-box:after, .resolution-slider:after, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:after,
+.side-bar-banner:after, .download-item.with-map .map-box ._inner:after, .accordion:after, .accordion > .title:after, .accordion.open > .content:after, .header-top-links:after, .main:after, .home-slider:after, .home-slider-item:after, .home-call-boxes:after, .home-news:after, .home-agenda:after, .home-video:after, .home-publications:after, .home-pesquisadores:after, .noticia-item:after, .side-bar-box:after, .form-line:after, .resolution-menu:after, .resolution-maps:after, .resolution-maps .maps-container .map-box:after, .resolution-slider:after, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:after,
 .resolution-slider .resolution-slider-item .title:after,
-.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:after, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:after, .publicacoes-livros-interna:after, .eventos-main:after, .evento-slider-foto-container .evento-fotos-slider-box:after, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:after, .calendar-wrapper:after, .search-items-wrapper:after, header.header:after, .header-top:after, .header-search:after, .header-menu:after, .footer:after, .footer-newsletter:after, .footer-navigation:after, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:after, .footer-copy:after, .internas-container:after {
+.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:after, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:after, .publicacoes-livros-interna:after, .eventos-main:after, .evento-slider-foto-container .evento-fotos-slider-box:after, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:after, .calendar-wrapper:after, .search-items-wrapper:after, header.header:after, .header-top:after, .header-search:after, .header-top-links .social:after, .header-top-links .contact-translate:after, .header-menu:after, .footer:after, .footer-newsletter:after, .footer-navigation:after, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:after, .footer-copy:after, .internas-container:after {
   clear: both;
 }
 
 /* line 253, cem/assets/scss/_helpers/_mixin.scss */
-.side-bar-banner, .download-item.with-map .map-box ._inner, .accordion, .accordion > .title, .accordion.open > .content, .main, .home-slider, .home-slider-item, .home-call-boxes, .home-news, .home-agenda, .home-video, .home-publications, .home-pesquisadores, .noticia-item, .side-bar-box, .form-line, .resolution-menu, .resolution-maps, .resolution-maps .maps-container .map-box, .resolution-slider, .resolution-slider .resolution-slider-item, .resolution-slider .resolution-slider-item .image,
+.side-bar-banner, .download-item.with-map .map-box ._inner, .accordion, .accordion > .title, .accordion.open > .content, .header-top-links, .main, .home-slider, .home-slider-item, .home-call-boxes, .home-news, .home-agenda, .home-video, .home-publications, .home-pesquisadores, .noticia-item, .side-bar-box, .form-line, .resolution-menu, .resolution-maps, .resolution-maps .maps-container .map-box, .resolution-slider, .resolution-slider .resolution-slider-item, .resolution-slider .resolution-slider-item .image,
 .resolution-slider .resolution-slider-item .title,
-.resolution-slider .resolution-slider-item .text, .quem-somos-menu, .publicacoes-artigos-grid-container, .publicacoes-artigos-grid-container > div, .header-search.publicoes-search, .publicacoes-livros-interna, .eventos-main, .evento-slider-foto-container .evento-fotos-slider-box, .agenda-slider-wrapper, .agenda-slider-wrapper .box-legenda, .agenda-slider, .calendar-wrapper, .search-items-wrapper, header.header, .header-top, .header-search, .header-menu, .footer, .footer-newsletter, .footer-navigation, .footer-nav-infos .social, .footer-nav-infos .footer-nav, .footer-copy, .internas-container {
+.resolution-slider .resolution-slider-item .text, .quem-somos-menu, .publicacoes-artigos-grid-container, .publicacoes-artigos-grid-container > div, .header-search.publicoes-search, .publicacoes-livros-interna, .eventos-main, .evento-slider-foto-container .evento-fotos-slider-box, .agenda-slider-wrapper, .agenda-slider-wrapper .box-legenda, .agenda-slider, .calendar-wrapper, .search-items-wrapper, header.header, .header-top, .header-search, .header-top-links .social, .header-top-links .contact-translate, .header-menu, .footer, .footer-newsletter, .footer-navigation, .footer-nav-infos .social, .footer-nav-infos .footer-nav, .footer-copy, .internas-container {
   *zoom: 1;
 }
 
 /* line 257, cem/assets/scss/_helpers/_mixin.scss */
-.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul, .side-bar-cem-na-midia, .resolution-menu .inner ul, .quem-somos-menu ul, .que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul, .quem-somos-conteudo-col fieldset > div > ul, .publicacoes-livros-interna .livro-display .actions ul, .agenda-slider-wrapper .box-legenda ul, .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul, .download-item .extension-wrapper, .header-menu > .inner > ul, .header-menu > .inner > ul > li > ul, .footer-nav-infos .social ul, .footer-nav-infos .footer-nav ul {
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul, .side-bar-cem-na-midia, .resolution-menu .inner ul, .quem-somos-menu ul, .que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul, .quem-somos-conteudo-col fieldset > div > ul, .publicacoes-livros-interna .livro-display .actions ul, .agenda-slider-wrapper .box-legenda ul, .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul, .download-item .extension-wrapper, .header-top-links .social ul, .header-top-links .contact-translate ul, .header-menu > .inner > ul, .header-menu > .inner > ul > li > ul, .footer-nav-infos .social ul, .footer-nav-infos .footer-nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 /* line 263, cem/assets/scss/_helpers/_mixin.scss */
-.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul, .side-bar-cem-na-midia, .resolution-menu .inner ul, .quem-somos-menu ul, .que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul, .quem-somos-conteudo-col fieldset > div > ul, .publicacoes-livros-interna .livro-display .actions ul, .agenda-slider-wrapper .box-legenda ul, .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul, .download-item .extension-wrapper, .header-menu > .inner > ul, .header-menu > .inner > ul > li > ul, .footer-nav-infos .social ul, .footer-nav-infos .footer-nav ul {
+.home-pesquisadores .home-pesquisadores-box .home-pesquisadores-item div.social ul, .side-bar-cem-na-midia, .resolution-menu .inner ul, .quem-somos-menu ul, .que-somos-menu-col .block-facet--checkbox .facets-widget-checkbox ul, .quem-somos-conteudo-col fieldset > div > ul, .publicacoes-livros-interna .livro-display .actions ul, .agenda-slider-wrapper .box-legenda ul, .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul, .download-item .extension-wrapper, .header-top-links .social ul, .header-top-links .contact-translate ul, .header-menu > .inner > ul, .header-menu > .inner > ul > li > ul, .footer-nav-infos .social ul, .footer-nav-infos .footer-nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 /* line 269, cem/assets/scss/_helpers/_mixin.scss */
-.side-bar-banner, .download-item.with-map .map-box ._inner, .accordion, .accordion > .title, .accordion.open > .content {
+.side-bar-banner, .download-item.with-map .map-box ._inner, .accordion, .accordion > .title, .accordion.open > .content, .header-top-links {
   position: relative;
   float: left;
   width: 100%;
@@ -6215,14 +6215,14 @@ header.header {
   padding: 26px 0;
 }
 
-/* line 6, cem/assets/scss/_layout/_header/_header-top.scss */
+/* line 7, cem/assets/scss/_layout/_header/_header-top.scss */
 .header-top .inner {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-/* line 15, cem/assets/scss/_layout/_header/_header-top.scss */
+/* line 16, cem/assets/scss/_layout/_header/_header-top.scss */
 .header-top .logo {
   float: left;
   min-height: 60px;
@@ -6232,7 +6232,7 @@ header.header {
   font-weight: normal;
 }
 
-/* line 22, cem/assets/scss/_layout/_header/_header-top.scss */
+/* line 24, cem/assets/scss/_layout/_header/_header-top.scss */
 .header-top .logo span.title {
   display: block;
   width: 100%;
@@ -6243,34 +6243,34 @@ header.header {
   color: #303030;
 }
 
-/* line 30, cem/assets/scss/_layout/_header/_header-top.scss */
+/* line 33, cem/assets/scss/_layout/_header/_header-top.scss */
 .header-top .logo span.sub-title {
   display: block;
   width: 100%;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 17px;
-  color: #676F72;
+  color: #676f72;
 }
 
-/* line 41, cem/assets/scss/_layout/_header/_header-top.scss */
+/* line 44, cem/assets/scss/_layout/_header/_header-top.scss */
 .header-search {
   position: relative;
   float: left;
   width: 100%;
   max-width: 410px;
   margin-top: 6px;
-  border: solid 1px #E1E1E1;
+  border: solid 1px #e1e1e1;
   border-radius: 50px;
   max-height: 46px;
 }
 
-/* line 51, cem/assets/scss/_layout/_header/_header-top.scss */
+/* line 55, cem/assets/scss/_layout/_header/_header-top.scss */
 .header-search > div {
   position: relative;
 }
 
-/* line 54, cem/assets/scss/_layout/_header/_header-top.scss */
+/* line 59, cem/assets/scss/_layout/_header/_header-top.scss */
 .header-search .search-field,
 .header-search #edit-busca-geral,
 .header-search .form-text {
@@ -6280,13 +6280,13 @@ header.header {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 13px;
-  color: #8B8B8B;
+  color: #8b8b8b;
   border: 0;
   background: transparent;
   outline: 0;
 }
 
-/* line 67, cem/assets/scss/_layout/_header/_header-top.scss */
+/* line 73, cem/assets/scss/_layout/_header/_header-top.scss */
 .header-search .search-select {
   position: absolute;
   right: 50px;
@@ -6295,19 +6295,19 @@ header.header {
   height: 20px;
   border-top: 0;
   border-bottom: 0;
-  border-left: solid 1px #E1E1E1;
-  border-right: solid 1px #E1E1E1;
+  border-left: solid 1px #e1e1e1;
+  border-right: solid 1px #e1e1e1;
   background: url(../img/icon-arrow-down-black.png) 70px center no-repeat;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 13px;
-  color: #8B8B8B;
+  color: #8b8b8b;
   -webkit-appearance: none;
   -moz-appearance: none;
   padding-left: 10px;
 }
 
-/* line 85, cem/assets/scss/_layout/_header/_header-top.scss */
+/* line 92, cem/assets/scss/_layout/_header/_header-top.scss */
 .header-search .search-button,
 .header-search #edit-submit-busca {
   position: absolute;
@@ -6321,21 +6321,104 @@ header.header {
   outline: 0;
 }
 
-/* line 98, cem/assets/scss/_layout/_header/_header-top.scss */
+/* line 106, cem/assets/scss/_layout/_header/_header-top.scss */
 .header-search form label {
   display: none;
 }
 
-/* line 105, cem/assets/scss/_layout/_header/_header-top.scss */
-.header-top .header-top-btn-contact {
+/* line 125, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top-links {
+  float: none;
+  background-color: #f5f5f5;
+  border-top: solid 2px #ffffff;
+  border-bottom: solid 1px #cbcbcb;
+}
+
+/* line 132, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top-links .inner {
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 138, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top-links .social {
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+/* line 147, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top-links .social ul li {
+  float: left;
+  width: 22px;
+  height: 22px;
+  margin-right: 20px;
+}
+
+/* line 153, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top-links .social ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 158, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top-links .social ul li a span {
+  position: absolute;
+  left: -9999px;
+}
+
+/* line 164, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top-links .social ul li.icon-facebook {
+  background: url(../img/icon-footer-social-facebook.png) center no-repeat;
+  background-size: contain;
+}
+
+/* line 169, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top-links .social ul li.icon-twitter {
+  background: url(../img/icon-footer-social-twitter.png) center no-repeat;
+  background-size: contain;
+}
+
+/* line 174, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top-links .social ul li.icon-instagram {
+  background: url(../img/icon-footer-social-instagram.png) center no-repeat;
+  background-size: contain;
+}
+
+/* line 182, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top-links .contact-translate {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+
+/* line 191, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top-links .contact-translate ul li {
   float: left;
   height: 21px;
-  right: 0;
-  background: url(../img/icon-mail.png) left center no-repeat;
   padding-left: 33px;
+}
+
+/* line 196, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top-links .contact-translate ul li a {
   font-size: 13px;
   color: #676767;
-  margin-top: 20px;
+}
+
+/* line 201, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top-links .contact-translate ul li.header-top-btn-contact {
+  background: url(../img/icon-mail.png) left center no-repeat;
+  background-size: contain;
+  padding-right: 20px;
+}
+
+/* line 206, cem/assets/scss/_layout/_header/_header-top.scss */
+.header-top-links .contact-translate ul li.header-top-btn-translate {
+  padding-left: 25px;
+  background: url(../img/icon-translate.png) left center no-repeat;
+  background-size: contain;
 }
 
 /* line 1, cem/assets/scss/_layout/_header/_menu.scss */
