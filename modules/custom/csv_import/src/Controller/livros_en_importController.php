@@ -38,11 +38,9 @@ class livros_en_importController extends ControllerBase
         }
         fclose($h);
 //        $base = array_slice($base,795,4);  // Payload de teste
-//        kint($base);
-//        exit();
         $head = array_shift($base);
         $autor = array();
-        $nid   = 0;
+        $nid   = 5432;
         $count = 0;
         foreach ($base as $value) {
 
@@ -56,11 +54,8 @@ class livros_en_importController extends ControllerBase
                     $file_entity = array_combine($files, $description);
                 }
                 $count++;
-                $nid = 5432;
-                $nid++;
-//                kint($nid);
-//                exit();
                 $node = Node::load($nid);
+                $nid++;
                 $translated_fields = [];
                 $documentos = [];
 
