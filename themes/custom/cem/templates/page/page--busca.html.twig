@@ -6,7 +6,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12">
-                       <h1 class="title-page"><span class="sub-title">busca avançada</span></h1>
+                        <h1 class="title-page icon icon-search">busca avançada</h1>
                     </div>
                 </div>
             </div>
@@ -23,22 +23,10 @@
                     </div>
 
                     <div class="col-md-8 col-xs-12 quem-somos-conteudo-col">
-                        <div class="header-search publicoes-search">
-                           <!-- <form method="get">
-                                <div>
-                                    <input type="text" placeholder="pesquisar" class="search-field" name="busca_geral">
-                                    <input type="submit" value="buscar" class="search-button">
-                                </div>
-                            </form>-->
-                            {{ drupal_entity('block','formularioexpostobuscabusca_geral') }}
-                        </div>
                         <div class="row quem-somos-perfis-content">
                             {{ drupal_view('busca','busca_geral') }}
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </div>

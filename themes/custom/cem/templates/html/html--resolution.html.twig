@@ -36,36 +36,40 @@
                 </head>
 <body{{ attributes }}>
 <header class="header">
+    <div class="header-top-links">
+        <div class="inner wrapper">
+            <div class="social">
+                <ul>
+                    <li class="icon-facebook">
+                        <a href="//facebook.com/sharer.php?u=/"><span>facebook</span></a>
+                    </li>
+                    <li class="icon-twitter">
+                        <a href="#"><span>twitter</span></a>
+                    </li>
+                    <li class="icon-instagram">
+                        <a href="#"><span>instagram</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-translate">
+                <ul>
+                    <li class="header-top-btn-contact"><a href="/fale-conosco"><span> {% trans %}Fale Conosco e Imprensa{% endtrans %}</span></a></li>
+                    <li class="header-top-btn-translate">{{ drupal_entity('block', 'seletordeidioma') }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="header-top">
         <div class="inner wrapper">
             <a href="/">
                 <h1 class="logo">
-                    <span class="title">CEM</span>
-                    {% trans %}
-                    <span class="sub-title">Centro de Estudo da Metrópole</span>
-                    {% endtrans %}
+                    <span class="title">{% trans %}CEM{% endtrans %}</span>
+                    <span class="sub-title">{% trans %}Centro de Estudos da Metrópole{% endtrans %}</span>
                 </h1>
             </a>
             <div class="header-search">
-                <form>
-                    <div>
-                        <input type="text" placeholder="pesquisar no site" class="search-field">
-                        <input type="submit" value="buscar" class="search-button">
-                    </div>
-                </form>
+                {{ drupal_entity('block','formularioexpostobuscabusca_geral') }}
             </div>
-            {% trans %}
-            <a href="/fale-conosco" class="header-top-btn-contact"><span>Fale Conosco e Impresa</span></a>
-            {% endtrans %}
-            <ul id="custom-menu-language" class="navbar-right navbar-nav">
-                <li>
-                    {% if (language == 'en') %}
-                        <a href="/pt-br/">(português)</a>
-                    {% elseif (language == 'pt-br') %}
-                        <a href="/en/">(english)</a>
-                    {% endif %}
-                </li>
-            </ul>
         </div>
     </div>
 </header>
