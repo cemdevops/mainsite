@@ -30,13 +30,14 @@ class livros_en_importController extends ControllerBase
         }
 
         $filePath = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
-        $publicacoes = $filePath . "/csv_file_pt-br.csv";
+        $publicacoes = $filePath . "/csv_file_en.csv";
         $h = fopen($publicacoes, "r");
         $base = [];
         while (($data = fgetcsv($h, 100000, "|")) !== FALSE) {
             $base[] = $data;
         }
         fclose($h);
+//        $base = array_slice($base,795,4);  // Payload de teste
 //        kint($base);
 //        exit();
         $head = array_shift($base);
@@ -54,8 +55,10 @@ class livros_en_importController extends ControllerBase
                     $file_entity = array_combine($files, $description);
                 }
                 $count++;
-                $node = Node::load($value[0]);
-//                $nid = $value[0] + 4729;
+                $nid = $value[0] + 4631;
+//                kint($nid);
+//                exit();
+                $node = Node::load($nid);
                 $translated_fields = [];
                 $documentos = [];
 
@@ -93,9 +96,9 @@ class livros_en_importController extends ControllerBase
                     'uri' => $value[4],
                     'title' => $value[5],
                 ];
-                if ($value[9] != "") {
-                    $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $value[9];
-                    $uri = file_unmanaged_copy($file_source, 'public://' . $value[9], FILE_EXISTS_REPLACE);
+                if ($value[10] != "") {
+                    $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $value[10];
+                    $uri = file_unmanaged_copy($file_source, 'public://' . $value[10], FILE_EXISTS_REPLACE);
                     $files = File::Create(['uri' => $uri]);
                     $files->save();
                     $imagem_capa = [

@@ -53,7 +53,7 @@ class publicacoes_en_importController extends ControllerBase {
                     $file_entity = array_combine($files, $description);
                 }
                 $count++;
-//                $nid = $value[0] + 4729;
+                $nid = $value[0] + 4729;
 //                kint($nid);
 //                exit();
                 $node = Node::load($nid);

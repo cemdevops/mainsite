@@ -34,13 +34,14 @@ class livros_importController extends ControllerBase {
             $base[] = $data;
         }
         fclose($h);
+//        $base = array_slice($base,795,4);  // Payload de teste
 //        kint($base);
 //        exit();
         $head  = array_shift($base);
         $autor = array();
         $count = 0;
         foreach($base as $value) {
-
+            kint($value[9]);
             if($value[1] == 'Livro'):
                 $files = explode('#', $value[6]);
                 $description = explode('#', $value[7]);
@@ -75,10 +76,9 @@ class livros_importController extends ControllerBase {
                     }
                 }
                 // Imagem capa do livro
-
-                if ($value[9] != "") {
-                    $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $value[9];
-                    $uri = file_unmanaged_copy($file_source, 'public://' . $value[9], FILE_EXISTS_REPLACE);
+                if ($value[10] != "") {
+                    $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $value[10];
+                    $uri = file_unmanaged_copy($file_source, 'public://' . $value[10], FILE_EXISTS_REPLACE);
                     $files = File::Create(['uri' => $uri]);
                     $files->save();
                     $imagem_capa = [
