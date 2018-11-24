@@ -1,94 +1,127 @@
 .home-call-boxes {
     width: 100%;
     position: relative;
-    min-height: 230px;
+    background: url(../img/home-infos-bg.jpg) center center no-repeat;
+    background-size: cover;
     @include cf();
-    &>.detail-left,
-    &>.detail-right {
-        position: absolute;
-        top: 0;
-        display: block;
-        width: 50%;
-        height: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    &>.detail-left {
-        left: 0;
-        background-image: url(../img/home-cem-pesquisa-bg.jpg);
-        background-position: right top;
-    }
-    &>.detail-right {
-        right: 0;
-        background-image: url(../img/home-cem-escolas.jpg);
-        background-position: left top;
-    }
-    @include mqrange(0, 520px) {
-        min-height: auto;
-        &>.detail-left,
-        &>.detail-right {
-            display: none;
-        }
-    }
+    
+    
     &>.inner {
+        min-height: 230px;
         display: flex;
-        @include mqrange(0, 520px) {
-            display: block;
-        }
-        &>.home-call-box-item {
+        align-items: center;
+        justify-content: space-around;
+        .home-info-item{
             display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            float: left;
-            width: 50%;
-            min-height: 230px;
-            text-align: center;
             color: #ffffff;
-            padding-top: 55px;
-            padding-bottom: 15px;
-            span.call {
-                display: block;
-                width: 100%;
-                text-align: center;
-                padding-top: 55px;
-                font-weight: 300;
-                font-size: 23px;
-            }
-            h2 {
-                padding: 5px 0 0;
+            font-weight: 500;
+            font-size: 17px;
+            text-align: center;
+            flex-direction: column;
+            p{
                 margin: 0;
-                @include font-roboto(300);
-                font-size: 30px;
             }
-            a {
-                color: inherit;
-            }
-            &.box-left {
-                span.call {
-                    background: url(../img/icon-chart-frame.png) top center no-repeat;
-                }
-            }
-            &.box-right {
-                span.call {
-                    background: url(../img/icon-lupa.png) top center no-repeat;
-                }
-            }
-            @include mqrange(0, 520px) {
-                width: 100%;
-                &.box-left {
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-image: url(../img/home-cem-pesquisa-bg.jpg);
-                    background-position: right top;
-                }
-                &.box-right {
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-image: url(../img/home-cem-escolas.jpg);
-                    background-position: right top;
-                }
+            .number{
+                display: block;
+                text-align: center;
+                font-size: 45px;
             }
         }
     }
 }
+// .home-call-boxes {
+//     width: 100%;
+//     position: relative;
+//     min-height: 230px;
+//     background: url(../img/home-infos-bg.jpg) center center no-repeat;
+//     background-size: cover;
+//     @include cf();
+//     &>.detail-left,
+//     &>.detail-right {
+//         position: absolute;
+//         top: 0;
+//         display: block;
+//         width: 50%;
+//         height: 100%;
+//         background-size: cover;
+//         background-repeat: no-repeat;
+//     }
+//     &>.detail-left {
+//         left: 0;
+//         background-image: url(../img/home-cem-pesquisa-bg.jpg);
+//         background-position: right top;
+//     }
+//     &>.detail-right {
+//         right: 0;
+//         background-image: url(../img/home-cem-escolas.jpg);
+//         background-position: left top;
+//     }
+//     @include mqrange(0, 520px) {
+//         min-height: auto;
+//         &>.detail-left,
+//         &>.detail-right {
+//             display: none;
+//         }
+//     }
+//     &>.inner {
+//         display: flex;
+//         @include mqrange(0, 520px) {
+//             display: block;
+//         }
+//         &>.home-call-box-item {
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             flex-wrap: wrap;
+//             float: left;
+//             width: 50%;
+//             min-height: 230px;
+//             text-align: center;
+//             color: #ffffff;
+//             padding-top: 55px;
+//             padding-bottom: 15px;
+//             span.call {
+//                 display: block;
+//                 width: 100%;
+//                 text-align: center;
+//                 padding-top: 55px;
+//                 font-weight: 300;
+//                 font-size: 23px;
+//             }
+//             h2 {
+//                 padding: 5px 0 0;
+//                 margin: 0;
+//                 @include font-roboto(300);
+//                 font-size: 30px;
+//             }
+//             a {
+//                 color: inherit;
+//             }
+//             &.box-left {
+//                 span.call {
+//                     background: url(../img/icon-chart-frame.png) top center no-repeat;
+//                 }
+//             }
+//             &.box-right {
+//                 span.call {
+//                     background: url(../img/icon-lupa.png) top center no-repeat;
+//                 }
+//             }
+//             @include mqrange(0, 520px) {
+//                 width: 100%;
+//                 &.box-left {
+//                     background-size: cover;
+//                     background-repeat: no-repeat;
+//                     background-image: url(../img/home-cem-pesquisa-bg.jpg);
+//                     background-position: right top;
+//                 }
+//                 &.box-right {
+//                     background-size: cover;
+//                     background-repeat: no-repeat;
+//                     background-image: url(../img/home-cem-escolas.jpg);
+//                     background-position: right top;
+//                 }
+//             }
+//         }
+//     }
+// }

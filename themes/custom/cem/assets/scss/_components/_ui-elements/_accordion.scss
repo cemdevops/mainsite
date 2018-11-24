@@ -1,0 +1,44 @@
+.accordion {
+  @extend %container;
+  font-size: 15px;
+  border: solid 1px #d4d4d4;
+  margin: 0 0 25px;
+  padding: 10px 15px;
+  & > .title {
+    @extend %container;
+    @include font-roboto(500);
+    font-size: 17px;
+    color: #00b8b8;
+    cursor: pointer;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -3px;
+      width: 5px;
+      height: 5px;
+      border-right: solid 1px #333;
+      border-bottom: solid 1px #333;
+      transform-origin: center;
+      transform: rotate(-45deg);
+      transition: all 0.2s linear;
+    }
+  }
+  & > .content {
+    display: none;
+  }
+  &.open {
+    & > .title {
+      &:after {
+        transform: rotate(45deg);
+      }
+    }
+    & > .content {
+      display: block;
+      @extend %container;
+      padding-top: 25px;
+    }
+  }
+}

@@ -1,0 +1,237 @@
+.agenda-slider {
+    width: 100%;
+    @include cf();
+    .inner {
+        position: relative;
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 60px;
+        button.slick-arrow {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            width: 62px;
+            height: 135px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background-color: transparent;
+            font-size: 0;
+            outline: none;
+            cursor: pointer;
+            &:before {
+                display: block;
+                content: '';
+                width: 62px;
+                height: 62px;
+                background-image: url(../img/arrows-circle-big.png);
+                background-repeat: no-repeat;
+                pointer-events: none;
+                cursor: pointer;
+            }
+            &.slick-prev {
+                left: 0;
+                // margin-left: -50px;
+            }
+            &.slick-next {
+                right: 0;
+                // margin-right: -50px;
+                &:before {
+                    background-position: right center;
+                }
+            }
+        }
+    }
+    .slick-list {
+        width: 100%;
+    }
+}
+
+.agenda-item {
+    float: left;
+    width: 25%;
+    height: 280px;
+    position: relative;
+    .link-body {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+    .days-wrapper {
+        display: none;
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        pointer-events: none;
+        width: 100%;
+        height: 135px;
+        .days {
+            position: relative;
+            display: table;
+            width: 98px;
+            height: 98px;
+            margin: 0 auto 0;
+            // @include vtal();
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: inset 0px 0px 0px 3px #E1E1E1; // z-index: 2;
+            overflow: hidden;
+            &>.day {
+                font-family: 'Titillium Web', sans-serif;
+                font-weight: 600;
+                color: #002A4A;
+                text-align: center;
+                font-size: 26px;
+                line-height: 22px;
+                height: 100%;
+                vertical-align: middle;
+                display: table-cell;
+                &>a {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                }
+                &>.day-element {
+                    display: block;
+                    font-size: 20px;
+                    font-weight: 900;
+                    color: #4C9AA0;
+                }
+                &>.month-element {
+                    font-size: 11px;
+                    text-transform: capitalize;
+                    color: #6A6A6A;
+                    font-weight: 700;
+                }
+                &+.day {
+                    position: relative;
+                    &:before {
+                        content: '-';
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        left: 0;
+                        margin-left: -9px;
+                        width: 18px;
+                        height: 100%;
+                        font-size: 17px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .infos {
+        width: 100%;
+        height: 100%;
+        padding: 135px 8px 19px;
+        padding: 115px 8px 19px; 
+        padding: 95px 8px 19px; 
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        .category {
+            position: relative;
+            width: 100%;
+            height: 70px;
+            border-bottom: dashed 1px #AEAEAE;
+            padding-top: 35px;
+            font-size: 13px;
+            font-weight: 400;
+            color: #727272;
+            text-align: center;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                margin: 0 auto;
+                top: 0;
+                width: 10px;
+                height: 10px;
+                box-shadow: 0 0 0 10px #086AAB;
+                border-radius: 50%;
+                left: 50%;
+                margin-left: -5px;
+            }
+        }
+        .description {
+            width: 100%;
+            height: 84px;
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: 400;
+            color: #727272;
+            text-align: center;
+            padding: 10px 10px 0;
+            p {
+                margin: 0;
+                padding: 0;
+                font-size: inherit;
+                font-weight: inherit;
+                line-height: inherit;
+            }
+            a {
+                color: #727272;
+            }
+        }
+        .hour {
+            width: 100%;
+            max-width: 90px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-size: 13px;
+            color: #7F7F7F;
+            border-radius: 4px;
+            background-color: #fff;
+            padding: 5px 0;
+        }
+    }
+    &.cursos,
+    &[data-filter="cursos"] {
+        .infos {
+            .category {
+                &:before {
+                    box-shadow: 0 0 0 10px #61B16F;
+                }
+            }
+        }
+    }
+    &.palestras,
+    &[data-filter="palestras"] {
+        .infos {
+            .category {
+                &:before {
+                    box-shadow: 0 0 0 10px #086AAB;
+                }
+            }
+        }
+    }
+    &.eventos,
+    &[data-filter="eventos"] {
+        .infos {
+            .category {
+                &:before {
+                    box-shadow: 0 0 0 10px #F39507;
+                }
+            }
+        }
+    }
+    &[class="datas comemorativas/feriados"],
+    &[data-filter="datas comemorativas/feriados"] {
+        .infos {
+            .category {
+                &:before {
+                    box-shadow: 0 0 0 10px #BE120E;
+                }
+            }
+        }
+    }
+}
