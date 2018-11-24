@@ -42,6 +42,7 @@ class livros_en_importController extends ControllerBase
 //        exit();
         $head = array_shift($base);
         $autor = array();
+        $nid   = 0;
         $count = 0;
         foreach ($base as $value) {
 
@@ -55,7 +56,8 @@ class livros_en_importController extends ControllerBase
                     $file_entity = array_combine($files, $description);
                 }
                 $count++;
-                $nid = $value[0] + 4631;
+                $nid = 5432;
+                $nid++;
 //                kint($nid);
 //                exit();
                 $node = Node::load($nid);
