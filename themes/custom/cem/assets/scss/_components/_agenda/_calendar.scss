@@ -1,0 +1,491 @@
+.calendar-wrapper {
+    width: 100%;
+    position: relative;
+    @include cf();
+    border-top: solid 5px #086AAB;
+    border-left: solid 1px #F0F0F0;
+    border-right: solid 1px #F0F0F0;
+}
+
+.calendar-header {
+    position: relative;
+    height: 65px;
+    background: #F4F4F4;
+    border-bottom: dashed 1px #C0C0C0;
+}
+
+.calendar-title {
+    font-size: 17px;
+    color: #525252;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+}
+
+// @media only screen and (max-width: 480px) {
+//     .calendar-title {
+//         padding-top: 13px;
+//         font-size: 22px;
+//     }
+// }
+// .calendar-month {
+//     position: relative;
+//     padding-right: 15px;
+//     color: #1e6581;
+//     text-transform: capitalize;
+// }
+.calendar-year:before {
+    content: ', ';
+}
+
+// @media only screen and (max-width: 480px) {
+//     .calendar-month:before {
+//         top: 16px;
+//     }
+// }
+// .calendar-year {
+//     padding-left: 8px;
+//     color: #1e6581;
+// }
+.calendar-prev,
+.calendar-next {
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    width: 90px;
+    height: 64px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:before {
+        display: block;
+        content: '';
+        width: 9px;
+        height: 10px;
+        background-image: url(../img/arrows-calendar.png);
+    }
+
+    span {
+        display: none;
+    }
+}
+
+.calendar-prev {
+    left: 0;
+    top: 0;
+    padding-left: 0; // border-left: solid 1px #C0C0C0;
+    border-right: dashed 1px #C0C0C0;
+
+    &:before {
+        background-position: left center;
+    }
+}
+
+.calendar-next {
+    right: 0;
+    top: 0; // border-right: solid 1px #C0C0C0;
+    border-left: dashed 1px #C0C0C0;
+
+    &:before {
+        background-position: right center;
+    }
+}
+
+.calendar-prev span,
+.calendar-next span {
+    display: none;
+    width: 36px;
+    height: 28px;
+    text-indent: -9999px;
+    background: url(/sites/all/themes/jornalpuc/assets/img/agenda-arrows.svg) no-repeat 0 0;
+}
+
+.calendar-prev span {
+    background-position: 18px 0px;
+}
+
+.calendar-next span {
+    background-position: -18px 0px;
+}
+
+.calendar-calendar {
+    float: left;
+    z-index: 2;
+    position: relative;
+    width: 70%;
+    max-width: 420px;
+    border-spacing: 0;
+
+    td {
+        padding: 0;
+    }
+}
+
+.calendar-calendar .calendar-week-end {
+    color: rgba(23, 96, 125, 0.75);
+}
+
+.calendar-calendar .day-week-end {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #666666;
+}
+
+.calendar-calendar th {
+    height: 60px;
+    border: 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+.calendar-calendar td {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #6A6A6A;
+    height: 60px;
+    text-decoration: none;
+}
+
+.calendar-calendar td a {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 650px) {
+    .calendar-calendar td {
+        font-size: 13px;
+    }
+}
+
+.calendar-calendar .status-default {
+    display: block;
+    outline: none;
+    text-decoration: none;
+    color: #6A6A6A;
+}
+
+.calendar-calendar {
+    .status-active {
+        color: #ffffff;
+        text-decoration: none;
+        background: url(../img/calendar-status-palestras.png) center no-repeat;
+        background-size: 30px;
+    }
+
+    .status-active-cursos {
+        color: #ffffff;
+        text-decoration: none;
+        background: url(../img/calendar-status-cursos.png) center no-repeat;
+        background-size: 30px;
+    }
+
+    .status-active-palestra {
+        color: #ffffff;
+        text-decoration: none;
+        background: url(../img/calendar-status-palestras.png) center no-repeat;
+        background-size: 30px;
+    }
+
+    .status-active-eventos {
+        color: #ffffff;
+        text-decoration: none;
+        background: url(../img/calendar-status-eventos.png) center no-repeat;
+        background-size: 30px;
+    }
+
+    .status-active-datas {
+        color: #ffffff;
+        text-decoration: none;
+        background: url(../img/calendar-status-datas.png) center no-repeat;
+        background-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:1060px) {
+    .calendar-calendar {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media only screen and (min-width: 0) and (max-width:720px) {
+    .calendar-calendar {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.calendar-other-month .status-default {
+    color: #17607D;
+}
+
+.calendar .sorting {
+    font-size: 18px;
+    width: 230px;
+    float: right;
+}
+
+.calendar .sorting ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.calendar .sorting ul li {
+    text-transform: capitalize;
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+.calendar .sorting ul li.ev-title {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #666666;
+    padding: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+.calendar .sorting ul li a {
+    display: block;
+}
+
+.calendar .sorting ul li a:hover {
+    font-weight: 700;
+}
+
+.calendar .sorting ul li a.cursos:before {
+    background: #61B16F;
+}
+
+.calendar .sorting ul li a.palestras:before {
+    background: #086AAB;
+}
+
+.calendar .sorting ul li a.eventos:before {
+    background: #F39507;
+}
+
+.calendar .sorting ul li a[class="datas comemorativas/feriados"]:before {
+    background: #BE120E;
+}
+
+.calendar .sorting ul li a:before {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    content: '';
+    float: left;
+    margin-right: 10px;
+}
+
+@media only screen and (min-width: 768px) and (max-width:1060px) {
+    .calendar .sorting {
+        width: 100%;
+    }
+
+    .calendar .sorting ul li {
+        float: left;
+        width: auto;
+        padding: 10px;
+    }
+
+    .calendar .sorting ul li.ev-title {
+        width: 100%;
+        padding: 10px 5px;
+        background: rgba(30, 125, 149, 0.1);
+        margin-bottom: 5px;
+    }
+
+    .calendar .sorting ul li a {
+        display: flex;
+        align-items: center;
+    }
+
+    .calendar .sorting ul li a:before {
+        width: 15px !important;
+        height: 15px !important;
+    }
+}
+
+@media only screen and (min-width: 0) and (max-width:720px) {
+    .calendar .sorting {
+        width: 100%;
+    }
+
+    .calendar .sorting ul li {
+        float: left;
+        width: auto;
+        padding: 10px;
+    }
+
+    .calendar .sorting ul li.ev-title {
+        width: 100%;
+        padding: 10px 5px;
+        background: rgba(30, 125, 149, 0.1);
+        margin-bottom: 5px;
+    }
+
+    .calendar .sorting ul li a {
+        display: flex;
+        align-items: center;
+    }
+
+    .calendar .sorting ul li a:before {
+        width: 15px !important;
+        height: 15px !important;
+    }
+}
+
+.listagem-resultados {
+    width: 100%;
+    float: left;
+    padding: 10px 0;
+    border-top: solid 10px #F0F0F0;
+    border-bottom: solid 1px #F0F0F0;
+}
+
+.listagem-resultados .box-eventos {
+    padding: 30px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: dashed 1px #F0F0F0;
+}
+
+.listagem-resultados .box-eventos:last-child {
+    border-bottom: none;
+}
+
+.listagem-resultados .box-eventos .ev-periodo {
+    font-size: 11px;
+    color: #727272;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+
+    &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: #4D9BA1;
+        border-radius: 50%;
+        z-index: 1;
+        left: -7px;
+        top: -9px;
+    }
+
+    &.no-sphere {
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.listagem-resultados .box-eventos .ev-periodo .ev-date-box {
+    position: relative;
+    z-index: 2;
+}
+
+.listagem-resultados .box-eventos .ev-periodo .ev-dia {
+    color: #ffffff;
+    display: inline-block;
+    // margin-right: 15px;
+
+    .item-list {
+        ul {
+            @extend %cleanUl;
+
+            li {
+                display: inline-block;
+                text-align: center;
+                position: relative;
+                width: 36px;
+                height: 36px;
+                background-color: #4D9BA1;
+                border-radius: 50%;
+                line-height: 36px;
+                margin: 0 2px;
+                &:first-child{
+                    margin-left: 0;
+                }
+
+                &:before {
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    display: none;
+                    width: 30px;
+                    height: 30px;
+                    background-color: #4D9BA1;
+                    border-radius: 50%;
+                    left: -7px;
+                    top: -9px;
+                }
+            }
+        }
+    }
+}
+
+.listagem-resultados .box-eventos .ev-periodo .ev-mes {
+    display: none;
+}
+
+.listagem-resultados .box-eventos p.ev-descricao {
+    font-size: 15px;
+    color: #727272;
+    padding: 0;
+    margin: 0;
+    // margin-left: 10px;
+    padding-left: 10px;
+    border-left: dashed 1px #F0F0F0;
+}
+
+@media only screen and (max-width: 650px) {
+    .listagem-resultados .box-eventos {
+        flex-direction: column;
+        padding: 15px 0;
+        margin: 0 10px;
+    }
+
+    .listagem-resultados .box-eventos .ev-periodo {
+        flex: auto;
+        width: 100%;
+        padding: 0 0 10px;
+    }
+
+    .listagem-resultados .box-eventos p.ev-descricao {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.ev-date-box+.ev-date-box {
+    padding-left: 18px;
+    position: relative;
+}
+
+.ev-date-box+.ev-date-box:before {
+    content: '-';
+    position: absolute;
+    left: 2px;
+    font-size: 33px;
+}

@@ -1,0 +1,50 @@
+.search-items-wrapper {
+    float: left;
+    width: 100%;
+    @include cf();
+    .search-item {
+        float: left;
+        width: 100%;
+        padding: 40px 0;
+        border-bottom: dashed 1px #D1D1D1;
+        .tipo{
+            float: left;
+            width: 200px;
+            padding: 6px 0;
+            font-size: 12px;
+            text-transform: lowercase;
+            @include font-roboto(500);
+            color: #ffffff;
+            background-color: #086AAB;
+            text-align: center;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .data{
+            float: left;
+            font-size: 12px;
+            font-weight: 400;
+            color: #999;
+            padding: 6px 0;
+        }
+        h2 {
+            width: 100%;
+            clear: both;
+            padding: 15px 0 10px;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+            color: #525252;
+        }
+        .texto,
+        .texto * {
+            font-size: 14px;
+            color: #7F7F7F;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            font-weight: 400;
+        }
+    }
+}
