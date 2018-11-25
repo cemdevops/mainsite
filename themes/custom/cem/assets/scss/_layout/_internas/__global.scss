@@ -1,0 +1,70 @@
+.internas-container {
+    @include cf();
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.internas-title-with-sub {
+    float: left;
+    width: 100%;
+    padding-bottom: 40px;
+    &>span.pre {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        font-weight: 500;
+        color: #4E4E4E;
+    }
+    h2 {
+        float: left;
+        width: auto;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        font-size: 35px;
+        color: #6A6A6A;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.internas-text{
+    float: left;
+    width: 100%;
+    padding-bottom: 40px;
+    @include font-roboto();
+    font-size: 15px;
+    color: #5A5A5A;
+    line-height: 1.5;
+    .btn {
+        display: inline-block;
+        background-color: #ffffff;
+        border: solid 2px #E8E8E8;
+        border-radius: 50px;
+        padding: 10px 20px;
+        color: #818181;
+        margin-top: 20px;
+    }
+    p,
+    li {
+        @include font-roboto();
+        font-size: inherit;
+        color: inherit;
+        &.alert{
+            font-size: 13px;
+            color: #7F7F7F;
+            a{
+                font-weight: 700;
+            }
+        }
+    }
+    h2{
+        @include font-roboto(700);
+        font-size: 20px;
+        color: #262626;
+        &.blue{
+            font-size: 15px;
+            font-weight: 500;
+            color: #4C9AA0
+        }
+    }
+}

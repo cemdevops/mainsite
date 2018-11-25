@@ -24,7 +24,10 @@
  *
  * @ingroup themeable
  */
-#}
+#} 
+
+
+
 {% macro menuMacro(menu, level) -%}
     {# Set our default level as an integer. #}
     {% set default_level = 1 %}
@@ -48,6 +51,59 @@
   </ul>
 {%- endmacro %}
 
+
+{% 
+  set bodyUrl =  path('<current>') 
+%}
+
+{% 
+    set sectionClass = ''
+  %}
+
+  {% if  ('/quem-somos' in bodyUrl) %} 
+
+  {% 
+    set sectionClass = 'section-quem-somos'
+  %}
+  
+  {% elseif  ('/pesquisa' in bodyUrl) %} 
+
+  {% 
+    set sectionClass = 'section-pesquisa'
+  %}
+
+  {% elseif  ('/publicacoes' in bodyUrl) %} 
+
+  {% 
+    set sectionClass = 'section-publicacoes'
+  %}
+
+  {% elseif  ('/download-de-dados' in bodyUrl) or ('/controle-acesso' in bodyUrl) %} 
+
+  {% 
+    set sectionClass = 'section-download-de-dados section-transferência-e-dados'
+  %}
+
+  {% elseif  ('/difusao-cientifica' in bodyUrl) %} 
+
+  {% 
+    set sectionClass = 'section-difusao-cientifica'
+  %}
+
+  {% elseif  ('/sistemas-interativos' in bodyUrl) %} 
+
+  {% 
+    set sectionClass = 'section-sistemas-interativos'
+  %}
+
+  {% else %} 
+
+  {% 
+    set sectionClass = 'section-normal'
+  %}
+
+   {% endif %}
+
 <!DOCTYPE html>
 <html{{ html_attributes }}>
   <head>
@@ -61,7 +117,7 @@
       <meta property="og:description"   content="Centro de Estudos da Metrópole" />
       <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
   </head>
-  <body{{ attributes }}>
+  <body{{ attributes }} class="{{ sectionClass }}">
 
   <header class="header">
     <div class="header-top-links">
@@ -108,9 +164,9 @@
         <ul>
             {% for menu_item in items.menu_tree %}
                 {% if menu_item.submenu %}
-                  <li class="drop-down"><a data-js="has-submenu" href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                  <li class="drop-down" data-menu="{{ menu_item.text|lower|replace({' ':'-','ç':'c','õ':'o','ã':'a','í':'i','ê':'e'}) }}"><a data-js="has-submenu" href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
                 {% else %}
-                  <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                  <li  data-menu="{{ menu_item.text|lower|replace({' ':'-','ç':'c','õ':'o','ã':'a','í':'i','ê':'e'}) }}"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
                 {% endif %}
                 {% if menu_item.submenu %}
                     {% set subMenuAttribute = "drop-down" %}
