@@ -1,0 +1,58 @@
+.internas-top-header {
+    width: 100%;
+    padding-top: 30px;
+    border-bottom: solid 1px #DCDCDC;
+    h1 {
+        @extend .title-page;
+    }
+}
+
+.title-page {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 30px;
+    color: #555555;
+    font-size: 24px;
+    font-weight: 500;
+    @include font-roboto(500);
+    text-transform: lowercase;
+    &.icon {
+        padding-left: 27px;
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: 16px auto;
+        @include font-roboto(500);
+    }
+    &.icon-news {
+        background-image: url(../img/icon-news.png);
+    }
+    &.icon-search {
+        background-image: url(../img/icon-search.png);
+    }
+    &.icon-mail {
+        background-image: url(../img/icon-mail.png);
+        background-size: 24px auto;
+        padding-left: 37px;
+    }
+    &.icon-agenda {
+        background-image: url(../img/icon-agenda.png);
+        background-size: 24px auto;
+        padding-left: 37px;
+    }
+    .sub-title{
+        display: inline-block;
+        padding-left: 36px;
+        background: url(../img/icon-arrow-right-black.png) 18px center no-repeat;
+        font-weight: 400;
+        font-size: 17px;
+        color: #7F7F7F;
+    }
+}
+
+.header-top-busca {
+    .header-search {
+        max-width: none;
+        margin-bottom: 30px;
+        background-color: #F7F7F7;
+    }
+}

@@ -1,0 +1,344 @@
+.quem-somos-menu {
+  position: relative;
+  width: 100%;
+  border: solid 1px #f0f0f0;
+  border-top: solid 5px #00b9b9;
+  @include cf();
+  ul {
+    @extend %cleanUl;
+    & > li {
+      float: left;
+      width: 100%;
+      font-size: 15px;
+      color: #7f7f7f;
+      & > a {
+        position: relative;
+        display: block;
+        padding: 20px;
+        color: inherit;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 90%;
+          height: 0;
+          left: 5%;
+          bottom: 0;
+          border-top: dashed 1px #c0c0c0;
+        }
+      }
+      &:hover,
+      &.active {
+        background-color: #086aab;
+        color: #ffffff;
+      }
+      &.drop-down {
+        & > a {
+          &:after {
+            content: "";
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background: url(../img/icon-arrow-down-black.png) center no-repeat;
+            margin-left: 7px;
+          }
+        }
+        &:hover,
+        &.active {
+          background-color: #086aab;
+          color: #ffffff;
+          & > a {
+            &:after {
+              background: url(../img/icon-arrow-down-white.png) center no-repeat;
+            }
+          }
+          & > ul {
+            display: block;
+          }
+        }
+      }
+      & > ul {
+        display: none;
+        & > li {
+          font-size: 15px;
+          color: #7f7f7f;
+          background-color: #f8f8f8;
+          & > a {
+            padding: 20px 30px;
+            color: inherit;
+          }
+          &:hover,
+          &.active {
+            background-color: #232323;
+          }
+        }
+      }
+      &:last-child {
+        & > a {
+          &:before {
+            display: none;
+          }
+        }
+      }
+      span.number {
+        float: right;
+      }
+    }
+  }
+}
+
+// Quem somos perfil
+.quem-somos-perfil-box {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  div.image {
+    float: left;
+    width: 100%;
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  div.title {
+    float: left;
+    width: 100%;
+    background-color: #086aab;
+    a {
+      display: block;
+      width: 100%;
+      height: 80px;
+      padding: 25px 10px 0;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+  }
+}
+
+.quem-somos-conteudo {
+  @include font-roboto();
+  strong {
+    font-weight: 500;
+    color: #4c4c4c;
+  }
+  h3 {
+    @include font-roboto(500);
+    font-size: 15px;
+    color: #4c4c4c;
+    padding: 15px 0;
+    &.blue {
+      color: #00b8b8;
+    }
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}
+
+/* fix */
+
+.que-somos-menu-col {
+  .block-facet--checkbox {
+    & > h2 {
+      float: left;
+      width: 100%;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: #7f7f7f;
+      background-color: #086aab;
+      color: #ffffff;
+      padding: 0;
+      margin: 0;
+      padding: 20px;
+      font-weight: 600;
+    }
+    .facets-widget-checkbox {
+      float: left;
+      width: 100%;
+      border-left: solid 1px #f0f0f0;
+      border-right: solid 1px #f0f0f0;
+      ul {
+        @extend %cleanUl;
+        li {
+          float: left;
+          width: 100%;
+          font-size: 15px;
+          color: #7f7f7f;
+          position: relative;
+          display: block;
+          padding: 20px;
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 90%;
+            height: 0;
+            left: 5%;
+            bottom: 0;
+            border-top: dashed 1px #c0c0c0;
+          }
+          input {
+            display: none;
+            & + label {
+              padding-left: 24px;
+              background: url(../img/icon-checkbox.png) left center no-repeat;
+            }
+            &:checked {
+              & + label {
+                background: url(../img/icon-checkbox-checked.png) left center
+                  no-repeat;
+              }
+            }
+          }
+          &:last-child {
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  #block-busca-geral {
+    &.block-facet--checkbox {
+      & > h2 {
+        color: #ffffff;
+        background-color: #000000;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.quem-somos-conteudo-col {
+  fieldset {
+    font-size: 15px;
+    border: solid 1px #d4d4d4;
+    margin: 0 0 25px;
+    padding: 10px 15px;
+    & > div {
+      * {
+        display: none;
+      }
+      & > h2 {
+        position: relative;
+        display: block;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 17px;
+        padding: 5px 0;
+        margin: 0;
+        color: #00b8b8;
+        cursor: pointer;
+        &:before {
+          content: "";
+          display: block;
+          width: 5px;
+          height: 8px;
+          position: absolute;
+          right: 0;
+          top: 10px;
+          background: url(../img/icon-arrow-right-black.png) center no-repeat;
+          transition: all 0.2s linear;
+        }
+      }
+
+      & > h3 {
+        position: relative;
+        display: block;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        padding: 15px 0 25px;
+        margin: 0;
+        color: #666666;
+      }
+      & > ul {
+        @extend %cleanUl;
+        li {
+          font-weight: 500;
+          font-size: 15px;
+          padding-bottom: 15px;
+          padding-left: 10px;
+        }
+      }
+      & > p {
+        font-weight: 400;
+        font-size: 15px;
+        strong {
+          font-weight: 500;
+        }
+      }
+    }
+    &.open {
+      & > div {
+        * {
+          display: block;
+        }
+        & > h2 {
+          &:before {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Quem somos timeline
+
+.quem-somos-timeline {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-left: 99px;
+  background: url(../img/timeline-bg.png) 49px top repeat-y;
+  p {
+    font-size: 15px;
+    color: #7f7f7f;
+  }
+  .timeline-item {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
+    .year {
+      position: absolute;
+      left: -99px;
+      font-size: 19px;
+      color: #333333;
+      font-weight: 900;
+    }
+    .title {
+      position: relative;
+      display: block;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      border-bottom: dashed 1px #c0c0c0;
+      font-size: 19px;
+      color: #333333;
+      font-weight: 700;
+      &:before {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-color: #00b9b9;
+        border-radius: 50%;
+        border: solid 4px #ffffff;
+        box-shadow: 0 0 1px 1px #eeeeee;
+        left: -35px;
+      }
+    }
+  }
+}

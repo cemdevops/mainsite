@@ -1,0 +1,45 @@
+.pesquisa-item{
+    position: relative;
+    margin-bottom: 30px;
+    &:before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: #40BDE9;
+        top: 0;
+        margin: -1px 0 0;
+    }
+    &:after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #D6D6D6;
+        bottom: 0;
+        margin: 1px 0 0;
+    }
+    .pesquisa-item-inner{
+        position: relative;
+        width: 100%;
+        height: 228px;
+        border: solid 1px #D6D6D6;
+        border-top: 0;
+        a{
+            display: table;
+            width: 100%;
+            height: 100%;
+            font-weight: 500;
+            font-size: 17px;
+            color: #4C4C4C;
+            &:hover{
+                background-color: #F5F5F5;
+            }
+            &>span{
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+        }
+    }
+}
