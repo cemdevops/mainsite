@@ -1,0 +1,350 @@
+.difusao-cientifica-menu {
+    border-top: solid 5px #4D9BA1;
+}
+
+.evento-btn {
+    border-radius: 4px;
+    padding: 10px 5px;
+    @include font-roboto(500);
+
+    a {
+        color: #ffffff !important;
+    }
+
+    &.btn-inscricao {
+        margin-top: 30px;
+        display: block;
+        width: 100%;
+        background-color: #262626;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff !important;
+    }
+
+    &.btn-voltar {
+        margin-top: 30px;
+        text-align: left;
+        display: inline-block;
+        color: #ffffff !important;
+        background-color: #086AAB;
+        background-image: url(../img/icon-arrow-left-white.png);
+        background-position: 29px center;
+        background-repeat: no-repeat;
+        padding: 10px 15px;
+        padding-left: 45px;
+    }
+}
+
+.eventos-main {
+    width: 100%;
+    background-color: #F4F4F4;
+    border-bottom: solid 1px #CCCCCC;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include cf();
+
+    .internas-text {
+        padding-bottom: 10px;
+        border-bottom: dashed 1px #C0C0C0;
+    }
+}
+
+.evento-header {
+    float: left;
+    width: 100%;
+    padding: 15px 0 30px;
+    border-bottom: dashed 1px #C0C0C0;
+
+    .evento-title {
+        @include font-roboto(700);
+        font-size: 28px;
+        color: #4D9BA1;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .evento-data {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        color: #7F7F7F;
+        font-weight: 400;
+        padding: 15px 0;
+        padding-left: 60px;
+        background: url(../img/icon-evento-data.png) left center no-repeat;
+    }
+}
+
+.evento-share {
+    div.social {
+        float: left;
+        width: 100%;
+        padding: 15px 0;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                float: left;
+                width: 25px;
+                height: 25px;
+                margin-right: 10px;
+
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+
+                    span {
+                        position: absolute;
+                        left: -9999px;
+                    }
+                }
+
+                &.text {
+                    @include font-roboto();
+                    font-size: 15px;
+                    color: #6A6A6A;
+                    width: auto;
+                    padding-right: 10px;
+                    padding-top: 5px;
+                }
+
+                &.facebook-like {
+                    width: auto;
+                    height: auto;
+                }
+
+                &.icon-linkedin {
+                    background: url(../img/icon-perfil-linkedin.png) center no-repeat;
+                }
+
+                &.icon-facebook {
+                    background: url(../img/icon-perfil-facebook.png) center no-repeat;
+                }
+
+                &.icon-twitter {
+                    background: url(../img/icon-perfil-twitter.png) center no-repeat;
+                }
+
+                &.icon-instagram {
+                    background: url(../img/icon-perfil-instagram.png) center no-repeat;
+                }
+
+                &.icon-email {
+                    background: url(../img/icon-perfil-email.png) center no-repeat;
+                }
+
+                &.icon-site {
+                    background: url(../img/icon-perfil-site.png) center no-repeat;
+                }
+            }
+        }
+    }
+}
+
+.side-bar-box.inscricoes {
+    .header {
+        background-image: none;
+        background-color: #262626;
+
+        .inscricao-valor-total {
+            float: right;
+        }
+    }
+
+    .box {
+        padding-left: 0;
+        padding-right: 0;
+        background-color: #ffffff;
+        padding-top: 10px;
+
+        .incricao-convites {
+            padding: 20px 10px;
+            font-size: 15px;
+            color: #4D4D4D;
+            font-weight: 500;
+            border-bottom: solid 1px #E1E1E1;
+
+            .number {
+                float: right;
+                width: 67px;
+                position: relative;
+
+                input {
+                    width: 33px;
+                    border: 0;
+                    background-color: transparent;
+                    font-size: 15px;
+                    color: #4D4D4D;
+                    @include font-roboto(500);
+                    margin-left: 18px;
+                    text-align: center;
+                }
+
+                span.plus,
+                span.low {
+                    position: absolute;
+                    top: 0;
+                    width: 18px;
+                    height: 18px;
+                    cursor: pointer;
+                }
+
+                span.plus {
+                    right: 0;
+                    background: url(../img/icon-plus.png) center;
+                }
+
+                span.low {
+                    left: 0;
+                    background: url(../img/icon-sub.png) center;
+                }
+            }
+        }
+
+        .text {
+            padding: 14px 20px;
+            font-size: 13px;
+            color: #7F7F7F;
+            line-height: 1.5;
+            border-bottom: solid 1px #E1E1E1;
+        }
+
+        .line {
+            padding: 14px 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .btn-continuar {
+            display: block;
+            width: 100%;
+            @include font-roboto();
+            font-size: 15px;
+            color: #ffffff;
+            background-color: #086AAB;
+            border-radius: 4px;
+            padding: 15px 5px;
+            text-align: center;
+
+            a {
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+.evento-slider-foto-container {
+    width: 100%;
+    background-color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 80px;
+
+    .slick-list {
+        padding-bottom: 50px;
+    }
+
+    .slick-dots {
+        z-index: 5;
+        padding: 0;
+        margin: 0;
+        padding-right: 15px;
+        list-style: none;
+        text-align: right;
+        position: absolute;
+        top: -35px;
+        width: 100%;
+
+        li {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin: 0 2px;
+
+            button {
+                background: #DCDCDC;
+                border: 0;
+                border-radius: 50%;
+                font-size: 0;
+                width: 14px;
+                height: 14px;
+                padding: 0;
+                outline: 0;
+                cursor: pointer;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    margin: 0 0 0 1px;
+                }
+            }
+
+            &.slick-active {
+                button {
+                    background-color: #086AAB;
+                    border: 0;
+                    border-radius: 50%;
+
+                    &:before {
+                        background-color: #086AAB;
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .evento-fotos-slider-header {
+        float: left;
+        width: 100%;
+        padding: 16px 0;
+        color: #333333;
+        font-size: 19px;
+        font-weight: 700;
+        margin: 0;
+        padding-left: 65px;
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-image: url(../img/icon-photo.png);
+
+
+    }
+    .evento-fotos-slider-box{
+        float: left;
+        width: 100%;
+        @include cf();
+    }
+    .evento-fotos-slider-item {
+        float: left;
+        padding: 10px 12px;
+        height: 220px;
+
+        .image {
+            float: left;
+            width: 100%;
+            height: 220px;
+            border: solid 1px #EAEAEA;
+            border-radius: 3px;
+
+            a {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                padding: 10px;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

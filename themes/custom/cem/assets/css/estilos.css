@@ -6416,7 +6416,7 @@ header.header {
 
 /* line 206, cem/assets/scss/_layout/_header/_header-top.scss */
 .header-top-links .contact-translate ul li.header-top-btn-translate {
-  padding-left: 0px;
+  padding-left: 25px;
   background: url(../img/icon-translate.png) left center no-repeat;
   background-size: contain;
 }
@@ -6430,14 +6430,14 @@ header.header {
   position: relative;
 }
 
-/* line 9, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 10, cem/assets/scss/_layout/_header/_menu.scss */
 .header-menu > .inner > ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-/* line 14, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 16, cem/assets/scss/_layout/_header/_menu.scss */
 .header-menu > .inner > ul > li {
   position: relative;
   float: left;
@@ -6448,7 +6448,7 @@ header.header {
   padding: 0 10px;
 }
 
-/* line 21, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 24, cem/assets/scss/_layout/_header/_menu.scss */
 .header-menu > .inner > ul > li > a {
   display: block;
   padding: 24px 6px;
@@ -6457,7 +6457,7 @@ header.header {
   color: inherit;
 }
 
-/* line 28, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 32, cem/assets/scss/_layout/_header/_menu.scss */
 .header-menu > .inner > ul > li > ul {
   display: none;
   position: absolute;
@@ -6472,7 +6472,7 @@ header.header {
   text-align: left;
 }
 
-/* line 41, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 46, cem/assets/scss/_layout/_header/_menu.scss */
 .header-menu > .inner > ul > li > ul > li {
   float: left;
   width: 100%;
@@ -6484,12 +6484,12 @@ header.header {
   border-bottom: solid 1px #eee;
 }
 
-/* line 49, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 55, cem/assets/scss/_layout/_header/_menu.scss */
 .header-menu > .inner > ul > li > ul > li:last-child {
   border: 0;
 }
 
-/* line 52, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 59, cem/assets/scss/_layout/_header/_menu.scss */
 .header-menu > .inner > ul > li > ul > li > a {
   display: block;
   padding: 10px 20px 10px 16px;
@@ -6498,7 +6498,7 @@ header.header {
   color: inherit;
 }
 
-/* line 62, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 70, cem/assets/scss/_layout/_header/_menu.scss */
 .header-menu > .inner > ul > li > a[data-js="has-submenu"]:after {
   content: '';
   display: inline-block;
@@ -6508,17 +6508,17 @@ header.header {
   background: url(../img/icon-arrow-down-white.png) center no-repeat;
 }
 
-/* line 72, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 81, cem/assets/scss/_layout/_header/_menu.scss */
 .header-menu > .inner > ul > li:hover > ul {
   display: block;
 }
 
 @media only screen and (min-width: 840px) and (max-width: 5000px) {
-  /* line 83, cem/assets/scss/_layout/_header/_menu.scss */
+  /* line 92, cem/assets/scss/_layout/_header/_menu.scss */
   .header-menu.fixed {
     height: 65px;
   }
-  /* line 85, cem/assets/scss/_layout/_header/_menu.scss */
+  /* line 95, cem/assets/scss/_layout/_header/_menu.scss */
   .header-menu.fixed > .inner.wrapper {
     position: fixed;
     top: 0;
@@ -6526,12 +6526,86 @@ header.header {
     background-color: #086AAB;
     border-bottom: solid 5px #CCCCCC;
   }
-  /* line 91, cem/assets/scss/_layout/_header/_menu.scss */
+  /* line 102, cem/assets/scss/_layout/_header/_menu.scss */
   .header-menu.fixed > .inner.wrapper > ul {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
   }
+}
+
+/* line 117, cem/assets/scss/_layout/_header/_menu.scss */
+.section-quem-somos .header-menu li[data-menu="quem-somos"]::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #00BAB9;
+  bottom: -5px;
+  left: 0;
+}
+
+/* line 136, cem/assets/scss/_layout/_header/_menu.scss */
+.section-pesquisa .header-menu li[data-menu="pesquisa"]::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #40BDE9;
+  bottom: -5px;
+  left: 0;
+}
+
+/* line 155, cem/assets/scss/_layout/_header/_menu.scss */
+.section-publicacoes .header-menu li[data-menu="publicacoes"]::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #FF3366;
+  bottom: -5px;
+  left: 0;
+}
+
+/* line 176, cem/assets/scss/_layout/_header/_menu.scss */
+.section-download-de-dados .header-menu li[data-menu="download-de-dados"]::before, .section-download-de-dados .header-menu li[data-menu="transferencia-e-dados"]::before,
+.section-transferencia-e-dados .header-menu li[data-menu="download-de-dados"]::before,
+.section-transferencia-e-dados .header-menu li[data-menu="transferencia-e-dados"]::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #353535;
+  bottom: -5px;
+  left: 0;
+}
+
+/* line 194, cem/assets/scss/_layout/_header/_menu.scss */
+.section-difusao-cientifica .header-menu li[data-menu="difusao-cientifica"]::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #4D9AA0;
+  bottom: -5px;
+  left: 0;
+}
+
+/* line 212, cem/assets/scss/_layout/_header/_menu.scss */
+.section-sistemas-interativos .header-menu li[data-menu="sistemas-interativos"]::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #8E499A;
+  bottom: -5px;
+  left: 0;
 }
 
 /* line 1, cem/assets/scss/_layout/_footer/__global.scss */

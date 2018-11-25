@@ -1,0 +1,291 @@
+.download-menu {
+    border-top: solid 5px #353535;
+}
+
+.header-search.download-search .search-field {
+    padding: 0 150px 0 28px;
+}
+
+.header-search.download-search .search-select {
+    width: 160px;
+    background: url(../img/icon-arrow-down-black.png) 140px center no-repeat;
+}
+
+.download-item {
+    float: left;
+    width: 100%;
+    padding: 40px 0;
+    border-bottom: dashed 1px #D1D1D1;
+
+    &:last-child {
+        border: 0;
+    }
+
+    h2 {
+        padding: 0 0 10px;
+        margin: 0;
+        @include font-roboto(500);
+        font-size: 15px;
+        color: #525252;
+    }
+
+    p,
+    .texto,
+    .texto * {
+        font-size: 15px;
+        color: #7F7F7F;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+    }
+
+    .files {
+        float: left;
+        padding: 20px 0;
+
+        [class*="doc"] {
+            background: url(../img/files-doc.png) left center no-repeat;
+        }
+
+        [class*="docx"] {
+            background: url(../img/files-docx.png) left center no-repeat;
+        }
+
+        [class*="pdf"] {
+            background: url(../img/files-pdf.png) left center no-repeat;
+        }
+
+        [class*="shp"] {
+            background: url(../img/files-shp.png) left center no-repeat;
+        }
+
+        [class*="xls"] {
+            background: url(../img/files-xls.png) left center no-repeat;
+        }
+
+        [class*="xlsx"] {
+            background: url(../img/files-xlsx.png) left center no-repeat;
+        }
+
+        [class*="zip"] {
+            background: url(../img/files-zip.png) left center no-repeat;
+        }
+
+        [class*="rar"] {
+            background: url(../img/files-rar.png) left center no-repeat;
+        }
+
+        [class*="gz"] {
+            background: url(../img/files-gz.png) left center no-repeat;
+        }
+
+        [class*="png"] {
+            background: url(../img/files-png.png) left center no-repeat;
+        }
+
+        [class*="jpg"] {
+            background: url(../img/files-jpg.png) left center no-repeat;
+        }
+
+        [class*="jpeg"] {
+            background: url(../img/files-jpg.png) left center no-repeat;
+        }
+
+        [class*="bmp"] {
+            background: url(../img/files-bmp.png) left center no-repeat;
+        }
+
+        [class*="txt"] {
+            background: url(../img/files-txt.png) left center no-repeat;
+        }
+
+        [class*="html"] {
+            background: url(../img/files-html.png) left center no-repeat;
+        }
+
+        .file {
+            // display: block;
+            display: inline-block;
+            padding: 20px 0;
+            padding: 10px 0;
+            padding-left: 48px;
+
+            a,
+            .file-size {
+                font-size: 13px;
+                font-weight: 500;
+                color: #666666;
+            }
+        }
+
+        .file-item+.file-item {
+            padding-top: 15px;
+        }
+    }
+
+    .extension-wrapper {
+        @extend %cleanUl;
+
+        li {
+            float: left;
+            width: 100%;
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #7F7F7F;
+            display: flex;
+            align-items: center;
+
+            span.extension {
+                content: '';
+                float: left;
+                width: 40px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                background-color: #666666;
+                color: #fff;
+                @include font-roboto(500);
+                font-size: 11px;
+                text-transform: uppercase;
+                text-align: center;
+                margin-right: 10px;
+
+                &.zip {
+                    background-color: #666666;
+
+                    &:before {
+                        content: 'ZIP';
+                    }
+                }
+
+                &.pdf {
+                    background-color: #E74C3C;
+
+                    &:before {
+                        content: 'PDF';
+                    }
+                }
+
+                &.shp {
+                    background-color: #5BB264;
+
+                    &:before {
+                        content: 'SHP';
+                    }
+                }
+            }
+        }
+    }
+
+    &.with-map {
+        position: relative;
+        padding-left: 30%;
+        padding-top: 0;
+        margin-bottom: 40px;
+        .map-box{
+            position: absolute;
+            width: 28%;
+            left: 0;
+            top: 0;
+            ._inner{
+                @extend %container;
+                max-width: 100%;
+                border: solid 1px #EAEAEA;
+                padding: 20px;
+            }
+            img{
+                max-width: 100%;
+                height: auto;
+                border: solid 1px #73716E;
+            }
+        }
+        .texto {
+            &+h2 {
+                padding-top: 30px;
+                padding-bottom: 25px;
+            }
+        }
+        .alert-blue{
+            display: none;
+        }
+        .files{
+            padding: 0;
+            .file-item{
+                & + .file-item{
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+.download-items-wrapper {
+
+    header,
+    .views-field-title {
+        float: left;
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        margin-bottom: 30px;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+}
+
+
+.alert-blue {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/icon-alert-blue.jpg) center;
+    margin: 0 15px;
+
+    &>span {
+        display: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        position: absolute;
+        width: 360px;
+        background-color: #357CBC;
+        border-radius: 5px;
+        border: solid 2px #ffffff;
+        box-shadow: 0px 0px 17px #000000;
+        font-size: 14px;
+        color: #ffffff;
+        padding: 10px;
+        text-align: center;
+        bottom: 0;
+        margin-bottom: 30px;
+        left: 50%;
+        margin-left: -180px;
+
+        &:after {
+            content: '';
+            display: block;
+            background: #357CBC;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            bottom: -7px;
+            left: 50%;
+            margin-left: -5px;
+            transform-origin: center;
+            transform: rotate(45deg);
+            border-right: solid 2px #ffffff;
+            border-bottom: solid 2px #ffffff;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        &>span {
+            display: block;
+        }
+    }
+}
