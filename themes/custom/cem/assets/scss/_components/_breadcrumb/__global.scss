@@ -1,0 +1,19 @@
+.breadcrumb {
+    float: left;
+    width: 100%;
+    padding-bottom: 30px;
+    a {
+        display: inline-block;
+        font-size: 13px;
+        padding-right: 10px;
+        color: #838383;
+        &:after{
+            content:' ›';
+        }
+        &:last-child{
+            &::after{
+                content: '';
+            }
+        }
+    }
+}
