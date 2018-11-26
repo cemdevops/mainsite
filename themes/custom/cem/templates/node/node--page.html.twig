@@ -72,7 +72,7 @@
                         {%
                                     set bodyUrl =  path('<current>') 
                                 %}
-                        <div class="quem-somos-menu" data-url="{{ bodyUrl }}{{app.request.attributes.get()}}">
+                        <div class="quem-somos-menu" data-url="{{ bodyUrl }}">
                             <ul>
                             {% for menu_item in items.menu_tree %}
                                 {%
@@ -96,7 +96,19 @@
                                     {% set subMenuAttribute = "drop-down" %}
                                     <ul>
                                         {% for itemSub in menu_item.submenu %}
-                                            <li class="{{ activeMenu }}"><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
+                                            {%
+                                                set activeMenuSub = ''
+                                            %}
+                                            {%
+                                                set bodyUrlSub =  path('<current>') 
+                                            %}
+                                            {% if (itemSub.url in bodyUrlSub) %}
+                                                {%
+                                                    set activeMenuSub = 'active'
+                                                %}
+                                            {% else %}
+                                            {% endif %}
+                                            <li class="{{ activeMenuSub }}"><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
                                         {% endfor %}
                                     </ul>
                                 {% endif %}
