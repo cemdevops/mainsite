@@ -35,26 +35,26 @@
 */
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:100,300,400,500,700");
 /* line 244, cem/assets/scss/_helpers/_mixin.scss */
-.side-bar-banner:before, .download-item.with-map .map-box ._inner:before, .accordion:before, .accordion > .title:before, .accordion.open > .content:before, .header-top-links:before, .side-bar-banner:after, .download-item.with-map .map-box ._inner:after, .accordion:after, .accordion > .title:after, .accordion.open > .content:after, .header-top-links:after, .main:before, .main:after, .home-slider:before, .home-slider:after, .home-slider-item:before, .home-slider-item:after, .home-call-boxes:before, .home-call-boxes:after, .home-news:before, .home-news:after, .home-agenda:before, .home-agenda:after, .home-video:before, .home-video:after, .home-publications:before, .home-publications:after, .home-pesquisadores:before, .home-pesquisadores:after, .noticia-item:before, .noticia-item:after, .side-bar-box:before, .side-bar-box:after, .form-line:before, .form-line:after, .resolution-menu:before, .resolution-menu:after, .resolution-maps:before, .resolution-maps:after, .resolution-maps .maps-container .map-box:before, .resolution-maps .maps-container .map-box:after, .resolution-slider:before, .resolution-slider:after, .resolution-slider .resolution-slider-item:before, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:before, .resolution-slider .resolution-slider-item .image:after,
+.side-bar-banner:before, .download-item.with-map .map-box ._inner:before, .download-item.with-map .infos:before, .download-item.with-map .infos .info-line:before, .accordion:before, .accordion > .title:before, .accordion.open > .content:before, .header-top-links:before, .side-bar-banner:after, .download-item.with-map .map-box ._inner:after, .download-item.with-map .infos:after, .download-item.with-map .infos .info-line:after, .accordion:after, .accordion > .title:after, .accordion.open > .content:after, .header-top-links:after, .main:before, .main:after, .home-slider:before, .home-slider:after, .home-slider-item:before, .home-slider-item:after, .home-call-boxes:before, .home-call-boxes:after, .home-news:before, .home-news:after, .home-agenda:before, .home-agenda:after, .home-video:before, .home-video:after, .home-publications:before, .home-publications:after, .home-pesquisadores:before, .home-pesquisadores:after, .noticia-item:before, .noticia-item:after, .side-bar-box:before, .side-bar-box:after, .form-line:before, .form-line:after, .resolution-menu:before, .resolution-menu:after, .resolution-maps:before, .resolution-maps:after, .resolution-maps .maps-container .map-box:before, .resolution-maps .maps-container .map-box:after, .resolution-slider:before, .resolution-slider:after, .resolution-slider .resolution-slider-item:before, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:before, .resolution-slider .resolution-slider-item .image:after,
 .resolution-slider .resolution-slider-item .title:before,
 .resolution-slider .resolution-slider-item .title:after,
 .resolution-slider .resolution-slider-item .text:before,
-.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:before, .quem-somos-menu:after, .publicacoes-artigos-grid-container:before, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:before, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:before, .header-search.publicoes-search:after, .publicacoes-livros-interna:before, .publicacoes-livros-interna:after, .eventos-main:before, .eventos-main:after, .evento-slider-foto-container .evento-fotos-slider-box:before, .evento-slider-foto-container .evento-fotos-slider-box:after, .agenda-slider-wrapper:before, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:before, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:before, .agenda-slider:after, .calendar-wrapper:before, .calendar-wrapper:after, .search-items-wrapper:before, .search-items-wrapper:after, header.header:before, header.header:after, .header-top:before, .header-top:after, .header-search:before, .header-search:after, .header-top-links .social:before, .header-top-links .social:after, .header-top-links .contact-translate:before, .header-top-links .contact-translate:after, .header-menu:before, .header-menu:after, .footer:before, .footer:after, .footer-newsletter:before, .footer-newsletter:after, .footer-navigation:before, .footer-navigation:after, .footer-nav-infos .social:before, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:before, .footer-nav-infos .footer-nav:after, .footer-copy:before, .footer-copy:after, .internas-container:before, .internas-container:after {
+.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:before, .quem-somos-menu:after, .publicacoes-artigos-grid-container:before, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:before, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:before, .header-search.publicoes-search:after, .publicacoes-livros-interna:before, .publicacoes-livros-interna:after, .eventos-main:before, .eventos-main:after, .evento-slider-foto-container .evento-fotos-slider-box:before, .evento-slider-foto-container .evento-fotos-slider-box:after, .agenda-slider-wrapper:before, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:before, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:before, .agenda-slider:after, .calendar-wrapper:before, .calendar-wrapper:after, .download-item.with-map .btn-show-more:before, .download-item.with-map .btn-show-more:after, .search-items-wrapper:before, .search-items-wrapper:after, header.header:before, header.header:after, .header-top:before, .header-top:after, .header-search:before, .header-search:after, .header-top-links .social:before, .header-top-links .social:after, .header-top-links .contact-translate:before, .header-top-links .contact-translate:after, .header-menu:before, .header-menu:after, .footer:before, .footer:after, .footer-newsletter:before, .footer-newsletter:after, .footer-navigation:before, .footer-navigation:after, .footer-nav-infos .social:before, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:before, .footer-nav-infos .footer-nav:after, .footer-copy:before, .footer-copy:after, .internas-container:before, .internas-container:after {
   content: " ";
   display: table;
 }
 
 /* line 249, cem/assets/scss/_helpers/_mixin.scss */
-.side-bar-banner:after, .download-item.with-map .map-box ._inner:after, .accordion:after, .accordion > .title:after, .accordion.open > .content:after, .header-top-links:after, .main:after, .home-slider:after, .home-slider-item:after, .home-call-boxes:after, .home-news:after, .home-agenda:after, .home-video:after, .home-publications:after, .home-pesquisadores:after, .noticia-item:after, .side-bar-box:after, .form-line:after, .resolution-menu:after, .resolution-maps:after, .resolution-maps .maps-container .map-box:after, .resolution-slider:after, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:after,
+.side-bar-banner:after, .download-item.with-map .map-box ._inner:after, .download-item.with-map .infos:after, .download-item.with-map .infos .info-line:after, .accordion:after, .accordion > .title:after, .accordion.open > .content:after, .header-top-links:after, .main:after, .home-slider:after, .home-slider-item:after, .home-call-boxes:after, .home-news:after, .home-agenda:after, .home-video:after, .home-publications:after, .home-pesquisadores:after, .noticia-item:after, .side-bar-box:after, .form-line:after, .resolution-menu:after, .resolution-maps:after, .resolution-maps .maps-container .map-box:after, .resolution-slider:after, .resolution-slider .resolution-slider-item:after, .resolution-slider .resolution-slider-item .image:after,
 .resolution-slider .resolution-slider-item .title:after,
-.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:after, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:after, .publicacoes-livros-interna:after, .eventos-main:after, .evento-slider-foto-container .evento-fotos-slider-box:after, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:after, .calendar-wrapper:after, .search-items-wrapper:after, header.header:after, .header-top:after, .header-search:after, .header-top-links .social:after, .header-top-links .contact-translate:after, .header-menu:after, .footer:after, .footer-newsletter:after, .footer-navigation:after, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:after, .footer-copy:after, .internas-container:after {
+.resolution-slider .resolution-slider-item .text:after, .quem-somos-menu:after, .publicacoes-artigos-grid-container:after, .publicacoes-artigos-grid-container > div:after, .header-search.publicoes-search:after, .publicacoes-livros-interna:after, .eventos-main:after, .evento-slider-foto-container .evento-fotos-slider-box:after, .agenda-slider-wrapper:after, .agenda-slider-wrapper .box-legenda:after, .agenda-slider:after, .calendar-wrapper:after, .download-item.with-map .btn-show-more:after, .search-items-wrapper:after, header.header:after, .header-top:after, .header-search:after, .header-top-links .social:after, .header-top-links .contact-translate:after, .header-menu:after, .footer:after, .footer-newsletter:after, .footer-navigation:after, .footer-nav-infos .social:after, .footer-nav-infos .footer-nav:after, .footer-copy:after, .internas-container:after {
   clear: both;
 }
 
 /* line 253, cem/assets/scss/_helpers/_mixin.scss */
-.side-bar-banner, .download-item.with-map .map-box ._inner, .accordion, .accordion > .title, .accordion.open > .content, .header-top-links, .main, .home-slider, .home-slider-item, .home-call-boxes, .home-news, .home-agenda, .home-video, .home-publications, .home-pesquisadores, .noticia-item, .side-bar-box, .form-line, .resolution-menu, .resolution-maps, .resolution-maps .maps-container .map-box, .resolution-slider, .resolution-slider .resolution-slider-item, .resolution-slider .resolution-slider-item .image,
+.side-bar-banner, .download-item.with-map .map-box ._inner, .download-item.with-map .infos, .download-item.with-map .infos .info-line, .accordion, .accordion > .title, .accordion.open > .content, .header-top-links, .main, .home-slider, .home-slider-item, .home-call-boxes, .home-news, .home-agenda, .home-video, .home-publications, .home-pesquisadores, .noticia-item, .side-bar-box, .form-line, .resolution-menu, .resolution-maps, .resolution-maps .maps-container .map-box, .resolution-slider, .resolution-slider .resolution-slider-item, .resolution-slider .resolution-slider-item .image,
 .resolution-slider .resolution-slider-item .title,
-.resolution-slider .resolution-slider-item .text, .quem-somos-menu, .publicacoes-artigos-grid-container, .publicacoes-artigos-grid-container > div, .header-search.publicoes-search, .publicacoes-livros-interna, .eventos-main, .evento-slider-foto-container .evento-fotos-slider-box, .agenda-slider-wrapper, .agenda-slider-wrapper .box-legenda, .agenda-slider, .calendar-wrapper, .search-items-wrapper, header.header, .header-top, .header-search, .header-top-links .social, .header-top-links .contact-translate, .header-menu, .footer, .footer-newsletter, .footer-navigation, .footer-nav-infos .social, .footer-nav-infos .footer-nav, .footer-copy, .internas-container {
+.resolution-slider .resolution-slider-item .text, .quem-somos-menu, .publicacoes-artigos-grid-container, .publicacoes-artigos-grid-container > div, .header-search.publicoes-search, .publicacoes-livros-interna, .eventos-main, .evento-slider-foto-container .evento-fotos-slider-box, .agenda-slider-wrapper, .agenda-slider-wrapper .box-legenda, .agenda-slider, .calendar-wrapper, .download-item.with-map .btn-show-more, .search-items-wrapper, header.header, .header-top, .header-search, .header-top-links .social, .header-top-links .contact-translate, .header-menu, .footer, .footer-newsletter, .footer-navigation, .footer-nav-infos .social, .footer-nav-infos .footer-nav, .footer-copy, .internas-container {
   *zoom: 1;
 }
 
@@ -73,7 +73,7 @@
 }
 
 /* line 269, cem/assets/scss/_helpers/_mixin.scss */
-.side-bar-banner, .download-item.with-map .map-box ._inner, .accordion, .accordion > .title, .accordion.open > .content, .header-top-links {
+.side-bar-banner, .download-item.with-map .map-box ._inner, .download-item.with-map .infos, .download-item.with-map .infos .info-line, .accordion, .accordion > .title, .accordion.open > .content, .header-top-links {
   position: relative;
   float: left;
   width: 100%;
@@ -5797,7 +5797,9 @@ nav.pager ul.pager__items li.is-active {
 /* line 32, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item p,
 .download-item .texto,
-.download-item .texto * {
+.download-item .texto *,
+.download-item .textoHide,
+.download-item .textoHide * {
   font-size: 15px;
   color: #7F7F7F;
   line-height: 1.5;
@@ -5806,88 +5808,89 @@ nav.pager ul.pager__items li.is-active {
   font-weight: 400;
 }
 
-/* line 43, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 45, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files {
   float: left;
   padding: 20px 0;
 }
 
-/* line 47, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 49, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files [class*="doc"] {
   background: url(../img/files-doc.png) left center no-repeat;
 }
 
-/* line 51, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 53, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files [class*="docx"] {
   background: url(../img/files-docx.png) left center no-repeat;
 }
 
-/* line 55, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 57, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files [class*="pdf"] {
   background: url(../img/files-pdf.png) left center no-repeat;
 }
 
-/* line 59, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 61, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files [class*="shp"] {
   background: url(../img/files-shp.png) left center no-repeat;
 }
 
-/* line 63, cem/assets/scss/_components/_download-de-dados/__global.scss */
-.download-item .files [class*="xls"] {
+/* line 65, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item .files [class*="xls"],
+.download-item .files [class*="excel"] {
   background: url(../img/files-xls.png) left center no-repeat;
 }
 
-/* line 67, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 70, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files [class*="xlsx"] {
   background: url(../img/files-xlsx.png) left center no-repeat;
 }
 
-/* line 71, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 74, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files [class*="zip"] {
   background: url(../img/files-zip.png) left center no-repeat;
 }
 
-/* line 75, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 78, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files [class*="rar"] {
   background: url(../img/files-rar.png) left center no-repeat;
 }
 
-/* line 79, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 82, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files [class*="gz"] {
   background: url(../img/files-gz.png) left center no-repeat;
 }
 
-/* line 83, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 86, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files [class*="png"] {
   background: url(../img/files-png.png) left center no-repeat;
 }
 
-/* line 87, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 90, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files [class*="jpg"] {
   background: url(../img/files-jpg.png) left center no-repeat;
 }
 
-/* line 91, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 94, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files [class*="jpeg"] {
   background: url(../img/files-jpg.png) left center no-repeat;
 }
 
-/* line 95, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 98, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files [class*="bmp"] {
   background: url(../img/files-bmp.png) left center no-repeat;
 }
 
-/* line 99, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 102, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files [class*="txt"] {
   background: url(../img/files-txt.png) left center no-repeat;
 }
 
-/* line 103, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 106, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files [class*="html"] {
   background: url(../img/files-html.png) left center no-repeat;
 }
 
-/* line 107, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 110, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files .file {
   display: inline-block;
   padding: 20px 0;
@@ -5895,7 +5898,7 @@ nav.pager ul.pager__items li.is-active {
   padding-left: 48px;
 }
 
-/* line 114, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 117, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files .file a,
 .download-item .files .file .file-size {
   font-size: 13px;
@@ -5903,12 +5906,12 @@ nav.pager ul.pager__items li.is-active {
   color: #666666;
 }
 
-/* line 122, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 125, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .files .file-item + .file-item {
   padding-top: 15px;
 }
 
-/* line 130, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 133, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li {
   float: left;
   width: 100%;
@@ -5919,7 +5922,7 @@ nav.pager ul.pager__items li.is-active {
   align-items: center;
 }
 
-/* line 139, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 142, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension {
   content: '';
   float: left;
@@ -5939,37 +5942,37 @@ nav.pager ul.pager__items li.is-active {
   margin-right: 10px;
 }
 
-/* line 156, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 159, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.zip {
   background-color: #666666;
 }
 
-/* line 159, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 162, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.zip:before {
   content: 'ZIP';
 }
 
-/* line 164, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 167, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.pdf {
   background-color: #E74C3C;
 }
 
-/* line 167, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 170, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.pdf:before {
   content: 'PDF';
 }
 
-/* line 172, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 175, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.shp {
   background-color: #5BB264;
 }
 
-/* line 175, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 178, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.shp:before {
   content: 'SHP';
 }
 
-/* line 183, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 186, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map {
   position: relative;
   padding-left: 30%;
@@ -5977,7 +5980,7 @@ nav.pager ul.pager__items li.is-active {
   margin-bottom: 40px;
 }
 
-/* line 188, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 192, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .map-box {
   position: absolute;
   width: 28%;
@@ -5985,42 +5988,139 @@ nav.pager ul.pager__items li.is-active {
   top: 0;
 }
 
-/* line 193, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 198, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .map-box ._inner {
   max-width: 100%;
   border: solid 1px #EAEAEA;
   padding: 20px;
 }
 
-/* line 199, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 205, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .map-box img {
   max-width: 100%;
   height: auto;
   border: solid 1px #73716E;
 }
 
-/* line 206, cem/assets/scss/_components/_download-de-dados/__global.scss */
-.download-item.with-map .texto + h2 {
+/* line 214, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .texto + h2,
+.download-item.with-map .textoHide + h2 {
   padding-top: 30px;
   padding-bottom: 25px;
 }
 
-/* line 211, cem/assets/scss/_components/_download-de-dados/__global.scss */
-.download-item.with-map .alert-blue {
+/* line 219, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .texto.hide,
+.download-item.with-map .textoHide.hide {
   display: none;
 }
 
-/* line 214, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 230, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .files {
   padding: 0;
 }
 
-/* line 217, cem/assets/scss/_components/_download-de-dados/__global.scss */
-.download-item.with-map .files .file-item + .file-item {
-  padding-top: 10px;
+/* line 233, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .files .file-item {
+  position: relative;
+  float: left;
+  padding: 0 10px 35px;
 }
 
-/* line 227, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 237, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .files .file-item .file {
+  width: 40px;
+  padding: 0;
+}
+
+/* line 240, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .files .file-item .file a {
+  display: block;
+  width: 40px;
+  height: 24px;
+  font-size: 0;
+}
+
+/* line 248, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .files .file-item .file-size {
+  display: none;
+}
+
+/* line 252, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .files .file-item + .file-item {
+  padding-top: 0;
+}
+
+/* line 255, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .files .file-item .alert-blue {
+  position: absolute;
+  margin-top: 10px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+/* line 260, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .files .file-item .alert-blue:hover > span {
+  z-index: 9999;
+}
+
+/* line 267, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .infos {
+  padding: 20px 0 0;
+}
+
+/* line 270, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .infos .info-line {
+  padding-bottom: 10px;
+  font-size: 13px;
+  color: #525252;
+}
+
+/* line 275, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .infos .info-line b {
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+/* line 281, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .btn-show-more {
+  float: left;
+  width: 100%;
+  padding: 15px 0;
+}
+
+/* line 287, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .btn-show-more > span {
+  display: block;
+  padding: 20px 0;
+  padding-left: 50px;
+  font-size: 13px;
+  color: #7F7F7F;
+  cursor: pointer;
+}
+
+/* line 295, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .btn-show-more > span.more {
+  background: url(../img/icon-arrow-round-down.png) left center no-repeat;
+}
+
+/* line 299, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .btn-show-more > span.less {
+  display: none;
+  background: url(../img/icon-arrow-round-up.png) left center no-repeat;
+}
+
+/* line 306, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .btn-show-more.show span.more {
+  display: none;
+}
+
+/* line 310, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .btn-show-more.show span.less {
+  display: block;
+}
+
+/* line 320, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-items-wrapper header,
 .download-items-wrapper .views-field-title {
   float: left;
@@ -6032,7 +6132,7 @@ nav.pager ul.pager__items li.is-active {
   line-height: 1.5;
 }
 
-/* line 240, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 333, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue {
   position: relative;
   display: inline-block;
@@ -6042,7 +6142,7 @@ nav.pager ul.pager__items li.is-active {
   margin: 0 15px;
 }
 
-/* line 248, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 341, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue > span {
   display: none;
   font-family: 'Roboto', sans-serif;
@@ -6063,7 +6163,7 @@ nav.pager ul.pager__items li.is-active {
   margin-left: -180px;
 }
 
-/* line 267, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 360, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue > span:after {
   content: '';
   display: block;
@@ -6080,12 +6180,12 @@ nav.pager ul.pager__items li.is-active {
   border-bottom: solid 2px #ffffff;
 }
 
-/* line 284, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 377, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue:hover {
   cursor: pointer;
 }
 
-/* line 287, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 380, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue:hover > span {
   display: block;
 }
