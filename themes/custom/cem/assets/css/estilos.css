@@ -6570,9 +6570,10 @@ header.header {
   border-radius: 6px;
   font-size: 15px;
   text-align: left;
+  z-index: 100;
 }
 
-/* line 46, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 47, cem/assets/scss/_layout/_header/_menu.scss */
 .header-menu > .inner > ul > li > ul > li {
   float: left;
   width: 100%;
@@ -6584,12 +6585,12 @@ header.header {
   border-bottom: solid 1px #eee;
 }
 
-/* line 55, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 56, cem/assets/scss/_layout/_header/_menu.scss */
 .header-menu > .inner > ul > li > ul > li:last-child {
   border: 0;
 }
 
-/* line 59, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 60, cem/assets/scss/_layout/_header/_menu.scss */
 .header-menu > .inner > ul > li > ul > li > a {
   display: block;
   padding: 10px 20px 10px 16px;
@@ -6598,7 +6599,7 @@ header.header {
   color: inherit;
 }
 
-/* line 70, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 71, cem/assets/scss/_layout/_header/_menu.scss */
 .header-menu > .inner > ul > li > a[data-js="has-submenu"]:after {
   content: '';
   display: inline-block;
@@ -6608,17 +6609,17 @@ header.header {
   background: url(../img/icon-arrow-down-white.png) center no-repeat;
 }
 
-/* line 81, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 82, cem/assets/scss/_layout/_header/_menu.scss */
 .header-menu > .inner > ul > li:hover > ul {
   display: block;
 }
 
 @media only screen and (min-width: 840px) and (max-width: 5000px) {
-  /* line 92, cem/assets/scss/_layout/_header/_menu.scss */
+  /* line 93, cem/assets/scss/_layout/_header/_menu.scss */
   .header-menu.fixed {
     height: 65px;
   }
-  /* line 95, cem/assets/scss/_layout/_header/_menu.scss */
+  /* line 96, cem/assets/scss/_layout/_header/_menu.scss */
   .header-menu.fixed > .inner.wrapper {
     position: fixed;
     top: 0;
@@ -6626,7 +6627,7 @@ header.header {
     background-color: #086AAB;
     border-bottom: solid 5px #CCCCCC;
   }
-  /* line 102, cem/assets/scss/_layout/_header/_menu.scss */
+  /* line 103, cem/assets/scss/_layout/_header/_menu.scss */
   .header-menu.fixed > .inner.wrapper > ul {
     width: 100%;
     max-width: 1200px;
@@ -6634,7 +6635,7 @@ header.header {
   }
 }
 
-/* line 117, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 118, cem/assets/scss/_layout/_header/_menu.scss */
 .section-quem-somos .header-menu li[data-menu="quem-somos"]::before {
   content: '';
   display: block;
@@ -6646,7 +6647,7 @@ header.header {
   left: 0;
 }
 
-/* line 136, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 137, cem/assets/scss/_layout/_header/_menu.scss */
 .section-pesquisa .header-menu li[data-menu="pesquisa"]::before {
   content: '';
   display: block;
@@ -6658,7 +6659,7 @@ header.header {
   left: 0;
 }
 
-/* line 155, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 156, cem/assets/scss/_layout/_header/_menu.scss */
 .section-publicacoes .header-menu li[data-menu="publicacoes"]::before {
   content: '';
   display: block;
@@ -6670,7 +6671,7 @@ header.header {
   left: 0;
 }
 
-/* line 176, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 177, cem/assets/scss/_layout/_header/_menu.scss */
 .section-download-de-dados .header-menu li[data-menu="download-de-dados"]::before, .section-download-de-dados .header-menu li[data-menu="transferencia-e-dados"]::before,
 .section-transferencia-e-dados .header-menu li[data-menu="download-de-dados"]::before,
 .section-transferencia-e-dados .header-menu li[data-menu="transferencia-e-dados"]::before {
@@ -6684,7 +6685,7 @@ header.header {
   left: 0;
 }
 
-/* line 194, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 195, cem/assets/scss/_layout/_header/_menu.scss */
 .section-difusao-cientifica .header-menu li[data-menu="difusao-cientifica"]::before {
   content: '';
   display: block;
@@ -6696,7 +6697,7 @@ header.header {
   left: 0;
 }
 
-/* line 212, cem/assets/scss/_layout/_header/_menu.scss */
+/* line 213, cem/assets/scss/_layout/_header/_menu.scss */
 .section-sistemas-interativos .header-menu li[data-menu="sistemas-interativos"]::before {
   content: '';
   display: block;
