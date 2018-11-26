@@ -40,19 +40,34 @@
                     <!-- quem somos main content init -->
                     <div class="col-md-4 col-xs-12 que-somos-menu-col">
                         {% set items = simplify_menu('menu-lateral-publicacoes') %}
-                        <div class="quem-somos-menu">
+                        {%
+                                    set bodyUrl =  path('<current>') 
+                                %}
+                         <div class="quem-somos-menu" data-url="{{ bodyUrl }}">
                             <ul>
                                 {% for menu_item in items.menu_tree %}
+                                {%
+                                    set activeMenu = ''
+                                %}
+                                {%
+                                    set bodyUrl =  path('<current>') 
+                                %}
+                                {% if (menu_item.url in bodyUrl) %}
+                                    {%
+                                        set activeMenu = 'active'
+                                    %}
+                                {% else %}
+                                {% endif %}
                                     {% if menu_item.submenu %}
-                                        <li class="drop-down"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                                        <li class="drop-down {{ activeMenu }}"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
                                     {% else %}
-                                        <li><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
+                                        <li class="{{ activeMenu }}"><a href="{{ menu_item.url }}"><span>{{ menu_item.text }}</span></a>
                                     {% endif %}
                                     {% if menu_item.submenu %}
                                         {% set subMenuAttribute = "drop-down" %}
                                         <ul>
                                             {% for itemSub in menu_item.submenu %}
-                                                <li><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
+                                                <li class="{{ activeMenu }}"><a href="{{ itemSub.url }}"><span>{{ itemSub.text }}</span></a></li>
                                             {% endfor %}
                                         </ul>
                                     {% endif %}
