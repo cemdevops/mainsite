@@ -23,6 +23,7 @@ sites/*/files
 sites/*/files/*
 sites/*/private
 sites/*/private/*
+backups/*
  
 # Ignore SimpleTest multi-site environment.
 sites/simpletest
