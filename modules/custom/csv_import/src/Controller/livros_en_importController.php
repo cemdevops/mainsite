@@ -30,55 +30,44 @@ class livros_en_importController extends ControllerBase
         }
 
         $filePath = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
-        $publicacoes = $filePath . "/csv_file_en.csv";
+        $publicacoes = $filePath . "/part2_books-en-single-rows.csv";
         $h = fopen($publicacoes, "r");
         $base = [];
         while (($data = fgetcsv($h, 100000, "|")) !== FALSE) {
             $base[] = $data;
         }
         fclose($h);
-//        $base = array_slice($base,795,4);  // Payload de teste
+//      $base = array_slice($base,795,4);  // Payload de teste
+//        kint($base);
+//        exit();
         $head = array_shift($base);
         $autor = array();
-        $nid   = 5432;
+        $nid   = 6022;
         $count = 0;
         foreach ($base as $value) {
 
             if($value[1] == 'Book'):
-                $files = explode('#', $value[6]);
-                $description = explode('#', $value[7]);
-                if (count($files) != count($description)) {
-                    echo "A quantidade de descrição não está igual a quantiade de arquivos: linha: " . $count;
-                }
-                {
-                    $file_entity = array_combine($files, $description);
-                }
+                $file = $value[6];
+                $description = $value[7];
                 $count++;
                 $node = Node::load($nid);
+                kint($node);
+                exit();
                 $nid++;
                 $translated_fields = [];
                 $documentos = [];
 
-                foreach ($file_entity as $file => $descricao) {
+                $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $file;
 
-                    $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $file;
-
-                    if (file_exists($file_source) && is_file($file_source)) {
-                        $uri = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
-                        $files = File::Create(['uri' => $uri]);
-                        $files->save();
-                        $documentos[] = [
-                            'target_id' => $files->id(),
-                            'description' => $descricao,
-                        ];
-                        $translated_fields['field_publicacoes_arquivo'] = $documentos;
-                    }
-                    if (file_exists($file_source)) {
-                        $log = $filePath . '/logs/arquivos-faltantes-publicacoes.txt';
-                        $current = file_get_contents($log);
-                        $current .= "{$file}\n";
-                        file_put_contents($log, $current);
-                    }
+                if (file_exists($file_source) && is_file($file_source)) {
+                    $uri = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
+                    $files = File::Create(['uri' => $uri]);
+                    $files->save();
+                    $documentos = [
+                        'target_id' => $files->id(),
+                        'description' => $description,
+                    ];
+                    $translated_fields['field_publicacoes_arquivo'] = $documentos;
                 }
                 if (!empty($value[1])) {
                     $translated_fields['title'] = $value[7];
@@ -91,11 +80,11 @@ class livros_en_importController extends ControllerBase
                 ];
                 $link = [
                     'uri' => $value[4],
-                    'title' => $value[5],
+                    'title' => !empty($value[5]) ? $value[5] : "Título"
                 ];
-                if ($value[10] != "") {
-                    $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $value[10];
-                    $uri = file_unmanaged_copy($file_source, 'public://' . $value[10], FILE_EXISTS_REPLACE);
+                $file_source_img = $filePath . "/publicacoes-migrated-files-mari/" . $value[9];
+                if(file_exists($file_source_img) && is_file($file_source_img)) {
+                    $uri = file_unmanaged_copy($file_source_img, 'public://' . $value[9], FILE_EXISTS_REPLACE);
                     $files = File::Create(['uri' => $uri]);
                     $files->save();
                     $imagem_capa = [
@@ -107,9 +96,10 @@ class livros_en_importController extends ControllerBase
                 }
                 $translated_fields['field_publicacoes_autores'] = $value[8];
                 $translated_fields['body'] = $body;
-                $translated_fields['field_publicacoes_link'] = $link;
+                if(!empty($value[4])){
+                    $translated_fields['field_publicacoes_link'] = $link;
+                }
                 $translated_fields['field_ano_de_publicacao'] = $value[3];
-
                 $node->addTranslation('en', $translated_fields)->save();
             endif;
         }
