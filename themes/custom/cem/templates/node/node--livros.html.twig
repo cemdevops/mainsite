@@ -1,5 +1,3 @@
-{% set link_resenha = content['field_publicacoes_link'][0]['#title'] %}
-{% set link_livro   = content['field_link_comprar_livro'][0]['#title'] %}
 {% set autor_livro  = content['field_publicacoes_autores'][0]['#context']['value'] %}
 
 {% macro menuMacro(menu, level) -%}
@@ -21,7 +19,6 @@
         {% endfor %}
     </ul>
 {%- endmacro %}
-
 <main class="main">
     <!-- internas top header init -->
     <section class="internas-top-header">
@@ -116,7 +113,7 @@
                                     </tr>
                                 {% endif %}
                             </table>
-                            <a href="#" class="btn-voltar">{% trans %}voltar para livros{% endtrans %}</a>
+                            <a href="/publicacoes/livros" class="btn-voltar">{% trans %}voltar para livros{% endtrans %}</a>
                         </div>
                     </div>
                 </div>

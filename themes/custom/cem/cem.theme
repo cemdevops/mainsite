@@ -42,6 +42,9 @@ function cem_preprocess_node(&$variables) {
         if(isset($variables['node']->get('field_publicacoes_arquivo')->entity->uri->value)) {
             $variables['anexos_livro'] = file_create_url($variables['node']->get('field_publicacoes_arquivo')->entity->uri->value);
         }
+      $variables['link_resenha'] = $variables['node']->get('field_publicacoes_link')->getString();
+      $variables['link_livro']   = $variables['node']->get('field_link_comprar_livro')->getString();
+
   }
   if($tipo == 'agenda') {
     $data      = $variables['node']->get('field_evento_data')->getString();
