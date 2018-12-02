@@ -17,7 +17,6 @@
         {% endfor %}
     </ul>
 {%- endmacro %}
-
 <main class="main">
     <!-- internas top header init -->
 
@@ -93,12 +92,13 @@
                         <div class="header-search publicoes-search">
                             {{ drupal_entity('block','formularioexpostobuscalivros') }}
                         </div>
+
                         <div class="row quem-somos-perfis-content">
-                            {{ drupal_view('busca','livros') }}
+                            {% if language_page %}
+                                {{ drupal_view('busca','livros',language_page) }}
+                            {% endif %}
                         </div>
                     </div>
-
-
 
                 </div>
             </div>
