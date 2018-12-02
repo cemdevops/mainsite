@@ -99,7 +99,12 @@ function cem_preprocess_node(&$variables) {
 }
 
 function cem_preprocess_page(&$variables) {
-  if(isset($variables['node'])){
+
+    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    if(isset($language)){
+        $variables['language_page'] = $language;
+    }
+    if(isset($variables['node'])){
     if($variables['node']->getType() == 'resolution') {
       $variables['descricao'] = $variables['node']->get('body')->getValue()[0]['value'];
       //SP
