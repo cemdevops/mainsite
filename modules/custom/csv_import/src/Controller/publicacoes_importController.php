@@ -27,7 +27,7 @@ class publicacoes_importController extends ControllerBase {
         }
 
         $filePath = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
-        $publicacoes = $filePath . "/part1_others_publications-pt-br-single-rows.csv";
+        $publicacoes = $filePath . "/publicaco-import-pt.csv";
         $h =fopen($publicacoes, "r");
         $base = [];
         while (($data = fgetcsv($h, 10000, "|")) !== FALSE) {
@@ -60,7 +60,7 @@ class publicacoes_importController extends ControllerBase {
                 $node->set('field_publicacoes_arquivo', $documentos);
             }
             if (!empty($value[1])) {
-                $node->set('title', $value[1]);
+                $node->set('title', $value[7]);
             } else {
                 $node->set('title', 'SEM TITULO');
             }

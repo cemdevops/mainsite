@@ -27,7 +27,7 @@ class publicacoes_en_importController extends ControllerBase {
         }
 
         $filePath = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
-        $publicacoes = $filePath . "/part1_others_publications-en-single-rows.csv";
+        $publicacoes = $filePath . "/puclicacao-import-en.csv";
         $h =fopen($publicacoes, "r");
         $base = [];
         $terms = [
@@ -50,7 +50,7 @@ class publicacoes_en_importController extends ControllerBase {
 //        exit();
         $autor = array();
         $count = 0;
-        $nid   = 4729;
+        $nid   = 7520;
         foreach($base as $value) {
 
                 $file =  $value[6];
@@ -59,6 +59,7 @@ class publicacoes_en_importController extends ControllerBase {
 //                kint($nid);
 //                exit();
                 $node = Node::load($nid);
+                $nid++;
                 $translated_fields = [];
                 $documentos        = [];
 
@@ -77,7 +78,7 @@ class publicacoes_en_importController extends ControllerBase {
 
 
                 if (!empty($value[1])) {
-                    $translated_fields['title'] = $value[1];
+                    $translated_fields['title'] = $value[7];
                 } else {
                     $translated_fields['title'] = 'SEM TITULO';
                 }
@@ -100,7 +101,7 @@ class publicacoes_en_importController extends ControllerBase {
                 $translated_fields['body']                        = $body;
                 $translated_fields['field_ano_de_publicacao']     = $value[3];
 
-//              $node->addTranslation('en', $translated_fields)->save();
+                $node->addTranslation('en', $translated_fields)->save();
         }
         drupal_set_message("Foram registrados" . $count .  " nodes!\n");
         return [
