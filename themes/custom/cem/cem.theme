@@ -47,6 +47,7 @@ function cem_preprocess_node(&$variables) {
 
   }
   if($tipo == 'agenda') {
+    $variables['lang'] = isset($lang) ? $lang : 'pt-br';
     $data      = $variables['node']->get('field_evento_data')->getString();
     $variables['categoria'] = $variables['node']->get('field_categoria')->getString();
     $data = explode(', ',$data);
