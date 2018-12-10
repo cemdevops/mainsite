@@ -3,7 +3,6 @@
 {% set lugar      = content['field_evento_endereco'][0]['organization']['#value'] %}
 {% set endereco   = content['field_evento_endereco'][0]['address_line1']['#value'] %}
 {% set bairro     = content['field_evento_endereco'][0]['dependent_locality']['#value'] %}
-
 <main class="main">
   <section class="internas-top-header">
   <div class="inner wrapper">
@@ -105,7 +104,7 @@
           {{  drupal_field('field_evento_conteudo','node') }}
         <div class="col-xs-12 internas-text">
             {{  drupal_field('field_evento_observacoes','node') }}
-          <a href="#" class="evento-btn btn-inscricao">{% trans %}Clique aqui para fazer a inscrição{% endtrans %}</a>
+          <a href="{{ lang }}/form/cadastro-curso?categoria={{ categoria }}" class="evento-btn btn-inscricao">{% trans %}Clique aqui para fazer a inscrição{% endtrans %}</a>
           <a href="/difusao-cientifica" class="evento-btn btn-voltar">{% trans %}voltar para seminário e agenda{% endtrans %}</a>
         </div>
 
