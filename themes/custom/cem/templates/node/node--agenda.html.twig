@@ -67,7 +67,7 @@
       <div class="col-md-3 col-xs-12">
 
         <!-- box inscricao init -->
-        {% if categoria == 3 || categoria == 247 %}
+        {% if (categoria == 3) or (categoria == 247) %}
           <div class="side-bar-box inscricoes">
             <div class="box">
               <div class="line">
@@ -106,7 +106,7 @@
           {{  drupal_field('field_evento_conteudo','node') }}
         <div class="col-xs-12 internas-text">
             {{  drupal_field('field_evento_observacoes','node') }}
-            {% if categoria == 3 || categoria == 247 %}
+            {% if (categoria == 3) or (categoria == 247) %}
               <a href="{{ lang }}/form/cadastro-curso?categoria={{ categoria }}" class="evento-btn btn-inscricao">{% trans %}Clique aqui para fazer a inscrição{% endtrans %}</a>
             {% endif %}
           <a href="/difusao-cientifica" class="evento-btn btn-voltar">{% trans %}voltar para seminário e agenda{% endtrans %}</a>
