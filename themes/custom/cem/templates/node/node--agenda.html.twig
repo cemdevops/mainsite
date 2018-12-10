@@ -11,7 +11,7 @@
         <div class="col-xs-12">
             <h1 class="title-page">
                 {% trans %}difusão científica{% endtrans %}
-              <span class="sub-title"><a href="/difusao-cientifica">{% trans %}seminários e agenda{% endtrans %}</a></span>
+              <span class="sub-title"><a href="/{{ lang }}/difusao-cientifica">{% trans %}seminários e agenda{% endtrans %}</a></span>
               <span class="sub-title">{{  label }}</span>
             </h1>
         </div>
@@ -71,7 +71,7 @@
           <div class="side-bar-box inscricoes">
             <div class="box">
               <div class="line">
-                <a href="{{ lang }}/form/cadastro-curso?categoria={{ categoria }}" class="btn-continuar">Inscrição</a>
+                <a href="/{{ lang }}/form/cadastro-curso?categoria={{ categoria }}" class="btn-continuar">{% trans %}Inscrição{% endtrans %}</a>
               </div>
             </div>
           </div>
@@ -107,9 +107,9 @@
         <div class="col-xs-12 internas-text">
             {{  drupal_field('field_evento_observacoes','node') }}
             {% if (categoria == 3) or (categoria == 247) %}
-              <a href="{{ lang }}/form/cadastro-curso?categoria={{ categoria }}" class="evento-btn btn-inscricao">{% trans %}Clique aqui para fazer a inscrição{% endtrans %}</a>
+              <a href="/{{ lang }}/form/cadastro-curso?categoria={{ categoria }}" class="evento-btn btn-inscricao">{% trans %}Clique aqui para fazer a inscrição{% endtrans %}</a>
             {% endif %}
-          <a href="/difusao-cientifica" class="evento-btn btn-voltar">{% trans %}voltar para seminário e agenda{% endtrans %}</a>
+          <a href="/{{ lang }}/difusao-cientifica" class="evento-btn btn-voltar">{% trans %}voltar para seminário e agenda{% endtrans %}</a>
         </div>
 
       </div>
