@@ -576,23 +576,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 18, cem/assets/scss/_base/_base.scss */
-a,
-a:link,
-a:visited {
-  color: inherit;
-  cursor: pointer;
-  outline: none;
-  text-decoration: none;
-}
-
-/* line 28, cem/assets/scss/_base/_base.scss */
-a:hover,
-a:focus {
-  outline: none;
-  text-decoration: underline;
-}
-
 /* line 34, cem/assets/scss/_base/_base.scss */
 .main {
   position: relative;
@@ -634,7 +617,7 @@ a:focus {
         src: url('../fonts/entypo.svg#entypo') format('svg');
     }
 }*/
-/* line 27, cem/assets/scss/_base/_typography.scss */
+/* line 25, cem/assets/scss/_base/_typography.scss */
 h1,
 h2,
 h3,
@@ -646,56 +629,108 @@ h6 {
 }
 
 /* PadronizaÃ§Ã£o de tÃ­tulos Hs */
-/* line 37, cem/assets/scss/_base/_typography.scss */
+/* line 35, cem/assets/scss/_base/_typography.scss */
+a {
+  color: #007c89;
+  text-decoration: none;
+  line-height: normal;
+  border-bottom: 1px solid;
+}
+
+/* line 40, cem/assets/scss/_base/_typography.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 45, cem/assets/scss/_base/_typography.scss */
+a:hover {
+  color: #004e56;
+}
+
+/* line 49, cem/assets/scss/_base/_typography.scss */
+a:visited {
+  color: #17607d;
+}
+
+/* line 54, cem/assets/scss/_base/_typography.scss */
+a:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+/* line 59, cem/assets/scss/_base/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+/* line 69, cem/assets/scss/_base/_typography.scss */
 h1 {
   font-size: 30px;
 }
 
-/* line 40, cem/assets/scss/_base/_typography.scss */
+/* line 72, cem/assets/scss/_base/_typography.scss */
 h2 {
   font-size: 25px;
 }
 
-/* line 43, cem/assets/scss/_base/_typography.scss */
+/* line 75, cem/assets/scss/_base/_typography.scss */
 h3 {
   font-size: 21px;
 }
 
-/* line 46, cem/assets/scss/_base/_typography.scss */
+/* line 78, cem/assets/scss/_base/_typography.scss */
 h4 {
   font-size: 18px;
 }
 
-/* line 49, cem/assets/scss/_base/_typography.scss */
+/* line 81, cem/assets/scss/_base/_typography.scss */
 h5 {
   font-size: 15px;
 }
 
-/* line 52, cem/assets/scss/_base/_typography.scss */
+/* line 84, cem/assets/scss/_base/_typography.scss */
 h6 {
   font-size: 13px;
 }
 
-/* line 57, cem/assets/scss/_base/_typography.scss */
+/* line 88, cem/assets/scss/_base/_typography.scss */
 p {
   font-size: 15px;
   line-height: 1.5;
 }
 
-/* line 63, cem/assets/scss/_base/_typography.scss */
+/* line 94, cem/assets/scss/_base/_typography.scss */
 p strong {
   font-weight: 600;
 }
 
-/* line 68, cem/assets/scss/_base/_typography.scss */
+/* line 97, cem/assets/scss/_base/_typography.scss */
+p > a {
+  line-height: normal;
+  border-bottom: 1px solid;
+}
+
+/* line 100, cem/assets/scss/_base/_typography.scss */
+p > a:hover {
+  text-decoration: none;
+}
+
+/* line 106, cem/assets/scss/_base/_typography.scss */
 blockquote {
-  text-align: center;
-  font-size: 25px;
+  margin: 20px 0;
+  padding-left: 1.5rem;
+  border-left: 5px solid #70c3d5;
   font-family: "Lato", sans-serif;
   font-weight: 400;
 }
 
-/* line 74, cem/assets/scss/_base/_typography.scss */
+/* line 113, cem/assets/scss/_base/_typography.scss */
 blockquote p {
   font-size: inherit;
   line-height: inherit;
@@ -4929,17 +4964,17 @@ nav.pager ul.pager__items li.is-active {
 .calendar-wrapper {
   width: 100%;
   position: relative;
-  border-top: solid 5px #086AAB;
-  border-left: solid 1px #F0F0F0;
-  border-right: solid 1px #F0F0F0;
+  border-top: solid 5px #086aab;
+  border-left: solid 1px #f0f0f0;
+  border-right: solid 1px #f0f0f0;
 }
 
 /* line 10, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-header {
   position: relative;
   height: 65px;
-  background: #F4F4F4;
-  border-bottom: dashed 1px #C0C0C0;
+  background: #f4f4f4;
+  border-bottom: dashed 1px #c0c0c0;
 }
 
 /* line 17, cem/assets/scss/_components/_agenda/_calendar.scss */
@@ -4955,7 +4990,7 @@ nav.pager ul.pager__items li.is-active {
 
 /* line 39, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-year:before {
-  content: ', ';
+  content: ", ";
 }
 
 /* line 52, cem/assets/scss/_components/_agenda/_calendar.scss */
@@ -4976,7 +5011,7 @@ nav.pager ul.pager__items li.is-active {
 .calendar-prev:before,
 .calendar-next:before {
   display: block;
-  content: '';
+  content: "";
   width: 9px;
   height: 10px;
   background-image: url(../img/arrows-calendar.png);
@@ -4993,7 +5028,7 @@ nav.pager ul.pager__items li.is-active {
   left: 0;
   top: 0;
   padding-left: 0;
-  border-right: dashed 1px #C0C0C0;
+  border-right: dashed 1px #c0c0c0;
 }
 
 /* line 83, cem/assets/scss/_components/_agenda/_calendar.scss */
@@ -5005,7 +5040,7 @@ nav.pager ul.pager__items li.is-active {
 .calendar-next {
   right: 0;
   top: 0;
-  border-left: dashed 1px #C0C0C0;
+  border-left: dashed 1px #c0c0c0;
 }
 
 /* line 93, cem/assets/scss/_components/_agenda/_calendar.scss */
@@ -5023,17 +5058,17 @@ nav.pager ul.pager__items li.is-active {
   background: url(/sites/all/themes/jornalpuc/assets/img/agenda-arrows.svg) no-repeat 0 0;
 }
 
-/* line 107, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 108, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-prev span {
   background-position: 18px 0px;
 }
 
-/* line 111, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 112, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-next span {
   background-position: -18px 0px;
 }
 
-/* line 115, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 116, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar {
   float: left;
   z-index: 2;
@@ -5043,17 +5078,17 @@ nav.pager ul.pager__items li.is-active {
   border-spacing: 0;
 }
 
-/* line 123, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 124, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar td {
   padding: 0;
 }
 
-/* line 128, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 129, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .calendar-week-end {
   color: rgba(23, 96, 125, 0.75);
 }
 
-/* line 132, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 133, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .day-week-end {
   font-size: 13px;
   font-weight: 500;
@@ -5061,7 +5096,7 @@ nav.pager ul.pager__items li.is-active {
   color: #666666;
 }
 
-/* line 139, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 140, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar th {
   height: 60px;
   border: 0;
@@ -5069,18 +5104,18 @@ nav.pager ul.pager__items li.is-active {
   font-weight: 500;
 }
 
-/* line 146, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 147, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar td {
   text-align: center;
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
-  color: #6A6A6A;
+  color: #6a6a6a;
   height: 60px;
   text-decoration: none;
 }
 
-/* line 156, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 157, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar td a {
   display: block;
   display: flex;
@@ -5092,21 +5127,21 @@ nav.pager ul.pager__items li.is-active {
 }
 
 @media only screen and (max-width: 650px) {
-  /* line 167, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 168, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar-calendar td {
     font-size: 13px;
   }
 }
 
-/* line 172, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 173, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .status-default {
   display: block;
   outline: none;
   text-decoration: none;
-  color: #6A6A6A;
+  color: #6a6a6a;
 }
 
-/* line 180, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 181, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .status-active {
   color: #ffffff;
   text-decoration: none;
@@ -5114,7 +5149,7 @@ nav.pager ul.pager__items li.is-active {
   background-size: 30px;
 }
 
-/* line 187, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 188, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .status-active-cursos {
   color: #ffffff;
   text-decoration: none;
@@ -5122,7 +5157,7 @@ nav.pager ul.pager__items li.is-active {
   background-size: 30px;
 }
 
-/* line 194, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 195, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .status-active-palestra {
   color: #ffffff;
   text-decoration: none;
@@ -5130,7 +5165,7 @@ nav.pager ul.pager__items li.is-active {
   background-size: 30px;
 }
 
-/* line 201, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 202, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .status-active-eventos {
   color: #ffffff;
   text-decoration: none;
@@ -5138,7 +5173,7 @@ nav.pager ul.pager__items li.is-active {
   background-size: 30px;
 }
 
-/* line 208, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 209, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-calendar .status-active-datas {
   color: #ffffff;
   text-decoration: none;
@@ -5147,7 +5182,7 @@ nav.pager ul.pager__items li.is-active {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1060px) {
-  /* line 217, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 218, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar-calendar {
     width: 100%;
     max-width: none;
@@ -5155,40 +5190,40 @@ nav.pager ul.pager__items li.is-active {
 }
 
 @media only screen and (min-width: 0) and (max-width: 720px) {
-  /* line 224, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 225, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar-calendar {
     width: 100%;
     max-width: none;
   }
 }
 
-/* line 230, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 231, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar-other-month .status-default {
-  color: #17607D;
+  color: #17607d;
 }
 
-/* line 234, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 235, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting {
   font-size: 18px;
   width: 230px;
   float: right;
 }
 
-/* line 240, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 241, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* line 246, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 247, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li {
   text-transform: capitalize;
   font-size: 14px;
   padding: 20px 0;
 }
 
-/* line 252, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 253, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li.ev-title {
   font-weight: 500;
   text-transform: uppercase;
@@ -5200,71 +5235,71 @@ nav.pager ul.pager__items li.is-active {
   font-size: 13px;
 }
 
-/* line 263, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 264, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li a {
   display: block;
 }
 
-/* line 267, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 268, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li a:hover {
   font-weight: 700;
 }
 
-/* line 271, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 272, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li a.cursos:before {
-  background: #61B16F;
+  background: #61b16f;
 }
 
-/* line 275, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 276, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li a.palestras:before {
-  background: #086AAB;
+  background: #086aab;
 }
 
-/* line 279, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 280, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li a.eventos:before {
-  background: #F39507;
+  background: #f39507;
 }
 
-/* line 283, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 284, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li a[class="datas comemorativas/feriados"]:before {
-  background: #BE120E;
+  background: #be120e;
 }
 
-/* line 287, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 288, cem/assets/scss/_components/_agenda/_calendar.scss */
 .calendar .sorting ul li a:before {
   display: block;
   width: 12px;
   height: 12px;
   border-radius: 10px;
-  content: '';
+  content: "";
   float: left;
   margin-right: 10px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1060px) {
-  /* line 298, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 299, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting {
     width: 100%;
   }
-  /* line 302, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 303, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li {
     float: left;
     width: auto;
     padding: 10px;
   }
-  /* line 308, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 309, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li.ev-title {
     width: 100%;
     padding: 10px 5px;
     background: rgba(30, 125, 149, 0.1);
     margin-bottom: 5px;
   }
-  /* line 315, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 316, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li a {
     display: flex;
     align-items: center;
   }
-  /* line 320, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 321, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li a:before {
     width: 15px !important;
     height: 15px !important;
@@ -5272,59 +5307,154 @@ nav.pager ul.pager__items li.is-active {
 }
 
 @media only screen and (min-width: 0) and (max-width: 720px) {
-  /* line 327, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 328, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting {
     width: 100%;
   }
-  /* line 331, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 332, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li {
     float: left;
     width: auto;
     padding: 10px;
   }
-  /* line 337, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 338, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li.ev-title {
     width: 100%;
     padding: 10px 5px;
     background: rgba(30, 125, 149, 0.1);
     margin-bottom: 5px;
   }
-  /* line 344, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 345, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li a {
     display: flex;
     align-items: center;
   }
-  /* line 349, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 350, cem/assets/scss/_components/_agenda/_calendar.scss */
   .calendar .sorting ul li a:before {
     width: 15px !important;
     height: 15px !important;
   }
 }
 
-/* line 355, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 356, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados {
   width: 100%;
   float: left;
   padding: 10px 0;
-  border-top: solid 10px #F0F0F0;
-  border-bottom: solid 1px #F0F0F0;
+  border-top: solid 10px #f0f0f0;
+  border-bottom: solid 1px #f0f0f0;
 }
 
-/* line 363, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 364, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos {
   padding: 30px 10px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: dashed 1px #F0F0F0;
+  border-bottom: dashed 1px #f0f0f0;
 }
 
 /* line 371, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos.new-box > .date-circle {
+  width: 65px;
+  height: 65px;
+  background-color: #086aab;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* line 379, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos.new-box > .date-circle span {
+  display: block;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* line 384, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos.new-box > .date-circle span.day {
+  font-weight: 700;
+  font-size: 18px;
+  padding-bottom: 0px;
+}
+
+/* line 389, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos.new-box > .date-circle span.month {
+  font-size: 11px;
+  text-transform: capitalize;
+  padding-bottom: 1px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* line 395, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos.new-box > .date-circle span.year {
+  padding-bottom: 6px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* line 402, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos.new-box > .evento-infos {
+  padding-left: 20px;
+  flex-grow: 2;
+  justify-content: flex-start;
+}
+
+/* line 406, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos.new-box > .evento-infos span {
+  display: block;
+  padding-bottom: 10px;
+}
+
+/* line 409, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos.new-box > .evento-infos span.title {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #086aab;
+  border: 0;
+}
+
+/* line 414, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos.new-box > .evento-infos span.title a {
+  border: 0;
+  text-decoration: none;
+}
+
+/* line 419, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos.new-box > .evento-infos span.data-completa {
+  font-size: 12px;
+  color: #666666;
+  background: url(../img/icon-agenda-gray.png) left top no-repeat;
+  background-size: 12px;
+  padding-left: 18px;
+}
+
+/* line 426, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos.new-box > .evento-infos span.local {
+  font-size: 13px;
+  color: #666666;
+  padding-bottom: 0;
+  background: url(../img/icon-local-gray.png) left top no-repeat;
+  background-size: 10px;
+  padding-left: 13px;
+  color: #086aab;
+}
+
+/* line 434, cem/assets/scss/_components/_agenda/_calendar.scss */
+.listagem-resultados .box-eventos.new-box > .evento-infos span.local p {
+  margin: 0;
+}
+
+/* line 443, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos:last-child {
   border-bottom: none;
 }
 
-/* line 375, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 447, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo {
   font-size: 11px;
   color: #727272;
@@ -5334,113 +5464,125 @@ nav.pager ul.pager__items li.is-active {
   z-index: 2;
 }
 
-/* line 383, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 455, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo:before {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   width: 30px;
   height: 30px;
-  background-color: #4D9BA1;
+  background-color: #4d9ba1;
   border-radius: 50%;
   z-index: 1;
   left: -7px;
   top: -9px;
 }
 
-/* line 397, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 469, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo.no-sphere:before {
   display: none;
 }
 
-/* line 403, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 475, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo .ev-date-box {
   position: relative;
   z-index: 2;
 }
 
-/* line 408, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 480, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo .ev-dia {
   color: #ffffff;
   display: inline-block;
 }
 
-/* line 417, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 489, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul li {
   display: inline-block;
   text-align: center;
   position: relative;
   width: 36px;
   height: 36px;
-  background-color: #4D9BA1;
+  background-color: #4d9ba1;
   border-radius: 50%;
   line-height: 36px;
   margin: 0 2px;
 }
 
-/* line 427, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 499, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul li:first-child {
   margin-left: 0;
 }
 
-/* line 431, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 503, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo .ev-dia .item-list ul li:before {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   display: none;
   width: 30px;
   height: 30px;
-  background-color: #4D9BA1;
+  background-color: #4d9ba1;
   border-radius: 50%;
   left: -7px;
   top: -9px;
 }
 
-/* line 448, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 520, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos .ev-periodo .ev-mes {
   display: none;
 }
 
-/* line 452, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 524, cem/assets/scss/_components/_agenda/_calendar.scss */
 .listagem-resultados .box-eventos p.ev-descricao {
   font-size: 15px;
   color: #727272;
   padding: 0;
   margin: 0;
   padding-left: 10px;
-  border-left: dashed 1px #F0F0F0;
+  border-left: dashed 1px #f0f0f0;
 }
 
 @media only screen and (max-width: 650px) {
-  /* line 463, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 535, cem/assets/scss/_components/_agenda/_calendar.scss */
   .listagem-resultados .box-eventos {
     flex-direction: column;
     padding: 15px 0;
     margin: 0 10px;
   }
-  /* line 469, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 540, cem/assets/scss/_components/_agenda/_calendar.scss */
+  .listagem-resultados .box-eventos.new-box {
+    padding-bottom: 50px;
+  }
+  /* line 542, cem/assets/scss/_components/_agenda/_calendar.scss */
+  .listagem-resultados .box-eventos.new-box > .date-circle {
+    margin-bottom: 20px;
+  }
+  /* line 545, cem/assets/scss/_components/_agenda/_calendar.scss */
+  .listagem-resultados .box-eventos.new-box > .evento-infos {
+    padding: 0;
+  }
+  /* line 550, cem/assets/scss/_components/_agenda/_calendar.scss */
   .listagem-resultados .box-eventos .ev-periodo {
     flex: auto;
     width: 100%;
     padding: 0 0 10px;
   }
-  /* line 475, cem/assets/scss/_components/_agenda/_calendar.scss */
+  /* line 556, cem/assets/scss/_components/_agenda/_calendar.scss */
   .listagem-resultados .box-eventos p.ev-descricao {
     padding: 0;
     margin: 0;
   }
 }
 
-/* line 481, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 562, cem/assets/scss/_components/_agenda/_calendar.scss */
 .ev-date-box + .ev-date-box {
   padding-left: 18px;
   position: relative;
 }
 
-/* line 486, cem/assets/scss/_components/_agenda/_calendar.scss */
+/* line 567, cem/assets/scss/_components/_agenda/_calendar.scss */
 .ev-date-box + .ev-date-box:before {
-  content: '-';
+  content: "-";
   position: absolute;
   left: 2px;
   font-size: 33px;
