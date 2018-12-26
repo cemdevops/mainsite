@@ -48,8 +48,8 @@ class mapas_importController extends ControllerBase {
         $count = 0;
 
         foreach($base as $value) {
-          $files       = explode('#', $value[8]);
-          $description = explode('#', $value[7]);
+          $files       = explode('#', $value[6]);
+          $description = explode('#', $value[5]);
           $file_entity    = array_combine($files, $description);
           if(count($files) != count($description)){
             echo "A quantidade de descrição não está igual a quantiade de arquivos: linha: " . $count;
@@ -60,9 +60,9 @@ class mapas_importController extends ControllerBase {
           $node = Node::create(['type' => 'mapas_prontos']);
           $documentos = array();
           foreach($file_entity as $file => $descricao){
-            $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $file;
+            $file_source = $filePath . "/new-mapoteca-migrated-files-mari/" . $file;
             if(file_exists($file_source) && is_file($file_source)) {
-              $uri = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
+              $uri = file_unmanaged_copy($file_source, 'public://user_files/mapas_prontos/documento' . $file, FILE_EXISTS_REPLACE);
               $files = File::Create(['uri' => $uri]);
               $files->save();
               $documentos[] = [
@@ -85,7 +85,7 @@ class mapas_importController extends ControllerBase {
                 $node->set('title', 'SEM TITULO');
             }
             $body = [
-                'value'  => substr($value[2], 0,255),
+                'value'  => $value[2],
                 'format' => 'full_html',
             ];
             $node->set('body', $body);
@@ -102,9 +102,9 @@ class mapas_importController extends ControllerBase {
 
             $node->set('field_ano_de_publicacao',$value[3]);
 
-            $file_source_img = $filePath . "/publicacoes-migrated-files-mari/" . $value[7];
+            $file_source_img = $filePath . "/new-mapoteca-migrated-files-mari/" . $value[7];
             if(file_exists($file_source_img) && is_file($file_source_img)) {
-                $uri = file_unmanaged_copy($file_source_img, 'public://' . $value[7], FILE_EXISTS_REPLACE);
+                $uri = file_unmanaged_copy($file_source_img, 'public://user_files/mapas_prontos/imagens' . $value[7], FILE_EXISTS_REPLACE);
                 $files = File::Create(['uri' => $uri]);
                 $files->save();
                 $imagem_capa = [

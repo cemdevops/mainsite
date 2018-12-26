@@ -35,8 +35,8 @@ class dados_importController extends ControllerBase {
     }
     fclose($h);
     $base = array_slice($base,0,5);
-//    kint($base);
-//    exit();
+    kint($base);
+    exit();
     $head = array_shift($base);
     $count = 0;
 
@@ -55,7 +55,7 @@ class dados_importController extends ControllerBase {
         
         foreach($file_entity as $file => $descricao){
 
-          $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $file;
+          $file_source = $filePath . "/data-migrated-files/" . $file;
 
           if(file_exists($file_source) && is_file($file_source)) {
             $uri = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);

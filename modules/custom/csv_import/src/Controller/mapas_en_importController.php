@@ -30,7 +30,7 @@ class mapas_en_importController extends ControllerBase {
             }
         }
         $filePath = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
-        $mapoteca = $filePath . "/dados/single-rows-mapoteca-en.csv";
+        $mapoteca = $filePath . "/dados/single-rows-mapoteca-en-2.csv";
         $h =fopen($mapoteca, "r");
 
         while (($data = fgetcsv($h, 100000, ";")) !== FALSE) {
@@ -38,15 +38,11 @@ class mapas_en_importController extends ControllerBase {
         }
         fclose($h);
         $base = array_slice($base,0,5);
-//        kint($base);
-//        exit();
+ //       kint($base);
         $head = array_shift($base);
-        $fonte      = array();
-        $tema       = array();
-        $tipo       = array();
         $divisao    = array();
         $count = 0;
-        $nid   = 9632;
+        $nid   = 8290;
         foreach($base as $value) {
             $files       = explode('#', $value[6]);
             $description = explode('#', $value[5]);
@@ -62,9 +58,9 @@ class mapas_en_importController extends ControllerBase {
             $translated_fields = [];
             $documentos = [];
             foreach($file_entity as $file => $descricao){
-                $file_source = $filePath . "/publicacoes-migrated-files-mari/" . $file;
+                $file_source = $filePath . "/new-mapoteca-migrated-files-mari/" . $file;
                 if(file_exists($file_source) && is_file($file_source)) {
-                    $uri = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
+                    $uri = file_unmanaged_copy($file_source, 'public://user_files/mapas_prontos/documento' . $file, FILE_EXISTS_REPLACE);
                     $files = File::Create(['uri' => $uri]);
                     $files->save();
                     $documentos[] = [
@@ -88,7 +84,7 @@ class mapas_en_importController extends ControllerBase {
             }
 
             $body = [
-                'value'  => substr($value[2], 0,255),
+                'value'  => $value[2],
                 'format' => 'full_html',
             ];
             $translated_fields['body'] = $body;
@@ -103,9 +99,9 @@ class mapas_en_importController extends ControllerBase {
             ];
             $translated_fields['field_documento_data_lancamento'] = $date;
 
-            $file_source_img = $filePath . "/publicacoes-migrated-files-mari/" . $value[7];
+            $file_source_img = $filePath . "/new-mapoteca-migrated-files-mari/" . $value[7];
             if(file_exists($file_source_img) && is_file($file_source_img)) {
-                $uri = file_unmanaged_copy($file_source_img, 'public://' . $value[7], FILE_EXISTS_REPLACE);
+                $uri = file_unmanaged_copy($file_source_img, 'public://user_files/mapas_prontos/imagens' . $value[7], FILE_EXISTS_REPLACE);
                 $files = File::Create(['uri' => $uri]);
                 $files->save();
                 $imagem_capa = [
