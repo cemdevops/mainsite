@@ -6,7 +6,6 @@ use Drupal\Core\Controller\ControllerBase;
 use \Drupal\node\Entity\Node;
 use \Drupal\file\Entity\File;
 
-
 class publicacoes_en_importController extends ControllerBase {
 
     public function import_publicacoes_en() {

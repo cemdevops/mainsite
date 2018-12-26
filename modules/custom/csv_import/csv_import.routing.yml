@@ -1,27 +1,50 @@
+# Import Webform
 csv_import.import_webform_csv:
-  path: '/webform_import/import_webform_csv'
+  path: '/import/webform'
   defaults:
-     _controller: \Drupal\csv_import\Controller\csv_importController::import_webform_csv
+     _controller: \Drupal\csv_import\Controller\webform_importController::import_webform_csv
      _title: 'Import Webform Submission'
   requirements:
      _permission: 'access content'
      _role: 'authenticated+admin'
+
+# Import Dados
 csv_import.import_base_dados:
   path: '/import/dados'
   defaults:
-     _controller: \Drupal\csv_import\Controller\csv_importController::import_base_dados
+     _controller: \Drupal\csv_import\Controller\dados_importController::import_base_dados
      _title: 'Import base de dados'
   requirements:
      _permission: 'access content'
      _role: 'authenticated+admin'
-csv_import.import_mapoteca:
-  path: '/import/mapoteca'
+csv_import.import_base_dados_en:
+  path: '/import/data'
   defaults:
-     _controller: \Drupal\csv_import\Controller\csv_importController::import_mapoteca
+     _controller: \Drupal\csv_import\Controller\dados_en_importController::import_base_dados_en
      _title: 'Import base de dados'
   requirements:
      _permission: 'access content'
      _role: 'authenticated+admin'
+
+# Imporft Mapas Prontos
+csv_import.import_mapoteca:
+  path: '/import/mapas'
+  defaults:
+     _controller: \Drupal\csv_import\Controller\mapas_importController::import_mapoteca
+     _title: 'Import base de dados'
+  requirements:
+     _permission: 'access content'
+     _role: 'authenticated+admin'
+csv_import.import_mapoteca_en:
+  path: '/import/maps'
+  defaults:
+     _controller: \Drupal\csv_import\Controller\mapas_en_importController::import_mapoteca_en
+     _title: 'Import base de dados'
+  requirements:
+     _permission: 'access content'
+     _role: 'authenticated+admin'
+
+# Import Publicações
 csv_import.import_publicacoes:
   path: '/import/publicacoes'
   defaults:
@@ -38,6 +61,8 @@ csv_import.import_publicacoes_en:
   requirements:
     _permission: 'access content'
     _role: 'authenticated+admin'
+
+# Import Livros
 csv_import.import_livros:
   path: '/import/livros'
   defaults:

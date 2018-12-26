@@ -1,0 +1,15 @@
+Anos:
+-------
+2008
+2018
+2019
+2020
+	
+Região:
+--------
+BRASIL
+CENTRO-OESTE
+NORDESTE
+NORTE
+SUDESTE
+SUL
