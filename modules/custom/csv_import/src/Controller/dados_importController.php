@@ -35,8 +35,8 @@ class dados_importController extends ControllerBase {
     }
     fclose($h);
     $base = array_slice($base,0,5);
-    kint($base);
-    exit();
+ //    kint($base);
+//    exit();
     $head = array_shift($base);
     $count = 0;
 
@@ -58,7 +58,7 @@ class dados_importController extends ControllerBase {
           $file_source = $filePath . "/data-migrated-files/" . $file;
 
           if(file_exists($file_source) && is_file($file_source)) {
-            $uri = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
+            $uri = file_unmanaged_copy($file_source, 'public://user_files/dados/documento' . $file, FILE_EXISTS_REPLACE);
             $files = File::Create(['uri' => $uri]);
             $files->save();
             $documentos[] = [
@@ -80,7 +80,7 @@ class dados_importController extends ControllerBase {
           $node->set('title', 'SEM TITULO');
         }
         $body = [
-            'value'  => substr(utf8_encode($value[5]), 0,255),
+            'value'  =>  utf8_encode($value[5]),
             'format' => 'full_html',
           ];
         $node->set('body', $body);
