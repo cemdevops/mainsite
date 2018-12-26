@@ -38,12 +38,13 @@ class dados_en_importController extends ControllerBase {
 //    kint($base);
 //    exit();
     $head = array_shift($base);
-    $fonte = array();
-    $tema  = array();
-    $tipo  = array();
     $count = 0;
     $nid   = 8310;
+
       foreach($base as $value) {
+        $fonte = array();
+        $tema  = array();
+        $tipo  = array();
   
         $files       = explode('#', utf8_encode($value[7]));
         $description = explode('#', utf8_encode($value[6]));
@@ -61,6 +62,7 @@ class dados_en_importController extends ControllerBase {
         foreach($file_entity as $file => $descricao){
           
           $file_source = $filePath . "/data-migrated-files/" . $file;
+
           if(file_exists($file_source) && is_file($file_source)) {
             $uri = file_unmanaged_copy($file_source, 'public://user_files/dados/documento' . $file, FILE_EXISTS_REPLACE);
             $files = File::Create(['uri' => $uri]);
@@ -69,7 +71,7 @@ class dados_en_importController extends ControllerBase {
               'target_id' => $files->id(),
               'description' => !empty($descricao) ? $descricao : "sem descrição",
             ];
-              $translated_fields['field_publicacoes_arquivo'] = $documentos;
+              $translated_fields['field_documento'] = $documentos;
           }
           if(file_exists($file_source)) {
             $log = $filePath . '/logs/arquivos-faltantes-dados.txt';

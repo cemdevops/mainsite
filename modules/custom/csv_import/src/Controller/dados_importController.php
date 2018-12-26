@@ -35,12 +35,17 @@ class dados_importController extends ControllerBase {
     }
     fclose($h);
     $base = array_slice($base,0,5);
- //    kint($base);
-//    exit();
+     kint($base);
+    exit();
     $head = array_shift($base);
     $count = 0;
 
       foreach($base as $value) {
+
+        $documentos  = array();
+        $fonte       = array();
+        $tema        = array();
+        $tipo        = array();
         $files       = explode('#', utf8_encode($value[7]));
         $description = explode('#', utf8_encode($value[6]));
 
@@ -51,8 +56,7 @@ class dados_importController extends ControllerBase {
         }
         $count++;
         $node = Node::create(['type' => 'documentos']);
-        $documentos  = array();
-        
+
         foreach($file_entity as $file => $descricao){
 
           $file_source = $filePath . "/data-migrated-files/" . $file;
@@ -110,10 +114,6 @@ class dados_importController extends ControllerBase {
         $node->set('field_documento_fontes', $fonte);
         $node->set('field_documento_temas', $tema);
         $node->set('field_documento_tipos', $tipo);
-
-        $fonte      = array();
-        $tema       = array();
-        $tipo       = array();
 
         $node->status = 1;
         $node->langcod = 'pt-br';
