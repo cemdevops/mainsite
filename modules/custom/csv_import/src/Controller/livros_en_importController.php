@@ -51,8 +51,6 @@ class livros_en_importController extends ControllerBase
                 $description = $value[7];
                 $count++;
                 $node = Node::load($nid);
-                kint($node);
-                exit();
                 $nid++;
                 $translated_fields = [];
                 $documentos = [];
