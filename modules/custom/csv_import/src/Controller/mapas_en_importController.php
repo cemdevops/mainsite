@@ -42,7 +42,7 @@ class mapas_en_importController extends ControllerBase {
         $head = array_shift($base);
         $divisao    = array();
         $count = 0;
-        $nid   = 8290;
+        $nid   = 8302;
         foreach($base as $value) {
             $files       = explode('#', $value[6]);
             $description = explode('#', $value[5]);

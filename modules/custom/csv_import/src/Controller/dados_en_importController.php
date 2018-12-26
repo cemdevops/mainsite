@@ -42,7 +42,7 @@ class dados_en_importController extends ControllerBase {
     $tema  = array();
     $tipo  = array();
     $count = 0;
-    $nid   = 8270;
+    $nid   = 8310;
       foreach($base as $value) {
   
         $files       = explode('#', utf8_encode($value[7]));
@@ -62,7 +62,7 @@ class dados_en_importController extends ControllerBase {
           
           $file_source = $filePath . "/data-migrated-files/" . $file;
           if(file_exists($file_source) && is_file($file_source)) {
-            $uri = file_unmanaged_copy($file_source, 'public://' . $file, FILE_EXISTS_REPLACE);
+            $uri = file_unmanaged_copy($file_source, 'public://user_files/dados/documento' . $file, FILE_EXISTS_REPLACE);
             $files = File::Create(['uri' => $uri]);
             $files->save();
             $documentos[] = [
@@ -84,7 +84,7 @@ class dados_en_importController extends ControllerBase {
             $translated_fields['title'] = 'SEM TITULO';
         }
           $body = [
-              'value'  => substr(utf8_encode($value[5]), 0,255),
+              'value'  => utf8_encode($value[5]),
               'format' => 'full_html',
           ];
         $translated_fields['body'] = $body;
