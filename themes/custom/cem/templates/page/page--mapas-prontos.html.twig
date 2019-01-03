@@ -19,7 +19,13 @@
                 <div class="row quem-somos-content">
                     <!-- quem somos main content init -->
                     <div class="col-md-4 col-xs-12 que-somos-menu-col">
+                        <div class="block-facet--checkbox">
+                            {% trans %}<h2>Ano</h2>{% endtrans %}
+                        </div>
                         {{ drupal_entity('block','ano') }}
+                        <div class="block-facet--checkbox">
+                            {% trans %}<h2>Região</h2>{% endtrans %}
+                        </div>
                         {{ drupal_entity('block','divisaoterritorial') }}
                         {{ drupal_entity('block','cursosdocem') }}
                     </div>
