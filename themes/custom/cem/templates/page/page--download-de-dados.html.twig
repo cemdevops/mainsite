@@ -19,7 +19,13 @@
                 <div class="row quem-somos-content">
                     <!-- quem somos main content init -->
                     <div class="col-md-4 col-xs-12 que-somos-menu-col">
+                        <div class="block-facet--checkbox">
+                            {% trans %}<h2>Tipos</h2>{% endtrans %}
+                        </div>
                         {{ drupal_entity('block','facets_tipos') }}
+                        <div class="block-facet--checkbox">
+                            {% trans %}<h2>Temas</h2>{% endtrans %}
+                        </div>
                         {{ drupal_entity('block','facets_temas') }}
                         {# drupal_entity('block','facets_fontes') #}
                         {# drupal_entity('block','tags') #}
