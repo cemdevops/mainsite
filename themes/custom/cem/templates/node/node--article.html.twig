@@ -6,8 +6,8 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="breadcrumb">
-                                <a href="/">{% trans %}home{% endtrans %}</a>
-                                <a href="/noticias">{% trans %}notícias em destaque{% endtrans %}</a>
+                                <a href="/{{ language }}">{% trans %}home{% endtrans %}</a>
+                                <a href="/{{ language }}/noticias">{% trans %}notícias em destaque{% endtrans %}</a>
                                 <a href="#">{{ label }}</a>
                             </div>
                         </div>
@@ -53,7 +53,6 @@
 							<div class="noticia-conteudo">
 								{{ drupal_field('body','node') }}
 							</div>
-
                                 <div class="botao-voltar">
                                     <span>{% trans %}<a id="link-voltar" href="/{{ language }}/noticias">< voltar para notícias{% endtrans %}</a></span>
                                 </div>
