@@ -34,9 +34,9 @@ class dados_importController extends ControllerBase {
       $base[] = $data;
     }
     fclose($h);
-    $base = array_slice($base,0,5);
-     kint($base);
-    exit();
+//    $base = array_slice($base,0,5);
+//     kint($base);
+//    exit();
     $head = array_shift($base);
     $count = 0;
 

@@ -34,12 +34,12 @@ class dados_en_importController extends ControllerBase {
       $base[] = $data;
     }
     fclose($h);
-    $base = array_slice($base,0,5);
+//    $base = array_slice($base,0,5);
 //    kint($base);
 //    exit();
     $head = array_shift($base);
     $count = 0;
-    $nid   = 8310;
+    $nid   = 8361;
 
       foreach($base as $value) {
         $fonte = array();
