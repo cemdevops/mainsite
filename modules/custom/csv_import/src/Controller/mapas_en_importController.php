@@ -37,12 +37,12 @@ class mapas_en_importController extends ControllerBase {
             $base[] = $data;
         }
         fclose($h);
-        $base = array_slice($base,0,5);
+ //       $base = array_slice($base,0,5);
  //       kint($base);
         $head = array_shift($base);
 
         $count = 0;
-        $nid   = 8302;
+        $nid   = 8318;
         foreach($base as $value) {
             $divisao    = array();
             $files       = explode('#', $value[6]);
