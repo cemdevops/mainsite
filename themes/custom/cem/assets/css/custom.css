@@ -52,3 +52,15 @@ div.quem-somos-conteudo  a{
 .js-form-item-sort-by {
     display: none;
 }
+
+.botao-voltar {
+    float: left;
+    padding: 10px;
+    font-size: 13px;
+    background-color: #086AAB;
+    border-radius: 3px;
+    color: #ffffff;
+}
+#link-voltar {
+    color: white;
+}
