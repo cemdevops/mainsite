@@ -56,3 +56,30 @@
     </section>
 
 </main>
+<footer>
+    <!-- footer newsletter init -->
+    <section class="footer-newsletter">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="footer-newsletter-form">
+
+                            <div>
+                                {{ drupal_entity('block','webform') }}
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="footer-newsletter-text">
+                            {% trans %}
+                            <span>RECEBA NOSSOS INFORMATIVOS</span><br> Não se preocupe, também não gostamos de SPAM.
+                            {% endtrans %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
