@@ -43,6 +43,16 @@
                         {# drupal_view('noticia', 'page_noticias', language) #}
                         {{ drupal_view('busca','page_noticias',language_page) }}
                     </div>
+                    <div class="col-xs-12">
+                        <section class="home-apoio">
+                            {% trans %}
+                            <div class="title">apoio</div>
+                            {% endtrans %}
+                            <div class="logos">
+                                {{ drupal_entity('block','apoio') }}
+                            </div>
+                        </section>
+                    </div>
 
                     <div class="col-md-3 col-xs-12">
                         <div class="side-bar-box agenda">
