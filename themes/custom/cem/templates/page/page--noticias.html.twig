@@ -12,15 +12,19 @@
                         <!-- noticias header busca init -->
                         <div class="header-top-busca">
                             <div class="header-search">
-                                {{ drupal_entity('block','apoio') }}
-                                <form>
-                                    <div>
-                                        <input type="text" placeholder="pesquisar no site" class="search-field">
-                                        <input type="submit" value="buscar" class="search-button">
-                                    </div>
-                                </form>
+                            {{ drupal_entity('block','formularioexpostobuscapage_noticias') }}
                             </div>
                         </div>
+                        {#<div class="header-top-busca">#}
+                            {#<div class="header-search">#}
+                                {#<form>#}
+                                    {#<div>#}
+                                        {#<input type="text" placeholder="pesquisar no site" class="search-field">#}
+                                        {#<input type="submit" value="buscar" class="search-button">#}
+                                    {#</div>#}
+                                {#</form>#}
+                            {#</div>#}
+                        {#</div>#}
                         <!-- noticias header busca end -->
                     </div>
                 </div>
@@ -36,7 +40,8 @@
                 <div class="row">
                     <!-- noticia listagem coluna left init -->
                     <div class="col-md-9 col-xs-12">
-                        {{ drupal_view('noticia', 'page_noticias', language) }}
+                        {# drupal_view('noticia', 'page_noticias', language) #}
+                        {{ drupal_view('busca','page_noticias',language_page) }}
                     </div>
 
                     <div class="col-md-3 col-xs-12">
