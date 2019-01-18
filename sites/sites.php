@@ -54,3 +54,4 @@
  * @see https://www.drupal.org/documentation/install/multi-site
  */
 $sites['cem.innovaretech.com.br'] = 'centrodametropole.fflch.usp.br';
+
