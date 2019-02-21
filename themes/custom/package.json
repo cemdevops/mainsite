@@ -1,0 +1,36 @@
+{
+  "name": "cem",
+  "version": "1.0.0",
+  "description": "Site CEM.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "cem",
+    "drupal",
+    "drupal8",
+    "sass",
+    "html",
+    "css3",
+    "gulp"
+  ],
+  "author": "Daniel-Gustavo",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-less": "^3.0.3",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.6.0"
+  }
+}
