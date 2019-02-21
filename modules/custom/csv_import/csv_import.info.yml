@@ -1,5 +1,0 @@
-name: Import CSV
-type: module
-description: 'Custom module'
-package: Custom
-core: 8.x

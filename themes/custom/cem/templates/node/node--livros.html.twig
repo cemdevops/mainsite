@@ -84,7 +84,7 @@
                                     </div>
                                 </div>
                             {% endif %}
-                            {{  drupal_field('body','node') }}
+                            {{  drupal_field('field_infor','node') }}
                             <table width="100%" cellpadding="0" cellspacing="0" class="livro-infos">
                                 <tr>
                                     <td class="header" colspan="2">{% trans %}Ficha Técnica{% endtrans %}</td>
@@ -99,6 +99,15 @@
                                 <tr>
                                     <td class="key">{% trans %}Título{% endtrans %}</td>
                                     <td class="value">{{ label }}</td>
+                                </tr>
+                                   <tr>
+                                    <td class="key">{% trans %}Ano{% endtrans %}</td>
+                                    <td class="value">{{  drupal_field('field_ano_de_publicacao','node') }}</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="key">{% trans %}Citação{% endtrans %}</td>
+                                    <td class="value">{{  drupal_field('body','node') }}</td>
                                 </tr>
                                 {% if link_resenha %}
                                     <tr>

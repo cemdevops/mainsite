@@ -5964,7 +5964,7 @@ nav.pager ul.pager__items li.is-active {
   float: left;
   width: 100%;
   padding: 40px 0;
-  border-bottom: dashed 1px #D1D1D1;
+  border-bottom: dashed 1px #d1d1d1;
 }
 
 /* line 20, cem/assets/scss/_components/_download-de-dados/__global.scss */
@@ -5989,7 +5989,7 @@ nav.pager ul.pager__items li.is-active {
 .download-item .textoHide,
 .download-item .textoHide * {
   font-size: 15px;
-  color: #7F7F7F;
+  color: #7f7f7f;
   line-height: 1.5;
   margin: 0;
   padding: 0;
@@ -6105,14 +6105,14 @@ nav.pager ul.pager__items li.is-active {
   width: 100%;
   margin-bottom: 10px;
   font-size: 13px;
-  color: #7F7F7F;
+  color: #7f7f7f;
   display: flex;
   align-items: center;
 }
 
 /* line 142, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension {
-  content: '';
+  content: "";
   float: left;
   width: 40px;
   height: 20px;
@@ -6137,27 +6137,27 @@ nav.pager ul.pager__items li.is-active {
 
 /* line 162, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.zip:before {
-  content: 'ZIP';
+  content: "ZIP";
 }
 
 /* line 167, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.pdf {
-  background-color: #E74C3C;
+  background-color: #e74c3c;
 }
 
 /* line 170, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.pdf:before {
-  content: 'PDF';
+  content: "PDF";
 }
 
 /* line 175, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.shp {
-  background-color: #5BB264;
+  background-color: #5bb264;
 }
 
 /* line 178, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item .extension-wrapper li span.extension.shp:before {
-  content: 'SHP';
+  content: "SHP";
 }
 
 /* line 186, cem/assets/scss/_components/_download-de-dados/__global.scss */
@@ -6166,9 +6166,21 @@ nav.pager ul.pager__items li.is-active {
   padding-left: 30%;
   padding-top: 0;
   margin-bottom: 40px;
+  padding-bottom: 60px;
+  min-height: 180px;
 }
 
-/* line 192, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 193, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map._full {
+  padding-left: 0;
+}
+
+/* line 195, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map._full .files {
+  padding: 20px 0;
+}
+
+/* line 200, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .map-box {
   position: absolute;
   width: 28%;
@@ -6176,151 +6188,153 @@ nav.pager ul.pager__items li.is-active {
   top: 0;
 }
 
-/* line 198, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 206, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .map-box ._inner {
   max-width: 100%;
-  border: solid 1px #EAEAEA;
+  border: solid 1px #eaeaea;
   padding: 20px;
 }
 
-/* line 205, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 213, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .map-box img {
   max-width: 100%;
   height: auto;
-  border: solid 1px #73716E;
+  border: solid 1px #73716e;
 }
 
-/* line 214, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 222, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .texto + h2,
 .download-item.with-map .textoHide + h2 {
   padding-top: 30px;
   padding-bottom: 25px;
 }
 
-/* line 219, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 227, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .texto.hide,
 .download-item.with-map .textoHide.hide {
   display: none;
 }
 
-/* line 230, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 236, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .files {
   padding: 0;
 }
 
-/* line 233, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 239, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .files .file-item {
   position: relative;
-  float: left;
-  padding: 0 10px 35px;
-}
-
-/* line 237, cem/assets/scss/_components/_download-de-dados/__global.scss */
-.download-item.with-map .files .file-item .file {
-  width: 40px;
-  padding: 0;
-}
-
-/* line 240, cem/assets/scss/_components/_download-de-dados/__global.scss */
-.download-item.with-map .files .file-item .file a {
-  display: block;
-  width: 40px;
-  height: 24px;
-  font-size: 0;
 }
 
 /* line 248, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .files .file-item .file a {
+  border: 0;
+}
+
+/* line 257, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .files .file-item .file-size {
   display: none;
 }
 
-/* line 252, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 261, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .files .file-item + .file-item {
   padding-top: 0;
 }
 
-/* line 255, cem/assets/scss/_components/_download-de-dados/__global.scss */
-.download-item.with-map .files .file-item .alert-blue {
-  position: absolute;
-  margin-top: 10px;
-  left: 50%;
-  margin-left: -10px;
-}
-
-/* line 260, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 271, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .files .file-item .alert-blue:hover > span {
   z-index: 9999;
 }
 
-/* line 267, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 278, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .infos {
   padding: 20px 0 0;
 }
 
-/* line 270, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 282, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .infos .info-line {
   padding-bottom: 10px;
   font-size: 13px;
   color: #525252;
 }
 
-/* line 275, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 288, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .infos .info-line b {
   text-transform: uppercase;
   font-size: 11px;
 }
 
-/* line 281, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 295, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .btn-show-more {
   float: left;
-  width: 100%;
   padding: 15px 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
 }
 
-/* line 287, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 304, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .btn-show-more > span {
   display: block;
   padding: 20px 0;
   padding-left: 50px;
   font-size: 13px;
-  color: #7F7F7F;
+  color: #7f7f7f;
   cursor: pointer;
 }
 
-/* line 295, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 312, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .btn-show-more > span.more {
   background: url(../img/icon-arrow-round-down.png) left center no-repeat;
 }
 
-/* line 299, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 316, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .btn-show-more > span.less {
   display: none;
   background: url(../img/icon-arrow-round-up.png) left center no-repeat;
 }
 
-/* line 306, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 323, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .btn-show-more.show span.more {
   display: none;
 }
 
-/* line 310, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 327, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-item.with-map .btn-show-more.show span.less {
   display: block;
 }
 
-/* line 320, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 332, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .btn-show-more + h2 {
+  padding: 15px 0 0;
+}
+
+/* line 337, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map .files,
+.download-item.with-map .infos,
+.download-item.with-map .btn-show-more + h2 {
+  display: none;
+}
+
+/* line 345, cem/assets/scss/_components/_download-de-dados/__global.scss */
+.download-item.with-map.show-content .files,
+.download-item.with-map.show-content .infos,
+.download-item.with-map.show-content .btn-show-more + h2 {
+  display: block;
+}
+
+/* line 356, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .download-items-wrapper header,
 .download-items-wrapper .views-field-title {
   float: left;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   margin-bottom: 30px;
   font-size: 15px;
   line-height: 1.5;
 }
 
-/* line 333, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 368, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue {
   position: relative;
   display: inline-block;
@@ -6330,14 +6344,14 @@ nav.pager ul.pager__items li.is-active {
   margin: 0 15px;
 }
 
-/* line 341, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 376, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue > span {
   display: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   position: absolute;
   width: 360px;
-  background-color: #357CBC;
+  background-color: #357cbc;
   border-radius: 5px;
   border: solid 2px #ffffff;
   box-shadow: 0px 0px 17px #000000;
@@ -6351,11 +6365,11 @@ nav.pager ul.pager__items li.is-active {
   margin-left: -180px;
 }
 
-/* line 360, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 395, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue > span:after {
-  content: '';
+  content: "";
   display: block;
-  background: #357CBC;
+  background: #357cbc;
   width: 10px;
   height: 10px;
   position: absolute;
@@ -6368,12 +6382,12 @@ nav.pager ul.pager__items li.is-active {
   border-bottom: solid 2px #ffffff;
 }
 
-/* line 377, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 412, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue:hover {
   cursor: pointer;
 }
 
-/* line 380, cem/assets/scss/_components/_download-de-dados/__global.scss */
+/* line 415, cem/assets/scss/_components/_download-de-dados/__global.scss */
 .alert-blue:hover > span {
   display: block;
 }

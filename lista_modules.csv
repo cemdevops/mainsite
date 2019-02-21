@@ -1,0 +1,85 @@
+Package,Name,Status,Version
+"Field types","Address (address)",Enabled,8.x-1.4
+Other,"Backup and Migrate (backup_migrate)",Enabled,8.x-4.0-rc1
+Other,"Block Class (block_class)",Enabled,8.x-1.0-alpha1
+Other,"Checklist API (checklistapi)",Enabled,8.x-1.4
+"Example modules","Checklist API Example (checklistapiexample)",Disabled,8.x-1.4
+Fields,"Conditional Fields (conditional_fields)",Enabled,8.x-1.0-alpha4
+Views,"Views Contextual Range Filter (contextual_range_filter)",Disabled,8.x-1.0-rc1
+Community,"Contribute (contribute)",Enabled,8.x-5.0-beta3
+Media,"Crop API (crop)",Enabled,8.x-2.0-rc1
+Custom,"Import CSV (csv_import)",Disabled,
+"Chaos tool suite","Chaos tools (ctools)",Enabled,8.x-3.0
+"Chaos tool suite (Experimental)","Chaos tools blocks (ctools_block)",Disabled,8.x-3.0
+"Chaos tool suite (Experimental)","Chaos tools Views (ctools_views)",Disabled,8.x-3.0
+Date/Time,"Date range formatter (date_range_formatter)",Enabled,8.x-3.1
+Development,"Devel (devel)",Enabled,8.x-1.2
+Development,"Devel generate (devel_generate)",Disabled,8.x-1.2
+Other,"Entity (entity)",Enabled,8.x-1.0-beta1
+Search,"Facets (facets)",Enabled,8.x-1.0
+Search,"Facets Range Widget (facets_range_widget)",Enabled,8.x-1.0
+Search,"Rest Facets (facets_rest)",Disabled,8.x-1.0
+Search,"Facets summary (Experimental) (facets_summary)",Enabled,8.x-1.0
+"Field types","Field collection (field_collection)",Disabled,8.x-1.0-alpha1
+Fields,"Field Group (field_group)",Enabled,8.x-3.0-beta1
+Migrate,"Field Group Migrate (field_group_migrate)",Disabled,8.x-3.0-beta1
+Media,"File entity (file_entity)",Enabled,8.x-2.0-beta4
+Media,"ImageWidgetCrop (image_widget_crop)",Enabled,8.x-2.1
+Media,"ImageWidgetCrop examples (image_widget_crop_examples)",Disabled,8.x-2.1
+Media,"Imce File Manager (imce)",Enabled,8.x-1.6
+Development,"Devel Kint (kint)",Enabled,8.x-1.2
+Mail,"Mail System (mailsystem)",Enabled,8.x-4.1
+SEO,"Metatag (metatag)",Disabled,8.x-1.5
+SEO,"Metatag: App Links (metatag_app_links)",Disabled,8.x-1.5
+SEO,"Metatag: Dublin Core (metatag_dc)",Disabled,8.x-1.5
+SEO,"Metatag: Dublin Core Advanced (metatag_dc_advanced)",Disabled,8.x-1.5
+SEO,"Metatag: Facebook (metatag_facebook)",Disabled,8.x-1.5
+SEO,"Metatag: favicons (metatag_favicons)",Disabled,8.x-1.5
+SEO,"Metatag: Google Custom Search Engine (CSE) (metatag_google_cse)",Disabled,8.x-1.5
+SEO,"Metatag: Google Plus (metatag_google_plus)",Disabled,8.x-1.5
+SEO,"Metatag: hreflang (metatag_hreflang)",Disabled,8.x-1.5
+SEO,"Metatag: Mobile & UI Adjustments (metatag_mobile)",Disabled,8.x-1.5
+SEO,"Metatag: Open Graph (metatag_open_graph)",Disabled,8.x-1.5
+SEO,"Metatag: Open Graph Products (metatag_open_graph_products)",Disabled,8.x-1.5
+SEO,"Metatag: Pinterest (metatag_pinterest)",Disabled,8.x-1.5
+SEO,"Metatag: Twitter Cards (metatag_twitter_cards)",Disabled,8.x-1.5
+SEO,"Metatag: Verification (metatag_verification)",Disabled,8.x-1.5
+SEO,"Metatag: Views (metatag_views)",Disabled,8.x-1.5
+Other,"Pathauto (pathauto)",Enabled,8.x-1.0
+"Spam control","reCAPTCHA (recaptcha)",Disabled,8.x-2.2
+Other,"Redirect (redirect)",Enabled,8.x-1.0
+Other,"Redirect 404 (redirect_404)",Disabled,8.x-1.0
+Other,"Redirect Domain (redirect_domain)",Disabled,8.x-1.0
+Search,"Search API (search_api)",Enabled,8.x-1.7
+Search,"Database Search (search_api_db)",Enabled,8.x-1.7
+Search,"Database Search Defaults (search_api_db_defaults)",Disabled,8.x-1.7
+Search,"Search API Taxonomy Term Handlers (search_api_views_taxonomy)",Disabled,8.x-1.7
+Views,"Semantic Views (semanticviews)",Enabled,8.x-2.2
+SEO,"SEO Checklist (seo_checklist)",Enabled,8.x-4.0
+Mail,"Simplenews (simplenews)",Enabled,8.x-1.0-alpha3
+Mail,"Simplenews Demo (simplenews_demo)",Disabled,8.x-1.0-alpha3
+Other,"Simplify Menu (simplify_menu)",Enabled,8.x-2.0
+Other,"Single Date Time Picker (single_datetime)",Disabled,8.x-1.6
+Mail,"Swift Mailer (swiftmailer)",Enabled,8.x-1.0-beta2
+Taxonomy,"Taxonomy Manager (taxonomy_manager)",Enabled,8.x-1.0-alpha1
+Other,"Token (token)",Enabled,8.x-1.1
+Other,"Twig tweak (twig_tweak)",Enabled,8.x-2.0-rc2
+Custom,"Valida Email (valida_email)",Enabled,
+Webform,"Webform (webform)",Enabled,8.x-5.0-rc12
+Webform,"Webform Bootstrap (webform_bootstrap)",Disabled,8.x-5.0-rc12
+"Webform Demo","Webform Demo: Application/Evaluation System (webform_demo_application_evaluation)",Disabled,8.x-5.0-rc12
+"Webform Demo","Webform Demo: Event Registration System (webform_demo_event_registration)",Disabled,8.x-5.0-rc12
+Webform,"Webform Devel (webform_devel)",Disabled,8.x-5.0-rc12
+Webform,"Webform Editorial (webform_editorial)",Disabled,8.x-5.0-rc12
+"Webform example","Webform Example Composite (webform_example_composite)",Disabled,8.x-5.0-rc12
+"Webform example","Webform Element Example (webform_example_element)",Disabled,8.x-5.0-rc12
+"Webform example","Webform Remote Post Example (webform_example_remote_post)",Disabled,8.x-5.0-rc12
+"Webform example","Webform Examples (webform_examples)",Disabled,8.x-5.0-rc12
+Webform,"Webform Image Select (webform_image_select)",Disabled,8.x-5.0-rc12
+Webform,"Webform Node (webform_node)",Disabled,8.x-5.0-rc12
+Webform,"Webform Scheduled Email Handler (webform_scheduled_email)",Disabled,8.x-5.0-rc12
+Webform,"Webform Templates (webform_templates)",Disabled,8.x-5.0-rc12
+Webform,"Webform UI (webform_ui)",Enabled,8.x-5.0-rc12
+Development,"Web Profiler (webprofiler)",Disabled,8.x-1.2
+"Field types","YouTube Field (youtube)",Enabled,8.x-1.0-beta3
+,"CEM Theme (cem)",Enabled,

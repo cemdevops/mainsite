@@ -12,15 +12,19 @@
                         <!-- noticias header busca init -->
                         <div class="header-top-busca">
                             <div class="header-search">
-                                {{ drupal_entity('block','apoio') }}
-                                <form>
-                                    <div>
-                                        <input type="text" placeholder="pesquisar no site" class="search-field">
-                                        <input type="submit" value="buscar" class="search-button">
-                                    </div>
-                                </form>
+                            {{ drupal_entity('block','formularioexpostobuscapage_noticias') }}
                             </div>
                         </div>
+                        {#<div class="header-top-busca">#}
+                            {#<div class="header-search">#}
+                                {#<form>#}
+                                    {#<div>#}
+                                        {#<input type="text" placeholder="pesquisar no site" class="search-field">#}
+                                        {#<input type="submit" value="buscar" class="search-button">#}
+                                    {#</div>#}
+                                {#</form>#}
+                            {#</div>#}
+                        {#</div>#}
                         <!-- noticias header busca end -->
                     </div>
                 </div>
@@ -36,7 +40,8 @@
                 <div class="row">
                     <!-- noticia listagem coluna left init -->
                     <div class="col-md-9 col-xs-12">
-                        {{ drupal_view('noticia', 'page_noticias', language) }}
+                        {# drupal_view('noticia', 'page_noticias', language) #}
+                        {{ drupal_view('busca','page_noticias',language_page) }}
                     </div>
 
                     <div class="col-md-3 col-xs-12">
@@ -66,7 +71,7 @@
                                 <!-- side bar noticia recente item init -->
                                 {{ drupal_view('noticia','bloco_noticia_interna',language) }}
                                 <!-- side bar noticia recente item end -->
-                                <a href="#" class="link-more">mais notícias</a>
+                                <!--<a href="#" class="link-more">mais notícias</a>-->
                             </div>
                         </div>
                         <!-- side bar  noticias recentes end -->
@@ -75,27 +80,26 @@
             </div>
         </div>
     </section>
-
-    <!-- internas container init -->
-    <section class="internas-container">
-        <div class="inner wrapper">
-            <div class="container-fluid">
-                <div class="row quem-somos-content">
-                    <div class="col-xs-12">
-                        <section class="home-apoio">
-                            {% trans %}
-                            <div class="title">apoio</div>
-                            {% endtrans %}
-                            <div class="logos">
-                                {{ drupal_entity('block','apoio') }}
-                            </div>
-                        </section>
-                    </div>
+</main>
+<!-- internas container init -->
+<section class="internas-container">
+    <div class="inner wrapper">
+        <div class="container-fluid">
+            <div class="row quem-somos-content">
+                <div class="col-xs-12">
+                    <section class="home-apoio">
+                        {% trans %}
+                        <div class="title">apoio</div>
+                        {% endtrans %}
+                        <div class="logos">
+                            {{ drupal_entity('block','apoio') }}
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
-    </section>
-</main>
+    </div>
+</section>
 <footer>
     <!-- footer newsletter init -->
     <section class="footer-newsletter">

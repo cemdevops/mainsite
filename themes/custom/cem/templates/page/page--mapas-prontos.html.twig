@@ -19,9 +19,13 @@
                 <div class="row quem-somos-content">
                     <!-- quem somos main content init -->
                     <div class="col-md-4 col-xs-12 que-somos-menu-col">
-                        {{ drupal_entity('block','temas') }}
-                        {{ drupal_entity('block','fontes') }}
-                        {{ drupal_entity('block','tipos') }}
+                        <div class="block-facet--checkbox">
+                            {% trans %}<h2>Ano</h2>{% endtrans %}
+                        </div>
+                        {{ drupal_entity('block','ano') }}
+                        <div class="block-facet--checkbox">
+                            {% trans %}<h2>Região</h2>{% endtrans %}
+                        </div>
                         {{ drupal_entity('block','divisaoterritorial') }}
                         {{ drupal_entity('block','cursosdocem') }}
                     </div>
@@ -31,12 +35,57 @@
                            {{ drupal_entity('block','formularioexpostobuscamapoteca') }}
                         </div>
                         <div class="row quem-somos-perfis-content">
-                            {{ drupal_view('busca','mapoteca') }}
+                            {{ drupal_view('busca','mapoteca',language_page) }}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 </main>
+<!-- internas container init -->
+<section class="internas-container">
+    <div class="inner wrapper">
+        <div class="container-fluid">
+            <div class="row quem-somos-content">
+                <div class="col-xs-12">
+                    <section class="home-apoio">
+                        {% trans %}
+                        <div class="title">apoio</div>
+                        {% endtrans %}
+                        <div class="logos">
+                            {{ drupal_entity('block','apoio') }}
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <!-- footer newsletter init -->
+    <section class="footer-newsletter">
+        <div class="inner wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="footer-newsletter-form">
+
+                            <div>
+                                {{ drupal_entity('block','webform') }}
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="footer-newsletter-text">
+                            {% trans %}
+                            <span>RECEBA NOSSOS INFORMATIVOS</span><br> Não se preocupe, também não gostamos de SPAM.
+                            {% endtrans %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
